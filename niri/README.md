@@ -1,80 +1,77 @@
-# niri Pack — agents, skills y guías de migración
+# niri Pack — agents, skills and migration guides
 
-Pack de agentes y skills para OpenCode sobre el compositor Wayland de
-scrollable-tiling **niri**, más la capa de **migración desde Hyprland**.
+Agent and skill pack for OpenCode covering the **niri** scrollable-tiling Wayland compositor, plus the **migration from Hyprland** layer.
 
-Baseline del compositor: **niri 26.04** (2026-04-25), configuración en KDL
-(`~/.config/niri/config.kdl`). Baseline del origen de la migración: **Hyprland
-0.56.x** (era de config Lua, 0.55+).
+Compositor baseline: **niri 26.04** (2026-04-25), KDL configuration (`~/.config/niri/config.kdl`). Migration source baseline: **Hyprland 0.56.x** (Lua config era, 0.55+).
 
-## Contenido
+## Contents
 
-- `agents/` — 10 subagentes con frontmatter de opencode (permisos allow):
+- `agents/` — 10 subagents with opencode frontmatter (allow permissions):
   - **niri core** — `niri-config-architect`, `niri-ipc-scripter`,
     `niri-layout-designer`, `niri-session-engineer`, `niri-shell-integrator`,
     `niri-troubleshooter`.
-  - **migración Hyprland→niri** — `hyprland-niri-migrator`,
+  - **Hyprland→niri migration** — `hyprland-niri-migrator`,
     `hyprland-niri-gap-analyst`, `niri-config-translator`,
     `equisdots-compositor-port`.
-- `skills/` — 15 skills deep-reference con `references/`:
+- `skills/` — 15 deep-reference skills with `references/`:
   - **niri core** (10) — `niri`, `niri-configuration`, `niri-keybindings`,
     `niri-layout-rules`, `niri-input-outputs`, `niri-workspaces`, `niri-ipc`,
     `niri-window-effects`, `niri-session-integration`, `niri-troubleshooting`.
-  - **migración Hyprland→niri** (5) — `hyprland-to-niri`,
+  - **Hyprland→niri migration** (5) — `hyprland-to-niri`,
     `hyprland-niri-config-mapping`, `hyprland-niri-ipc-mapping`,
     `hyprland-niri-tooling-mapping`, `equisdots-niri-port`.
 
-## Instalación
+## Install
 
 ```bash
-# Agentes (copia plana, como espera opencode)
+# Agents (flat copy, as opencode expects)
 cp agents/*.md ~/.config/opencode/agents/
-# Skills (carpeta por skill)
+# Skills (one folder per skill)
 cp -r skills/* ~/.config/opencode/skills/
 ```
 
-Después reinicia opencode. Los agentes ya traen `permission` allow.
+Then restart opencode. The agents already ship with `permission` allow.
 
-## Hallazgos clave que corrige este pack
+## Key findings this pack corrects
 
-1. **niri se versiona por fecha, no semver.** Baseline documentado: **26.04**
-   (2026-04-25). Config en un único **KDL** (`config.kdl`) que **recarga en
-   caliente** al guardar; no existe `hyprctl eval`: los cambios en vivo se
-   escriben como fragmentos y se recargan.
-2. **KDL es estricto**: un bloque cuyo último nodo no termina con `;` o salto de
-   línea antes de `}` no parsea, y niri **cae a su config por defecto** (pantalla
-   gris con el overlay de atajos, sin error). Valida con
+1. **niri is versioned by date, not semver.** Documented baseline: **26.04**
+   (2026-04-25). Config in a single **KDL** file (`config.kdl`) that **hot-reloads**
+   on save; there is no `hyprctl eval`: live changes are written as fragments and
+   reloaded.
+2. **KDL is strict**: a block whose last node does not end with `;` or a newline
+   before `}` will not parse, and niri **falls back to its default config** (gray
+   screen with the hotkey overlay, no error). Validate with
    `niri validate -c ~/.config/niri/config.kdl`.
-3. **Scrollable tiling**: las ventanas viven en columnas sobre una tira
-   horizontal infinita por monitor; los **espacios de trabajo son dinámicos e
-   independientes por monitor** (existen los nombrados y `recent-windows`).
-4. **`exclusiveZone` de layer-shell** reserva 1 o 3 bordes por superficie (no los
-   4); la reserva de un borde empuja las superficies ancladas a ese borde.
-5. **IPC**: `niri msg` (`--json`), `niri msg action`, y el **event-stream**
-   (`niri msg --json event-stream`, socket en `NIRI_SOCKET`) sustituyen a
-   `hyprctl` y a `.socket2.sock`.
-6. **Portales**: selección en `niri-portals.conf` (`gnome` + `gtk`);
-   screencasting vía `xdg-desktop-portal-gnome`. No poner `GDK_BACKEND=wayland`
-   global (rompe el portal de screencast).
-7. **X11**: `xwayland-satellite` (>= 0.7) para apps X11.
-8. **Migración (equisdots, Estrategia A)**: la raíz de datos compartida se queda
-   en `~/.config/hypr` y solo la config del compositor se mueve a
-   `~/.config/niri`; el shell se hace neutral al compositor tras un seam
-   (`Compositor.qml` → `Niri.qml`). Estimación para el stack: ~**63% reuso**,
-   ~25% adaptar, ~12% reescribir.
+3. **Scrollable tiling**: windows live in columns on an infinite horizontal strip
+   per monitor; **workspaces are dynamic and independent per monitor** (named
+   workspaces and `recent-windows` exist).
+4. **layer-shell `exclusiveZone`** reserves 1 or 3 edges per surface (not all
+   4); reserving an edge pushes the surfaces anchored to that edge.
+5. **IPC**: `niri msg` (`--json`), `niri msg action`, and the **event-stream**
+   (`niri msg --json event-stream`, socket at `NIRI_SOCKET`) replace
+   `hyprctl` and `.socket2.sock`.
+6. **Portals**: selection in `niri-portals.conf` (`gnome` + `gtk`);
+   screencasting via `xdg-desktop-portal-gnome`. Do not set `GDK_BACKEND=wayland`
+   globally (it breaks the screencast portal).
+7. **X11**: `xwayland-satellite` (>= 0.7) for X11 apps.
+8. **Migration (equisdots, Strategy A)**: the shared data root stays at
+   `~/.config/hypr` and only the compositor config moves to
+   `~/.config/niri`; the shell becomes compositor-neutral after a seam
+   (`Compositor.qml` → `Niri.qml`). Estimate for the stack: ~**63% reuse**,
+   ~25% adapt, ~12% rewrite.
 
-Fuentes primarias: `github.com/YaLTeR/niri` (releases y `docs/wiki`),
-`wiki.archlinux.org` (niri, xwayland-satellite, portales).
+Primary sources: `github.com/YaLTeR/niri` (releases and `docs/wiki`),
+`wiki.archlinux.org` (niri, xwayland-satellite, portals).
 
-## Uso recomendado
+## Recommended usage
 
-1. `niri-config-architect` escribe/valida `config.kdl`; `niri-configuration`
-   describe dónde carga y cómo validar.
-2. `niri-keybindings`, `niri-layout-rules`, `niri-input-outputs` y
-   `niri-workspaces` cubren binds, colocación, entrada/salida y espacios.
-3. `niri-ipc-scripter` construye barras/scripts sobre `niri msg` y el
+1. `niri-config-architect` writes/validates `config.kdl`; `niri-configuration`
+   describes where it is loaded from and how to validate it.
+2. `niri-keybindings`, `niri-layout-rules`, `niri-input-outputs` and
+   `niri-workspaces` cover binds, placement, input/output and workspaces.
+3. `niri-ipc-scripter` builds bars/scripts on top of `niri msg` and the
    event-stream.
-4. `niri-session-engineer` monta la sesión, portales, Xwayland y NVIDIA.
-5. En migraciones: `hyprland-to-niri` (visión), los `hyprland-niri-*-mapping`
-   (config, IPC, tooling), y `equisdots-compositor-port` para el backend del
-   shell de equisdots.
+4. `niri-session-engineer` sets up the session, portals, Xwayland and NVIDIA.
+5. For migrations: `hyprland-to-niri` (overview), the `hyprland-niri-*-mapping`
+   skills (config, IPC, tooling), and `equisdots-compositor-port` for the
+   equisdots shell backend.

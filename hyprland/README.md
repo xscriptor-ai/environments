@@ -1,34 +1,34 @@
 # Hyprland Pack — agents, skills and docs (September 2026)
 
-Pack de agentes, skills, comandos y documentación para OpenCode sobre el estado ACTUAL de Hyprland (v0.56.x, era de config Lua).
+Agents, skills, commands and documentation for OpenCode covering the CURRENT state of Hyprland (v0.56.x, the Lua config era).
 
-## Contenido
+## Contents
 
-- `agents/` — 12 agentes subagente especializados (frontmatter opencode, permisos allow).
-- `skills/` — 3 skills deep-reference (`hyprland`, `hyprland-qml`, `hyprland-tools`) con `references/`.
-- `commands/` — 2 comandos: `/hypr-config`, `/hypr-diag`.
-- `docs/` — estado del ecosistema 2026 (versiones, cambios, mapa de fuentes).
+- `agents/` — 12 specialized subagents (opencode frontmatter, allow permissions).
+- `skills/` — 3 deep-reference skills (`hyprland`, `hyprland-qml`, `hyprland-tools`) with `references/`.
+- `commands/` — 2 commands: `/hypr-config`, `/hypr-diag`.
+- `docs/` — state of the ecosystem 2026 (versions, changes, source map).
 
-## Instalación
+## Install
 
 ```bash
-# Agentes (copia plana, como espera opencode)
+# Agents (flat copy, as opencode expects)
 cp agents/*.md ~/.config/opencode/agents/
-# Skills (carpeta por skill)
+# Skills (one folder per skill)
 cp -r skills/* ~/.config/opencode/skills/
-# Comandos
+# Commands
 cp commands/*.md ~/.config/opencode/commands/
 ```
 
-Después reinicia opencode. Los agentes ya traen `permission` allow-all (sin prompts al delegar), igual que el resto del pack instalado.
+Then restart opencode. The agents already ship with `permission` allow-all (no prompts when delegating), like the rest of the installed pack.
 
-## Hallazgos clave que corrige este pack (frente a documentación vieja)
+## Key findings this pack corrects (against old documentation)
 
-1. **Config en Lua desde Hyprland 0.55** (2026-05): `~/.config/hypr/hyprland.lua` con API `hl.config/hl.bind/hl.dsp.*/hl.on/...`. `.conf` hyprlang está deprecado (aviso desde 0.56.1). No existe "Hyprland 1.0"; la línea sigue en 0.x (v0.56.2, 2026-08-05).
-2. **Wiki movida y versionada**: https://wiki.hypr.land/ (snapshots por release; legacy hyprlang → páginas 0.54).
-3. **Reglas de ventana reescritas en 0.53** (sintaxis nueva; `windowrulev2` no existe).
-4. **UI oficial ≠ QML**: la dirección oficial es hyprtoolkit (C++); Qt/QML solo periférico (hyprland-qt-support = estilo "Hyprland" de Qt Quick Controls; hyprland-qtutils archivado → hyprland-guiutils).
-5. **QML real en Hyprland = Quickshell** (v0.3.1, org quickshell-mirror). HyprPanel está archivado (2026-04) → sucesor Wayle (Rust/GTK4). AGS/Astal (GTK/TS) y Waybar+SwayNC siguen vivos.
-6. **hyprpm ahora es in-tree** en hyprwm/Hyprland (repo standalone eliminado).
+1. **Lua config since Hyprland 0.55** (2026-05): `~/.config/hypr/hyprland.lua` with the `hl.config/hl.bind/hl.dsp.*/hl.on/...` API. hyprlang `.conf` is deprecated (notice since 0.56.1). There is no "Hyprland 1.0"; the line stays on 0.x (v0.56.2, 2026-08-05).
+2. **Wiki moved and versioned**: https://wiki.hypr.land/ (per-release snapshots; legacy hyprlang → 0.54 pages).
+3. **Window rules rewritten in 0.53** (new syntax; `windowrulev2` no longer exists).
+4. **Official UI ≠ QML**: the official direction is hyprtoolkit (C++); Qt/QML is peripheral only (hyprland-qt-support = the "Hyprland" style for Qt Quick Controls; hyprland-qtutils archived → hyprland-guiutils).
+5. **Real QML on Hyprland = Quickshell** (v0.3.1, quickshell-mirror org). HyprPanel is archived (2026-04) → successor Wayle (Rust/GTK4). AGS/Astal (GTK/TS) and Waybar+SwayNC are still alive.
+6. **hyprpm is now in-tree** in hyprwm/Hyprland (standalone repo removed).
 
-Fuentes primarias: github.com/hyprwm/Hyprland (releases), wiki.hypr.land, quickshell.outfoxxed.me, wayle.app, aylur.github.io/ags.
+Primary sources: github.com/hyprwm/Hyprland (releases), wiki.hypr.land, quickshell.outfoxxed.me, wayle.app, aylur.github.io/ags.
