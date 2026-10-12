@@ -1,127 +1,127 @@
-# Blueprint — construir una distro basada en Arch de cero a release
+# Blueprint — building an Arch-based distro from zero to release
 
-Documento de arquitectura de referencia. Cada fase lista decisiones, herramientas actuales (2026) y criterios de salida. Los agentes del pack ejecutan cada bloque.
+Reference architecture document. Each phase lists decisions, current tools (2026) and exit criteria. The pack's agents execute each block.
 
-## Fase 0 — Definir alcance
+## Phase 0 — Define scope
 
-| Decisión | Opciones 2026 | Recomendación |
+| Decision | 2026 options | Recommendation |
 |---|---|---|
-| Base | archiso puro / fork archiso (EndeavourOS) / framework Manjaro-lineage (Garuda, Artix artools) / toolchain propio (archboot) | archiso puro para empezar; fork solo si necesitas tocar mkarchiso |
-| Instalador | Calamares (GUI), archinstall (TUI oficial), propio (CachyOS New-Cli) | Calamares offline + archinstall como fallback |
-| Público | rolling / snapshot mensual / LTS-like | rolling con ISO mensual fechada |
-| Arquitecturas | x86_64, x86_64_v3, aarch64 | x86_64_v3 si tu base de usuarios es moderna |
-| Identidad | ID=arch vs ID_LIKE=arch | `ID_LIKE=arch` (spec-clean); `ID=arch` maximiza compatibilidad AUR/tooling |
-| Repos | solo official / + propio / + chaotic / AUR en build | repo propio firmado; AUR solo en build con chroot limpio |
+| Base | pure archiso / archiso fork (EndeavourOS) / Manjaro-lineage framework (Garuda, Artix artools) / own toolchain (archboot) | pure archiso to start; fork only if you need to touch mkarchiso |
+| Installer | Calamares (GUI), archinstall (official TUI), custom (CachyOS New-Cli) | Calamares offline + archinstall as fallback |
+| Audience | rolling / monthly snapshot / LTS-like | rolling with a dated monthly ISO |
+| Architectures | x86_64, x86_64_v3, aarch64 | x86_64_v3 if your user base is modern |
+| Identity | ID=arch vs ID_LIKE=arch | `ID_LIKE=arch` (spec-clean); `ID=arch` maximizes AUR/tooling compatibility |
+| Repos | official only / + own / + chaotic / AUR at build | own signed repo; AUR only at build with a clean chroot |
 
-Criterio de salida: documento de alcance de 1 página + nombre, `ID`, canales (nightly/beta/stable) y política de actualizaciones.
+Exit criterion: one-page scope document + name, `ID`, channels (nightly/beta/stable) and update policy.
 
-## Fase 1 — Bootstrap del árbol
+## Phase 1 — Bootstrap the tree
 
 ```text
 distro/
 ├── profiles/
-│   └── mi-distro/            # perfil archiso (copia de /usr/share/archiso/configs/releng)
+│   └── my-distro/            # archiso profile (copy of /usr/share/archiso/configs/releng)
 │       ├── profiledef.sh
 │       ├── packages.x86_64
-│       ├── pacman.conf       # build-time (mirrors + repo propio)
+│       ├── pacman.conf       # build-time (mirrors + own repo)
 │       ├── airootfs/
 │       ├── efiboot/loader/{loader.conf,entries/}
 │       ├── syslinux/
 │       └── grub/
-├── packages/                 # PKGBUILDs propios (mi-distro-*)
-├── repo/                     # repo binario firmado (repo-add)
+├── packages/                 # own PKGBUILDs (my-distro-*)
+├── repo/                     # signed binary repo (repo-add)
 ├── ci/                       # workflows
 └── scripts/                  # build.sh, release.sh, test-iso.sh
 ```
 
-Salida: `mkarchiso -v -w work -o out profiles/mi-distro` produce ISO arrancable (aunque sea fea).
+Output: `mkarchiso -v -w work -o out profiles/my-distro` produces a bootable ISO (even if ugly).
 
-## Fase 2 — Capa de paquetes
+## Phase 2 — Package layer
 
-- Construir paquetes propios con `pkgctl build` (imita a Arch) o `makechrootpkg`; firmar con `GPGKEY`.
-- Repo propio: `repo-add -s -k KEY repo/mi-distro.db.tar.zst repo/*.pkg.tar.zst` + `.files`, symlinks `*.db`/`*.files`.
-- Consumo en perfil: `[mi-distro]` **arriba** de official en `pacman.conf`, `Server = file:///srv/repo` (build-time) y copia de `pacman.conf`+keyring en `airootfs/etc` + `airootfs/usr/share/pacman/keyrings/` (runtime live).
-- Si reemplazas paquetes oficiales: `provides` + `conflicts`, y `replaces` para takeover; `IgnoreGroup`/`IgnorePkg` para holdear.
-- Kernel propio: renombrar `pkgbase` (p. ej. `linux-midistro`), **nunca** `provides=('linux')`; headers a juego; entradas de boot actualizadas.
+- Build your own packages with `pkgctl build` (mimics Arch) or `makechrootpkg`; sign with `GPGKEY`.
+- Own repo: `repo-add -s -k KEY repo/my-distro.db.tar.zst repo/*.pkg.tar.zst` + `.files`, `*.db`/`*.files` symlinks.
+- Profile consumption: `[my-distro]` **above** official in `pacman.conf`, `Server = file:///srv/repo` (build-time) and a copy of `pacman.conf`+keyring into `airootfs/etc` + `airootfs/usr/share/pacman/keyrings/` (live runtime).
+- If you replace official packages: `provides` + `conflicts`, and `replaces` for takeover; `IgnoreGroup`/`IgnorePkg` to hold.
+- Own kernel: rename `pkgbase` (e.g. `linux-midistro`), **never** `provides=('linux')`; matching headers; updated boot entries.
 
-Salida: repo firmado y reproducible; ISO instala paquetes de tu repo.
+Output: signed and reproducible repo; the ISO installs packages from your repo.
 
-## Fase 3 — Boot y seguridad
+## Phase 3 — Boot and security
 
-- Bootmodes: `bios.syslinux` (si soportas legacy) + `uefi.systemd-boot` (default 2026). GRUB solo si necesitas loopback/cifrado de `/boot`.
-- UKI x86_64 (opcional pero recomendado): preset `uki` + `ukify`, salida `EFI/Linux/*.efi`; systemd-boot las autodescubre.
-- Secure Boot: shim+GRUB firmados por Microsoft (máxima compatibilidad), claves propias con `sbctl` (control total), o PreLoader (más simple). Al menos: documentar cómo desactivar SB.
-- Firma de artefactos: GPG detached (`iso.sig`, `sha256sums.txt`, `b2sums.txt`) + torrent con webseeds.
-- `linux-firmware` explícito (split): incluye `-amdgpu -intel -nvidia -realtek -other`; añade wifi/storage usados en instalación.
+- Bootmodes: `bios.syslinux` (if you support legacy) + `uefi.systemd-boot` (2026 default). GRUB only if you need loopback/encrypted `/boot`.
+- x86_64 UKI (optional but recommended): `uki` preset + `ukify`, output `EFI/Linux/*.efi`; systemd-boot auto-discovers them.
+- Secure Boot: Microsoft-signed shim+GRUB (maximum compatibility), own keys with `sbctl` (full control), or PreLoader (simplest). At minimum: document how to disable SB.
+- Artifact signing: GPG detached (`iso.sig`, `sha256sums.txt`, `b2sums.txt`) + torrent with webseeds.
+- Explicit `linux-firmware` (split): include `-amdgpu -intel -nvidia -realtek -other`; add the wifi/storage used during install.
 
-Salida: ISO bootea en UEFI (y BIOS si aplica), con Secure Boot documentado, artefactos firmados.
+Output: ISO boots on UEFI (and BIOS if applicable), with documented Secure Boot and signed artifacts.
 
-## Fase 4 — Instalador y first-boot
+## Phase 4 — Installer and first boot
 
-- Calamares offline: módulos `partition → mount → unpackfs → machineid → fstab → locale → keyboard → localecfg → initcpiocfg → initcpio → users → networkcfg → displaymanager → packages@offline → hwclock → bootloader → services-systemd → umount`; branding propio en `/etc/calamares/branding/<id>`.
-- `unpackfs` extrae `airootfs.sfs` del propio ISO a `${ROOT}`.
-- archinstall como alternativa TUI: `archinstall --config config.json --creds creds.json --silent`.
-- First boot: `systemd-firstboot` interactivo o `ConditionFirstBoot=yes`; limpiar `/etc/machine-id` antes de publicar; `/etc/skel` para defaults de usuario.
+- Calamares offline: modules `partition → mount → unpackfs → machineid → fstab → locale → keyboard → localecfg → initcpiocfg → initcpio → users → networkcfg → displaymanager → packages@offline → hwclock → bootloader → services-systemd → umount`; own branding in `/etc/calamares/branding/<id>`.
+- `unpackfs` extracts `airootfs.sfs` from the ISO itself into `${ROOT}`.
+- archinstall as a TUI alternative: `archinstall --config config.json --creds creds.json --silent`.
+- First boot: interactive `systemd-firstboot` or `ConditionFirstBoot=yes`; clear `/etc/machine-id` before publishing; `/etc/skel` for user defaults.
 
-Salida: instalación completa offline en VM sin intervención manual (modo automatizado).
+Output: full offline install in a VM without manual intervention (automated mode).
 
-## Fase 5 — Branding y experiencia
+## Phase 5 — Branding and experience
 
 - `/etc/os-release` (NAME, ID, ID_LIKE, PRETTY_NAME, LOGO, HOME_URL, SUPPORT_URL, BUG_REPORT_URL, DEFAULT_HOSTNAME, RELEASE_TYPE).
-- Plymouth (`splash` + hook `plymouth` antes de `encrypt`/`sd-encrypt`), tema propio.
-- fastfetch config, MOTD, `/etc/issue`, wallpapers, GRUB/syslinux con nombre de distro.
-- Live session: autologin (`getty@tty1.service.d/autologin.conf`), CoW por defecto (`cow_spacesize=4G`), iwd/NetworkManager, sshd opcional.
+- Plymouth (`splash` + `plymouth` hook before `encrypt`/`sd-encrypt`), own theme.
+- fastfetch config, MOTD, `/etc/issue`, wallpapers, GRUB/syslinux with the distro name.
+- Live session: autologin (`getty@tty1.service.d/autologin.conf`), CoW by default (`cow_spacesize=4G`), iwd/NetworkManager, optional sshd.
 
-Salida: identidad coherente en boot, live e instalado.
+Output: coherent identity at boot, live and installed.
 
-## Fase 6 — CI, testing y release
+## Phase 6 — CI, testing and release
 
-- CI: contenedor `archlinux:base-devel` (o tag fechada para reproducibilidad) + `mkarchiso`; cache de `/var/cache/pacman/pkg`; matriz `{releng-like, minimal} × {iso, netboot}`; validación estática (`xorriso -report_el_torito`, `unsquashfs -l`, `mcopy -i efiboot.img`, `gpg --verify`).
-- Smoke test QEMU UEFI headless: pflash OVMF + `-display none -serial mon:stdio -no-reboot`, esperar login/SSH/QGA, ejecutar una orden; variante BIOS; opcional Secure Boot.
-- Release: checksums, firmas, torrent (`mktorrent -l 19` + webseeds), rsync a mirror, `latest` symlink, retention N releases, notas de release generadas.
-- Reproducibilidad: `SOURCE_DATE_EPOCH`, TZ=UTC, listas ordenadas, `--source-date-epoch` en container builds; gate opcional con `diffoscope`.
+- CI: `archlinux:base-devel` container (or a dated tag for reproducibility) + `mkarchiso`; cache of `/var/cache/pacman/pkg`; `{releng-like, minimal} × {iso, netboot}` matrix; static validation (`xorriso -report_el_torito`, `unsquashfs -l`, `mcopy -i efiboot.img`, `gpg --verify`).
+- Headless QEMU UEFI smoke test: OVMF pflash + `-display none -serial mon:stdio -no-reboot`, wait for login/SSH/QGA, run a command; BIOS variant; optional Secure Boot.
+- Release: checksums, signatures, torrent (`mktorrent -l 19` + webseeds), rsync to mirror, `latest` symlink, N-release retention, generated release notes.
+- Reproducibility: `SOURCE_DATE_EPOCH`, TZ=UTC, sorted lists, `--source-date-epoch` in container builds; optional gate with `diffoscope`.
 
-Salida: pipeline nightly + release firmado y testeado.
+Output: nightly pipeline + a signed and tested release.
 
-## Fase 7 — Operación
+## Phase 7 — Operations
 
-- Canales: nightly → beta → stable (ISO fechada); avisar de cambios que rompen (partial upgrades, keyring).
-- Monitorizar mirror status, tamaño del ISO y nº de paquetes contra builds previos (regresión barata).
-- Mantener `archiso`, `mkinitcpio`, `grub`, `systemd`, `calamares` al día: son la superficie de boot.
-- Seguridad de cadena de suministro: firmar paquetes, SLSA/provenance si el CI lo permite, revisar AUR (incidente 2026-06-12).
+- Channels: nightly → beta → stable (dated ISO); warn about breaking changes (partial upgrades, keyring).
+- Monitor mirror status, ISO size and package count against previous builds (cheap regression check).
+- Keep `archiso`, `mkinitcpio`, `grub`, `systemd`, `calamares` up to date: they are the boot surface.
+- Supply-chain security: sign packages, SLSA/provenance if CI allows, review AUR (2026-06-12 incident).
 
-## Presupuesto de tiempo realista (primer ISO usable)
+## Realistic time budget (first usable ISO)
 
-| Hito | Esfuerzo |
+| Milestone | Effort |
 |---|---|
-| ISO releng rebrandeada | 1 día |
-| Perfil propio + paquetes propios | 1-2 semanas |
-| Repo firmado + CI de build | 1 semana |
-| Calamares offline funcional | 1-2 semanas |
-| Secure Boot + UKI | 1 semana |
-| Smoke tests QEMU en CI | 2-4 días |
-| Release reproducible y firmada | 1 semana |
+| Rebranded releng ISO | 1 day |
+| Own profile + own packages | 1-2 weeks |
+| Signed repo + build CI | 1 week |
+| Functional offline Calamares | 1-2 weeks |
+| Secure Boot + UKI | 1 week |
+| QEMU smoke tests in CI | 2-4 days |
+| Reproducible and signed release | 1 week |
 
-## Cumplimiento, licencias y marca
+## Compliance, licensing and trademark
 
-- **Sources de Arch**: los PKGBUILD oficiales son 0BSD (RFC40) y pasan REUSE (RFC52); puedes bifurcarlos legalmente, pero conserva avisos de copyright de los parches upstream y de los sources (GPL/MIT/etc.).
-- **Paquetes propios**: cada PKGBUILD necesita `license=` correcto y, si empaqueta binarios, el texto de licencia en `/usr/share/licenses/<pkg>/`. GPL exige oferta de fuente (publica tus PKGBUILDs y sources).
-- **Marca**: "Arch Linux" y su logo son marcas registradas (política de términos de Arch); no los uses para promocionar tu derivada. Crea tu propio logo/nombre y usa `ID_LIKE=arch` (o `ID=arch` solo por compatibilidad, documentándolo).
-- **Atribución**: reconoce a Arch, upstream y contribuidores en el README/página de descargas; incluye el texto de licencia del ISO y de los artefactos.
-- **Privacidad/telemetría**: si añades telemetría, sé explícito y opt-in; publica política. Si no, decláralo ("sin telemetría").
-- **Export/control**: si tu distro se distribuye en países con regulaciones de exportación/crypto (LUKS), revisa el aviso correspondiente.
+- **Arch sources**: official PKGBUILDs are 0BSD (RFC40) and pass REUSE (RFC52); you may legally fork them, but keep the copyright notices of upstream patches and of the sources (GPL/MIT/etc.).
+- **Own packages**: every PKGBUILD needs the correct `license=` and, if it packages binaries, the license text in `/usr/share/licenses/<pkg>/`. GPL requires a source offer (publish your PKGBUILDs and sources).
+- **Trademark**: "Arch Linux" and its logo are registered trademarks (Arch terms policy); do not use them to promote your derivative. Create your own logo/name and use `ID_LIKE=arch` (or `ID=arch` only for compatibility, documenting it).
+- **Attribution**: credit Arch, upstream and contributors in the README/download page; include the license text of the ISO and the artifacts.
+- **Privacy/telemetry**: if you add telemetry, be explicit and opt-in; publish a policy. If not, state it ("no telemetry").
+- **Export/control**: if your distro is distributed in countries with export/crypto regulations (LUKS), review the corresponding notice.
 
-## Seguimiento de vulnerabilidades (distro propia)
+## Vulnerability tracking (own distro)
 
-- **Arch Security Tracker**: `https://security.archlinux.org/` (JSON/API por paquete) — monitoriza los paquetes que recompaquetas o pineas.
-- `arch-audit` (paquete `arch-audit`) sobre el sistema instalado; en CI, comparar lista de paquetes del perfil contra advisories abiertos.
-- **CVE**: NVD/MITRE feeds + `cve-bin-tool`/OSV-scanner para tus paquetes propios; GitHub Advisory DB para dependencias del toolchain.
-- Rebuild policy: al actualizar una librería compartida, `checkrebuild`/`rebuild-detector` y reconstruye tus paquetes propios; para kernels/loader, re-firma tras cada update.
-- Suscripciones: `arch-security` mailing list/RSS y los canales de tus upstreams; documenta SLA de parcheo (p. ej. crítico ≤72 h) si publicas una distro.
+- **Arch Security Tracker**: `https://security.archlinux.org/` (JSON/API per package) — monitor the packages you repackage or pin.
+- `arch-audit` (package `arch-audit`) against the installed system; in CI, compare the profile's package list against open advisories.
+- **CVE**: NVD/MITRE feeds + `cve-bin-tool`/OSV-scanner for your own packages; GitHub Advisory DB for toolchain dependencies.
+- Rebuild policy: when updating a shared library, `checkrebuild`/`rebuild-detector` and rebuild your own packages; for kernels/loader, re-sign after every update.
+- Subscriptions: `arch-security` mailing list/RSS and your upstreams' channels; document a patching SLA (e.g. critical ≤72 h) if you publish a distro.
 
-## Accesibilidad (patrón ISO)
+## Accessibility (ISO pattern)
 
-- Consolas de arranque: entradas "speech" con `accessibility=on` (releng la incluye) + `espeakup`/`brltty`; servicios activados bajo `sound.target.wants`.
-- Live: lector de pantalla disponible (Orca en GNOME), contraste/tema alto, fuentes legibles; el instalador (Calamares) tiene QML accesible/teclado.
-- Instalado: no rompas los defaults de accesibilidad del DE elegido; verifica navegación por teclado y foco en el instalador.
-- Prueba real: arranca el ISO con `accessibility=on` y valida que el instalador sea operable sin pantalla.
+- Boot consoles: "speech" entries with `accessibility=on` (releng includes them) + `espeakup`/`brltty`; services enabled under `sound.target.wants`.
+- Live: screen reader available (Orca on GNOME), high contrast/theme, readable fonts; the installer (Calamares) has accessible QML/keyboard.
+- Installed: do not break the accessibility defaults of the chosen DE; verify keyboard navigation and focus in the installer.
+- Real test: boot the ISO with `accessibility=on` and validate that the installer is operable without a screen.
