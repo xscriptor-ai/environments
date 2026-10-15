@@ -1,10 +1,10 @@
-# Shell landscape 2026 — comparison & daemon contracts
+# Shell landscape 2026 (verified October 2026) — comparison & daemon contracts
 
-## Stacks (verified September 2026)
+## Stacks
 
 | Stack | Repo / docs | Tech | Status |
 |---|---|---|---|
-| Quickshell | quickshell-mirror/quickshell; quickshell.outfoxxed.me | QML/QtQuick6 | Active, v0.3.1 (2026-08); Arch extra |
+| Quickshell | git.outfoxxed.me/quickshell (GH mirror); quickshell.org | QML/QtQuick6 | Active, v0.3.2 (2026-10); Arch extra |
 | Wayle | wayle-rs/wayle; wayle.app | Rust + GTK4 + Relm4 | Active, v0.7.0 (2026-07); AUR wayle-bin |
 | AGS/Astal | Aylur/ags (scaffolding for Astal+Gnim); aylur.github.io/ags, /astal | GTK3/4 + JS/TS | Active, v3.1.2 (2026-04) |
 | Waybar + SwayNC | Alexays/Waybar; ErikReider/SwayNotificationCenter | GTK/CSS | Active: Waybar 0.15.0 (2026-02), SwayNC 0.12.6 (2026-03) |

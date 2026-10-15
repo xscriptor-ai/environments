@@ -1,10 +1,10 @@
-# Quickshell module catalog & patterns (v0.3.x, September 2026)
+# Quickshell module catalog & patterns (v0.3.x, October 2026)
 
 ## Runtime
-- Repo quickshell-mirror/quickshell; docs quickshell.outfoxxed.me; LGPL-3.0. Arch extra `quickshell` (0.3.1), AUR `quickshell-git`. Distro availability: Fedora COPR errornointernet/quickshell, Debian/Ubuntu (PPA avengemedia/danklinux), Gentoo GURU, nixpkgs, openSUSE OBS.
-- Run: `quickshell -c <name>` or `-p <path>`; instance mgmt subcommands (`qs list|log|kill` per changelog — verify locally). Hot reload on save.
-- Env (0.3): `QS_DISABLE_FILE_WATCHER`, `QS_DISABLE_CRASH_HANDLER`, `QS_CRASHREPORT_URL`, `QS_APP_ID`, `QS_DROP_EXPENSIVE_FONTS`, `DefaultEnv` pragma.
-- Shell dir: `Quickshell.shellDir` (renamed from shellRoot, 0.2). Imports: `import qs.path.to.module`; `//@ pragma Singleton`; app-id via `//@ pragma AppId`.
+- Repo `git.outfoxxed.me/quickshell/quickshell` (GitHub mirror quickshell-mirror/quickshell); docs **quickshell.org** (versioned; v0.3.0 = 0.3.x); LGPL-3.0. Arch extra `quickshell` (0.3.2), AUR `quickshell-git`. Distro availability: Fedora Rawhide + COPR errornointernet/quickshell, Debian unstable/testing, Ubuntu PPA avengemedia/danklinux, OBS home:AvengeMedia:danklinux, Gentoo GURU, Guix, nixpkgs.
+- Run: `qs -c <name>` / `qs -p <path>`; instance ops `qs list [-a] [-j]`, `qs log [-t N] [-f]`, `qs kill -i <id>`, `qs ipc show|call|listen|prop get`; `qs --debug <port> [--waitfordebug]` for QML debugging. Hot reload on save.
+- Env (0.3): `QS_DISABLE_FILE_WATCHER`, `QS_DISABLE_CRASH_HANDLER`, `QS_CRASHREPORT_URL`, `QS_APP_ID`, `QS_DROP_EXPENSIVE_FONTS`, `QS_ICON_THEME`, `QS_NO_RELOAD_POPUP`, `DefaultEnv` pragma. Shell dir: `Quickshell.shellDir` (renamed from shellRoot, 0.2). Imports: `import qs.path.to.module`; `//@ pragma Singleton`; app-id via `//@ pragma AppId`.
+- v0.3.2 (2026-10-08): Qt 6.12 support, Hyprland new workspace address format, session-lock/PAM/notification fixes. v0.3.0 added: Polkit agent, idle inhibitors/timeouts, shortcut inhibition, FloatingWindow min/max/fullscreen + move/resize, Pipewire peak monitor, Networking, WindowManager (ext-workspace), BackgroundEffect, IPC signal listeners, version-gated pragmas.
 
 ## Core types (Quickshell module)
 Windows: `PanelWindow` (layer-shell bar) `PopupWindow` (anchored) `FloatingWindow` (managed window; dialogs, move/resize, min/max/fullscreen since 0.3) `QsWindow`.

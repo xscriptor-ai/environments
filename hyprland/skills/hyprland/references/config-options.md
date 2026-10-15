@@ -13,7 +13,7 @@ Format: `path (type, default)`. Source: wiki.hypr.land config-options (Latest gi
 `decoration.glow`: `enabled (false)` · `color` · `range (10)` · `render_power (3)`
 `decoration.motion_blur`: `enabled (false)` · `samples (7)`
 `decoration.wobble`: `enabled (false)` · `mesh (12)` · `stiffness (200)` · `damping (12)` · `mass (1)` · `intensity (0.2)`
-`decoration.blur`: `enabled (true)` · `size (8)` · `passes (1)` · `new_optimizations (true)` · `ignore_opacity (true)` · `noise (0.0117)` · `contrast (0.8916)` · `brightness (1.0)` · `vibrancy (0.1696)` · `vibrancy_darkness (0)` · `xray (false)` · `popups (false)` · `popups_ignorealpha (0.2)` · `special (false)` · `variant ("kawase")` — variants: kawase acrylic aurora drops fluid_jar frost haze heat_shimmer prism ripple water (each with own sub-options; shared `glass` group for aurora/drops/heat_shimmer/prism: refraction/roughness/size)
+`decoration.blur`: `enabled (true)` · `size (8)` · `passes (1)` · `new_optimizations (true)` · `ignore_opacity (true)` · `input_methods (false)` · `input_methods_ignorealpha (0.2)` · `noise (0.0117)` · `contrast (0.8916)` · `brightness (1.0)` · `vibrancy (0.1696)` · `vibrancy_darkness (0)` · `xray (false)` · `popups (false)` · `popups_ignorealpha (0.2)` · `special (false)` · `variant ("kawase")` — variants: kawase acrylic aurora drops fluid_jar frost haze heat_shimmer prism ripple water (each with own sub-options; shared `glass` group for aurora/drops/heat_shimmer/prism: refraction/roughness/size)
 
 ## animations
 `enabled (true)` · `workspace_wraparound (false)` — leaf tree in SKILL/agents (windows*, fade*, border, borderangle, shadowangle, glowangle, workspaces, specialWorkspace, layers*, zoomFactor, monitorAdded...)
@@ -33,7 +33,7 @@ Format: `path (type, default)`. Source: wiki.hypr.land config-options (Latest gi
 ## group
 `auto_group (true)` · `insert_after_current (true)` · `focus_removed_window (true)` · `drag_into_group (1)` · `merge_groups_on_drag (true)` · `merge_groups_on_groupbar (true)` · `merge_floated_into_tiled_on_groupbar (false)` · `group_on_movetoworkspace (false)`
 `group.col`: `border_active (0x66ffff00)` · `border_inactive (0x66777700)` · `border_locked_active (0x66ff5500)` · `border_locked_inactive (0x66775500)`
-`group.groupbar`: `enabled (true)` · `height (14)` · `gaps_in (2)` · `gaps_out (2)` · `rounding (1)` · `rounding_power` · `round_only_edges (true)` · `gradients (false)` · `gradient_rounding (2)` · `gradient_round_only_edges (true)` · `render_titles (true)` · `stacked (false)` · `scrolling (true)` · `font_family` · `font_size (8)` · `text_color (0xffffffff)` · `text_offset (0)` · `text_padding (0)` · `priority (3)` · `blur (false)` · `indicator_height (3)` · `indicator_gap (0)` · `disable_when_only (false)` (0.56) · `middle_click_close (true)` (0.56)
+`group.groupbar`: `enabled (true)` · `height (14)` · `gaps_in (2)` · `gaps_out (2)` · `rounding (1)` · `rounding_power` · `round_only_edges (true)` · `gradients (false)` · `gradient_rounding (2)` · `gradient_round_only_edges (true)` · `gradient_rounding_power (2.0)` · `render_titles (true)` · `stacked (false)` · `scrolling (true)` · `font_family` · `font_size (8)` · `font_weight_active (normal)` · `font_weight_inactive (normal)` · `text_color (0xffffffff)` · `text_offset (0)` · `text_padding (0)` · `keep_upper_gap (true)` · `priority (3)` · `blur (false)` · `indicator_height (3)` · `indicator_gap (0)` · `disable_when_only (false)` (0.56) · `middle_click_close (true)` (0.56)
 `group.groupbar.col`: `active/inactive/locked_active/locked_inactive`
 
 ## misc

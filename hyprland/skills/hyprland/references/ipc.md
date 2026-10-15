@@ -4,7 +4,7 @@
 `version` · `monitors [-j]` · `workspaces` · `activeworkspace` · `workspacerules` · `clients` · `activewindow` · `layers` · `devices` · `decorations` · `animations` · `binds` · `submap` · `cursorpos` · `instances` · `layouts` · `locked` · `splash` · `configerrors` · `rollinglog [-f]` · `getoption <dotted.path>` (e.g. `general.border_size`; legacy colon form in hyprlang era) · `getprop <window> <prop>` · `descriptions -j` (all options JSON) · `notify <icon> <ms> <color> msg` (icon -1/0..5, prefix `fontsize:N`) · `dismissnotify [n]`
 
 ## hyprctl control
-`reload` · `reload full-reset` · `dispatch '<hl.dsp.*>'` (e.g. `hyprctl dispatch 'hl.dsp.window.close()'`) · `eval '<lua>'` · `repl` (interactive Lua REPL, 0.56+) · `switchxkblayout <dev|current|all> next|prev|<id>` · `setcursor <theme> <size>` · `setprop <window> <prop> <value>` · `seterror [disable] [color] msg` · `kill` (xkill mode) · `output create|remove|add|destroy`
+`reload` · `reload full-reset` · `dispatch '<hl.dsp.*>'` (e.g. `hyprctl dispatch 'hl.dsp.window.close()'`) · `eval '<lua>'` · `repl [code]` (interactive Lua REPL, 0.56+; one-shot prints `tostring()` result) · `switchxkblayout <dev|current|all> next|prev|<id>` · `setcursor <theme> <size>` · `setprop <window> <prop> <value>` · `seterror [disable] [color] msg` · `kill` (xkill mode) · `output create|remove [backend] (name)` — backends: `wayland` (nested output), `headless` (virtual output, e.g. `hyprctl output create headless test`), `auto` (picks per session: headless from a TTY, wayland when nested)
 Flags: `-j` JSON · `-i <instance>` · `-r` · `--batch "a ; b"` (escape `;` in Lua strings)
 
 ## Sockets
