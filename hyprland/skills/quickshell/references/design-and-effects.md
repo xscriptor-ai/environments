@@ -1,6 +1,6 @@
 # Building modern interfaces — design, effects & theming (Quickshell + Hyprland)
 
-Verified **2026-10-15**. Sources: quickshell.org docs v0.3.0 + source (layer namespace, `iconPath`, `RectangularShadow`); Hyprland wiki (layer rules, blur variants); **equisdots** `shell@branch/experimental` (Theme.qml, Bar.qml, ModulePill.qml, docs/themes.md, docs/bar.md), `nyx@branch/experimental`, `palettes`/`theme-sync` (own work); **Caelestia** `shell@main` + `tokens.hpp` (GPL-3.0 — values/patterns used as design reference only, no code copied). Base typeface: **Hack Nerd Font**.
+Verified **2026-10-15**. Sources: quickshell.org docs v0.3.0 + source (layer namespace, `iconPath`, `RectangularShadow`); Hyprland wiki (layer rules, blur variants); **equisdots** `shell@branch/experimental` (Theme.qml, Bar.qml, ModulePill.qml, docs/themes.md, docs/bar.md), `nyx@branch/experimental`, `palettes`/`theme-sync` (own work); **Caelestia** `shell@main` + `tokens.hpp` (GPL-3.0 — values/patterns used as design reference only, no code copied). Base typeface: **Hack Nerd Font**. Structure tokens (Material-You shape/spacing/elevation/state/motion, see §1b): **equisdots** `shell/docs/design-language.md`.
 
 Hard requirements for every design produced with this pack:
 1. **Modern & dense — no dead space.** Layouts fill their region purposefully; leftover space is distributed, never left as holes.
@@ -80,6 +80,36 @@ Item {
 ```
 
 Rules of thumb: one accent + one accent2, 3 surface tiers (`surface0/1/2`), overlays only for text hierarchy, radii from `borderRadius` (+ clamped formula), spacing from the 4/8/12/16 scale. Consistency reads as "designed" more than any single effect.
+
+## 1b. Material-You structure tokens (shape / spacing / elevation / state / motion)
+
+Added **2026-10-15** (equisdots `shell@branch/experimental`; full spec in `docs/design-language.md`). Colour and type are unchanged (synced base16 palette + Hack Nerd Font) — these tokens add the **structure** so every panel, popup, tab and widget shares ONE dimension system. It is a separate layer **on top of** §1: the palette stays the source of colour; `surfaceContainer*`/`outline*` are derived from it.
+
+Scales are live from `settings.json → appearance.{shapeScale,densityScale,motionScale}` (default `1`), editable from **Settings → Theme → Appearance** (three steppers, 0.60–1.60). `Theme` watches `settings.json`, so changing a scale re-applies everywhere immediately (verified: a widget's corner radius changes without a shell reload).
+
+| Group | Tokens | Values (× scale) |
+|---|---|---|
+| Shape (corner radius) | `radiusXs/Sm/Md/Lg/Xl/Full` | 4 / 8 / 12 / 16 / 28 / pill |
+| Spacing (4dp grid) | `gap2xs/Xs/Sm/Md/Lg/Xl` | 2 / 4 / 8 / 12 / 16 / 24 |
+| Elevation (tonal surfaces) | `surfaceContainerLowest/Low/surfaceContainer/High/Highest` | `base` mixed toward `text` by 0 / .04 / .07 / .11 / .15 (alpha-aware → glass still shows through) |
+| Outlines | `outline`, `outlineVariant` | `text` mixed onto `base` by .32 / .16 |
+| State layers | `stateHover` .08, `statePress` .12, `stateLayer(c, amt)` | hover/press overlays (not colour swaps) |
+| Motion | `durShort / durMedium / durLong` | 150 / 250 / 400 ms × motionScale |
+
+Derivation helper: `Theme.tone(amount)` mixes `base` → `text` while keeping `base`'s alpha (so glass mode survives).
+
+Application rules (what a "designed" page looks like — the pattern the equisdots settings/editor use):
+
+- **Page**: inset `gapLg` on all sides; sections spaced `gapXl`; rows `gapMd`.
+- **Card/section** = `surfaceContainerLow` fill + 1 px `outlineVariant` + `radiusLg`, **sized to content** — never force equal heights with `Layout.fillHeight` (that leaves voids).
+- **Row** = label (`text`, s12) + hint (`subtext0`, s11) on the left, control on the right, `Layout.minimumHeight` ≈ 44; hover = `stateLayer(accent, stateHover)`. This is the unit both the settings tabs and the bar `Zones` page are built from.
+- **Concentric corners**: an inner surface's radius ≤ outer radius − inset (so nested borders stay parallel).
+- **No magic numbers** for radius/spacing/motion; **no element out of flow** — and never set `displayMarginBeginning/End` on a non-interactive list, it draws delegates over neighbouring cards (a real overlap bug fixed this way).
+- **No overlap / a space for each thing** remains the hard requirement (§ intro + §5).
+
+Shared surface primitive: **`core/GlassCard.qml`** (theme-free — colours passed in via `Theme.glassFill`/`hairline` or the surface tokens). It lives in `core/` because Quickshell's component loader does **not** resolve an implicit sibling-directory import; faces reach it through their existing `import "../../../core"`. New widget faces (`date`, `system`, `calendar`, `battery`, `countdown`) and the existing clock/music/image/visualizer faces all use it.
+
+Migration reality (2026-10-15): the token layer is applied across the editor primitives + pages, the bar popups, the standalone panels, the desktop-widget faces, and the General/Keyboard/Monitors/Startup settings tabs (redesigned to the page-header + section + row scaffold above). The bar (`ModulePill`) keeps its own `bar.pillRadius()`/`bar.s()` scale — map it to the tokens only if the bar engine is touched. Palette sync (`theme-sync`) and Hack Nerd Font are untouched by design.
 
 ## 2. Theme contract for your own generator binary (no matugen)
 

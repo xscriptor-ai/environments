@@ -1,6 +1,6 @@
 ---
 name: quickshell
-description: Deep Quickshell v0.3.x reference for building QML/Wayland shells (bars, panels, popups, OSDs, docks, lockscreens, notification centers, trays). Covers install/dirs/CLI, QML language, full module catalog, modern UI design (tokens, glass, motion, layout hygiene, Hack Nerd Font), qmlls/QML debugging, performance and Hyprland integration. Use when writing, reviewing or debugging Quickshell configs, or when a shell misbehaves at runtime.
+description: Deep Quickshell v0.3.x reference for building QML/Wayland shells (bars, panels, popups, OSDs, docks, lockscreens, notification centers, trays). Covers install/dirs/CLI, QML language, full module catalog, modern UI design (tokens, Material-You structure tokens, glass, motion, layout hygiene, Hack Nerd Font), qmlls/QML debugging, performance and Hyprland integration. Use when writing, reviewing or debugging Quickshell configs, or when a shell misbehaves at runtime.
 ---
 
 # Quickshell (October 2026)
