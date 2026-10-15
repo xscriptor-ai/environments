@@ -66,5 +66,6 @@ hyprctl option paths used colons (`general:border_size`); touchpad options were 
 - `references/config-options.md` — condensed current option catalog with defaults.
 - `references/ipc.md` — hyprctl commands, IPC sockets, socket2 event catalog.
 - `references/rules-animations.md` — rules catalogs and animation tree details.
+- `references/scripts-and-tooling.md` — router for Bash/Python glue: language decision table, cross-language escaping cookbook, compositor-citizenship checklist (dedicated skills: `hyprland-bash`, `hyprland-python`).
 
-Sibling skills: `hyprland-lua` (full Lua 5.5 + hl API + custom layouts), `quickshell` (shells), `hyprland-live-debug` (live debugging), `arch-wsl-headless` (WSL/headless testing), `hyprland-tools` (ecosystem daemons), `hyprland-qml` (shell landscape).
+Sibling skills: `hyprland-lua` (full Lua 5.5 + hl API + custom layouts), `hyprland-bash` (the .sh scripts), `hyprland-python` (.py tooling), `quickshell` (shells), `hyprland-live-debug` (live debugging), `arch-wsl-headless` (WSL/headless testing), `hyprland-tools` (ecosystem daemons), `hyprland-qml` (shell landscape).

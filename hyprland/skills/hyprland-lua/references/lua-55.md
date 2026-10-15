@@ -40,6 +40,7 @@ local obj = setmetatable({}, { __index = function(_, k) return "default:" .. k e
 - Numeric for with step: `for i = 0.5, 2.5, 0.5 do end`.
 - Integer/float distinction: `1` vs `1.0`; `math.type(x)` tells them apart. Config values accept both where a float is expected.
 - `os.execute` technically works but blocks the compositor event loop — never do it inside binds/timers; use `hl.exec_cmd`.
+- Filesystem reads work in the config context (`io.open`): the equisdots config reads `settings.json` and palette JSONs from Lua (brace-matching helpers in `colors.lua`, full decoder in `lib/json.lua`). Bash/Python glue conventions: skills `hyprland-bash` and `hyprland-python`.
 
 ## Scope of the embedded environment
 
