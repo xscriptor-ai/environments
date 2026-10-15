@@ -31,4 +31,4 @@
 - In-tree (standalone repo removed). `hyprpm update/add <repo>/enable/disable/remove/list/reload`. sudo for sensitive ops. Nix integration since 0.54. ABI locked to `hyprctl version`. Official plugins: hyprwm/hyprland-plugins (rolling).
 
 ## Version pinning advice
-Always record versions used in any guide: hyprlock 0.9.x, hypridle 0.1.x, hyprpaper 0.8.x, portal 1.4.x, Quickshell 0.3.x, Wayle 0.7.x. Config syntax drift between minors is real (hypridle commands; hyprlock labels).
+Always record versions used in any guide: hyprlock 0.9.x, hypridle 0.1.x, hyprpaper 0.8.x, hyprsunset 0.4.x, portal 1.4.x, Quickshell 0.3.x, Wayle 0.7.x, aquamarine 0.15.x, hyprutils 0.14.x. Config syntax drift between minors is real (hypridle commands; hyprlock labels; systemd target handling since 0.55-era — the session target is now integrated automatically, remove old manual `systemctl` lines and use `systemctl --user revert hyprland-session.target` to clean leftovers).

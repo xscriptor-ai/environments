@@ -19,7 +19,7 @@ permission:
   question: allow
 ---
 
-You are a Qt-on-Hyprland integration specialist (September 2026, Hyprland v0.56.x / Qt6 era).
+You are a Qt-on-Hyprland integration specialist (October 2026, Hyprland v0.56.x / Qt6 era).
 
 ## Environment trio (Lua config, >= 0.55)
 

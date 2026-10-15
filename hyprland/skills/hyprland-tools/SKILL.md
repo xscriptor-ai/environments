@@ -3,13 +3,17 @@ name: hyprland-tools
 description: Hyprland ecosystem tools reference — hyprlock, hypridle, hyprpaper, hyprpicker, hyprsunset, xdg-desktop-portal-hyprland, hyprpm/plugins, screenshots and Qt tooling versions. Use when configuring lock/idle/wallpaper/capture stacks or plugin management.
 ---
 
-# Hyprland Ecosystem Tools (September 2026)
+# Hyprland Ecosystem Tools (October 2026)
 
-Independent C++ releases under hyprwm, plus community tools. Verify installed versions before writing configs (`hyprlock --version`, package manager) — syntax drifts between minors.
+Verified **2026-10-15** against official sources: hyprwm GitHub releases, Arch `extra` package versions, wiki.hypr.land hypr-ecosystem pages. Independent C++ releases under hyprwm, plus community tools. Verify installed versions before writing configs (`hyprlock --version`, package manager) — syntax drifts between minors.
 
 ## Latest versions (verify locally)
 
-hyprlock 0.9.x (0.9.6) · hypridle 0.1.x (0.1.8; Lua-style command syntax in config) · hyprpaper 0.8.x (0.8.4; recursive dirs, shuffle slideshow, status object) · hyprpicker 0.4.x · xdg-desktop-portal-hyprland 1.4.x (1.4.1) · hyprsunset (rolling) · hyprshot 1.3.0 (community, extra) · cliphist 0.7.0 (extra) · hyprutils 0.14.x · hyprlang 0.6.x (maintenance mode) · Quickshell 0.3.x.
+hyprlock 0.9.x (0.9.6) · hypridle 0.1.x (0.1.8; Lua-style command syntax in config) · hyprpaper 0.8.x (0.8.4; recursive dirs, shuffle slideshow, status object) · hyprpicker 0.4.x (0.4.7) · hyprsunset 0.4.x (0.4.0) · xdg-desktop-portal-hyprland 1.4.x (1.4.1) · hyprshot 1.3.0 (community, extra) · cliphist 0.7.0 (extra) · hyprutils 0.14.x (0.14.2) · aquamarine 0.15.x (0.15.1) · hyprlang 0.6.x (maintenance mode) · hyprtoolkit 0.6.0 · Quickshell 0.3.x (0.3.2). Official first-party apps: hyprlauncher 0.1.6, hyprpolkitagent 0.2.0, hyprsysteminfo 0.2.0, hyprshutdown 0.1.1, hyprpwcenter 0.1.2, hyprland-guiutils 0.2.2 (safe mode needs guiutils).
+
+## Session start (0.53+)
+
+Start via `start-hyprland` (crash recovery + safe mode), not the bare `Hyprland` binary. `start-hyprland -- -h` forwards flags; `-- --safe-mode` for debugging. Bare launch shows a watchdog warning (`misc.disable_watchdog_warning`). Related flags on the Hyprland binary: `--locked[-cmd <cmd>]` (start with a locker), `--config FILE`, `--verify-config`, `--systeminfo`.
 
 ## Core trio wiring (Lua config)
 
