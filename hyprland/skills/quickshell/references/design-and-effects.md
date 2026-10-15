@@ -236,4 +236,4 @@ Generator requirements (so the shell never breaks): write **atomically** (tmp + 
 7. GPU floor: shell usable on llvmpipe; blur/effects degrade gracefully; no per-frame `hyprctl`.
 8. Licensing: ideas/values from Caelestia (GPL-3.0) are fine; its code is not, unless the target project is GPL-compatible. equisdots/nyx are own-work (nyx MIT).
 
-Cross-refs: layer rules + blur variants → skill `hyprland` (`references/rules-animations.md`); lock/idle/wallpaper daemons → skill `hyprland-tools`; headless visual checks → skill `arch-wsl-headless`; glass optics theory (web-oriented) → skill `xglassmorphism`.
+Cross-refs: layer rules + blur variants → skill `hyprland` (`references/rules-animations.md`); **Bash glue (daemons, watchers, debounce)** → skill `hyprland-bash`; **Python tooling (generators, theme-sync)** → skill `hyprland-python`; lock/idle/wallpaper daemons → skill `hyprland-tools`; headless visual checks → skill `arch-wsl-headless`; glass optics theory (web-oriented) → skill `xglassmorphism`.

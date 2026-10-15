@@ -5,9 +5,11 @@ Agents, skills, commands and documentation for OpenCode covering the CURRENT sta
 ## Contents
 
 - `agents/` — 13 specialized subagents (opencode frontmatter, allow permissions).
-- `skills/` — 7 deep-reference skills with `references/`:
-  - `hyprland` — the core reference (Lua era + legacy hyprlang, options, IPC, rules).
+- `skills/` — 9 deep-reference skills with `references/`:
+  - `hyprland` — the core reference (Lua era + legacy hyprlang, options, IPC, rules, scripts/tooling router).
   - `hyprland-lua` — complete Lua 5.5 + `hl.*` API, binds/flags/dispatchers, events, timers, custom layouts, stubs/LSP, debugging.
+  - `hyprland-bash` — the stack's `.sh` conventions: anatomy/strict mode, caching env, hyprctl automation, socket2 daemons, watchers, Quickshell IPC, systemd units, rofi menus.
+  - `hyprland-python` — `.py` tooling: theme-sync targets, palette generators, hyprctl/socket automation, atomic file contracts, CLI design, packaging, pytest.
   - `quickshell` — deep Quickshell v0.3.x: CLI, QML language, module catalog, debugging, patterns, and the design system (tokens, palette-generator contract, dimensions/transitions tokens, layout hygiene).
   - `hyprland-qml` — shell landscape cross-reference (Quickshell/Wayle/AGS/Waybar).
   - `hyprland-tools` — hyprlock/hypridle/hyprpaper/hyprsunset/portal/hyprpm versions.

@@ -1,6 +1,6 @@
 # Quickshell patterns that work (v0.3.x)
 
-Battle-tested shapes for shells on Hyprland. Keep shared state OUTSIDE per-screen windows (a root `Scope`), and split files by widget (`Bar.qml`, `Clock.qml`, `Workspaces.qml`, ...).
+Battle-tested shapes for shells on Hyprland. Keep shared state OUTSIDE per-screen windows (a root `Scope`), and split files by widget (`Bar.qml`, `Clock.qml`, `Workspaces.qml`, ...). Long-running Bash glue (socket2 daemons, watchers, `pactl subscribe` listeners) follows the conventions in skill `hyprland-bash`.
 
 ## Bar + popup (+ outside-click dismissal)
 
