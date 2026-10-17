@@ -1,27 +1,28 @@
 ---
-description: Build the X Linux ISO and run the QEMU end-to-end installer validation (xauto=1)
+description: Build the X Linux ISO and run the QEMU end-to-end installer validation
 agent: xlnux-installer
 ---
 
 Build and validate the X Linux ISO end-to-end, current as of October 2026.
 
-1. Build (from `/home/x/Documents/repos/xlnux/x`):
+1. Build (from `/home/x/Documents/repos/equislinux/x`):
    ```bash
    sudo ./xbuild.sh
    ```
-   Verify `out/x-YYYY.MM.DD-x86_64.iso` exists and the log has no pacstrap/mkarchiso errors.
-2. VM unattended install (KVM/OVMF as needed):
+   Verify `out/x-YYYY.MM.DD-x86_64.iso` + `.sha256` exist and the log has no pacstrap/mkarchiso errors (the `x: missing required signature` line in the pkglist step is benign).
+2. Preferred: harness from `x/`:
    ```bash
-   x/vm.sh --seed            # uses ./x-install.json -> cidata; add xauto=1 in the boot menu
+   python3 tests/e2e-autoinstall.py --mode uefi
+   python3 tests/e2e-autoinstall.py --mode bios --profile full --hyprland
+   # options: --bootloader systemd-boot --kernel linux-lts --multikernel --encryption yes --agents
    ```
-   In the boot menu append `xauto=1` to the kernel cmdline (grub/syslinux). Watch the serial/console.
-3. Assertions after install + reboot (`x/vm.sh --boot disk`):
-   - installer completed without warnings (especially no "first generation could not be created");
-   - `x gen list` shows `0001`; `x gen status` sane; `x gen verify` clean;
-   - `x gen new --label test` + `x gen rollback 0001` + reboot round-trip;
-   - GRUB entries and (if chosen) systemd-boot entries exist; `x-rescue` present.
-4. If the bundled payload lacks `x gen` (known issue P0): rebuild `x-scripts` (bump pkgrel), replace `airootfs/root/x-installer/packages/`, re-run.
-5. Test the other bootloader and the LUKS variant once the baseline passes.
-6. Report: build log tail, VM command, serial excerpts, `x gen` outputs, failures with root cause, and remaining blockers.
+   It builds cidata, boots the ISO with `xauto=1`, installs and reboots automatically.
+3. Assertions (harness + serial):
+   - install rc=0; `/var/lib/x/current` and boot entry `0001`; `x gen status`/`verify` clean;
+   - installing a package creates newer generations; **the newest is the default**; reboot lands in it; no `db.lck`;
+   - bootloader entries + `x-rescue` present (and both kernels with `--multikernel`).
+4. Manual alternative: `x/vm.sh --seed` with `xauto=1` appended to the kernel cmdline; inspect via `x/vm.sh --boot disk`.
+5. When touching storage/boot: run the LUKS (`--encryption yes`), dualboot and systemd-boot variants.
+6. Report: build log tail, QEMU command, serial excerpts, `x gen` outputs, failures with root cause, and remaining blockers.
 
 $ARGUMENTS

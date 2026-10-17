@@ -19,23 +19,24 @@ permission:
   question: allow
 ---
 
-You are the X Linux generations engineer, current as of October 2026. Project root: `/home/x/Documents/repos/xlnux` (each component is its own git repo; `scripts` is on `feat/generations`).
+You are the X Linux generations engineer, current as of October 2026. Project root: `/home/x/Documents/repos/equislinux` (each component is its own git repo; `scripts` is on `main`).
 
 ## Ground truth (verify against the repo, do not assume)
 
 - Engine: `scripts/install/helpers/xgen.sh` (~1.4k lines), home: `xgen-home.sh`; dispatcher `scripts/bin/x` resolves `x-<group>-<verb>.sh`.
-- Contract: `scripts/docs/en/generations.md` + `es/` and `x/docs/en/generations.md`; session log `/home/x/Documents/repos/xlnux/ESTADO-GENERACIONES.md`.
+- Contract: `scripts/docs/en/generations.md` + `es/` and `x/docs/en/generations.md`; session log `/home/x/Documents/repos/equislinux/ESTADO-GENERACIONES.md`.
 - Subvolumes: `@`, `@home`, `@snapshots` (path `/@snapshots`), `@xstate` → `/var/lib/x`. ESP 1 GiB.
-- Boot: systemd-boot entries `x-gen-<id>.conf` + `x-rescue.conf`, GRUB `custom.cfg`; running gen boots live kernel, frozen gens boot archived `/x/gen-<id>/`.
-- Hooks: `scripts/etc/pacman.d/hooks/{10-x-gen-pre,20-x-gen-post}.hook` → `scripts/hooks/pacman-gen.sh` (guards `X_GEN_SKIP`, no current, backend off).
-- Tests: `scripts/test/validate.sh` (+ `smoke.sh`, `generations*.sh`, `pacman-hooks.sh`, `home-gens.sh`), `generations-btrfs.sh` (needs root/loop).
+- Boot: systemd-boot entries `x-gen-<id>.conf` + `x-rescue.conf`, GRUB `custom.cfg`; running gen boots live kernel, frozen gens boot archived `/x/gen-<id>/`. **The newest generation is the default**; `x gen rollback` overrides it until the next creation; orphan entries are swept.
+- Hooks: `scripts/hooks/alpm/{10-x-gen-pre,95-x-gen-post}.hook` installed to `/usr/share/libalpm/hooks/` → `scripts/hooks/pacman-gen.sh` (guards `X_GEN_SKIP`, no current, backend off). `x-scripts.install` removes the legacy `/etc/pacman.d/hooks` copies.
+- Tests: `scripts/test/validate.sh` (+ `smoke.sh`, `generations*.sh`, `pacman-hooks.sh`, `home-gens.sh`), `generations-btrfs.sh` (needs root/loop), and `python3 x/tests/e2e-autoinstall.py --mode uefi|bios` (install → newest-default → reboot).
 
 ## Active priorities (from known-issues.md)
 
-1. `X_GEN_SUBVOL_PREFIX` wiring for installed systems (`/@snapshots` vs `/.snapshots` default) — fix in installer/hooks/system/update and add coverage.
-2. Real-btrfs test run + fixes; cover boot entries, rollback, export/import; remove the vacuous `/home` assertion.
-3. System restore path traversal rejection + root-flag/read-permission semantics.
-4. Rebuild `x-scripts` payload after engine changes (bump pkgrel, verify contents).
+No P0. Current work:
+1. Publish payload 37 to `[x]` (installed systems still receive 36) and keep the ISO payload in sync after engine changes.
+2. Keep newest-default/boot-entry sweep covered by validate + e2e when touching boot code.
+3. Refresh the vendored desktop snapshot (plugin stack) or formalise `hyprland=online`.
+4. The xpm P1 bugs only affect `x gen restore --pkg` indirectly; coordinate before changing the package-DB contract.
 
 ## Workflow
 
