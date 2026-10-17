@@ -1,84 +1,68 @@
-# X Linux architecture (xlnux)
+# X Linux architecture (verified 2026-10-17)
 
-## Repo topology
+## Topology
 
-Each component is an independent git repo cloned side by side under `/home/x/Documents/repos/xlnux/`; the parent directory is not a repo. Cross-repo contracts are file/CLI/env based, not submodules.
+Workspace `/home/x/Documents/repos/equislinux/` (not a monorepo, not a git repo itself). Each component is its own repository on `main`:
+
+| Repo | Role |
+|---|---|
+| `x/` | archiso v91 profile, Bash `x-installer`, `xbuild.sh`, `vm.sh`, e2e harness |
+| `scripts/` | `x` CLI, generations engine, home generations, hooks, migrations, provisioning, `x-scripts` package |
+| `xpm/` | Rust package manager (native `.xp` + ALPM, SAT resolver, journal, rollback/diff) |
+| `xpkg/` | Rust builder (XBUILD/PKGBUILD, signing, lint, repo DB + `.files`, history) |
+| `x-repo/` | GitHub Pages: signed `[x]` pacman repo, native `.xp` endpoint, portal, packaging |
+| `wsl/`, `wsl-scripts/` | WSL rootfs builder/importer and two-stage in-distro provisioning |
+| `web/`, `wiki/` | Public portal and aggregated bilingual documentation |
 
 ## ISO profile (`x/`)
 
-`profiledef.sh` (verified 2026-10-01):
+- archiso **v91**; `profiledef.sh`: `iso_name=x`, label `X`, publisher `X Linux`; bootmodes `bios.syslinux` + `uefi.grub` (mutually exclusive with systemd-boot for UEFI in v91). The orphaned `efiboot/` tree was removed.
+- Live rootfs: full Arch base plus rescue/tooling (btrfs-progs, zstd, NetworkManager, openssh, grub/syslinux, firmware, editors, etc.). `airootfs` overrides for branding, MOTD, sysctl, locale, sshd (root only in the live session).
+- Keyring: no `customize_airootfs.sh` (retired in session 23). `pacman-init.service` + `x-keyring.service` populate the keyring; enablement symlinks are committed.
+- Networking: **only NetworkManager** in the live session (no networkd/iwd overlap). `choose-mirror` + reflector run before install.
+- Users: root autologin on `tty1`; `x-autoinstall` consumes the JSON config from the cidata/seed and powers off on completion. Installed systems get the user configured in JSON.
+- Journald volatile in live; persistent on target.
 
-```sh
-iso_name="x"; iso_label="x_$(date ... +%Y%m)"; iso_version="$(date ... +%Y.%m.%d)"
-iso_publisher="Xscriptor <https://xscriptor.io/x>"
-install_dir="arch"
-buildmodes=('iso')
-bootmodes=('bios.syslinux' 'uefi.grub')
-airootfs_image_type="squashfs"
-airootfs_image_tool_options=('-comp' 'xz' '-Xbcj' 'x86' '-b' '1M' '-Xdict-size' '1M')
-bootstrap_tarball_compression=('zstd' '-c' '-T0' '--auto-threads=logical' '--long' '-19')
-```
+## Installer (`/root/x-installer`)
 
-- 141 packages: full rescue/live toolkit (clonezilla, gpart, testdisk, fsarchiver, nmap, tcpdump, lvm/mdadm/cryptsetup, tpm2, openconnect/openvpn, firefox, NetworkManager, x-release, x-dev) + `gum` for the installer UI.
-- `pacman.conf`: `[x]` repo first (`Server = https://xlnux.github.io/x-repo/repo/x86_64`, `SigLevel = Optional TrustAll`) + core/extra; same file in `airootfs/etc/pacman.conf`.
-- Live identity: autologin root on tty1, `x-autoinstall.service`, pacman-init, choose-mirror, reflector (conditioned on `!mirror`), systemd-networkd + iwd + NetworkManager enabled, sshd with root/password auth (ISO only), volatile journald, no suspend.
-- `customize_airootfs.sh` initializes keyring and enables `x-autoinstall.service`/NetworkManager.
-- `.zlogin` launches `xinstall` on tty1 when no `script=`/`xauto=1`; `/usr/local/bin/xinstall` wraps the installer.
-- Build: `sudo ./xbuild.sh` (unmounts work, wipes out/, `mkarchiso -C pacman.conf -v -w ./work -o ./out .`, logs to `build-<ts>.log`); minimal variant `x.sh`.
-- VM: `x/vm.sh` (QEMU; `--boot iso|disk`, `--uefi`, `--seed` cidata with `x-install.json`, `xauto=1` in the kernel cmdline triggers unattended install via `autoinstall.sh`; default disk `~/x-vm.qcow2`, 32G, 6G RAM, KVM auto).
+- Entry points: `install.sh` (non-interactive), `configurator.sh` (TUI), `helpers/`; shared JSON schema.
+- Config keys (documented subset): `disk`, `mode` (`wipe`/`dualboot`), `hostname`, `username`, `password`, `language`, `locale`, `keyboard`, `timezone`, `profile`, `bootloader`, `kernel`, `kernel_params`, `encryption`, `luks_password`, `agents`, `hyprland` (`no`/`yes`/`online`), `hyprland_ref`.
+- Partitioning: GPT, 1 GiB FAT32 ESP, optional LUKS2 root, btrfs with subvolumes `@`, `@home`, `@snapshots`, `@xstate`; mounting and fstab generation.
+- Payload: offline `x-scripts` package embedded in the ISO (`0.1.0-37` as of 2026-10-17) installed with `pacstrap`; online mode uses the mirrors. The payload includes the generations engine, hooks, tools, themes and provisioning.
+- First generation: `x-scripts` post-install creates generation `0001` with `X_GEN_SUBVOL_PREFIX=/@snapshots` (explicit in `install.sh`; the engine also auto-detects it).
+- Desktop: `hyprland=yes` deploys the vendored equisdots snapshot (pinned 2026-10-04); `hyprland=online` clones `equisdots` `main` plus app configs and runs theme sync, with automatic fallback to the snapshot if the clone fails. `hyprland_ref` pins a ref for `online`.
+- Bootloader: GRUB (BIOS+UEFI) or systemd-boot (UEFI only); per-generation entries, `x-rescue`, newest generation as default. Initramfs regenerated per kernel.
+- Target identity: `/etc/os-release` (`ID=x`, `ID_LIKE=arch`) from the `x-release` package; `/etc/motd` empty on installed systems.
 
-## Installer (`x/airootfs/root/x-installer/`)
+## Package repo (`x-repo`)
 
-Bash (`set -euo pipefail`) + gum, no Calamares:
+- `[x]` pacman repo on GitHub Pages: `https://equislinux.github.io/x-repo/repo/x86_64`, **signed**, `SigLevel = Required`; keyring embedded in live and target. Built with `build-packages.sh` (makepkg + `repo-add`), SHA256SUMS published.
+- Native `.xp` endpoint: `https://equislinux.github.io/x-repo/x/x86_64` built/signed by `scripts/build-xp.sh` (wraps xpkg), consumed end-to-end by xpm.
+- `x-release`, `x-scripts` and the rest of the distro packages live in `x-repo/packages/`; version drift reconciled (x-scripts 0.1.0-37, x-release 1.0-8).
+- Portal: Next.js static export on Pages.
 
-| File | Role |
-|---|---|
-| `installer.sh` | entry; honors `X_SKIP_INSTALLER=1`, `X_DRY=1` |
-| `configurator.sh` | interactive collection → JSON (mode 600) |
-| `install.sh` | partition/format/pacstrap/provision/bootloader/first generation |
-| `autoinstall.sh` | unattended via `x-autoinstall.service` (requires `xauto=1` + `cidata` label + `x-install.json`) |
-| `ui.sh` | gum/plain prompts |
-| `packages.x86_64` | full-profile manifest (same as profile list) |
-| `packages/x-scripts-*.pkg.tar.zst` | offline provisioning payload |
-
-JSON keys: `disk, hostname, username, password, language, locale, keyboard, timezone, profile(full|core), bootloader(grub|systemd-boot), encryption(no|yes), luks_password, hyprland(no|yes)`. Mandatory: `disk`, `hostname`, `username`.
-
-Partitioning (`sgdisk --zap-all`):
-- GRUB: p1 1M BIOS boot, p2 1G EFI, p3 rest.
-- systemd-boot: p1 1G EFI, p2 rest.
-- LUKS2 optional (`cryptsetup luksFormat --type luks2`, mapper `xroot`).
-- btrfs subvols `@ @home @snapshots @xstate`, `/tmp` tmpfs, ESP at `/boot`.
-- `pacstrap -K` online (official + `[x]`), then install offline `x-scripts-*.pkg.tar.zst`.
-- Provisioning: `X_HW_AUTO=0 X_GEN_SKIP=1 x setup` (root) + `x setup --user` (user); optional Hyprland via `tools/hyprland-install.sh`.
-- Branding: `x-release-apply` before bootloader.
-- First generation: `X_GEN_CMDLINE="$CMDROOT" X_GEN_LIVE_SUBVOL=/@ x gen new --reason install --label first` (guarded by `test -x /usr/bin/x`; **current payload lacks `x gen`**, so it warns).
-
-## x-scripts payload (`scripts/`)
-
-- `bin/x` dispatcher: `x-<group>-<verb>.sh` resolution, `# x:summary/aliases/root` metadata, exec bash.
-- `install/` phase scripts (`system.sh`, `config.sh`, `hardware.sh`, `login.sh`, `user.sh`, `user-seed.sh`); `install/helpers/{common,sync,xgen,xgen-home}.sh`.
-- `etc/` overlay installs pacman hooks; `hooks/pacman-gen.sh` wrapper; `migrations/` (empty mechanism); `themes/x-dark`; `tools/` (node, hyprland); `config/` dotfiles seed; `skel/.bashrc`.
-- Package: `scripts/packaging/PKGBUILD` → `x-scripts 0.1.0-13` (depends `bash` only — audit list includes adding `btrfs-progs`/`zstd`/`util-linux` relations and a LICENSE).
-- Vendor pinning: `packaging/vendor-config.lock` pins 10 upstream repos to exact commits merged into the package.
-
-## `[x]` repo and artifacts (`x-repo/`)
-
-- `build-packages.sh`: `makepkg` for `x-release` (1.0-8) and `x-dev` (1.0-2), imports `x-scripts` artifact, `repo-add -R x.db.tar.gz *.pkg.tar.zst`, symlinks `x.db`/`x.files`, `sha256sum * > SHA256SUMS`; commit + push; Pages workflow (manual) deploys the Next.js portal.
-- `packages/x-release`: os-release (`NAME="X"`, `ID=x`, `ID_LIKE=arch`, `LOGO=x`), grub defaults, logos, wallpapers, `x-release-apply`, pacman hooks `99-x-os-release`, `99-x-grub`.
-- Native `.xp` endpoint `public/x/x86_64/` is **disabled/frozen** (build-x-native workflow disabled; `build_xbuild` commented). Version drift exists between PKGBUILD/XBUILD/published artifacts.
-
-## Build/validation commands (canonical)
+## Build and validation
 
 ```bash
-# Repo-local validation (no root)
-bash scripts/test/validate.sh              # smoke + generations + boot + hooks + home-gens + cargo tests
-# Real btrfs (root, loop device)
+# ISO
+cd x && sudo ./xbuild.sh                 # out/x-YYYY.MM.DD-x86_64.iso + .sha256
+
+# Static + rootless suite
+bash scripts/test/validate.sh            # 362 checks
+
+# Real btrfs (loop device)
 sudo bash scripts/test/generations-btrfs.sh
-# ISO build + VM e2e (blocking validation, not yet green)
-sudo x/xbuild.sh
-x/vm.sh --seed                             # add xauto=1 at the boot menu
+
+# Installer E2E (QEMU/OVMF or SeaBIOS)
+python3 x/tests/e2e-autoinstall.py --mode uefi
+python3 x/tests/e2e-autoinstall.py --mode bios --profile full --hyprland yes
 ```
+
+The e2e harness asserts: install rc=0, `/var/lib/x/current` + boot entry `0001`, `x gen verify`, package install creates a newer generation, **the newest generation becomes the boot default**, and a reboot lands in it. It also checks the absence of `db.lck` and collects serial evidence.
+
+Publication: `x-repo/scripts/publish-iso.sh --verify` signs, uploads to SourceForge, removes the previous ISO, updates `web/data/releases.json`, waits for the stable URL and verifies the hash. `wsl/publish-sf.sh` mirrors the WSL rootfs.
 
 ## Related generic knowledge
 
-Mapping to the rest of this pack: profile/ISO → `archiso` skill; packaging → `arch-packaging`; boot entries/UKI/SB → `distro-boot`; installer patterns (Calamares/archinstall as alternatives) → `distro-installers`; CI/QEMU/release → `distro-release`. X deliberately differs: Bash installer instead of Calamares, custom generations instead of snapper/limine, own repo instead of chaotic-aur.
+- `archiso`, `arch-packaging`, `distro-boot`, `distro-installers`, `distro-release` skills for Arch/archiso specifics.
+- `xlnux/references/generations.md` for the generations contract; `known-issues.md` for the current backlog.

@@ -17,16 +17,16 @@ All the knowledge is verified against primary sources on **2026-10-01** (archiso
 - `commands/` — 6 commands: `/archiso-new`, `/archiso-build`, `/archiso-test`, `/archiso-diag`, `/xlnux-validate`, `/xlnux-vm`.
 - `docs/` — state of the ecosystem 2026, distro blueprint from zero to release, source map, and the X Linux project map with gap analysis.
 
-## X Linux layer (xlnux)
+## X Linux layer
 
-This pack is meant to work on **X Linux** (`/home/x/Documents/repos/xlnux`), the Arch-based distro of this workspace (`x/` profile + Bash installer, btrfs generations in `scripts/`, `xpm`/`xpkg`, WSL, `x-repo`). The specific layer lives in:
+This pack is meant to work on **X Linux** (`/home/x/Documents/repos/equislinux`), the Arch-based distro of this workspace (`x/` profile + Bash installer, btrfs generations in `scripts/`, `xpm`/`xpkg`, WSL, `x-repo`). The specific layer lives in:
 
 - skill `xlnux` — real architecture, generations contract, Rust toolchain, WSL and a prioritized `known-issues.md` (P0–P2).
 - `xlnux-*` agents — generations, installer/VM, packaging and WSL.
 - `/xlnux-validate` and `/xlnux-vm` commands — validation gates (rootless suite, real btrfs, QEMU e2e).
 - `docs/xlnux-map.md` — component→coverage map and open gaps.
 
-Current X blockers (2026-10-01): installer VM e2e validation, `X_GEN_SUBVOL_PREFIX` on installed systems, outdated `x-scripts` payload (no `x gen`), and the root btrfs test. Details and plan in `skills/xlnux/references/known-issues.md`.
+Current status (2026-10-17): no P0 blockers. ISO 10.17 (payload 37) built and e2e-validated on UEFI+BIOS, including the newest-generation default and reboot; `[x]` is signed and `Required`; the native `.xp` endpoint is live and consumed by xpm. Open: two xpm P1 bugs, publishing payload 37 / ISO 10.17, refreshing the vendored desktop snapshot for the plugin stack, and owner crypto housekeeping. Details in `skills/xlnux/references/known-issues.md`.
 
 ## Install
 
