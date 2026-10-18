@@ -1,0 +1,61 @@
+{
+  "name": "Tailwind Fuchsia",
+  "slug": "tailwind-fuchsia",
+  "source": "https://github.com/tailwindlabs/tailwindcss",
+  "license": "MIT",
+  "dark": false,
+  "note": "11-step UI scale (v3 palette)",
+  "colors": [
+    {
+      "name": "50",
+      "hex": "#fdf4ff"
+    },
+    {
+      "name": "100",
+      "hex": "#fae8ff"
+    },
+    {
+      "name": "200",
+      "hex": "#f5d0fe"
+    },
+    {
+      "name": "300",
+      "hex": "#f0abfc"
+    },
+    {
+      "name": "400",
+      "hex": "#e879f9"
+    },
+    {
+      "name": "500",
+      "hex": "#d946ef"
+    },
+    {
+      "name": "600",
+      "hex": "#c026d3"
+    },
+    {
+      "name": "700",
+      "hex": "#a21caf"
+    },
+    {
+      "name": "800",
+      "hex": "#86198f"
+    },
+    {
+      "name": "900",
+      "hex": "#701a75"
+    },
+    {
+      "name": "950",
+      "hex": "#4a044e"
+    }
+  ],
+  "roles": {
+    "background": "#fdf4ff",
+    "surface": "#fae8ff",
+    "text": "#4a044e",
+    "accent": "#a21caf",
+    "accent_2": "#86198f"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "name": "Radix Gold (Dark)",
+  "slug": "radix-gold-dark",
+  "source": "https://github.com/radix-ui/colors",
+  "license": "MIT",
+  "dark": true,
+  "note": "12-step perceptual UI scale",
+  "colors": [
+    {
+      "name": "gold1",
+      "hex": "#121211"
+    },
+    {
+      "name": "gold2",
+      "hex": "#1b1a17"
+    },
+    {
+      "name": "gold3",
+      "hex": "#24231f"
+    },
+    {
+      "name": "gold4",
+      "hex": "#2d2b26"
+    },
+    {
+      "name": "gold5",
+      "hex": "#38352e"
+    },
+    {
+      "name": "gold6",
+      "hex": "#444039"
+    },
+    {
+      "name": "gold7",
+      "hex": "#544f46"
+    },
+    {
+      "name": "gold8",
+      "hex": "#696256"
+    },
+    {
+      "name": "gold9",
+      "hex": "#978365"
+    },
+    {
+      "name": "gold10",
+      "hex": "#a39073"
+    },
+    {
+      "name": "gold11",
+      "hex": "#cbb99f"
+    },
+    {
+      "name": "gold12",
+      "hex": "#e8e2d9"
+    }
+  ],
+  "roles": {
+    "background": "#121211",
+    "surface": "#1b1a17",
+    "text": "#e8e2d9",
+    "accent": "#978365",
+    "accent_2": "#a39073"
+  }
+}

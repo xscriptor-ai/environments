@@ -1,0 +1,65 @@
+{
+  "name": "Radix Slate (Light)",
+  "slug": "radix-slate-light",
+  "source": "https://github.com/radix-ui/colors",
+  "license": "MIT",
+  "dark": false,
+  "note": "12-step perceptual UI scale",
+  "colors": [
+    {
+      "name": "slate1",
+      "hex": "#fcfcfd"
+    },
+    {
+      "name": "slate2",
+      "hex": "#f9f9fb"
+    },
+    {
+      "name": "slate3",
+      "hex": "#f0f0f3"
+    },
+    {
+      "name": "slate4",
+      "hex": "#e8e8ec"
+    },
+    {
+      "name": "slate5",
+      "hex": "#e0e1e6"
+    },
+    {
+      "name": "slate6",
+      "hex": "#d9d9e0"
+    },
+    {
+      "name": "slate7",
+      "hex": "#cdced6"
+    },
+    {
+      "name": "slate8",
+      "hex": "#b9bbc6"
+    },
+    {
+      "name": "slate9",
+      "hex": "#8b8d98"
+    },
+    {
+      "name": "slate10",
+      "hex": "#80838d"
+    },
+    {
+      "name": "slate11",
+      "hex": "#60646c"
+    },
+    {
+      "name": "slate12",
+      "hex": "#1c2024"
+    }
+  ],
+  "roles": {
+    "background": "#fcfcfd",
+    "surface": "#f9f9fb",
+    "text": "#1c2024",
+    "accent": "#1c2024",
+    "accent_2": "#60646c"
+  }
+}

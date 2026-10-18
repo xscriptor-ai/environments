@@ -1,0 +1,3 @@
+Pillow>=11
+colorthief>=0.2.1
+smartcrop>=0.5

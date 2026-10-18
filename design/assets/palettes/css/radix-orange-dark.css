@@ -1,0 +1,20 @@
+/* Radix Orange (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-orange-dark"] {
+  --orange1: #17120e;
+  --orange2: #1e160f;
+  --orange3: #331e0b;
+  --orange4: #462100;
+  --orange5: #562800;
+  --orange6: #66350c;
+  --orange7: #7e451d;
+  --orange8: #a35829;
+  --orange9: #f76b15;
+  --orange10: #ff801f;
+  --orange11: #ffa057;
+  --orange12: #ffe0c2;
+  --background: #17120e;
+  --surface: #1e160f;
+  --text: #ffe0c2;
+  --accent: #462100;
+  --accent-2: #562800;
+}

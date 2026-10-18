@@ -1,0 +1,65 @@
+{
+  "name": "Radix Yellow (Light)",
+  "slug": "radix-yellow-light",
+  "source": "https://github.com/radix-ui/colors",
+  "license": "MIT",
+  "dark": false,
+  "note": "12-step perceptual UI scale",
+  "colors": [
+    {
+      "name": "yellow1",
+      "hex": "#fdfdf9"
+    },
+    {
+      "name": "yellow2",
+      "hex": "#fefce9"
+    },
+    {
+      "name": "yellow3",
+      "hex": "#fffab8"
+    },
+    {
+      "name": "yellow4",
+      "hex": "#fff394"
+    },
+    {
+      "name": "yellow5",
+      "hex": "#ffe770"
+    },
+    {
+      "name": "yellow6",
+      "hex": "#f3d768"
+    },
+    {
+      "name": "yellow7",
+      "hex": "#e4c767"
+    },
+    {
+      "name": "yellow8",
+      "hex": "#d5ae39"
+    },
+    {
+      "name": "yellow9",
+      "hex": "#ffe629"
+    },
+    {
+      "name": "yellow10",
+      "hex": "#ffdc00"
+    },
+    {
+      "name": "yellow11",
+      "hex": "#9e6c00"
+    },
+    {
+      "name": "yellow12",
+      "hex": "#473b1f"
+    }
+  ],
+  "roles": {
+    "background": "#fdfdf9",
+    "surface": "#fefce9",
+    "text": "#473b1f",
+    "accent": "#9e6c00",
+    "accent_2": "#d5ae39"
+  }
+}

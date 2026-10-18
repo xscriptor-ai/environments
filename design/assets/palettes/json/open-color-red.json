@@ -1,0 +1,57 @@
+{
+  "name": "Open Color Red",
+  "slug": "open-color-red",
+  "source": "https://github.com/yeun/open-color",
+  "license": "MIT",
+  "dark": false,
+  "note": "13 hues x 10 steps; designed for UI",
+  "colors": [
+    {
+      "name": "50",
+      "hex": "#fff5f5"
+    },
+    {
+      "name": "100",
+      "hex": "#ffe3e3"
+    },
+    {
+      "name": "200",
+      "hex": "#ffc9c9"
+    },
+    {
+      "name": "300",
+      "hex": "#ffa8a8"
+    },
+    {
+      "name": "400",
+      "hex": "#ff8787"
+    },
+    {
+      "name": "500",
+      "hex": "#ff6b6b"
+    },
+    {
+      "name": "600",
+      "hex": "#fa5252"
+    },
+    {
+      "name": "700",
+      "hex": "#f03e3e"
+    },
+    {
+      "name": "800",
+      "hex": "#e03131"
+    },
+    {
+      "name": "900",
+      "hex": "#c92a2a"
+    }
+  ],
+  "roles": {
+    "background": "#fff5f5",
+    "surface": "#ffe3e3",
+    "text": "#c92a2a",
+    "accent": "#c92a2a",
+    "accent_2": "#e03131"
+  }
+}

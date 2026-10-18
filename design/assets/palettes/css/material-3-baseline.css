@@ -1,0 +1,23 @@
+/* Material 3 Baseline — https://m3.material.io/styles/color/overview — Apache-2.0 */
+[data-palette="material-3-baseline"] {
+  --primary: #6750a4;
+  --on-primary: #ffffff;
+  --primary-container: #eaddff;
+  --on-primary-container: #21005d;
+  --secondary: #625b71;
+  --tertiary: #7d5260;
+  --error: #b3261e;
+  --background: #fffbfe;
+  --surface-variant: #e7e0ec;
+  --on-surface: #1c1b1f;
+  --on-surface-variant: #49454f;
+  --outline: #79747e;
+  --outline-variant: #cac4d0;
+  --inverse-surface: #313033;
+  --inverse-primary: #d0bcff;
+  --background: #ffffff;
+  --surface: #fffbfe;
+  --text: #21005d;
+  --accent: #b3261e;
+  --accent-2: #6750a4;
+}

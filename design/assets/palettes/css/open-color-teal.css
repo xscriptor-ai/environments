@@ -1,0 +1,18 @@
+/* Open Color Teal — https://github.com/yeun/open-color — MIT */
+[data-palette="open-color-teal"] {
+  --50: #e6fcf5;
+  --100: #c3fae8;
+  --200: #96f2d7;
+  --300: #63e6be;
+  --400: #38d9a9;
+  --500: #20c997;
+  --600: #12b886;
+  --700: #0ca678;
+  --800: #099268;
+  --900: #087f5b;
+  --background: #e6fcf5;
+  --surface: #c3fae8;
+  --text: #087f5b;
+  --accent: #099268;
+  --accent-2: #087f5b;
+}

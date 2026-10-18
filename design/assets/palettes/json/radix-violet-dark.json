@@ -1,0 +1,65 @@
+{
+  "name": "Radix Violet (Dark)",
+  "slug": "radix-violet-dark",
+  "source": "https://github.com/radix-ui/colors",
+  "license": "MIT",
+  "dark": true,
+  "note": "12-step perceptual UI scale",
+  "colors": [
+    {
+      "name": "violet1",
+      "hex": "#14121f"
+    },
+    {
+      "name": "violet2",
+      "hex": "#1b1525"
+    },
+    {
+      "name": "violet3",
+      "hex": "#291f43"
+    },
+    {
+      "name": "violet4",
+      "hex": "#33255b"
+    },
+    {
+      "name": "violet5",
+      "hex": "#3c2e69"
+    },
+    {
+      "name": "violet6",
+      "hex": "#473876"
+    },
+    {
+      "name": "violet7",
+      "hex": "#56468b"
+    },
+    {
+      "name": "violet8",
+      "hex": "#6958ad"
+    },
+    {
+      "name": "violet9",
+      "hex": "#6e56cf"
+    },
+    {
+      "name": "violet10",
+      "hex": "#7d66d9"
+    },
+    {
+      "name": "violet11",
+      "hex": "#baa7ff"
+    },
+    {
+      "name": "violet12",
+      "hex": "#e2ddfe"
+    }
+  ],
+  "roles": {
+    "background": "#14121f",
+    "surface": "#1b1525",
+    "text": "#e2ddfe",
+    "accent": "#33255b",
+    "accent_2": "#6e56cf"
+  }
+}

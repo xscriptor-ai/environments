@@ -1,0 +1,61 @@
+{
+  "name": "Tailwind Purple",
+  "slug": "tailwind-purple",
+  "source": "https://github.com/tailwindlabs/tailwindcss",
+  "license": "MIT",
+  "dark": false,
+  "note": "11-step UI scale (v3 palette)",
+  "colors": [
+    {
+      "name": "50",
+      "hex": "#faf5ff"
+    },
+    {
+      "name": "100",
+      "hex": "#f3e8ff"
+    },
+    {
+      "name": "200",
+      "hex": "#e9d5ff"
+    },
+    {
+      "name": "300",
+      "hex": "#d8b4fe"
+    },
+    {
+      "name": "400",
+      "hex": "#c084fc"
+    },
+    {
+      "name": "500",
+      "hex": "#a855f7"
+    },
+    {
+      "name": "600",
+      "hex": "#9333ea"
+    },
+    {
+      "name": "700",
+      "hex": "#7e22ce"
+    },
+    {
+      "name": "800",
+      "hex": "#6b21a8"
+    },
+    {
+      "name": "900",
+      "hex": "#581c87"
+    },
+    {
+      "name": "950",
+      "hex": "#3b0764"
+    }
+  ],
+  "roles": {
+    "background": "#faf5ff",
+    "surface": "#f3e8ff",
+    "text": "#3b0764",
+    "accent": "#7e22ce",
+    "accent_2": "#6b21a8"
+  }
+}

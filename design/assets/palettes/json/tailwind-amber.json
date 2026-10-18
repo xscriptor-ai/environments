@@ -1,0 +1,61 @@
+{
+  "name": "Tailwind Amber",
+  "slug": "tailwind-amber",
+  "source": "https://github.com/tailwindlabs/tailwindcss",
+  "license": "MIT",
+  "dark": false,
+  "note": "11-step UI scale (v3 palette)",
+  "colors": [
+    {
+      "name": "50",
+      "hex": "#fffbeb"
+    },
+    {
+      "name": "100",
+      "hex": "#fef3c7"
+    },
+    {
+      "name": "200",
+      "hex": "#fde68a"
+    },
+    {
+      "name": "300",
+      "hex": "#fcd34d"
+    },
+    {
+      "name": "400",
+      "hex": "#fbbf24"
+    },
+    {
+      "name": "500",
+      "hex": "#f59e0b"
+    },
+    {
+      "name": "600",
+      "hex": "#d97706"
+    },
+    {
+      "name": "700",
+      "hex": "#b45309"
+    },
+    {
+      "name": "800",
+      "hex": "#92400e"
+    },
+    {
+      "name": "900",
+      "hex": "#78350f"
+    },
+    {
+      "name": "950",
+      "hex": "#451a03"
+    }
+  ],
+  "roles": {
+    "background": "#fffbeb",
+    "surface": "#fef3c7",
+    "text": "#451a03",
+    "accent": "#d97706",
+    "accent_2": "#451a03"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "name": "Tailwind Orange",
+  "slug": "tailwind-orange",
+  "source": "https://github.com/tailwindlabs/tailwindcss",
+  "license": "MIT",
+  "dark": false,
+  "note": "11-step UI scale (v3 palette)",
+  "colors": [
+    {
+      "name": "50",
+      "hex": "#fff7ed"
+    },
+    {
+      "name": "100",
+      "hex": "#ffedd5"
+    },
+    {
+      "name": "200",
+      "hex": "#fed7aa"
+    },
+    {
+      "name": "300",
+      "hex": "#fdba74"
+    },
+    {
+      "name": "400",
+      "hex": "#fb923c"
+    },
+    {
+      "name": "500",
+      "hex": "#f97316"
+    },
+    {
+      "name": "600",
+      "hex": "#ea580c"
+    },
+    {
+      "name": "700",
+      "hex": "#c2410c"
+    },
+    {
+      "name": "800",
+      "hex": "#9a3412"
+    },
+    {
+      "name": "900",
+      "hex": "#7c2d12"
+    },
+    {
+      "name": "950",
+      "hex": "#431407"
+    }
+  ],
+  "roles": {
+    "background": "#fff7ed",
+    "surface": "#ffedd5",
+    "text": "#431407",
+    "accent": "#ea580c",
+    "accent_2": "#c2410c"
+  }
+}

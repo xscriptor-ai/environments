@@ -1,0 +1,61 @@
+{
+  "name": "Tailwind Indigo",
+  "slug": "tailwind-indigo",
+  "source": "https://github.com/tailwindlabs/tailwindcss",
+  "license": "MIT",
+  "dark": false,
+  "note": "11-step UI scale (v3 palette)",
+  "colors": [
+    {
+      "name": "50",
+      "hex": "#eef2ff"
+    },
+    {
+      "name": "100",
+      "hex": "#e0e7ff"
+    },
+    {
+      "name": "200",
+      "hex": "#c7d2fe"
+    },
+    {
+      "name": "300",
+      "hex": "#a5b4fc"
+    },
+    {
+      "name": "400",
+      "hex": "#818cf8"
+    },
+    {
+      "name": "500",
+      "hex": "#6366f1"
+    },
+    {
+      "name": "600",
+      "hex": "#4f46e5"
+    },
+    {
+      "name": "700",
+      "hex": "#4338ca"
+    },
+    {
+      "name": "800",
+      "hex": "#3730a3"
+    },
+    {
+      "name": "900",
+      "hex": "#312e81"
+    },
+    {
+      "name": "950",
+      "hex": "#1e1b4b"
+    }
+  ],
+  "roles": {
+    "background": "#eef2ff",
+    "surface": "#e0e7ff",
+    "text": "#1e1b4b",
+    "accent": "#4338ca",
+    "accent_2": "#3730a3"
+  }
+}

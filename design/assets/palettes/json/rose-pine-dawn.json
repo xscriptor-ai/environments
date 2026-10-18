@@ -1,0 +1,65 @@
+{
+  "name": "Rose Pine Dawn",
+  "slug": "rose-pine-dawn",
+  "source": "https://github.com/rose-pine/palette",
+  "license": "MIT",
+  "dark": false,
+  "note": "roles: base, surface, overlay, text, accents",
+  "colors": [
+    {
+      "name": "base",
+      "hex": "#faf4ed"
+    },
+    {
+      "name": "surface",
+      "hex": "#fffaf3"
+    },
+    {
+      "name": "overlay",
+      "hex": "#f2e9e1"
+    },
+    {
+      "name": "muted",
+      "hex": "#9893a5"
+    },
+    {
+      "name": "subtle",
+      "hex": "#797593"
+    },
+    {
+      "name": "text",
+      "hex": "#464261"
+    },
+    {
+      "name": "love",
+      "hex": "#b4637a"
+    },
+    {
+      "name": "gold",
+      "hex": "#ea9d34"
+    },
+    {
+      "name": "rose",
+      "hex": "#d7827e"
+    },
+    {
+      "name": "pine",
+      "hex": "#286983"
+    },
+    {
+      "name": "foam",
+      "hex": "#56949f"
+    },
+    {
+      "name": "iris",
+      "hex": "#907aa9"
+    }
+  ],
+  "roles": {
+    "background": "#fffaf3",
+    "surface": "#faf4ed",
+    "text": "#464261",
+    "accent": "#ea9d34",
+    "accent_2": "#286983"
+  }
+}

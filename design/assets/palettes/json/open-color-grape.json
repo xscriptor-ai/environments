@@ -1,0 +1,57 @@
+{
+  "name": "Open Color Grape",
+  "slug": "open-color-grape",
+  "source": "https://github.com/yeun/open-color",
+  "license": "MIT",
+  "dark": false,
+  "note": "13 hues x 10 steps; designed for UI",
+  "colors": [
+    {
+      "name": "50",
+      "hex": "#f8f0fc"
+    },
+    {
+      "name": "100",
+      "hex": "#f3d9fa"
+    },
+    {
+      "name": "200",
+      "hex": "#eebefa"
+    },
+    {
+      "name": "300",
+      "hex": "#e599f7"
+    },
+    {
+      "name": "400",
+      "hex": "#da77f2"
+    },
+    {
+      "name": "500",
+      "hex": "#cc5de8"
+    },
+    {
+      "name": "600",
+      "hex": "#be4bdb"
+    },
+    {
+      "name": "700",
+      "hex": "#ae3ec9"
+    },
+    {
+      "name": "800",
+      "hex": "#9c36b5"
+    },
+    {
+      "name": "900",
+      "hex": "#862e9c"
+    }
+  ],
+  "roles": {
+    "background": "#f8f0fc",
+    "surface": "#f3d9fa",
+    "text": "#862e9c",
+    "accent": "#862e9c",
+    "accent_2": "#9c36b5"
+  }
+}

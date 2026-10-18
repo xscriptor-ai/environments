@@ -1,0 +1,65 @@
+{
+  "name": "Radix Pink (Light)",
+  "slug": "radix-pink-light",
+  "source": "https://github.com/radix-ui/colors",
+  "license": "MIT",
+  "dark": false,
+  "note": "12-step perceptual UI scale",
+  "colors": [
+    {
+      "name": "pink1",
+      "hex": "#fffcfe"
+    },
+    {
+      "name": "pink2",
+      "hex": "#fef7fb"
+    },
+    {
+      "name": "pink3",
+      "hex": "#fee9f5"
+    },
+    {
+      "name": "pink4",
+      "hex": "#fbdcef"
+    },
+    {
+      "name": "pink5",
+      "hex": "#f6cee7"
+    },
+    {
+      "name": "pink6",
+      "hex": "#efbfdd"
+    },
+    {
+      "name": "pink7",
+      "hex": "#e7acd0"
+    },
+    {
+      "name": "pink8",
+      "hex": "#dd93c2"
+    },
+    {
+      "name": "pink9",
+      "hex": "#d6409f"
+    },
+    {
+      "name": "pink10",
+      "hex": "#cf3897"
+    },
+    {
+      "name": "pink11",
+      "hex": "#c2298a"
+    },
+    {
+      "name": "pink12",
+      "hex": "#651249"
+    }
+  ],
+  "roles": {
+    "background": "#fffcfe",
+    "surface": "#fef7fb",
+    "text": "#651249",
+    "accent": "#651249",
+    "accent_2": "#c2298a"
+  }
+}

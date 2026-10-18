@@ -1,0 +1,61 @@
+{
+  "name": "Tailwind Gray",
+  "slug": "tailwind-gray",
+  "source": "https://github.com/tailwindlabs/tailwindcss",
+  "license": "MIT",
+  "dark": false,
+  "note": "11-step UI scale (v3 palette)",
+  "colors": [
+    {
+      "name": "50",
+      "hex": "#f9fafb"
+    },
+    {
+      "name": "100",
+      "hex": "#f3f4f6"
+    },
+    {
+      "name": "200",
+      "hex": "#e5e7eb"
+    },
+    {
+      "name": "300",
+      "hex": "#d1d5db"
+    },
+    {
+      "name": "400",
+      "hex": "#9ca3af"
+    },
+    {
+      "name": "500",
+      "hex": "#6b7280"
+    },
+    {
+      "name": "600",
+      "hex": "#4b5563"
+    },
+    {
+      "name": "700",
+      "hex": "#374151"
+    },
+    {
+      "name": "800",
+      "hex": "#1f2937"
+    },
+    {
+      "name": "900",
+      "hex": "#111827"
+    },
+    {
+      "name": "950",
+      "hex": "#030712"
+    }
+  ],
+  "roles": {
+    "background": "#f9fafb",
+    "surface": "#f3f4f6",
+    "text": "#030712",
+    "accent": "#1f2937",
+    "accent_2": "#374151"
+  }
+}

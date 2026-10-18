@@ -1,0 +1,65 @@
+{
+  "name": "Radix Sky (Dark)",
+  "slug": "radix-sky-dark",
+  "source": "https://github.com/radix-ui/colors",
+  "license": "MIT",
+  "dark": true,
+  "note": "12-step perceptual UI scale",
+  "colors": [
+    {
+      "name": "sky1",
+      "hex": "#0d141f"
+    },
+    {
+      "name": "sky2",
+      "hex": "#111a27"
+    },
+    {
+      "name": "sky3",
+      "hex": "#112840"
+    },
+    {
+      "name": "sky4",
+      "hex": "#113555"
+    },
+    {
+      "name": "sky5",
+      "hex": "#154467"
+    },
+    {
+      "name": "sky6",
+      "hex": "#1b537b"
+    },
+    {
+      "name": "sky7",
+      "hex": "#1f6692"
+    },
+    {
+      "name": "sky8",
+      "hex": "#197cae"
+    },
+    {
+      "name": "sky9",
+      "hex": "#7ce2fe"
+    },
+    {
+      "name": "sky10",
+      "hex": "#a8eeff"
+    },
+    {
+      "name": "sky11",
+      "hex": "#75c7f0"
+    },
+    {
+      "name": "sky12",
+      "hex": "#c2f3ff"
+    }
+  ],
+  "roles": {
+    "background": "#0d141f",
+    "surface": "#111a27",
+    "text": "#c2f3ff",
+    "accent": "#197cae",
+    "accent_2": "#113555"
+  }
+}
