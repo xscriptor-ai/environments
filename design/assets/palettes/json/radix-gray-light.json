@@ -1,0 +1,65 @@
+{
+  "name": "Radix Gray (Light)",
+  "slug": "radix-gray-light",
+  "source": "https://github.com/radix-ui/colors",
+  "license": "MIT",
+  "dark": false,
+  "note": "12-step perceptual UI scale",
+  "colors": [
+    {
+      "name": "gray1",
+      "hex": "#fcfcfc"
+    },
+    {
+      "name": "gray2",
+      "hex": "#f9f9f9"
+    },
+    {
+      "name": "gray3",
+      "hex": "#f0f0f0"
+    },
+    {
+      "name": "gray4",
+      "hex": "#e8e8e8"
+    },
+    {
+      "name": "gray5",
+      "hex": "#e0e0e0"
+    },
+    {
+      "name": "gray6",
+      "hex": "#d9d9d9"
+    },
+    {
+      "name": "gray7",
+      "hex": "#cecece"
+    },
+    {
+      "name": "gray8",
+      "hex": "#bbbbbb"
+    },
+    {
+      "name": "gray9",
+      "hex": "#8d8d8d"
+    },
+    {
+      "name": "gray10",
+      "hex": "#838383"
+    },
+    {
+      "name": "gray11",
+      "hex": "#646464"
+    },
+    {
+      "name": "gray12",
+      "hex": "#202020"
+    }
+  ],
+  "roles": {
+    "background": "#fcfcfc",
+    "surface": "#f9f9f9",
+    "text": "#202020",
+    "accent": "#cecece",
+    "accent_2": "#bbbbbb"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "name": "Tailwind Zinc",
+  "slug": "tailwind-zinc",
+  "source": "https://github.com/tailwindlabs/tailwindcss",
+  "license": "MIT",
+  "dark": false,
+  "note": "11-step UI scale (v3 palette)",
+  "colors": [
+    {
+      "name": "50",
+      "hex": "#fafafa"
+    },
+    {
+      "name": "100",
+      "hex": "#f4f4f5"
+    },
+    {
+      "name": "200",
+      "hex": "#e4e4e7"
+    },
+    {
+      "name": "300",
+      "hex": "#d4d4d8"
+    },
+    {
+      "name": "400",
+      "hex": "#a1a1aa"
+    },
+    {
+      "name": "500",
+      "hex": "#71717a"
+    },
+    {
+      "name": "600",
+      "hex": "#52525b"
+    },
+    {
+      "name": "700",
+      "hex": "#3f3f46"
+    },
+    {
+      "name": "800",
+      "hex": "#27272a"
+    },
+    {
+      "name": "900",
+      "hex": "#18181b"
+    },
+    {
+      "name": "950",
+      "hex": "#09090b"
+    }
+  ],
+  "roles": {
+    "background": "#fafafa",
+    "surface": "#f4f4f5",
+    "text": "#09090b",
+    "accent": "#3f3f46",
+    "accent_2": "#52525b"
+  }
+}

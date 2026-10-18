@@ -1,0 +1,433 @@
+#!/usr/bin/env bash
+# design-arsenal wallpaper/image pipeline
+set -euo pipefail
+
+SELF="$(readlink -f "${BASH_SOURCE[0]}")"
+ROOT="$(cd "$(dirname "$SELF")/.." && pwd)"
+if [[ -x "$ROOT/.venv/bin/python" ]]; then
+  PY="$ROOT/.venv/bin/python"
+elif [[ -n "${PYTHON:-}" ]]; then
+  PY="$PYTHON"
+else
+  PY="$(command -v python3 || true)"
+fi
+REALESRGAN="$(command -v realesrgan-ncnn-vulkan || command -v realesrgan || true)"
+VIPS="$(command -v vips || true)"
+EXIFTOOL="$(command -v exiftool || true)"
+
+c_reset=$'\033[0m'; c_dim=$'\033[2m'; c_bold=$'\033[1m'; c_cyan=$'\033[36m'; c_green=$'\033[32m'; c_yellow=$'\033[33m'; c_red=$'\033[31m'
+
+die() { printf '%s\n' "${c_red}error:${c_reset} $*" >&2; exit 1; }
+need() { command -v "$1" >/dev/null 2>&1 || die "missing command: $1"; }
+have() { command -v "$1" >/dev/null 2>&1; }
+WA_TMP="$(mktemp -d "${TMPDIR:-/tmp}/wa.XXXXXX")"
+tmpdir() { printf '%s\n' "$WA_TMP"; }
+cleanup() { [[ -n "$WA_TMP" ]] && rm -rf "$WA_TMP" || true; }
+trap cleanup EXIT
+
+size_wh() {
+  local size="${1:-3840x2160}"
+  [[ "$size" =~ ^([0-9]+)x([0-9]+)$ ]] || die "invalid --size '$size' (expected WIDTHxHEIGHT)"
+  W="${BASH_REMATCH[1]}"; H="${BASH_REMATCH[2]}"
+}
+
+img_size() {
+  magick identify -format '%w %h' "$1" 2>/dev/null || die "cannot read image: $1"
+}
+
+palette_json() {
+  "$PY" "$ROOT/scripts/wa_palette.py" "$1" --colors "${2:-8}" --out-dir "$3" >/dev/null
+  local slug
+  slug=$("$PY" - "$3" <<'PY'
+import json, sys, pathlib
+files = sorted(pathlib.Path(sys.argv[1]).glob('*.json'))
+print(json.loads(files[0].read_text())['slug'] if files else '')
+PY
+)
+  printf '%s/%s.json' "$3" "$slug"
+}
+
+apply_grain() {
+  local in="$1" out="$2" w="$3" h="$4" strength="${5:-1}"
+  local grain="$ROOT/assets/textures/overlays/noise-alpha.png"
+  if [[ ! -f "$grain" ]]; then
+    magick "$in" \( +clone -colorspace Gray -attenuate 0.35 +noise Gaussian \) \
+      -compose soft-light -composite "$out"
+    return
+  fi
+  magick "$in" \( "$grain" -resize "${w}x${h}^" -gravity center -background none -extent "${w}x${h}" -alpha set -channel A -evaluate multiply 0.55 +channel \) \
+    -compose overlay -composite "$out"
+}
+
+apply_vignette() {
+  local in="$1" out="$2" w="$3" h="$4"
+  local vig="$ROOT/assets/textures/overlays/vignette.png"
+  [[ -f "$vig" ]] || { cp "$in" "$out"; return; }
+  magick "$in" \( "$vig" -resize "${w}x${h}^" -gravity center -background none -extent "${w}x${h}" \) -compose over -composite "$out"
+}
+
+apply_scrim() {
+  local in="$1" out="$2" w="$3" h="$4"
+  local sh=$((h / 2))
+  magick "$in" \( -size "${w}x${sh}" gradient:'#00000000-#00000099' -colorspace sRGB \) -gravity south -compose over -composite "$out"
+}
+
+help() {
+  cat <<'EOF'
+design-arsenal / wallpaper — image & wallpaper craft CLI
+
+Usage:
+  wallpaper <command> [options]
+
+Commands:
+  doctor                         check tools, assets and paths
+  inspect IMAGE                  dimensions, format, colorspace, metadata
+  palette IMAGE [--colors N]     extract JSON/CSS/GPL/swatches (default 8)
+  fit IMAGE --size WxH [--mode cover|contain|smart] --out FILE
+  extend IMAGE --size WxH [--method blur|solid|gradient|mirror|edge]
+                                --out FILE [--scale 0.92] [--grain] [--vignette]
+                                [--scrim] [--upscale] [--shadow] [--bg HEX]
+  upscale IMAGE [--scale 4] [--model realesrgan-x4plus] --out FILE
+  optimize IMAGE --out FILE [--quality N] [--resize WxH] [--keep-metadata]
+  batch DIR --preset PRESET --out DIR [--method METHOD] [--force]
+  contact DIR --out FILE [--thumb 420] [--cols 5]
+  animate --out FILE [--size WxH] [--colors '#h,#h,#h'] [--duration 8]
+  ratios                         print common canvas sizes and aspect math
+  doctor, help
+
+Presets: desktop-4k, desktop-1440p, desktop-5k, desktop-16-10, ultrawide,
+         mobile-9-20, tablet-3-4, square
+
+Notes:
+  • extend is the mobile→desktop workhorse: keeps the subject sharp and builds
+    a designed field around it (blur, sampled solid, gradient, mirror or edge).
+  • use --upscale for low-resolution mobile sources (Real-ESRGAN, GPU).
+  • all outputs keep the source orientation/EXIF unless optimize --keep-metadata.
+EOF
+}
+
+cmd_doctor() {
+  printf '%sdesign-arsenal doctor%s\n' "$c_bold" "$c_reset"
+  printf 'root: %s\n\n' "$ROOT"
+  local ok=0
+  check() {
+    local label="$1" cmd="$2" version=""
+    if have "$cmd"; then
+      if [[ "$cmd" == "ffmpeg" ]]; then version=$(ffmpeg -version 2>/dev/null | head -1 || true); else version=$("$cmd" --version 2>/dev/null | head -1 || true); fi
+      printf '  %s✓%s %-22s %s\n' "$c_green" "$c_reset" "$label" "$version"
+    else
+      printf '  %s✗%s %-22s missing\n' "$c_red" "$c_reset" "$label"; ok=1
+    fi
+  }
+  check "ImageMagick" magick
+  check "FFmpeg" ffmpeg
+  check "rsvg-convert" rsvg-convert
+  check "jq" jq
+  check "Python" "$PY"
+  if [[ -n "$REALESRGAN" && -x "$REALESRGAN" ]]; then printf '  %s✓%s %-22s %s\n' "$c_green" "$c_reset" "Real-ESRGAN" "$(basename "$REALESRGAN")"; else printf '  %s!%s %-22s optional (Lanczos fallback)\n' "$c_yellow" "$c_reset" "Real-ESRGAN"; fi
+  if [[ -n "$VIPS" && -x "$VIPS" ]]; then printf '  %s✓%s %-22s %s\n' "$c_green" "$c_reset" "libvips" "$("$VIPS" --version)"; else printf '  %s!%s %-22s optional\n' "$c_yellow" "$c_reset" "libvips"; fi
+  if [[ -n "$PY" ]] && "$PY" -c 'import PIL, colorthief, smartcrop' 2>/dev/null; then printf '  %s✓%s %-22s %s\n' "$c_green" "$c_reset" "Python imaging" "Pillow/colorthief/smartcrop"; else printf '  %s✗%s %-22s run scripts/setup.sh\n' "$c_red" "$c_reset" "Python imaging"; ok=1; fi
+  if [[ -n "$EXIFTOOL" && -x "$EXIFTOOL" ]]; then printf '  %s✓%s %-22s %s\n' "$c_green" "$c_reset" "ExifTool" "$("$EXIFTOOL" -ver)"; else printf '  %s!%s %-22s optional\n' "$c_yellow" "$c_reset" "ExifTool"; fi
+  if have oxipng; then printf '  %s✓%s %-22s %s\n' "$c_green" "$c_reset" "oxipng" "$(oxipng --version | head -1)"; else printf '  %s!%s %-22s optional\n' "$c_yellow" "$c_reset" "oxipng"; fi
+  printf '\n  assets: %s palettes · %s gradient SVGs · %s patterns · %s safe-zone guides\n' \
+    "$(find "$ROOT/assets/palettes/json" -name '*.json' 2>/dev/null | wc -l)" \
+    "$(find "$ROOT/assets/gradients/svg" -name '*.svg' 2>/dev/null | wc -l)" \
+    "$(find "$ROOT/assets/patterns" -name '*.svg' 2>/dev/null | wc -l)" \
+    "$(find "$ROOT/assets/guides" -name '*.png' 2>/dev/null | wc -l)"
+  return $ok
+}
+
+cmd_inspect() {
+  [[ $# -ge 1 ]] || die "usage: wallpaper inspect IMAGE"
+  local img="$1"; [[ -f "$img" ]] || die "not found: $img"
+  magick identify -verbose "$img" | sed -n '1,28p'
+  printf '\n%smetadata%s\n' "$c_bold" "$c_reset"
+  if [[ -n "$EXIFTOOL" ]]; then "$EXIFTOOL" -G1 -s -ImageSize -FileType -ColorSpace -Orientation -Artist -Copyright -License "$img" 2>/dev/null || true; fi
+}
+
+cmd_palette() {
+  local img="" colors=8 out=""
+  while [[ $# -gt 0 ]]; do case "$1" in
+    --colors) colors="$2"; shift 2 ;;
+    --out) out="$2"; shift 2 ;;
+    -*) die "unknown option: $1" ;;
+    *) img="$1"; shift ;;
+  esac; done
+  [[ -n "$img" ]] || die "usage: wallpaper palette IMAGE [--colors N] [--out DIR]"
+  out="${out:-$(dirname "$img")/$(basename "${img%.*}")-palette}"
+  "$PY" "$ROOT/scripts/wa_palette.py" "$img" --colors "$colors" --out-dir "$out"
+  printf '\n%s✓%s files in %s\n' "$c_green" "$c_reset" "$out"
+}
+
+cmd_fit() {
+  local img="" size="3840x2160" mode="smart" out="" quality=92 upscale=0
+  while [[ $# -gt 0 ]]; do case "$1" in
+    --size) size="$2"; shift 2 ;;
+    --mode) mode="$2"; shift 2 ;;
+    --out) out="$2"; shift 2 ;;
+    --quality) quality="$2"; shift 2 ;;
+    --upscale) upscale=1; shift ;;
+    -*) die "unknown option: $1" ;;
+    *) img="$1"; shift ;;
+  esac; done
+  [[ -n "$img" && -n "$out" ]] || die "usage: wallpaper fit IMAGE --size WxH --out FILE [--mode smart|cover|contain]"
+  size_wh "$size"
+  case "$mode" in
+    smart)
+      local tmp; tmp="$(tmpdir)"; mkdir -p "$tmp"
+      if [[ "$upscale" == 1 ]]; then cmd_upscale "$img" --out "$tmp/src.png" >/dev/null; img="$tmp/src.png"; fi
+      "$PY" "$ROOT/scripts/wa_smartcrop.py" "$img" --size "${W}x${H}" --out "$out" --quality "$quality" ;;
+    cover)
+      magick "$img" -auto-orient -resize "${W}x${H}^" -gravity center -extent "${W}x${H}" -quality "$quality" "$out" ;;
+    contain)
+      magick "$img" -auto-orient -resize "${W}x${H}" -gravity center -background '#0b0b0f' -extent "${W}x${H}" -quality "$quality" "$out" ;;
+    *) die "unknown fit mode: $mode" ;;
+  esac
+  printf '%s%s -> %s (%sx%s, %s)%s\n' "$c_green" "$(basename "$img")" "$out" "$W" "$H" "$mode" "$c_reset"
+}
+
+cmd_upscale() {
+  local img="" out="" scale=4 model="realesrgan-x4plus"
+  while [[ $# -gt 0 ]]; do case "$1" in
+    --out) out="$2"; shift 2 ;;
+    --scale) scale="$2"; shift 2 ;;
+    --model) model="$2"; shift 2 ;;
+    -*) die "unknown option: $1" ;;
+    *) img="$1"; shift ;;
+  esac; done
+  [[ -n "$img" ]] || die "usage: wallpaper upscale IMAGE --out FILE [--scale 4] [--model NAME]"
+  out="${out:-${img%.*}-${scale}x.png}"
+  if [[ -x "$REALESRGAN" ]]; then
+    local tmp; tmp="$(tmpdir)"; mkdir -p "$tmp"
+    "$REALESRGAN" -i "$img" -o "$tmp/up.png" -n "$model" -s 4 -t 256 >/dev/null 2>&1 || true
+    if [[ -f "$tmp/up.png" ]]; then
+      if [[ "$scale" != 4 ]]; then
+        size_wh "$(magick identify -format '%wx%h' "$img")"
+        magick "$tmp/up.png" -resize "$((W * scale))x$((H * scale))" "$out"
+      else
+        mv "$tmp/up.png" "$out"
+      fi
+      printf '%sReal-ESRGAN %sx -> %s%s\n' "$c_green" "$scale" "$out" "$c_reset"
+      return
+    fi
+  fi
+  magick "$img" -auto-orient -filter Lanczos -resize "$(( $(magick identify -format '%w' "$img") * scale ))x" -unsharp 0x0.8+0.5+0.02 "$out"
+  printf '%sLanczos %sx -> %s (Real-ESRGAN unavailable)%s\n' "$c_yellow" "$scale" "$out" "$c_reset"
+}
+
+cmd_extend() {
+  local img="" size="3840x2160" method="blur" out="" scale="0.92" quality=92
+  local grain=0 vignette=0 scrim=0 shadow=0 upscale=0 bg=""
+  while [[ $# -gt 0 ]]; do case "$1" in
+    --size) size="$2"; shift 2 ;;
+    --method) method="$2"; shift 2 ;;
+    --out) out="$2"; shift 2 ;;
+    --scale) scale="$2"; shift 2 ;;
+    --quality) quality="$2"; shift 2 ;;
+    --bg) bg="$2"; shift 2 ;;
+    --grain) grain=1; shift ;;
+    --vignette) vignette=1; shift ;;
+    --scrim) scrim=1; shift ;;
+    --shadow) shadow=1; shift ;;
+    --upscale) upscale=1; shift ;;
+    -*) die "unknown option: $1" ;;
+    *) img="$1"; shift ;;
+  esac; done
+  [[ -n "$img" && -n "$out" ]] || die "usage: wallpaper extend IMAGE --size WxH --out FILE [--method blur|solid|gradient|mirror|edge]"
+  [[ -f "$img" ]] || die "not found: $img"
+  size_wh "$size"
+
+  local tmp; tmp="$(tmpdir)"; mkdir -p "$tmp"
+  local src="$img"
+  if [[ "$upscale" == 1 ]]; then
+    cmd_upscale "$img" --out "$tmp/up.png" >/dev/null
+    src="$tmp/up.png"
+  fi
+  local bgimg="$tmp/bg.png" fg="$tmp/fg.png" fgshadow="$tmp/fg-shadow.png" canvas="$tmp/canvas.png"
+  local fg_h; fg_h=$(awk -v h="$H" -v s="$scale" 'BEGIN { printf "%d", h*s }')
+  local blur_px; blur_px=$(awk -v w="$W" -v h="$H" 'BEGIN { m = (w<h?w:h); printf "%.0f", m*0.02 }')
+
+  case "$method" in
+    blur|mirror|edge)
+      case "$method" in
+        mirror) magick "$src" -auto-orient -flop -resize "${W}x${H}^" -gravity center -extent "${W}x${H}" -blur "0x${blur_px}" -modulate 92,112,100 "$bgimg" ;;
+        edge) magick "$src" -auto-orient -resize "1x${H}!" -resize "${W}x${H}!" -blur "0x${blur_px}" -modulate 92,108,100 "$bgimg" ;;
+        *) magick "$src" -auto-orient -resize "${W}x${H}^" -gravity center -extent "${W}x${H}" -blur "0x${blur_px}" -modulate 92,112,100 "$bgimg" ;;
+      esac
+      ;;
+    solid|gradient)
+      local pjson; pjson="$(palette_json "$src" 8 "$tmp/palette")"
+      local c1 c2
+      c1="$(jq -r '.roles.background' "$pjson")"
+      c2="$(jq -r '.roles.accent' "$pjson")"
+      if [[ "$c1" == "$c2" ]]; then c2="$(jq -r '.colors[1].hex // .roles.surface' "$pjson")"; fi
+      [[ -n "$bg" ]] && c1="$bg"
+      case "$method" in
+        gradient) magick -size "${W}x${H}" gradient:"${c1}-${c2}" "$bgimg" ;;
+        *) magick -size "${W}x${H}" "xc:${c1}" "$bgimg" ;;
+      esac
+      ;;
+    *) die "unknown extend method: $method" ;;
+  esac
+
+  magick "$src" -auto-orient -resize "x${fg_h}" "$fg"
+  if [[ "$shadow" == 1 ]]; then
+    magick "$fg" \( +clone -background black -shadow 55x18+0+18 \) +swap -background none -layers merge +repage "$fgshadow"
+    fg="$fgshadow"
+  fi
+  magick "$bgimg" "$fg" -gravity center -compose over -composite "$canvas"
+  if [[ "$scrim" == 1 ]]; then apply_scrim "$canvas" "$tmp/scrim.png" "$W" "$H"; canvas="$tmp/scrim.png"; fi
+  if [[ "$vignette" == 1 ]]; then apply_vignette "$canvas" "$tmp/vig.png" "$W" "$H"; canvas="$tmp/vig.png"; fi
+  if [[ "$grain" == 1 ]]; then apply_grain "$canvas" "$tmp/grain.png" "$W" "$H"; canvas="$tmp/grain.png"; fi
+  mkdir -p "$(dirname "$out")"
+  magick "$canvas" -colorspace sRGB -quality "$quality" "$out"
+  printf '%s%s -> %s (%sx%s, %s)%s\n' "$c_green" "$(basename "$img")" "$out" "$W" "$H" "$method" "$c_reset"
+}
+
+cmd_optimize() {
+  local img="" out="" quality=90 resize="" keep=0
+  while [[ $# -gt 0 ]]; do case "$1" in
+    --out) out="$2"; shift 2 ;;
+    --quality) quality="$2"; shift 2 ;;
+    --resize) resize="$2"; shift 2 ;;
+    --keep-metadata) keep=1; shift ;;
+    -*) die "unknown option: $1" ;;
+    *) img="$1"; shift ;;
+  esac; done
+  [[ -n "$img" && -n "$out" ]] || die "usage: wallpaper optimize IMAGE --out FILE [--quality N] [--resize WxH]"
+  local args=( "$img" -auto-orient )
+  [[ -n "$resize" ]] && args+=( -resize "$resize" )
+  [[ "$keep" == 0 ]] && args+=( -strip )
+  case "${out,,}" in
+    *.webp) args+=( -define webp:method=6 -quality "$quality" ) ;;
+    *.avif) args+=( -quality "$quality" -define heic:speed=4 ) ;;
+    *.jxl) args+=( -quality "$quality" ) ;;
+    *.png) args+=( -define png:compression-level=9 ) ;;
+    *.jpg|*.jpeg) args+=( -sampling-factor 4:2:0 -interlace Plane -quality "$quality" ) ;;
+  esac
+  args+=( "$out" )
+  magick "${args[@]}"
+  if [[ "${out,,}" == *.png ]] && have oxipng; then oxipng -o 4 --strip safe "$out" >/dev/null 2>&1 || true; fi
+  printf '%s%s -> %s (%s)%s\n' "$c_green" "$(basename "$img")" "$out" "$(du -h "$out" | cut -f1)" "$c_reset"
+}
+
+preset_size() {
+  case "$1" in
+    desktop-4k) echo "3840x2160" ;;
+    desktop-1440p) echo "2560x1440" ;;
+    desktop-5k) echo "5120x2880" ;;
+    desktop-16-10) echo "2560x1600" ;;
+    ultrawide) echo "5120x1440" ;;
+    mobile-9-20) echo "1440x3200" ;;
+    tablet-3-4) echo "2048x2732" ;;
+    square) echo "2160x2160" ;;
+    *) die "unknown preset: $1" ;;
+  esac
+}
+
+cmd_batch() {
+  local dir="" preset="desktop-4k" out="" method="blur" force=0
+  while [[ $# -gt 0 ]]; do case "$1" in
+    --preset) preset="$2"; shift 2 ;;
+    --out) out="$2"; shift 2 ;;
+    --method) method="$2"; shift 2 ;;
+    --force) force=1; shift ;;
+    -*) die "unknown option: $1" ;;
+    *) dir="$1"; shift ;;
+  esac; done
+  [[ -n "$dir" && -n "$out" ]] || die "usage: wallpaper batch DIR --preset PRESET --out DIR [--method METHOD]"
+  [[ -d "$dir" ]] || die "not a directory: $dir"
+  local size; size="$(preset_size "$preset")"
+  mkdir -p "$out"
+  local n=0
+  while IFS= read -r -d '' f; do
+    local base; base="$(basename "${f%.*}")"
+    local dest="$out/${base}.jpg"
+    if [[ -f "$dest" && "$force" == 0 ]]; then printf '%sskip%s %s\n' "$c_dim" "$c_reset" "$dest"; continue; fi
+    cmd_extend "$f" --size "$size" --method "$method" --out "$dest" --grain --vignette
+    n=$((n + 1))
+  done < <(find "$dir" -maxdepth 1 -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.webp' -o -iname '*.tif' -o -iname '*.tiff' \) -print0)
+  printf '%s%d files -> %s%s\n' "$c_green" "$n" "$out" "$c_reset"
+}
+
+cmd_contact() {
+  local dir="" out="" thumb=420 cols=5
+  while [[ $# -gt 0 ]]; do case "$1" in
+    --out) out="$2"; shift 2 ;;
+    --thumb) thumb="$2"; shift 2 ;;
+    --cols) cols="$2"; shift 2 ;;
+    -*) die "unknown option: $1" ;;
+    *) dir="$1"; shift ;;
+  esac; done
+  [[ -n "$dir" && -n "$out" ]] || die "usage: wallpaper contact DIR --out FILE [--thumb 420] [--cols 5]"
+  magick montage "$dir"/* -thumbnail "${thumb}x${thumb}^" -gravity center -extent "${thumb}x${thumb}" \
+    -tile "${cols}x" -geometry +8+8 -background '#0b0b0f' -fill '#e4e4e7' -font Inter -pointsize 18 -label '%t' "$out"
+  printf '%s%s%s\n' "$c_green" "$out" "$c_reset"
+}
+
+cmd_animate() {
+  local out="" size="2560x1440" colors="#0b1026,#4338ca,#db2777,#fbbf24" duration=8
+  while [[ $# -gt 0 ]]; do case "$1" in
+    --out) out="$2"; shift 2 ;;
+    --size) size="$2"; shift 2 ;;
+    --colors) colors="$2"; shift 2 ;;
+    --duration) duration="$2"; shift 2 ;;
+    -*) die "unknown option: $1" ;;
+    *) die "unexpected argument: $1" ;;
+  esac; done
+  [[ -n "$out" ]] || die "usage: wallpaper animate --out FILE [--size WxH] [--colors '#a,#b,#c'] [--duration 8]"
+  need ffmpeg
+  IFS=',' read -r -a arr <<< "$colors"
+  local filt="gradients=s=${size}:c0=${arr[0]}:c1=${arr[1]:-${arr[0]}}"
+  [[ ${#arr[@]} -ge 3 ]] && filt+=":c2=${arr[2]}"
+  [[ ${#arr[@]} -ge 4 ]] && filt+=":c3=${arr[3]}"
+  filt+=":nb_colors=${#arr[@]}:speed=0.012:d=${duration}:r=30"
+  if [[ "${out,,}" == *.webm ]]; then
+    ffmpeg -y -hide_banner -loglevel error -f lavfi -i "$filt" -vf "noise=alls=5:allf=t+u,vignette=PI/5,format=yuv420p" -c:v libvpx-vp9 -b:v 0 -crf 34 -row-mt 1 -cpu-used 2 "$out"
+  else
+    ffmpeg -y -hide_banner -loglevel error -f lavfi -i "$filt" -vf "noise=alls=4:allf=t+u,vignette=PI/5,format=yuv420p" -c:v libx264 -crf 20 -preset medium -movflags +faststart "$out"
+  fi
+  printf '%s%s (%s)%s\n' "$c_green" "$out" "$(du -h "$out" | cut -f1)" "$c_reset"
+}
+
+cmd_ratios() {
+  cat <<'EOF'
+Canvas presets
+  16:9      3840x2160 (4K)   2560x1440 (1440p)   1920x1080
+  16:10     3840x2400        2560x1600
+  21:9      3440x1440        5120x2160
+  32:9      5120x1440        7680x2160
+  9:20      1440x3200        1080x2400
+  9:16      1440x2560        1080x1920
+  3:4       2048x2732        1536x2048
+  1:1       2400x2400        3000x3000
+
+Aspect math
+  width  = height * ratio
+  height = width / ratio
+  crop area for 9:16 from 16:9: width = height * 9/16
+  extend from 9:16 to 16:9: canvas width ≈ source height * 16/9
+                                   ≈ 1.78 × source height
+EOF
+}
+
+main() {
+  local cmd="${1:-help}"; [[ $# -gt 0 ]] && shift
+  case "$cmd" in
+    help|-h|--help) help ;;
+    doctor) cmd_doctor "$@" ;;
+    inspect) cmd_inspect "$@" ;;
+    palette) cmd_palette "$@" ;;
+    fit) cmd_fit "$@" ;;
+    extend) cmd_extend "$@" ;;
+    upscale) cmd_upscale "$@" ;;
+    optimize) cmd_optimize "$@" ;;
+    batch) cmd_batch "$@" ;;
+    contact) cmd_contact "$@" ;;
+    animate) cmd_animate "$@" ;;
+    ratios) cmd_ratios ;;
+    *) die "unknown command: $cmd (try: wallpaper help)" ;;
+  esac
+}
+
+main "$@"

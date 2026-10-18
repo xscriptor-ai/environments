@@ -1,0 +1,61 @@
+{
+  "name": "Dracula",
+  "slug": "dracula",
+  "source": "https://draculatheme.com/",
+  "license": "MIT",
+  "dark": true,
+  "note": "the dark theme for night owls",
+  "colors": [
+    {
+      "name": "background",
+      "hex": "#282a36"
+    },
+    {
+      "name": "current-line",
+      "hex": "#44475a"
+    },
+    {
+      "name": "foreground",
+      "hex": "#f8f8f2"
+    },
+    {
+      "name": "comment",
+      "hex": "#6272a4"
+    },
+    {
+      "name": "cyan",
+      "hex": "#8be9fd"
+    },
+    {
+      "name": "green",
+      "hex": "#50fa7b"
+    },
+    {
+      "name": "orange",
+      "hex": "#ffb86c"
+    },
+    {
+      "name": "pink",
+      "hex": "#ff79c6"
+    },
+    {
+      "name": "purple",
+      "hex": "#bd93f9"
+    },
+    {
+      "name": "red",
+      "hex": "#ff5555"
+    },
+    {
+      "name": "yellow",
+      "hex": "#f1fa8c"
+    }
+  ],
+  "roles": {
+    "background": "#282a36",
+    "surface": "#44475a",
+    "text": "#f8f8f2",
+    "accent": "#50fa7b",
+    "accent_2": "#ff5555"
+  }
+}

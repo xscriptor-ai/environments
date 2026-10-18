@@ -1,0 +1,2700 @@
+/* design-arsenal — every palette as [data-palette="slug"] CSS variables */
+
+/* Catppuccin Frappé — https://github.com/catppuccin/palette — MIT */
+[data-palette="catppuccin-frapp"] {
+  --rosewater: #f2d5cf;
+  --flamingo: #eebebe;
+  --pink: #f4b8e4;
+  --mauve: #ca9ee6;
+  --red: #e78284;
+  --maroon: #ea999c;
+  --peach: #ef9f76;
+  --yellow: #e5c890;
+  --green: #a6d189;
+  --teal: #81c8be;
+  --sky: #99d1db;
+  --sapphire: #85c1dc;
+  --blue: #8caaee;
+  --lavender: #babbf1;
+  --text: #c6d0f5;
+  --subtext1: #b5bfe2;
+  --subtext0: #a5adce;
+  --overlay2: #949cbb;
+  --overlay1: #838ba7;
+  --overlay0: #737994;
+  --surface2: #626880;
+  --surface1: #51576d;
+  --surface0: #414559;
+  --base: #303446;
+  --mantle: #292c3c;
+  --crust: #232634;
+  --background: #232634;
+  --surface: #292c3c;
+  --text: #f2d5cf;
+  --accent: #ef9f76;
+  --accent-2: #e78284;
+}
+
+/* Catppuccin Latte — https://github.com/catppuccin/palette — MIT */
+[data-palette="catppuccin-latte"] {
+  --rosewater: #dc8a78;
+  --flamingo: #dd7878;
+  --pink: #ea76cb;
+  --mauve: #8839ef;
+  --red: #d20f39;
+  --maroon: #e64553;
+  --peach: #fe640b;
+  --yellow: #df8e1d;
+  --green: #40a02b;
+  --teal: #179299;
+  --sky: #04a5e5;
+  --sapphire: #209fb5;
+  --blue: #1e66f5;
+  --lavender: #7287fd;
+  --text: #4c4f69;
+  --subtext1: #5c5f77;
+  --subtext0: #6c6f85;
+  --overlay2: #7c7f93;
+  --overlay1: #8c8fa1;
+  --overlay0: #9ca0b0;
+  --surface2: #acb0be;
+  --surface1: #bcc0cc;
+  --surface0: #ccd0da;
+  --base: #eff1f5;
+  --mantle: #e6e9ef;
+  --crust: #dce0e8;
+  --background: #eff1f5;
+  --surface: #e6e9ef;
+  --text: #d20f39;
+  --accent: #04a5e5;
+  --accent-2: #fe640b;
+}
+
+/* Catppuccin Macchiato — https://github.com/catppuccin/palette — MIT */
+[data-palette="catppuccin-macchiato"] {
+  --rosewater: #f4dbd6;
+  --flamingo: #f0c6c6;
+  --pink: #f5bde6;
+  --mauve: #c6a0f6;
+  --red: #ed8796;
+  --maroon: #ee99a0;
+  --peach: #f5a97f;
+  --yellow: #eed49f;
+  --green: #a6da95;
+  --teal: #8bd5ca;
+  --sky: #91d7e3;
+  --sapphire: #7dc4e4;
+  --blue: #8aadf4;
+  --lavender: #b7bdf8;
+  --text: #cad3f5;
+  --subtext1: #b8c0e0;
+  --subtext0: #a5adcb;
+  --overlay2: #939ab7;
+  --overlay1: #8087a2;
+  --overlay0: #6e738d;
+  --surface2: #5b6078;
+  --surface1: #494d64;
+  --surface0: #363a4f;
+  --base: #24273a;
+  --mantle: #1e2030;
+  --crust: #181926;
+  --background: #181926;
+  --surface: #1e2030;
+  --text: #f4dbd6;
+  --accent: #f5a97f;
+  --accent-2: #7dc4e4;
+}
+
+/* Catppuccin Mocha — https://github.com/catppuccin/palette — MIT */
+[data-palette="catppuccin-mocha"] {
+  --rosewater: #f5e0dc;
+  --flamingo: #f2cdcd;
+  --pink: #f5c2e7;
+  --mauve: #cba6f7;
+  --red: #f38ba8;
+  --maroon: #eba0ac;
+  --peach: #fab387;
+  --yellow: #f9e2af;
+  --green: #a6e3a1;
+  --teal: #94e2d5;
+  --sky: #89dceb;
+  --sapphire: #74c7ec;
+  --blue: #89b4fa;
+  --lavender: #b4befe;
+  --text: #cdd6f4;
+  --subtext1: #bac2de;
+  --subtext0: #a6adc8;
+  --overlay2: #9399b2;
+  --overlay1: #7f849c;
+  --overlay0: #6c7086;
+  --surface2: #585b70;
+  --surface1: #45475a;
+  --surface0: #313244;
+  --base: #1e1e2e;
+  --mantle: #181825;
+  --crust: #11111b;
+  --background: #11111b;
+  --surface: #181825;
+  --text: #f5e0dc;
+  --accent: #74c7ec;
+  --accent-2: #fab387;
+}
+
+/* Dracula — https://draculatheme.com/ — MIT */
+[data-palette="dracula"] {
+  --background: #282a36;
+  --current-line: #44475a;
+  --foreground: #f8f8f2;
+  --comment: #6272a4;
+  --cyan: #8be9fd;
+  --green: #50fa7b;
+  --orange: #ffb86c;
+  --pink: #ff79c6;
+  --purple: #bd93f9;
+  --red: #ff5555;
+  --yellow: #f1fa8c;
+  --background: #282a36;
+  --surface: #44475a;
+  --text: #f8f8f2;
+  --accent: #50fa7b;
+  --accent-2: #ff5555;
+}
+
+/* Everforest — https://github.com/sainnhe/everforest — MIT */
+[data-palette="everforest"] {
+  --bg0: #2d353b;
+  --bg1: #343f44;
+  --bg2: #3d484d;
+  --bg3: #475258;
+  --bg4: #4f585e;
+  --bg5: #56635f;
+  --fg: #d3c6aa;
+  --red: #e67e80;
+  --orange: #e69875;
+  --yellow: #dbbc7f;
+  --green: #a7c080;
+  --aqua: #83c092;
+  --blue: #7fbbb3;
+  --purple: #d699b6;
+  --grey0: #7a8478;
+  --grey1: #859289;
+  --grey2: #9da9a0;
+  --background: #2d353b;
+  --surface: #343f44;
+  --text: #d3c6aa;
+  --accent: #e69875;
+  --accent-2: #e67e80;
+}
+
+/* Flexoki — https://github.com/kepano/flexoki — MIT */
+[data-palette="flexoki"] {
+  --paper: #fffcf0;
+  --black: #100f0f;
+  --50: #f2f0e5;
+  --100: #e6e4d9;
+  --150: #dad8ce;
+  --200: #cecdc3;
+  --300: #b7b5ac;
+  --400: #9f9d96;
+  --500: #878580;
+  --600: #6f6e69;
+  --700: #575653;
+  --800: #403e3c;
+  --850: #343331;
+  --900: #282726;
+  --950: #1c1b1a;
+  --red-400: #d14d41;
+  --red-600: #af3029;
+  --orange-400: #da702c;
+  --orange-600: #bc5215;
+  --yellow-400: #d0a215;
+  --yellow-600: #ad8301;
+  --green-400: #879a39;
+  --green-600: #66800b;
+  --cyan-400: #3aa99f;
+  --cyan-600: #24837b;
+  --blue-400: #4385be;
+  --blue-600: #205ea6;
+  --purple-400: #8b7ec8;
+  --purple-600: #5e409d;
+  --magenta-400: #ce5d97;
+  --magenta-600: #a02f6f;
+  --background: #fffcf0;
+  --surface: #f2f0e5;
+  --text: #100f0f;
+  --accent: #ad8301;
+  --accent-2: #66800b;
+}
+
+/* Gruvbox — https://github.com/morhetz/gruvbox — MIT */
+[data-palette="gruvbox"] {
+  --dark0-hard: #1d2021;
+  --dark0: #282828;
+  --dark0-soft: #32302f;
+  --dark1: #3c3836;
+  --dark2: #504945;
+  --dark3: #665c54;
+  --dark4: #7c6f64;
+  --gray-245: #928374;
+  --light0-hard: #f9f5d7;
+  --light0: #fbf1c7;
+  --light0-soft: #f2e5bc;
+  --light1: #ebdbb2;
+  --light2: #d5c4a1;
+  --light3: #bdae93;
+  --light4: #a89984;
+  --bright-red: #fb4934;
+  --bright-green: #b8bb26;
+  --bright-yellow: #fabd2f;
+  --bright-blue: #83a598;
+  --bright-purple: #d3869b;
+  --bright-aqua: #8ec07c;
+  --bright-orange: #fe8019;
+  --neutral-red: #cc241d;
+  --neutral-green: #98971a;
+  --neutral-yellow: #d79921;
+  --neutral-blue: #458588;
+  --neutral-purple: #b16286;
+  --neutral-aqua: #689d6a;
+  --neutral-orange: #d65d0e;
+  --faded-red: #9d0006;
+  --faded-green: #79740e;
+  --faded-yellow: #b57614;
+  --faded-blue: #076678;
+  --faded-purple: #8f3f71;
+  --faded-aqua: #427b58;
+  --faded-orange: #af3a03;
+  --background: #1d2021;
+  --surface: #9d0006;
+  --text: #f9f5d7;
+  --accent: #9d0006;
+  --accent-2: #af3a03;
+}
+
+/* Kanagawa Wave — https://github.com/rebelot/kanagawa.nvim — MIT */
+[data-palette="kanagawa-wave"] {
+  --sumiink0: #16161d;
+  --sumiink1: #181820;
+  --sumiink2: #1a1a22;
+  --sumiink3: #1f1f28;
+  --sumiink4: #2a2a37;
+  --sumiink5: #363646;
+  --sumiink6: #54546d;
+  --waveblue1: #223249;
+  --waveblue2: #2d4f67;
+  --wintergreen: #2b3328;
+  --winteryellow: #49443c;
+  --winterred: #43242b;
+  --winterblue: #252535;
+  --autumngreen: #76946a;
+  --autumnred: #c34043;
+  --autumnyellow: #dca561;
+  --samuraired: #e82424;
+  --roninyellow: #ff9e3b;
+  --waveaqua1: #6a9589;
+  --dragonblue: #658594;
+  --oldwhite: #c8c093;
+  --fujiwhite: #dcd7ba;
+  --fujigray: #727169;
+  --oniviolet: #957fb8;
+  --oniviolet2: #b8b4d0;
+  --crystalblue: #7e9cd8;
+  --springviolet1: #938aa9;
+  --springviolet2: #9cabca;
+  --springblue: #7fb4ca;
+  --lightblue: #a3d4d5;
+  --waveaqua2: #7aa89f;
+  --springgreen: #98bb6c;
+  --boatyellow1: #938056;
+  --boatyellow2: #c0a36e;
+  --carpyellow: #e6c384;
+  --sakurapink: #d27e99;
+  --wavered: #e46876;
+  --peachred: #ff5d62;
+  --surimiorange: #ffa066;
+  --katanagray: #717c7c;
+  --dragonblack0: #0d0c0c;
+  --dragonblack1: #12120f;
+  --dragonblack2: #1d1c19;
+  --dragonblack3: #181616;
+  --dragonblack4: #282727;
+  --dragonblack5: #393836;
+  --dragonblack6: #625e5a;
+  --dragonwhite: #c5c9c5;
+  --dragongreen: #87a987;
+  --dragongreen2: #8a9a7b;
+  --dragonpink: #a292a3;
+  --dragonorange: #b6927b;
+  --dragonorange2: #b98d7b;
+  --dragongray: #a6a69c;
+  --dragongray2: #9e9b93;
+  --dragongray3: #7a8382;
+  --dragonblue2: #8ba4b0;
+  --dragonviolet: #8992a7;
+  --dragonred: #c4746e;
+  --dragonaqua: #8ea4a2;
+  --dragonash: #737c73;
+  --dragonteal: #949fb5;
+  --dragonyellow: #c4b28a;
+  --lotusink1: #545464;
+  --lotusink2: #43436c;
+  --lotusgray2: #716e61;
+  --lotusgray3: #8a8980;
+  --lotuswhite0: #d5cea3;
+  --lotuswhite1: #dcd5ac;
+  --lotuswhite2: #e5ddb0;
+  --lotuswhite3: #f2ecbc;
+  --lotuswhite4: #e7dba0;
+  --lotuswhite5: #e4d794;
+  --lotusviolet1: #a09cac;
+  --lotusviolet2: #766b90;
+  --lotusviolet3: #c9cbd1;
+  --lotusviolet4: #624c83;
+  --lotusblue1: #c7d7e0;
+  --lotusblue2: #b5cbd2;
+  --lotusblue3: #9fb5c9;
+  --lotusblue4: #4d699b;
+  --lotusblue5: #5d57a3;
+  --lotusgreen: #6f894e;
+  --lotusgreen2: #6e915f;
+  --lotusgreen3: #b7d0ae;
+  --lotuspink: #b35b79;
+  --lotusorange: #cc6d00;
+  --lotusorange2: #e98a00;
+  --lotusyellow: #77713f;
+  --lotusyellow2: #836f4a;
+  --lotusyellow3: #de9800;
+  --lotusyellow4: #f9d791;
+  --lotusred: #c84053;
+  --lotusred2: #d7474b;
+  --lotusred4: #d9a594;
+  --lotusaqua: #597b75;
+  --lotusaqua2: #5e857a;
+  --lotusteal1: #4e8ca2;
+  --lotusteal2: #6693bf;
+  --lotusteal3: #5a7785;
+  --lotuscyan: #d7e3d8;
+  --background: #0d0c0c;
+  --surface: #12120f;
+  --text: #f2ecbc;
+  --accent: #cc6d00;
+  --accent-2: #e98a00;
+}
+
+/* Material 3 Baseline — https://m3.material.io/styles/color/overview — Apache-2.0 */
+[data-palette="material-3-baseline"] {
+  --primary: #6750a4;
+  --on-primary: #ffffff;
+  --primary-container: #eaddff;
+  --on-primary-container: #21005d;
+  --secondary: #625b71;
+  --tertiary: #7d5260;
+  --error: #b3261e;
+  --background: #fffbfe;
+  --surface-variant: #e7e0ec;
+  --on-surface: #1c1b1f;
+  --on-surface-variant: #49454f;
+  --outline: #79747e;
+  --outline-variant: #cac4d0;
+  --inverse-surface: #313033;
+  --inverse-primary: #d0bcff;
+  --background: #ffffff;
+  --surface: #fffbfe;
+  --text: #21005d;
+  --accent: #b3261e;
+  --accent-2: #6750a4;
+}
+
+/* Nord — https://www.nordtheme.com/ — MIT */
+[data-palette="nord"] {
+  --nord0: #2e3440;
+  --nord1: #3b4252;
+  --nord2: #434c5e;
+  --nord3: #4c566a;
+  --nord4: #d8dee9;
+  --nord5: #e5e9f0;
+  --nord6: #eceff4;
+  --nord7: #8fbcbb;
+  --nord8: #88c0d0;
+  --nord9: #81a1c1;
+  --nord10: #5e81ac;
+  --nord11: #bf616a;
+  --nord12: #d08770;
+  --nord13: #ebcb8b;
+  --nord14: #a3be8c;
+  --nord15: #b48ead;
+  --background: #2e3440;
+  --surface: #3b4252;
+  --text: #eceff4;
+  --accent: #bf616a;
+  --accent-2: #d08770;
+}
+
+/* One Dark — https://github.com/atom/one-dark-syntax — MIT */
+[data-palette="one-dark"] {
+  --bg: #282c34;
+  --fg: #abb2bf;
+  --red: #e06c75;
+  --green: #98c379;
+  --yellow: #e5c07b;
+  --blue: #61afef;
+  --magenta: #c678dd;
+  --cyan: #56b6c2;
+  --comment: #5c6370;
+  --gutter: #4b5263;
+  --selection: #3e4451;
+  --white: #ffffff;
+  --background: #282c34;
+  --surface: #3e4451;
+  --text: #ffffff;
+  --accent: #61afef;
+  --accent-2: #56b6c2;
+}
+
+/* Open Color Blue — https://github.com/yeun/open-color — MIT */
+[data-palette="open-color-blue"] {
+  --50: #e7f5ff;
+  --100: #d0ebff;
+  --200: #a5d8ff;
+  --300: #74c0fc;
+  --400: #4dabf7;
+  --500: #339af0;
+  --600: #228be6;
+  --700: #1c7ed6;
+  --800: #1971c2;
+  --900: #1864ab;
+  --background: #e7f5ff;
+  --surface: #d0ebff;
+  --text: #1864ab;
+  --accent: #1971c2;
+  --accent-2: #1c7ed6;
+}
+
+/* Open Color Cyan — https://github.com/yeun/open-color — MIT */
+[data-palette="open-color-cyan"] {
+  --50: #e3fafc;
+  --100: #c5f6fa;
+  --200: #99e9f2;
+  --300: #66d9e8;
+  --400: #3bc9db;
+  --500: #22b8cf;
+  --600: #15aabf;
+  --700: #1098ad;
+  --800: #0c8599;
+  --900: #0b7285;
+  --background: #e3fafc;
+  --surface: #c5f6fa;
+  --text: #0b7285;
+  --accent: #0c8599;
+  --accent-2: #0b7285;
+}
+
+/* Open Color Grape — https://github.com/yeun/open-color — MIT */
+[data-palette="open-color-grape"] {
+  --50: #f8f0fc;
+  --100: #f3d9fa;
+  --200: #eebefa;
+  --300: #e599f7;
+  --400: #da77f2;
+  --500: #cc5de8;
+  --600: #be4bdb;
+  --700: #ae3ec9;
+  --800: #9c36b5;
+  --900: #862e9c;
+  --background: #f8f0fc;
+  --surface: #f3d9fa;
+  --text: #862e9c;
+  --accent: #862e9c;
+  --accent-2: #9c36b5;
+}
+
+/* Open Color Gray — https://github.com/yeun/open-color — MIT */
+[data-palette="open-color-gray"] {
+  --50: #f8f9fa;
+  --100: #f1f3f5;
+  --200: #e9ecef;
+  --300: #dee2e6;
+  --400: #ced4da;
+  --500: #adb5bd;
+  --600: #868e96;
+  --700: #495057;
+  --800: #343a40;
+  --900: #212529;
+  --background: #f8f9fa;
+  --surface: #f1f3f5;
+  --text: #212529;
+  --accent: #212529;
+  --accent-2: #343a40;
+}
+
+/* Open Color Green — https://github.com/yeun/open-color — MIT */
+[data-palette="open-color-green"] {
+  --50: #ebfbee;
+  --100: #d3f9d8;
+  --200: #b2f2bb;
+  --300: #8ce99a;
+  --400: #69db7c;
+  --500: #51cf66;
+  --600: #40c057;
+  --700: #37b24d;
+  --800: #2f9e44;
+  --900: #2b8a3e;
+  --background: #ebfbee;
+  --surface: #d3f9d8;
+  --text: #2b8a3e;
+  --accent: #2f9e44;
+  --accent-2: #37b24d;
+}
+
+/* Open Color Indigo — https://github.com/yeun/open-color — MIT */
+[data-palette="open-color-indigo"] {
+  --50: #edf2ff;
+  --100: #dbe4ff;
+  --200: #bac8ff;
+  --300: #91a7ff;
+  --400: #748ffc;
+  --500: #5c7cfa;
+  --600: #4c6ef5;
+  --700: #4263eb;
+  --800: #3b5bdb;
+  --900: #364fc7;
+  --background: #edf2ff;
+  --surface: #dbe4ff;
+  --text: #364fc7;
+  --accent: #3b5bdb;
+  --accent-2: #364fc7;
+}
+
+/* Open Color Lime — https://github.com/yeun/open-color — MIT */
+[data-palette="open-color-lime"] {
+  --50: #f4fce3;
+  --100: #e9fac8;
+  --200: #d8f5a2;
+  --300: #c0eb75;
+  --400: #a9e34b;
+  --500: #94d82d;
+  --600: #82c91e;
+  --700: #74b816;
+  --800: #66a80f;
+  --900: #5c940d;
+  --background: #f4fce3;
+  --surface: #e9fac8;
+  --text: #5c940d;
+  --accent: #5c940d;
+  --accent-2: #66a80f;
+}
+
+/* Open Color Neutrals — https://github.com/yeun/open-color — MIT */
+[data-palette="open-color-neutrals"] {
+  --white: #ffffff;
+  --black: #000000;
+  --gray-50: #f8f9fa;
+  --gray-100: #f1f3f5;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --gray-600: #868e96;
+  --gray-700: #495057;
+  --gray-800: #343a40;
+  --gray-900: #212529;
+  --background: #ffffff;
+  --surface: #f8f9fa;
+  --text: #000000;
+  --accent: #212529;
+  --accent-2: #343a40;
+}
+
+/* Open Color Orange — https://github.com/yeun/open-color — MIT */
+[data-palette="open-color-orange"] {
+  --50: #fff4e6;
+  --100: #ffe8cc;
+  --200: #ffd8a8;
+  --300: #ffc078;
+  --400: #ffa94d;
+  --500: #ff922b;
+  --600: #fd7e14;
+  --700: #f76707;
+  --800: #e8590c;
+  --900: #d9480f;
+  --background: #fff4e6;
+  --surface: #ffe8cc;
+  --text: #d9480f;
+  --accent: #f76707;
+  --accent-2: #e8590c;
+}
+
+/* Open Color Pink — https://github.com/yeun/open-color — MIT */
+[data-palette="open-color-pink"] {
+  --50: #fff0f6;
+  --100: #ffdeeb;
+  --200: #fcc2d7;
+  --300: #faa2c1;
+  --400: #f783ac;
+  --500: #f06595;
+  --600: #e64980;
+  --700: #d6336c;
+  --800: #c2255c;
+  --900: #a61e4d;
+  --background: #fff0f6;
+  --surface: #ffdeeb;
+  --text: #a61e4d;
+  --accent: #a61e4d;
+  --accent-2: #c2255c;
+}
+
+/* Open Color Red — https://github.com/yeun/open-color — MIT */
+[data-palette="open-color-red"] {
+  --50: #fff5f5;
+  --100: #ffe3e3;
+  --200: #ffc9c9;
+  --300: #ffa8a8;
+  --400: #ff8787;
+  --500: #ff6b6b;
+  --600: #fa5252;
+  --700: #f03e3e;
+  --800: #e03131;
+  --900: #c92a2a;
+  --background: #fff5f5;
+  --surface: #ffe3e3;
+  --text: #c92a2a;
+  --accent: #c92a2a;
+  --accent-2: #e03131;
+}
+
+/* Open Color Teal — https://github.com/yeun/open-color — MIT */
+[data-palette="open-color-teal"] {
+  --50: #e6fcf5;
+  --100: #c3fae8;
+  --200: #96f2d7;
+  --300: #63e6be;
+  --400: #38d9a9;
+  --500: #20c997;
+  --600: #12b886;
+  --700: #0ca678;
+  --800: #099268;
+  --900: #087f5b;
+  --background: #e6fcf5;
+  --surface: #c3fae8;
+  --text: #087f5b;
+  --accent: #099268;
+  --accent-2: #087f5b;
+}
+
+/* Open Color Violet — https://github.com/yeun/open-color — MIT */
+[data-palette="open-color-violet"] {
+  --50: #f3f0ff;
+  --100: #e5dbff;
+  --200: #d0bfff;
+  --300: #b197fc;
+  --400: #9775fa;
+  --500: #845ef7;
+  --600: #7950f2;
+  --700: #7048e8;
+  --800: #6741d9;
+  --900: #5f3dc4;
+  --background: #f3f0ff;
+  --surface: #e5dbff;
+  --text: #5f3dc4;
+  --accent: #6741d9;
+  --accent-2: #7048e8;
+}
+
+/* Open Color Yellow — https://github.com/yeun/open-color — MIT */
+[data-palette="open-color-yellow"] {
+  --50: #fff9db;
+  --100: #fff3bf;
+  --200: #ffec99;
+  --300: #ffe066;
+  --400: #ffd43b;
+  --500: #fcc419;
+  --600: #fab005;
+  --700: #f59f00;
+  --800: #f08c00;
+  --900: #e67700;
+  --background: #fff9db;
+  --surface: #fff3bf;
+  --text: #e67700;
+  --accent: #f59f00;
+  --accent-2: #f08c00;
+}
+
+/* Radix Amber (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-amber-dark"] {
+  --amber1: #16120c;
+  --amber2: #1d180f;
+  --amber3: #302008;
+  --amber4: #3f2700;
+  --amber5: #4d3000;
+  --amber6: #5c3d05;
+  --amber7: #714f19;
+  --amber8: #8f6424;
+  --amber9: #ffc53d;
+  --amber10: #ffd60a;
+  --amber11: #ffca16;
+  --amber12: #ffe7b3;
+  --background: #16120c;
+  --surface: #1d180f;
+  --text: #ffe7b3;
+  --accent: #3f2700;
+  --accent-2: #4d3000;
+}
+
+/* Radix Amber (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-amber-light"] {
+  --amber1: #fefdfb;
+  --amber2: #fefbe9;
+  --amber3: #fff7c2;
+  --amber4: #ffee9c;
+  --amber5: #fbe577;
+  --amber6: #f3d673;
+  --amber7: #e9c162;
+  --amber8: #e2a336;
+  --amber9: #ffc53d;
+  --amber10: #ffba18;
+  --amber11: #ab6400;
+  --amber12: #4f3422;
+  --background: #fefdfb;
+  --surface: #fefbe9;
+  --text: #4f3422;
+  --accent: #ab6400;
+  --accent-2: #ffba18;
+}
+
+/* Radix Blue (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-blue-dark"] {
+  --blue1: #0d1520;
+  --blue2: #111927;
+  --blue3: #0d2847;
+  --blue4: #003362;
+  --blue5: #004074;
+  --blue6: #104d87;
+  --blue7: #205d9e;
+  --blue8: #2870bd;
+  --blue9: #0090ff;
+  --blue10: #3b9eff;
+  --blue11: #70b8ff;
+  --blue12: #c2e6ff;
+  --background: #0d1520;
+  --surface: #111927;
+  --text: #c2e6ff;
+  --accent: #003362;
+  --accent-2: #004074;
+}
+
+/* Radix Blue (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-blue-light"] {
+  --blue1: #fbfdff;
+  --blue2: #f4faff;
+  --blue3: #e6f4fe;
+  --blue4: #d5efff;
+  --blue5: #c2e5ff;
+  --blue6: #acd8fc;
+  --blue7: #8ec8f6;
+  --blue8: #5eb1ef;
+  --blue9: #0090ff;
+  --blue10: #0588f0;
+  --blue11: #0d74ce;
+  --blue12: #113264;
+  --background: #fbfdff;
+  --surface: #f4faff;
+  --text: #113264;
+  --accent: #0090ff;
+  --accent-2: #0588f0;
+}
+
+/* Radix Bronze (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-bronze-dark"] {
+  --bronze1: #141110;
+  --bronze2: #1c1917;
+  --bronze3: #262220;
+  --bronze4: #302a27;
+  --bronze5: #3b3330;
+  --bronze6: #493e3a;
+  --bronze7: #5a4c47;
+  --bronze8: #6f5f58;
+  --bronze9: #a18072;
+  --bronze10: #ae8c7e;
+  --bronze11: #d4b3a5;
+  --bronze12: #ede0d9;
+  --background: #141110;
+  --surface: #1c1917;
+  --text: #ede0d9;
+  --accent: #a18072;
+  --accent-2: #ae8c7e;
+}
+
+/* Radix Bronze (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-bronze-light"] {
+  --bronze1: #fdfcfc;
+  --bronze2: #fdf7f5;
+  --bronze3: #f6edea;
+  --bronze4: #efe4df;
+  --bronze5: #e7d9d3;
+  --bronze6: #dfcdc5;
+  --bronze7: #d3bcb3;
+  --bronze8: #c2a499;
+  --bronze9: #a18072;
+  --bronze10: #957468;
+  --bronze11: #7d5e54;
+  --bronze12: #43302b;
+  --background: #fdfcfc;
+  --surface: #fdf7f5;
+  --text: #43302b;
+  --accent: #43302b;
+  --accent-2: #7d5e54;
+}
+
+/* Radix Brown (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-brown-dark"] {
+  --brown1: #12110f;
+  --brown2: #1c1816;
+  --brown3: #28211d;
+  --brown4: #322922;
+  --brown5: #3e3128;
+  --brown6: #4d3c2f;
+  --brown7: #614a39;
+  --brown8: #7c5f46;
+  --brown9: #ad7f58;
+  --brown10: #b88c67;
+  --brown11: #dbb594;
+  --brown12: #f2e1ca;
+  --background: #12110f;
+  --surface: #1c1816;
+  --text: #f2e1ca;
+  --accent: #ad7f58;
+  --accent-2: #b88c67;
+}
+
+/* Radix Brown (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-brown-light"] {
+  --brown1: #fefdfc;
+  --brown2: #fcf9f6;
+  --brown3: #f6eee7;
+  --brown4: #f0e4d9;
+  --brown5: #ebdaca;
+  --brown6: #e4cdb7;
+  --brown7: #dcbc9f;
+  --brown8: #cea37e;
+  --brown9: #ad7f58;
+  --brown10: #a07553;
+  --brown11: #815e46;
+  --brown12: #3e332e;
+  --background: #fefdfc;
+  --surface: #fcf9f6;
+  --text: #3e332e;
+  --accent: #ad7f58;
+  --accent-2: #a07553;
+}
+
+/* Radix Crimson (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-crimson-dark"] {
+  --crimson1: #191114;
+  --crimson2: #201318;
+  --crimson3: #381525;
+  --crimson4: #4d122f;
+  --crimson5: #5c1839;
+  --crimson6: #6d2545;
+  --crimson7: #873356;
+  --crimson8: #b0436e;
+  --crimson9: #e93d82;
+  --crimson10: #ee518a;
+  --crimson11: #ff92ad;
+  --crimson12: #fdd3e8;
+  --background: #191114;
+  --surface: #201318;
+  --text: #fdd3e8;
+  --accent: #4d122f;
+  --accent-2: #5c1839;
+}
+
+/* Radix Crimson (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-crimson-light"] {
+  --crimson1: #fffcfd;
+  --crimson2: #fef7f9;
+  --crimson3: #ffe9f0;
+  --crimson4: #fedce7;
+  --crimson5: #facedd;
+  --crimson6: #f3bed1;
+  --crimson7: #eaacc3;
+  --crimson8: #e093b2;
+  --crimson9: #e93d82;
+  --crimson10: #df3478;
+  --crimson11: #cb1d63;
+  --crimson12: #621639;
+  --background: #fffcfd;
+  --surface: #fef7f9;
+  --text: #621639;
+  --accent: #cb1d63;
+  --accent-2: #621639;
+}
+
+/* Radix Cyan (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-cyan-dark"] {
+  --cyan1: #0b161a;
+  --cyan2: #101b20;
+  --cyan3: #082c36;
+  --cyan4: #003848;
+  --cyan5: #004558;
+  --cyan6: #045468;
+  --cyan7: #12677e;
+  --cyan8: #11809c;
+  --cyan9: #00a2c7;
+  --cyan10: #23afd0;
+  --cyan11: #4ccce6;
+  --cyan12: #b6ecf7;
+  --background: #0b161a;
+  --surface: #101b20;
+  --text: #b6ecf7;
+  --accent: #003848;
+  --accent-2: #004558;
+}
+
+/* Radix Cyan (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-cyan-light"] {
+  --cyan1: #fafdfe;
+  --cyan2: #f2fafb;
+  --cyan3: #def7f9;
+  --cyan4: #caf1f6;
+  --cyan5: #b5e9f0;
+  --cyan6: #9ddde7;
+  --cyan7: #7dcedc;
+  --cyan8: #3db9cf;
+  --cyan9: #00a2c7;
+  --cyan10: #0797b9;
+  --cyan11: #107d98;
+  --cyan12: #0d3c48;
+  --background: #fafdfe;
+  --surface: #f2fafb;
+  --text: #0d3c48;
+  --accent: #00a2c7;
+  --accent-2: #0797b9;
+}
+
+/* Radix Gold (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-gold-dark"] {
+  --gold1: #121211;
+  --gold2: #1b1a17;
+  --gold3: #24231f;
+  --gold4: #2d2b26;
+  --gold5: #38352e;
+  --gold6: #444039;
+  --gold7: #544f46;
+  --gold8: #696256;
+  --gold9: #978365;
+  --gold10: #a39073;
+  --gold11: #cbb99f;
+  --gold12: #e8e2d9;
+  --background: #121211;
+  --surface: #1b1a17;
+  --text: #e8e2d9;
+  --accent: #978365;
+  --accent-2: #a39073;
+}
+
+/* Radix Gold (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-gold-light"] {
+  --gold1: #fdfdfc;
+  --gold2: #faf9f2;
+  --gold3: #f2f0e7;
+  --gold4: #eae6db;
+  --gold5: #e1dccf;
+  --gold6: #d8d0bf;
+  --gold7: #cbc0aa;
+  --gold8: #b9a88d;
+  --gold9: #978365;
+  --gold10: #8c7a5e;
+  --gold11: #71624b;
+  --gold12: #3b352b;
+  --background: #fdfdfc;
+  --surface: #faf9f2;
+  --text: #3b352b;
+  --accent: #71624b;
+  --accent-2: #978365;
+}
+
+/* Radix Grass (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-grass-dark"] {
+  --grass1: #0e1511;
+  --grass2: #141a15;
+  --grass3: #1b2a1e;
+  --grass4: #1d3a24;
+  --grass5: #25482d;
+  --grass6: #2d5736;
+  --grass7: #366740;
+  --grass8: #3e7949;
+  --grass9: #46a758;
+  --grass10: #53b365;
+  --grass11: #71d083;
+  --grass12: #c2f0c2;
+  --background: #0e1511;
+  --surface: #141a15;
+  --text: #c2f0c2;
+  --accent: #46a758;
+  --accent-2: #53b365;
+}
+
+/* Radix Grass (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-grass-light"] {
+  --grass1: #fbfefb;
+  --grass2: #f5fbf5;
+  --grass3: #e9f6e9;
+  --grass4: #daf1db;
+  --grass5: #c9e8ca;
+  --grass6: #b2ddb5;
+  --grass7: #94ce9a;
+  --grass8: #65ba74;
+  --grass9: #46a758;
+  --grass10: #3e9b4f;
+  --grass11: #2a7e3b;
+  --grass12: #203c25;
+  --background: #fbfefb;
+  --surface: #f5fbf5;
+  --text: #203c25;
+  --accent: #2a7e3b;
+  --accent-2: #3e9b4f;
+}
+
+/* Radix Gray (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-gray-dark"] {
+  --gray1: #111111;
+  --gray2: #191919;
+  --gray3: #222222;
+  --gray4: #2a2a2a;
+  --gray5: #313131;
+  --gray6: #3a3a3a;
+  --gray7: #484848;
+  --gray8: #606060;
+  --gray9: #6e6e6e;
+  --gray10: #7b7b7b;
+  --gray11: #b4b4b4;
+  --gray12: #eeeeee;
+  --background: #111111;
+  --surface: #191919;
+  --text: #eeeeee;
+  --accent: #222222;
+  --accent-2: #2a2a2a;
+}
+
+/* Radix Gray (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-gray-light"] {
+  --gray1: #fcfcfc;
+  --gray2: #f9f9f9;
+  --gray3: #f0f0f0;
+  --gray4: #e8e8e8;
+  --gray5: #e0e0e0;
+  --gray6: #d9d9d9;
+  --gray7: #cecece;
+  --gray8: #bbbbbb;
+  --gray9: #8d8d8d;
+  --gray10: #838383;
+  --gray11: #646464;
+  --gray12: #202020;
+  --background: #fcfcfc;
+  --surface: #f9f9f9;
+  --text: #202020;
+  --accent: #cecece;
+  --accent-2: #bbbbbb;
+}
+
+/* Radix Green (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-green-dark"] {
+  --green1: #0e1512;
+  --green2: #121b17;
+  --green3: #132d21;
+  --green4: #113b29;
+  --green5: #174933;
+  --green6: #20573e;
+  --green7: #28684a;
+  --green8: #2f7c57;
+  --green9: #30a46c;
+  --green10: #33b074;
+  --green11: #3dd68c;
+  --green12: #b1f1cb;
+  --background: #0e1512;
+  --surface: #121b17;
+  --text: #b1f1cb;
+  --accent: #3dd68c;
+  --accent-2: #113b29;
+}
+
+/* Radix Green (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-green-light"] {
+  --green1: #fbfefc;
+  --green2: #f4fbf6;
+  --green3: #e6f6eb;
+  --green4: #d6f1df;
+  --green5: #c4e8d1;
+  --green6: #adddc0;
+  --green7: #8eceaa;
+  --green8: #5bb98b;
+  --green9: #30a46c;
+  --green10: #2b9a66;
+  --green11: #218358;
+  --green12: #193b2d;
+  --background: #fbfefc;
+  --surface: #f4fbf6;
+  --text: #193b2d;
+  --accent: #218358;
+  --accent-2: #2b9a66;
+}
+
+/* Radix Indigo (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-indigo-dark"] {
+  --indigo1: #11131f;
+  --indigo2: #141726;
+  --indigo3: #182449;
+  --indigo4: #1d2e62;
+  --indigo5: #253974;
+  --indigo6: #304384;
+  --indigo7: #3a4f97;
+  --indigo8: #435db1;
+  --indigo9: #3e63dd;
+  --indigo10: #5472e4;
+  --indigo11: #9eb1ff;
+  --indigo12: #d6e1ff;
+  --background: #11131f;
+  --surface: #141726;
+  --text: #d6e1ff;
+  --accent: #3e63dd;
+  --accent-2: #1d2e62;
+}
+
+/* Radix Indigo (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-indigo-light"] {
+  --indigo1: #fdfdfe;
+  --indigo2: #f7f9ff;
+  --indigo3: #edf2fe;
+  --indigo4: #e1e9ff;
+  --indigo5: #d2deff;
+  --indigo6: #c1d0ff;
+  --indigo7: #abbdf9;
+  --indigo8: #8da4ef;
+  --indigo9: #3e63dd;
+  --indigo10: #3358d4;
+  --indigo11: #3a5bc7;
+  --indigo12: #1f2d5c;
+  --background: #fdfdfe;
+  --surface: #f7f9ff;
+  --text: #1f2d5c;
+  --accent: #3358d4;
+  --accent-2: #3e63dd;
+}
+
+/* Radix Iris (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-iris-dark"] {
+  --iris1: #13131e;
+  --iris2: #171625;
+  --iris3: #202248;
+  --iris4: #262a65;
+  --iris5: #303374;
+  --iris6: #3d3e82;
+  --iris7: #4a4a95;
+  --iris8: #5958b1;
+  --iris9: #5b5bd6;
+  --iris10: #6e6ade;
+  --iris11: #b1a9ff;
+  --iris12: #e0dffe;
+  --background: #13131e;
+  --surface: #171625;
+  --text: #e0dffe;
+  --accent: #262a65;
+  --accent-2: #303374;
+}
+
+/* Radix Iris (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-iris-light"] {
+  --iris1: #fdfdff;
+  --iris2: #f8f8ff;
+  --iris3: #f0f1fe;
+  --iris4: #e6e7ff;
+  --iris5: #dadcff;
+  --iris6: #cbcdff;
+  --iris7: #b8baf8;
+  --iris8: #9b9ef0;
+  --iris9: #5b5bd6;
+  --iris10: #5151cd;
+  --iris11: #5753c6;
+  --iris12: #272962;
+  --background: #fdfdff;
+  --surface: #f8f8ff;
+  --text: #272962;
+  --accent: #5151cd;
+  --accent-2: #272962;
+}
+
+/* Radix Jade (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-jade-dark"] {
+  --jade1: #0d1512;
+  --jade2: #121c18;
+  --jade3: #0f2e22;
+  --jade4: #0b3b2c;
+  --jade5: #114837;
+  --jade6: #1b5745;
+  --jade7: #246854;
+  --jade8: #2a7e68;
+  --jade9: #29a383;
+  --jade10: #27b08b;
+  --jade11: #1fd8a4;
+  --jade12: #adf0d4;
+  --background: #0d1512;
+  --surface: #121c18;
+  --text: #adf0d4;
+  --accent: #1fd8a4;
+  --accent-2: #0b3b2c;
+}
+
+/* Radix Jade (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-jade-light"] {
+  --jade1: #fbfefd;
+  --jade2: #f4fbf7;
+  --jade3: #e6f7ed;
+  --jade4: #d6f1e3;
+  --jade5: #c3e9d7;
+  --jade6: #acdec8;
+  --jade7: #8bceb6;
+  --jade8: #56ba9f;
+  --jade9: #29a383;
+  --jade10: #26997b;
+  --jade11: #208368;
+  --jade12: #1d3b31;
+  --background: #fbfefd;
+  --surface: #f4fbf7;
+  --text: #1d3b31;
+  --accent: #208368;
+  --accent-2: #26997b;
+}
+
+/* Radix Lime (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-lime-dark"] {
+  --lime1: #11130c;
+  --lime2: #151a10;
+  --lime3: #1f2917;
+  --lime4: #29371d;
+  --lime5: #334423;
+  --lime6: #3d522a;
+  --lime7: #496231;
+  --lime8: #577538;
+  --lime9: #bdee63;
+  --lime10: #d4ff70;
+  --lime11: #bde56c;
+  --lime12: #e3f7ba;
+  --background: #11130c;
+  --surface: #151a10;
+  --text: #e3f7ba;
+  --accent: #577538;
+  --accent-2: #496231;
+}
+
+/* Radix Lime (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-lime-light"] {
+  --lime1: #fcfdfa;
+  --lime2: #f8faf3;
+  --lime3: #eef6d6;
+  --lime4: #e2f0bd;
+  --lime5: #d3e7a6;
+  --lime6: #c2da91;
+  --lime7: #abc978;
+  --lime8: #8db654;
+  --lime9: #bdee63;
+  --lime10: #b0e64c;
+  --lime11: #5c7c2f;
+  --lime12: #37401c;
+  --background: #fcfdfa;
+  --surface: #f8faf3;
+  --text: #37401c;
+  --accent: #b0e64c;
+  --accent-2: #5c7c2f;
+}
+
+/* Radix Mauve (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-mauve-dark"] {
+  --mauve1: #121113;
+  --mauve2: #1a191b;
+  --mauve3: #232225;
+  --mauve4: #2b292d;
+  --mauve5: #323035;
+  --mauve6: #3c393f;
+  --mauve7: #49474e;
+  --mauve8: #625f69;
+  --mauve9: #6f6d78;
+  --mauve10: #7c7a85;
+  --mauve11: #b5b2bc;
+  --mauve12: #eeeef0;
+  --background: #121113;
+  --surface: #1a191b;
+  --text: #eeeef0;
+  --accent: #3c393f;
+  --accent-2: #625f69;
+}
+
+/* Radix Mauve (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-mauve-light"] {
+  --mauve1: #fdfcfd;
+  --mauve2: #faf9fb;
+  --mauve3: #f2eff3;
+  --mauve4: #eae7ec;
+  --mauve5: #e3dfe6;
+  --mauve6: #dbd8e0;
+  --mauve7: #d0cdd7;
+  --mauve8: #bcbac7;
+  --mauve9: #8e8c99;
+  --mauve10: #84828e;
+  --mauve11: #65636d;
+  --mauve12: #211f26;
+  --background: #fdfcfd;
+  --surface: #faf9fb;
+  --text: #211f26;
+  --accent: #211f26;
+  --accent-2: #65636d;
+}
+
+/* Radix Mint (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-mint-dark"] {
+  --mint1: #0e1515;
+  --mint2: #0f1b1b;
+  --mint3: #092c2b;
+  --mint4: #003a38;
+  --mint5: #004744;
+  --mint6: #105650;
+  --mint7: #1e685f;
+  --mint8: #277f70;
+  --mint9: #86ead4;
+  --mint10: #a8f5e5;
+  --mint11: #58d5ba;
+  --mint12: #c4f5e1;
+  --background: #0e1515;
+  --surface: #0f1b1b;
+  --text: #c4f5e1;
+  --accent: #003a38;
+  --accent-2: #004744;
+}
+
+/* Radix Mint (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-mint-light"] {
+  --mint1: #f9fefd;
+  --mint2: #f2fbf9;
+  --mint3: #ddf9f2;
+  --mint4: #c8f4e9;
+  --mint5: #b3ecde;
+  --mint6: #9ce0d0;
+  --mint7: #7ecfbd;
+  --mint8: #4cbba5;
+  --mint9: #86ead4;
+  --mint10: #7de0cb;
+  --mint11: #027864;
+  --mint12: #16433c;
+  --background: #f9fefd;
+  --surface: #f2fbf9;
+  --text: #16433c;
+  --accent: #027864;
+  --accent-2: #16433c;
+}
+
+/* Radix Olive (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-olive-dark"] {
+  --olive1: #111210;
+  --olive2: #181917;
+  --olive3: #212220;
+  --olive4: #282a27;
+  --olive5: #2f312e;
+  --olive6: #383a36;
+  --olive7: #454843;
+  --olive8: #5c625b;
+  --olive9: #687066;
+  --olive10: #767d74;
+  --olive11: #afb5ad;
+  --olive12: #eceeec;
+  --background: #111210;
+  --surface: #181917;
+  --text: #eceeec;
+  --accent: #687066;
+  --accent-2: #767d74;
+}
+
+/* Radix Olive (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-olive-light"] {
+  --olive1: #fcfdfc;
+  --olive2: #f8faf8;
+  --olive3: #eff1ef;
+  --olive4: #e7e9e7;
+  --olive5: #dfe2df;
+  --olive6: #d7dad7;
+  --olive7: #cccfcc;
+  --olive8: #b9bcb8;
+  --olive9: #898e87;
+  --olive10: #7f847d;
+  --olive11: #60655f;
+  --olive12: #1d211c;
+  --background: #fcfdfc;
+  --surface: #f8faf8;
+  --text: #1d211c;
+  --accent: #1d211c;
+  --accent-2: #60655f;
+}
+
+/* Radix Orange (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-orange-dark"] {
+  --orange1: #17120e;
+  --orange2: #1e160f;
+  --orange3: #331e0b;
+  --orange4: #462100;
+  --orange5: #562800;
+  --orange6: #66350c;
+  --orange7: #7e451d;
+  --orange8: #a35829;
+  --orange9: #f76b15;
+  --orange10: #ff801f;
+  --orange11: #ffa057;
+  --orange12: #ffe0c2;
+  --background: #17120e;
+  --surface: #1e160f;
+  --text: #ffe0c2;
+  --accent: #462100;
+  --accent-2: #562800;
+}
+
+/* Radix Orange (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-orange-light"] {
+  --orange1: #fefcfb;
+  --orange2: #fff7ed;
+  --orange3: #ffefd6;
+  --orange4: #ffdfb5;
+  --orange5: #ffd19a;
+  --orange6: #ffc182;
+  --orange7: #f5ae73;
+  --orange8: #ec9455;
+  --orange9: #f76b15;
+  --orange10: #ef5f00;
+  --orange11: #cc4e00;
+  --orange12: #582d1d;
+  --background: #fefcfb;
+  --surface: #fff7ed;
+  --text: #582d1d;
+  --accent: #ef5f00;
+  --accent-2: #cc4e00;
+}
+
+/* Radix Pink (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-pink-dark"] {
+  --pink1: #191117;
+  --pink2: #21121d;
+  --pink3: #37172f;
+  --pink4: #4b143d;
+  --pink5: #591c47;
+  --pink6: #692955;
+  --pink7: #833869;
+  --pink8: #a84885;
+  --pink9: #d6409f;
+  --pink10: #de51a8;
+  --pink11: #ff8dcc;
+  --pink12: #fdd1ea;
+  --background: #191117;
+  --surface: #21121d;
+  --text: #fdd1ea;
+  --accent: #4b143d;
+  --accent-2: #d6409f;
+}
+
+/* Radix Pink (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-pink-light"] {
+  --pink1: #fffcfe;
+  --pink2: #fef7fb;
+  --pink3: #fee9f5;
+  --pink4: #fbdcef;
+  --pink5: #f6cee7;
+  --pink6: #efbfdd;
+  --pink7: #e7acd0;
+  --pink8: #dd93c2;
+  --pink9: #d6409f;
+  --pink10: #cf3897;
+  --pink11: #c2298a;
+  --pink12: #651249;
+  --background: #fffcfe;
+  --surface: #fef7fb;
+  --text: #651249;
+  --accent: #651249;
+  --accent-2: #c2298a;
+}
+
+/* Radix Plum (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-plum-dark"] {
+  --plum1: #181118;
+  --plum2: #201320;
+  --plum3: #351a35;
+  --plum4: #451d47;
+  --plum5: #512454;
+  --plum6: #5e3061;
+  --plum7: #734079;
+  --plum8: #92549c;
+  --plum9: #ab4aba;
+  --plum10: #b658c4;
+  --plum11: #e796f3;
+  --plum12: #f4d4f4;
+  --background: #181118;
+  --surface: #201320;
+  --text: #f4d4f4;
+  --accent: #ab4aba;
+  --accent-2: #451d47;
+}
+
+/* Radix Plum (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-plum-light"] {
+  --plum1: #fefcff;
+  --plum2: #fdf7fd;
+  --plum3: #fbebfb;
+  --plum4: #f7def8;
+  --plum5: #f2d1f3;
+  --plum6: #e9c2ec;
+  --plum7: #deade3;
+  --plum8: #cf91d8;
+  --plum9: #ab4aba;
+  --plum10: #a144af;
+  --plum11: #953ea3;
+  --plum12: #53195d;
+  --background: #fefcff;
+  --surface: #fdf7fd;
+  --text: #53195d;
+  --accent: #53195d;
+  --accent-2: #953ea3;
+}
+
+/* Radix Purple (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-purple-dark"] {
+  --purple1: #18111b;
+  --purple2: #1e1523;
+  --purple3: #301c3b;
+  --purple4: #3d224e;
+  --purple5: #48295c;
+  --purple6: #54346b;
+  --purple7: #664282;
+  --purple8: #8457aa;
+  --purple9: #8e4ec6;
+  --purple10: #9a5cd0;
+  --purple11: #d19dff;
+  --purple12: #ecd9fa;
+  --background: #18111b;
+  --surface: #1e1523;
+  --text: #ecd9fa;
+  --accent: #8e4ec6;
+  --accent-2: #3d224e;
+}
+
+/* Radix Purple (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-purple-light"] {
+  --purple1: #fefcfe;
+  --purple2: #fbf7fe;
+  --purple3: #f7edfe;
+  --purple4: #f2e2fc;
+  --purple5: #ead5f9;
+  --purple6: #e0c4f4;
+  --purple7: #d1afec;
+  --purple8: #be93e4;
+  --purple9: #8e4ec6;
+  --purple10: #8347b9;
+  --purple11: #8145b5;
+  --purple12: #402060;
+  --background: #fefcfe;
+  --surface: #fbf7fe;
+  --text: #402060;
+  --accent: #402060;
+  --accent-2: #8145b5;
+}
+
+/* Radix Red (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-red-dark"] {
+  --red1: #191111;
+  --red2: #201314;
+  --red3: #3b1219;
+  --red4: #500f1c;
+  --red5: #611623;
+  --red6: #72232d;
+  --red7: #8c333a;
+  --red8: #b54548;
+  --red9: #e5484d;
+  --red10: #ec5d5e;
+  --red11: #ff9592;
+  --red12: #ffd1d9;
+  --background: #191111;
+  --surface: #201314;
+  --text: #ffd1d9;
+  --accent: #611623;
+  --accent-2: #72232d;
+}
+
+/* Radix Red (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-red-light"] {
+  --red1: #fffcfc;
+  --red2: #fff7f7;
+  --red3: #feebec;
+  --red4: #ffdbdc;
+  --red5: #ffcdce;
+  --red6: #fdbdbe;
+  --red7: #f4a9aa;
+  --red8: #eb8e90;
+  --red9: #e5484d;
+  --red10: #dc3e42;
+  --red11: #ce2c31;
+  --red12: #641723;
+  --background: #fffcfc;
+  --surface: #fff7f7;
+  --text: #641723;
+  --accent: #ce2c31;
+  --accent-2: #641723;
+}
+
+/* Radix Ruby (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-ruby-dark"] {
+  --ruby1: #191113;
+  --ruby2: #1e1517;
+  --ruby3: #3a141e;
+  --ruby4: #4e1325;
+  --ruby5: #5e1a2e;
+  --ruby6: #6f2539;
+  --ruby7: #883447;
+  --ruby8: #b3445a;
+  --ruby9: #e54666;
+  --ruby10: #ec5a72;
+  --ruby11: #ff949d;
+  --ruby12: #fed2e1;
+  --background: #191113;
+  --surface: #1e1517;
+  --text: #fed2e1;
+  --accent: #4e1325;
+  --accent-2: #5e1a2e;
+}
+
+/* Radix Ruby (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-ruby-light"] {
+  --ruby1: #fffcfd;
+  --ruby2: #fff7f8;
+  --ruby3: #feeaed;
+  --ruby4: #ffdce1;
+  --ruby5: #ffced6;
+  --ruby6: #f8bfc8;
+  --ruby7: #efacb8;
+  --ruby8: #e592a3;
+  --ruby9: #e54666;
+  --ruby10: #dc3b5d;
+  --ruby11: #ca244d;
+  --ruby12: #64172b;
+  --background: #fffcfd;
+  --surface: #fff7f8;
+  --text: #64172b;
+  --accent: #ca244d;
+  --accent-2: #64172b;
+}
+
+/* Radix Sage (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-sage-dark"] {
+  --sage1: #101211;
+  --sage2: #171918;
+  --sage3: #202221;
+  --sage4: #272a29;
+  --sage5: #2e3130;
+  --sage6: #373b39;
+  --sage7: #444947;
+  --sage8: #5b625f;
+  --sage9: #63706b;
+  --sage10: #717d79;
+  --sage11: #adb5b2;
+  --sage12: #eceeed;
+  --background: #101211;
+  --surface: #171918;
+  --text: #eceeed;
+  --accent: #63706b;
+  --accent-2: #717d79;
+}
+
+/* Radix Sage (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-sage-light"] {
+  --sage1: #fbfdfc;
+  --sage2: #f7f9f8;
+  --sage3: #eef1f0;
+  --sage4: #e6e9e8;
+  --sage5: #dfe2e0;
+  --sage6: #d7dad9;
+  --sage7: #cbcfcd;
+  --sage8: #b8bcba;
+  --sage9: #868e8b;
+  --sage10: #7c8481;
+  --sage11: #5f6563;
+  --sage12: #1a211e;
+  --background: #fbfdfc;
+  --surface: #f7f9f8;
+  --text: #1a211e;
+  --accent: #1a211e;
+  --accent-2: #7c8481;
+}
+
+/* Radix Sand (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-sand-dark"] {
+  --sand1: #111110;
+  --sand2: #191918;
+  --sand3: #222221;
+  --sand4: #2a2a28;
+  --sand5: #31312e;
+  --sand6: #3b3a37;
+  --sand7: #494844;
+  --sand8: #62605b;
+  --sand9: #6f6d66;
+  --sand10: #7c7b74;
+  --sand11: #b5b3ad;
+  --sand12: #eeeeec;
+  --background: #111110;
+  --surface: #191918;
+  --text: #eeeeec;
+  --accent: #6f6d66;
+  --accent-2: #62605b;
+}
+
+/* Radix Sand (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-sand-light"] {
+  --sand1: #fdfdfc;
+  --sand2: #f9f9f8;
+  --sand3: #f1f0ef;
+  --sand4: #e9e8e6;
+  --sand5: #e2e1de;
+  --sand6: #dad9d6;
+  --sand7: #cfceca;
+  --sand8: #bcbbb5;
+  --sand9: #8d8d86;
+  --sand10: #82827c;
+  --sand11: #63635e;
+  --sand12: #21201c;
+  --background: #fdfdfc;
+  --surface: #f9f9f8;
+  --text: #21201c;
+  --accent: #21201c;
+  --accent-2: #63635e;
+}
+
+/* Radix Sky (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-sky-dark"] {
+  --sky1: #0d141f;
+  --sky2: #111a27;
+  --sky3: #112840;
+  --sky4: #113555;
+  --sky5: #154467;
+  --sky6: #1b537b;
+  --sky7: #1f6692;
+  --sky8: #197cae;
+  --sky9: #7ce2fe;
+  --sky10: #a8eeff;
+  --sky11: #75c7f0;
+  --sky12: #c2f3ff;
+  --background: #0d141f;
+  --surface: #111a27;
+  --text: #c2f3ff;
+  --accent: #197cae;
+  --accent-2: #113555;
+}
+
+/* Radix Sky (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-sky-light"] {
+  --sky1: #f9feff;
+  --sky2: #f1fafd;
+  --sky3: #e1f6fd;
+  --sky4: #d1f0fa;
+  --sky5: #bee7f5;
+  --sky6: #a9daed;
+  --sky7: #8dcae3;
+  --sky8: #60b3d7;
+  --sky9: #7ce2fe;
+  --sky10: #74daf8;
+  --sky11: #00749e;
+  --sky12: #1d3e56;
+  --background: #f9feff;
+  --surface: #f1fafd;
+  --text: #1d3e56;
+  --accent: #00749e;
+  --accent-2: #1d3e56;
+}
+
+/* Radix Slate (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-slate-dark"] {
+  --slate1: #111113;
+  --slate2: #18191b;
+  --slate3: #212225;
+  --slate4: #272a2d;
+  --slate5: #2e3135;
+  --slate6: #363a3f;
+  --slate7: #43484e;
+  --slate8: #5a6169;
+  --slate9: #696e77;
+  --slate10: #777b84;
+  --slate11: #b0b4ba;
+  --slate12: #edeef0;
+  --background: #111113;
+  --surface: #18191b;
+  --text: #edeef0;
+  --accent: #363a3f;
+  --accent-2: #5a6169;
+}
+
+/* Radix Slate (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-slate-light"] {
+  --slate1: #fcfcfd;
+  --slate2: #f9f9fb;
+  --slate3: #f0f0f3;
+  --slate4: #e8e8ec;
+  --slate5: #e0e1e6;
+  --slate6: #d9d9e0;
+  --slate7: #cdced6;
+  --slate8: #b9bbc6;
+  --slate9: #8b8d98;
+  --slate10: #80838d;
+  --slate11: #60646c;
+  --slate12: #1c2024;
+  --background: #fcfcfd;
+  --surface: #f9f9fb;
+  --text: #1c2024;
+  --accent: #1c2024;
+  --accent-2: #60646c;
+}
+
+/* Radix Teal (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-teal-dark"] {
+  --teal1: #0d1514;
+  --teal2: #111c1b;
+  --teal3: #0d2d2a;
+  --teal4: #023b37;
+  --teal5: #084843;
+  --teal6: #145750;
+  --teal7: #1c6961;
+  --teal8: #207e73;
+  --teal9: #12a594;
+  --teal10: #0eb39e;
+  --teal11: #0bd8b6;
+  --teal12: #adf0dd;
+  --background: #0d1514;
+  --surface: #111c1b;
+  --text: #adf0dd;
+  --accent: #023b37;
+  --accent-2: #0bd8b6;
+}
+
+/* Radix Teal (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-teal-light"] {
+  --teal1: #fafefd;
+  --teal2: #f3fbf9;
+  --teal3: #e0f8f3;
+  --teal4: #ccf3ea;
+  --teal5: #b8eae0;
+  --teal6: #a1ded2;
+  --teal7: #83cdc1;
+  --teal8: #53b9ab;
+  --teal9: #12a594;
+  --teal10: #0d9b8a;
+  --teal11: #008573;
+  --teal12: #0d3d38;
+  --background: #fafefd;
+  --surface: #f3fbf9;
+  --text: #0d3d38;
+  --accent: #008573;
+  --accent-2: #0d9b8a;
+}
+
+/* Radix Tomato (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-tomato-dark"] {
+  --tomato1: #181111;
+  --tomato2: #1f1513;
+  --tomato3: #391714;
+  --tomato4: #4e1511;
+  --tomato5: #5e1c16;
+  --tomato6: #6e2920;
+  --tomato7: #853a2d;
+  --tomato8: #ac4d39;
+  --tomato9: #e54d2e;
+  --tomato10: #ec6142;
+  --tomato11: #ff977d;
+  --tomato12: #fbd3cb;
+  --background: #181111;
+  --surface: #1f1513;
+  --text: #fbd3cb;
+  --accent: #e54d2e;
+  --accent-2: #4e1511;
+}
+
+/* Radix Tomato (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-tomato-light"] {
+  --tomato1: #fffcfc;
+  --tomato2: #fff8f7;
+  --tomato3: #feebe7;
+  --tomato4: #ffdcd3;
+  --tomato5: #ffcdc2;
+  --tomato6: #fdbdaf;
+  --tomato7: #f5a898;
+  --tomato8: #ec8e7b;
+  --tomato9: #e54d2e;
+  --tomato10: #dd4425;
+  --tomato11: #d13415;
+  --tomato12: #5c271f;
+  --background: #fffcfc;
+  --surface: #fff8f7;
+  --text: #5c271f;
+  --accent: #d13415;
+  --accent-2: #dd4425;
+}
+
+/* Radix Violet (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-violet-dark"] {
+  --violet1: #14121f;
+  --violet2: #1b1525;
+  --violet3: #291f43;
+  --violet4: #33255b;
+  --violet5: #3c2e69;
+  --violet6: #473876;
+  --violet7: #56468b;
+  --violet8: #6958ad;
+  --violet9: #6e56cf;
+  --violet10: #7d66d9;
+  --violet11: #baa7ff;
+  --violet12: #e2ddfe;
+  --background: #14121f;
+  --surface: #1b1525;
+  --text: #e2ddfe;
+  --accent: #33255b;
+  --accent-2: #6e56cf;
+}
+
+/* Radix Violet (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-violet-light"] {
+  --violet1: #fdfcfe;
+  --violet2: #faf8ff;
+  --violet3: #f4f0fe;
+  --violet4: #ebe4ff;
+  --violet5: #e1d9ff;
+  --violet6: #d4cafe;
+  --violet7: #c2b5f5;
+  --violet8: #aa99ec;
+  --violet9: #6e56cf;
+  --violet10: #654dc4;
+  --violet11: #6550b9;
+  --violet12: #2f265f;
+  --background: #fdfcfe;
+  --surface: #faf8ff;
+  --text: #2f265f;
+  --accent: #654dc4;
+  --accent-2: #2f265f;
+}
+
+/* Radix Yellow (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-yellow-dark"] {
+  --yellow1: #14120b;
+  --yellow2: #1b180f;
+  --yellow3: #2d2305;
+  --yellow4: #362b00;
+  --yellow5: #433500;
+  --yellow6: #524202;
+  --yellow7: #665417;
+  --yellow8: #836a21;
+  --yellow9: #ffe629;
+  --yellow10: #ffff57;
+  --yellow11: #f5e147;
+  --yellow12: #f6eeb4;
+  --background: #14120b;
+  --surface: #1b180f;
+  --text: #ffff57;
+  --accent: #362b00;
+  --accent-2: #433500;
+}
+
+/* Radix Yellow (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-yellow-light"] {
+  --yellow1: #fdfdf9;
+  --yellow2: #fefce9;
+  --yellow3: #fffab8;
+  --yellow4: #fff394;
+  --yellow5: #ffe770;
+  --yellow6: #f3d768;
+  --yellow7: #e4c767;
+  --yellow8: #d5ae39;
+  --yellow9: #ffe629;
+  --yellow10: #ffdc00;
+  --yellow11: #9e6c00;
+  --yellow12: #473b1f;
+  --background: #fdfdf9;
+  --surface: #fefce9;
+  --text: #473b1f;
+  --accent: #9e6c00;
+  --accent-2: #d5ae39;
+}
+
+/* Rose Pine Dawn — https://github.com/rose-pine/palette — MIT */
+[data-palette="rose-pine-dawn"] {
+  --base: #faf4ed;
+  --surface: #fffaf3;
+  --overlay: #f2e9e1;
+  --muted: #9893a5;
+  --subtle: #797593;
+  --text: #464261;
+  --love: #b4637a;
+  --gold: #ea9d34;
+  --rose: #d7827e;
+  --pine: #286983;
+  --foam: #56949f;
+  --iris: #907aa9;
+  --background: #fffaf3;
+  --surface: #faf4ed;
+  --text: #464261;
+  --accent: #ea9d34;
+  --accent-2: #286983;
+}
+
+/* Rose Pine Main — https://github.com/rose-pine/palette — MIT */
+[data-palette="rose-pine-main"] {
+  --base: #191724;
+  --surface: #1f1d2e;
+  --overlay: #26233a;
+  --muted: #6e6a86;
+  --subtle: #908caa;
+  --text: #e0def4;
+  --love: #eb6f92;
+  --gold: #f6c177;
+  --rose: #ebbcba;
+  --pine: #31748f;
+  --foam: #9ccfd8;
+  --iris: #c4a7e7;
+  --background: #191724;
+  --surface: #1f1d2e;
+  --text: #e0def4;
+  --accent: #31748f;
+  --accent-2: #eb6f92;
+}
+
+/* Rose Pine Moon — https://github.com/rose-pine/palette — MIT */
+[data-palette="rose-pine-moon"] {
+  --base: #232136;
+  --surface: #2a273f;
+  --overlay: #393552;
+  --muted: #6e6a86;
+  --subtle: #908caa;
+  --text: #e0def4;
+  --love: #eb6f92;
+  --gold: #f6c177;
+  --rose: #ea9a97;
+  --pine: #3e8fb0;
+  --foam: #9ccfd8;
+  --iris: #c4a7e7;
+  --background: #232136;
+  --surface: #2a273f;
+  --text: #e0def4;
+  --accent: #3e8fb0;
+  --accent-2: #eb6f92;
+}
+
+/* Solarized Dark — https://ethanschoonover.com/solarized/ — MIT */
+[data-palette="solarized-dark"] {
+  --base03: #002b36;
+  --base02: #073642;
+  --base01: #586e75;
+  --base00: #657b83;
+  --base0: #839496;
+  --base1: #93a1a1;
+  --base2: #eee8d5;
+  --base3: #fdf6e3;
+  --yellow: #b58900;
+  --orange: #cb4b16;
+  --red: #dc322f;
+  --magenta: #d33682;
+  --violet: #6c71c4;
+  --blue: #268bd2;
+  --cyan: #2aa198;
+  --green: #859900;
+  --background: #002b36;
+  --surface: #073642;
+  --text: #fdf6e3;
+  --accent: #002b36;
+  --accent-2: #b58900;
+}
+
+/* Solarized Light — https://ethanschoonover.com/solarized/ — MIT */
+[data-palette="solarized-light"] {
+  --base3: #fdf6e3;
+  --base2: #eee8d5;
+  --base1: #93a1a1;
+  --base0: #839496;
+  --base00: #657b83;
+  --base01: #586e75;
+  --base02: #073642;
+  --base03: #002b36;
+  --yellow: #b58900;
+  --orange: #cb4b16;
+  --red: #dc322f;
+  --magenta: #d33682;
+  --violet: #6c71c4;
+  --blue: #268bd2;
+  --cyan: #2aa198;
+  --green: #859900;
+  --background: #fdf6e3;
+  --surface: #eee8d5;
+  --text: #002b36;
+  --accent: #002b36;
+  --accent-2: #b58900;
+}
+
+/* Tailwind Amber — https://github.com/tailwindlabs/tailwindcss — MIT */
+[data-palette="tailwind-amber"] {
+  --50: #fffbeb;
+  --100: #fef3c7;
+  --200: #fde68a;
+  --300: #fcd34d;
+  --400: #fbbf24;
+  --500: #f59e0b;
+  --600: #d97706;
+  --700: #b45309;
+  --800: #92400e;
+  --900: #78350f;
+  --950: #451a03;
+  --background: #fffbeb;
+  --surface: #fef3c7;
+  --text: #451a03;
+  --accent: #d97706;
+  --accent-2: #451a03;
+}
+
+/* Tailwind Blue — https://github.com/tailwindlabs/tailwindcss — MIT */
+[data-palette="tailwind-blue"] {
+  --50: #eff6ff;
+  --100: #dbeafe;
+  --200: #bfdbfe;
+  --300: #93c5fd;
+  --400: #60a5fa;
+  --500: #3b82f6;
+  --600: #2563eb;
+  --700: #1d4ed8;
+  --800: #1e40af;
+  --900: #1e3a8a;
+  --950: #172554;
+  --background: #eff6ff;
+  --surface: #dbeafe;
+  --text: #172554;
+  --accent: #1d4ed8;
+  --accent-2: #2563eb;
+}
+
+/* Tailwind Cyan — https://github.com/tailwindlabs/tailwindcss — MIT */
+[data-palette="tailwind-cyan"] {
+  --50: #ecfeff;
+  --100: #cffafe;
+  --200: #a5f3fc;
+  --300: #67e8f9;
+  --400: #22d3ee;
+  --500: #06b6d4;
+  --600: #0891b2;
+  --700: #0e7490;
+  --800: #155e75;
+  --900: #164e63;
+  --950: #083344;
+  --background: #ecfeff;
+  --surface: #cffafe;
+  --text: #083344;
+  --accent: #06b6d4;
+  --accent-2: #0891b2;
+}
+
+/* Tailwind Emerald — https://github.com/tailwindlabs/tailwindcss — MIT */
+[data-palette="tailwind-emerald"] {
+  --50: #ecfdf5;
+  --100: #d1fae5;
+  --200: #a7f3d0;
+  --300: #6ee7b7;
+  --400: #34d399;
+  --500: #10b981;
+  --600: #059669;
+  --700: #047857;
+  --800: #065f46;
+  --900: #064e3b;
+  --950: #022c22;
+  --background: #ecfdf5;
+  --surface: #d1fae5;
+  --text: #022c22;
+  --accent: #047857;
+  --accent-2: #059669;
+}
+
+/* Tailwind Fuchsia — https://github.com/tailwindlabs/tailwindcss — MIT */
+[data-palette="tailwind-fuchsia"] {
+  --50: #fdf4ff;
+  --100: #fae8ff;
+  --200: #f5d0fe;
+  --300: #f0abfc;
+  --400: #e879f9;
+  --500: #d946ef;
+  --600: #c026d3;
+  --700: #a21caf;
+  --800: #86198f;
+  --900: #701a75;
+  --950: #4a044e;
+  --background: #fdf4ff;
+  --surface: #fae8ff;
+  --text: #4a044e;
+  --accent: #a21caf;
+  --accent-2: #86198f;
+}
+
+/* Tailwind Gray — https://github.com/tailwindlabs/tailwindcss — MIT */
+[data-palette="tailwind-gray"] {
+  --50: #f9fafb;
+  --100: #f3f4f6;
+  --200: #e5e7eb;
+  --300: #d1d5db;
+  --400: #9ca3af;
+  --500: #6b7280;
+  --600: #4b5563;
+  --700: #374151;
+  --800: #1f2937;
+  --900: #111827;
+  --950: #030712;
+  --background: #f9fafb;
+  --surface: #f3f4f6;
+  --text: #030712;
+  --accent: #1f2937;
+  --accent-2: #374151;
+}
+
+/* Tailwind Green — https://github.com/tailwindlabs/tailwindcss — MIT */
+[data-palette="tailwind-green"] {
+  --50: #f0fdf4;
+  --100: #dcfce7;
+  --200: #bbf7d0;
+  --300: #86efac;
+  --400: #4ade80;
+  --500: #22c55e;
+  --600: #16a34a;
+  --700: #15803d;
+  --800: #166534;
+  --900: #14532d;
+  --950: #052e16;
+  --background: #f0fdf4;
+  --surface: #dcfce7;
+  --text: #052e16;
+  --accent: #052e16;
+  --accent-2: #16a34a;
+}
+
+/* Tailwind Indigo — https://github.com/tailwindlabs/tailwindcss — MIT */
+[data-palette="tailwind-indigo"] {
+  --50: #eef2ff;
+  --100: #e0e7ff;
+  --200: #c7d2fe;
+  --300: #a5b4fc;
+  --400: #818cf8;
+  --500: #6366f1;
+  --600: #4f46e5;
+  --700: #4338ca;
+  --800: #3730a3;
+  --900: #312e81;
+  --950: #1e1b4b;
+  --background: #eef2ff;
+  --surface: #e0e7ff;
+  --text: #1e1b4b;
+  --accent: #4338ca;
+  --accent-2: #3730a3;
+}
+
+/* Tailwind Lime — https://github.com/tailwindlabs/tailwindcss — MIT */
+[data-palette="tailwind-lime"] {
+  --50: #f7fee7;
+  --100: #ecfccb;
+  --200: #d9f99d;
+  --300: #bef264;
+  --400: #a3e635;
+  --500: #84cc16;
+  --600: #65a30d;
+  --700: #4d7c0f;
+  --800: #3f6212;
+  --900: #365314;
+  --950: #1a2e05;
+  --background: #f7fee7;
+  --surface: #ecfccb;
+  --text: #1a2e05;
+  --accent: #65a30d;
+  --accent-2: #84cc16;
+}
+
+/* Tailwind Neutral — https://github.com/tailwindlabs/tailwindcss — MIT */
+[data-palette="tailwind-neutral"] {
+  --50: #fafafa;
+  --100: #f5f5f5;
+  --200: #e5e5e5;
+  --300: #d4d4d4;
+  --400: #a3a3a3;
+  --500: #737373;
+  --600: #525252;
+  --700: #404040;
+  --800: #262626;
+  --900: #171717;
+  --950: #0a0a0a;
+  --background: #fafafa;
+  --surface: #f5f5f5;
+  --text: #0a0a0a;
+  --accent: #a3a3a3;
+  --accent-2: #737373;
+}
+
+/* Tailwind Orange — https://github.com/tailwindlabs/tailwindcss — MIT */
+[data-palette="tailwind-orange"] {
+  --50: #fff7ed;
+  --100: #ffedd5;
+  --200: #fed7aa;
+  --300: #fdba74;
+  --400: #fb923c;
+  --500: #f97316;
+  --600: #ea580c;
+  --700: #c2410c;
+  --800: #9a3412;
+  --900: #7c2d12;
+  --950: #431407;
+  --background: #fff7ed;
+  --surface: #ffedd5;
+  --text: #431407;
+  --accent: #ea580c;
+  --accent-2: #c2410c;
+}
+
+/* Tailwind Pink — https://github.com/tailwindlabs/tailwindcss — MIT */
+[data-palette="tailwind-pink"] {
+  --50: #fdf2f8;
+  --100: #fce7f3;
+  --200: #fbcfe8;
+  --300: #f9a8d4;
+  --400: #f472b6;
+  --500: #ec4899;
+  --600: #db2777;
+  --700: #be185d;
+  --800: #9d174d;
+  --900: #831843;
+  --950: #500724;
+  --background: #fdf2f8;
+  --surface: #fce7f3;
+  --text: #500724;
+  --accent: #be185d;
+  --accent-2: #9d174d;
+}
+
+/* Tailwind Purple — https://github.com/tailwindlabs/tailwindcss — MIT */
+[data-palette="tailwind-purple"] {
+  --50: #faf5ff;
+  --100: #f3e8ff;
+  --200: #e9d5ff;
+  --300: #d8b4fe;
+  --400: #c084fc;
+  --500: #a855f7;
+  --600: #9333ea;
+  --700: #7e22ce;
+  --800: #6b21a8;
+  --900: #581c87;
+  --950: #3b0764;
+  --background: #faf5ff;
+  --surface: #f3e8ff;
+  --text: #3b0764;
+  --accent: #7e22ce;
+  --accent-2: #6b21a8;
+}
+
+/* Tailwind Red — https://github.com/tailwindlabs/tailwindcss — MIT */
+[data-palette="tailwind-red"] {
+  --50: #fef2f2;
+  --100: #fee2e2;
+  --200: #fecaca;
+  --300: #fca5a5;
+  --400: #f87171;
+  --500: #ef4444;
+  --600: #dc2626;
+  --700: #b91c1c;
+  --800: #991b1b;
+  --900: #7f1d1d;
+  --950: #450a0a;
+  --background: #fef2f2;
+  --surface: #fee2e2;
+  --text: #450a0a;
+  --accent: #b91c1c;
+  --accent-2: #dc2626;
+}
+
+/* Tailwind Rose — https://github.com/tailwindlabs/tailwindcss — MIT */
+[data-palette="tailwind-rose"] {
+  --50: #fff1f2;
+  --100: #ffe4e6;
+  --200: #fecdd3;
+  --300: #fda4af;
+  --400: #fb7185;
+  --500: #f43f5e;
+  --600: #e11d48;
+  --700: #be123c;
+  --800: #9f1239;
+  --900: #881337;
+  --950: #4c0519;
+  --background: #fff1f2;
+  --surface: #ffe4e6;
+  --text: #4c0519;
+  --accent: #be123c;
+  --accent-2: #9f1239;
+}
+
+/* Tailwind Sky — https://github.com/tailwindlabs/tailwindcss — MIT */
+[data-palette="tailwind-sky"] {
+  --50: #f0f9ff;
+  --100: #e0f2fe;
+  --200: #bae6fd;
+  --300: #7dd3fc;
+  --400: #38bdf8;
+  --500: #0ea5e9;
+  --600: #0284c7;
+  --700: #0369a1;
+  --800: #075985;
+  --900: #0c4a6e;
+  --950: #082f49;
+  --background: #f0f9ff;
+  --surface: #e0f2fe;
+  --text: #082f49;
+  --accent: #0284c7;
+  --accent-2: #0369a1;
+}
+
+/* Tailwind Slate — https://github.com/tailwindlabs/tailwindcss — MIT */
+[data-palette="tailwind-slate"] {
+  --50: #f8fafc;
+  --100: #f1f5f9;
+  --200: #e2e8f0;
+  --300: #cbd5e1;
+  --400: #94a3b8;
+  --500: #64748b;
+  --600: #475569;
+  --700: #334155;
+  --800: #1e293b;
+  --900: #0f172a;
+  --950: #020617;
+  --background: #f8fafc;
+  --surface: #f1f5f9;
+  --text: #020617;
+  --accent: #1e293b;
+  --accent-2: #334155;
+}
+
+/* Tailwind Stone — https://github.com/tailwindlabs/tailwindcss — MIT */
+[data-palette="tailwind-stone"] {
+  --50: #fafaf9;
+  --100: #f5f5f4;
+  --200: #e7e5e4;
+  --300: #d6d3d1;
+  --400: #a8a29e;
+  --500: #78716c;
+  --600: #57534e;
+  --700: #44403c;
+  --800: #292524;
+  --900: #1c1917;
+  --950: #0c0a09;
+  --background: #fafaf9;
+  --surface: #f5f5f4;
+  --text: #0c0a09;
+  --accent: #292524;
+  --accent-2: #44403c;
+}
+
+/* Tailwind Teal — https://github.com/tailwindlabs/tailwindcss — MIT */
+[data-palette="tailwind-teal"] {
+  --50: #f0fdfa;
+  --100: #ccfbf1;
+  --200: #99f6e4;
+  --300: #5eead4;
+  --400: #2dd4bf;
+  --500: #14b8a6;
+  --600: #0d9488;
+  --700: #0f766e;
+  --800: #115e59;
+  --900: #134e4a;
+  --950: #042f2e;
+  --background: #f0fdfa;
+  --surface: #ccfbf1;
+  --text: #042f2e;
+  --accent: #042f2e;
+  --accent-2: #0d9488;
+}
+
+/* Tailwind Violet — https://github.com/tailwindlabs/tailwindcss — MIT */
+[data-palette="tailwind-violet"] {
+  --50: #f5f3ff;
+  --100: #ede9fe;
+  --200: #ddd6fe;
+  --300: #c4b5fd;
+  --400: #a78bfa;
+  --500: #8b5cf6;
+  --600: #7c3aed;
+  --700: #6d28d9;
+  --800: #5b21b6;
+  --900: #4c1d95;
+  --950: #2e1065;
+  --background: #f5f3ff;
+  --surface: #ede9fe;
+  --text: #2e1065;
+  --accent: #5b21b6;
+  --accent-2: #6d28d9;
+}
+
+/* Tailwind Yellow — https://github.com/tailwindlabs/tailwindcss — MIT */
+[data-palette="tailwind-yellow"] {
+  --50: #fefce8;
+  --100: #fef9c3;
+  --200: #fef08a;
+  --300: #fde047;
+  --400: #facc15;
+  --500: #eab308;
+  --600: #ca8a04;
+  --700: #a16207;
+  --800: #854d0e;
+  --900: #713f12;
+  --950: #422006;
+  --background: #fefce8;
+  --surface: #fef9c3;
+  --text: #422006;
+  --accent: #ca8a04;
+  --accent-2: #eab308;
+}
+
+/* Tailwind Zinc — https://github.com/tailwindlabs/tailwindcss — MIT */
+[data-palette="tailwind-zinc"] {
+  --50: #fafafa;
+  --100: #f4f4f5;
+  --200: #e4e4e7;
+  --300: #d4d4d8;
+  --400: #a1a1aa;
+  --500: #71717a;
+  --600: #52525b;
+  --700: #3f3f46;
+  --800: #27272a;
+  --900: #18181b;
+  --950: #09090b;
+  --background: #fafafa;
+  --surface: #f4f4f5;
+  --text: #09090b;
+  --accent: #3f3f46;
+  --accent-2: #52525b;
+}
+
+/* Tokyo Night Moon — https://github.com/folke/tokyonight.nvim — MIT */
+[data-palette="tokyo-night-moon"] {
+  --bg: #222436;
+  --bg-dark: #1e2030;
+  --bg-dark1: #191b29;
+  --bg-highlight: #2f334d;
+  --blue: #82aaff;
+  --blue0: #3e68d7;
+  --blue1: #65bcff;
+  --blue2: #0db9d7;
+  --blue5: #89ddff;
+  --blue6: #b4f9f8;
+  --blue7: #394b70;
+  --comment: #636da6;
+  --cyan: #86e1fc;
+  --dark3: #545c7e;
+  --dark5: #737aa2;
+  --fg: #c8d3f5;
+  --fg-dark: #828bb8;
+  --fg-gutter: #3b4261;
+  --green: #c3e88d;
+  --green1: #4fd6be;
+  --green2: #41a6b5;
+  --magenta: #c099ff;
+  --magenta2: #ff007c;
+  --orange: #ff966c;
+  --purple: #fca7ea;
+  --red: #ff757f;
+  --red1: #c53b53;
+  --terminal-black: #444a73;
+  --yellow: #ffc777;
+  --add: #b8db87;
+  --change: #7ca1f2;
+  --delete: #e26a75;
+  --background: #191b29;
+  --surface: #1e2030;
+  --text: #b4f9f8;
+  --accent: #ff007c;
+  --accent-2: #0db9d7;
+}
+
+/* Tokyo Night Storm — https://github.com/folke/tokyonight.nvim — MIT */
+[data-palette="tokyo-night-storm"] {
+  --bg: #24283b;
+  --bg-dark: #1f2335;
+  --bg-dark1: #1b1e2d;
+  --bg-highlight: #292e42;
+  --blue: #7aa2f7;
+  --blue0: #3d59a1;
+  --blue1: #2ac3de;
+  --blue2: #0db9d7;
+  --blue5: #89ddff;
+  --blue6: #b4f9f8;
+  --blue7: #394b70;
+  --comment: #565f89;
+  --cyan: #7dcfff;
+  --dark3: #545c7e;
+  --dark5: #737aa2;
+  --fg: #c0caf5;
+  --fg-dark: #a9b1d6;
+  --fg-gutter: #3b4261;
+  --green: #9ece6a;
+  --green1: #73daca;
+  --green2: #41a6b5;
+  --magenta: #bb9af7;
+  --magenta2: #ff007c;
+  --orange: #ff9e64;
+  --purple: #9d7cd8;
+  --red: #f7768e;
+  --red1: #db4b4b;
+  --teal: #1abc9c;
+  --terminal-black: #414868;
+  --yellow: #e0af68;
+  --add: #449dab;
+  --change: #6183bb;
+  --delete: #914c54;
+  --background: #1b1e2d;
+  --surface: #1f2335;
+  --text: #b4f9f8;
+  --accent: #ff007c;
+  --accent-2: #0db9d7;
+}
+
+/* Tokyo Night — https://github.com/folke/tokyonight.nvim — MIT */
+[data-palette="tokyo-night"] {
+  --bg: #1a1b26;
+  --bg-dark: #16161e;
+  --bg-dark1: #0c0e14;
+  --bg-highlight: #292e42;
+  --blue: #7aa2f7;
+  --blue0: #3d59a1;
+  --blue1: #2ac3de;
+  --blue2: #0db9d7;
+  --blue5: #89ddff;
+  --blue6: #b4f9f8;
+  --blue7: #394b70;
+  --comment: #565f89;
+  --cyan: #7dcfff;
+  --dark3: #545c7e;
+  --dark5: #737aa2;
+  --fg: #c0caf5;
+  --fg-dark: #a9b1d6;
+  --fg-gutter: #3b4261;
+  --green: #9ece6a;
+  --green1: #73daca;
+  --green2: #41a6b5;
+  --magenta: #bb9af7;
+  --magenta2: #ff007c;
+  --orange: #ff9e64;
+  --purple: #9d7cd8;
+  --red: #f7768e;
+  --red1: #db4b4b;
+  --teal: #1abc9c;
+  --terminal-black: #414868;
+  --yellow: #e0af68;
+  --add: #449dab;
+  --change: #6183bb;
+  --delete: #914c54;
+  --background: #0c0e14;
+  --surface: #16161e;
+  --text: #b4f9f8;
+  --accent: #ff007c;
+  --accent-2: #0db9d7;
+}

@@ -1,0 +1,20 @@
+/* Radix Blue (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-blue-light"] {
+  --blue1: #fbfdff;
+  --blue2: #f4faff;
+  --blue3: #e6f4fe;
+  --blue4: #d5efff;
+  --blue5: #c2e5ff;
+  --blue6: #acd8fc;
+  --blue7: #8ec8f6;
+  --blue8: #5eb1ef;
+  --blue9: #0090ff;
+  --blue10: #0588f0;
+  --blue11: #0d74ce;
+  --blue12: #113264;
+  --background: #fbfdff;
+  --surface: #f4faff;
+  --text: #113264;
+  --accent: #0090ff;
+  --accent-2: #0588f0;
+}

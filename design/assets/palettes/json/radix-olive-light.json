@@ -1,0 +1,65 @@
+{
+  "name": "Radix Olive (Light)",
+  "slug": "radix-olive-light",
+  "source": "https://github.com/radix-ui/colors",
+  "license": "MIT",
+  "dark": false,
+  "note": "12-step perceptual UI scale",
+  "colors": [
+    {
+      "name": "olive1",
+      "hex": "#fcfdfc"
+    },
+    {
+      "name": "olive2",
+      "hex": "#f8faf8"
+    },
+    {
+      "name": "olive3",
+      "hex": "#eff1ef"
+    },
+    {
+      "name": "olive4",
+      "hex": "#e7e9e7"
+    },
+    {
+      "name": "olive5",
+      "hex": "#dfe2df"
+    },
+    {
+      "name": "olive6",
+      "hex": "#d7dad7"
+    },
+    {
+      "name": "olive7",
+      "hex": "#cccfcc"
+    },
+    {
+      "name": "olive8",
+      "hex": "#b9bcb8"
+    },
+    {
+      "name": "olive9",
+      "hex": "#898e87"
+    },
+    {
+      "name": "olive10",
+      "hex": "#7f847d"
+    },
+    {
+      "name": "olive11",
+      "hex": "#60655f"
+    },
+    {
+      "name": "olive12",
+      "hex": "#1d211c"
+    }
+  ],
+  "roles": {
+    "background": "#fcfdfc",
+    "surface": "#f8faf8",
+    "text": "#1d211c",
+    "accent": "#1d211c",
+    "accent_2": "#60655f"
+  }
+}

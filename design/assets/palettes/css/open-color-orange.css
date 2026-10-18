@@ -1,0 +1,18 @@
+/* Open Color Orange — https://github.com/yeun/open-color — MIT */
+[data-palette="open-color-orange"] {
+  --50: #fff4e6;
+  --100: #ffe8cc;
+  --200: #ffd8a8;
+  --300: #ffc078;
+  --400: #ffa94d;
+  --500: #ff922b;
+  --600: #fd7e14;
+  --700: #f76707;
+  --800: #e8590c;
+  --900: #d9480f;
+  --background: #fff4e6;
+  --surface: #ffe8cc;
+  --text: #d9480f;
+  --accent: #f76707;
+  --accent-2: #e8590c;
+}

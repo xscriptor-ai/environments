@@ -1,0 +1,57 @@
+{
+  "name": "Open Color Lime",
+  "slug": "open-color-lime",
+  "source": "https://github.com/yeun/open-color",
+  "license": "MIT",
+  "dark": false,
+  "note": "13 hues x 10 steps; designed for UI",
+  "colors": [
+    {
+      "name": "50",
+      "hex": "#f4fce3"
+    },
+    {
+      "name": "100",
+      "hex": "#e9fac8"
+    },
+    {
+      "name": "200",
+      "hex": "#d8f5a2"
+    },
+    {
+      "name": "300",
+      "hex": "#c0eb75"
+    },
+    {
+      "name": "400",
+      "hex": "#a9e34b"
+    },
+    {
+      "name": "500",
+      "hex": "#94d82d"
+    },
+    {
+      "name": "600",
+      "hex": "#82c91e"
+    },
+    {
+      "name": "700",
+      "hex": "#74b816"
+    },
+    {
+      "name": "800",
+      "hex": "#66a80f"
+    },
+    {
+      "name": "900",
+      "hex": "#5c940d"
+    }
+  ],
+  "roles": {
+    "background": "#f4fce3",
+    "surface": "#e9fac8",
+    "text": "#5c940d",
+    "accent": "#5c940d",
+    "accent_2": "#66a80f"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "name": "Tailwind Lime",
+  "slug": "tailwind-lime",
+  "source": "https://github.com/tailwindlabs/tailwindcss",
+  "license": "MIT",
+  "dark": false,
+  "note": "11-step UI scale (v3 palette)",
+  "colors": [
+    {
+      "name": "50",
+      "hex": "#f7fee7"
+    },
+    {
+      "name": "100",
+      "hex": "#ecfccb"
+    },
+    {
+      "name": "200",
+      "hex": "#d9f99d"
+    },
+    {
+      "name": "300",
+      "hex": "#bef264"
+    },
+    {
+      "name": "400",
+      "hex": "#a3e635"
+    },
+    {
+      "name": "500",
+      "hex": "#84cc16"
+    },
+    {
+      "name": "600",
+      "hex": "#65a30d"
+    },
+    {
+      "name": "700",
+      "hex": "#4d7c0f"
+    },
+    {
+      "name": "800",
+      "hex": "#3f6212"
+    },
+    {
+      "name": "900",
+      "hex": "#365314"
+    },
+    {
+      "name": "950",
+      "hex": "#1a2e05"
+    }
+  ],
+  "roles": {
+    "background": "#f7fee7",
+    "surface": "#ecfccb",
+    "text": "#1a2e05",
+    "accent": "#65a30d",
+    "accent_2": "#84cc16"
+  }
+}

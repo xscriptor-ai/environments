@@ -1,0 +1,61 @@
+{
+  "name": "Tailwind Violet",
+  "slug": "tailwind-violet",
+  "source": "https://github.com/tailwindlabs/tailwindcss",
+  "license": "MIT",
+  "dark": false,
+  "note": "11-step UI scale (v3 palette)",
+  "colors": [
+    {
+      "name": "50",
+      "hex": "#f5f3ff"
+    },
+    {
+      "name": "100",
+      "hex": "#ede9fe"
+    },
+    {
+      "name": "200",
+      "hex": "#ddd6fe"
+    },
+    {
+      "name": "300",
+      "hex": "#c4b5fd"
+    },
+    {
+      "name": "400",
+      "hex": "#a78bfa"
+    },
+    {
+      "name": "500",
+      "hex": "#8b5cf6"
+    },
+    {
+      "name": "600",
+      "hex": "#7c3aed"
+    },
+    {
+      "name": "700",
+      "hex": "#6d28d9"
+    },
+    {
+      "name": "800",
+      "hex": "#5b21b6"
+    },
+    {
+      "name": "900",
+      "hex": "#4c1d95"
+    },
+    {
+      "name": "950",
+      "hex": "#2e1065"
+    }
+  ],
+  "roles": {
+    "background": "#f5f3ff",
+    "surface": "#ede9fe",
+    "text": "#2e1065",
+    "accent": "#5b21b6",
+    "accent_2": "#6d28d9"
+  }
+}

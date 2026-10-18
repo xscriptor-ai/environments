@@ -1,0 +1,121 @@
+{
+  "name": "Catppuccin Mocha",
+  "slug": "catppuccin-mocha",
+  "source": "https://github.com/catppuccin/palette",
+  "license": "MIT",
+  "dark": true,
+  "note": "26 roles, four flavors",
+  "colors": [
+    {
+      "name": "rosewater",
+      "hex": "#f5e0dc"
+    },
+    {
+      "name": "flamingo",
+      "hex": "#f2cdcd"
+    },
+    {
+      "name": "pink",
+      "hex": "#f5c2e7"
+    },
+    {
+      "name": "mauve",
+      "hex": "#cba6f7"
+    },
+    {
+      "name": "red",
+      "hex": "#f38ba8"
+    },
+    {
+      "name": "maroon",
+      "hex": "#eba0ac"
+    },
+    {
+      "name": "peach",
+      "hex": "#fab387"
+    },
+    {
+      "name": "yellow",
+      "hex": "#f9e2af"
+    },
+    {
+      "name": "green",
+      "hex": "#a6e3a1"
+    },
+    {
+      "name": "teal",
+      "hex": "#94e2d5"
+    },
+    {
+      "name": "sky",
+      "hex": "#89dceb"
+    },
+    {
+      "name": "sapphire",
+      "hex": "#74c7ec"
+    },
+    {
+      "name": "blue",
+      "hex": "#89b4fa"
+    },
+    {
+      "name": "lavender",
+      "hex": "#b4befe"
+    },
+    {
+      "name": "text",
+      "hex": "#cdd6f4"
+    },
+    {
+      "name": "subtext1",
+      "hex": "#bac2de"
+    },
+    {
+      "name": "subtext0",
+      "hex": "#a6adc8"
+    },
+    {
+      "name": "overlay2",
+      "hex": "#9399b2"
+    },
+    {
+      "name": "overlay1",
+      "hex": "#7f849c"
+    },
+    {
+      "name": "overlay0",
+      "hex": "#6c7086"
+    },
+    {
+      "name": "surface2",
+      "hex": "#585b70"
+    },
+    {
+      "name": "surface1",
+      "hex": "#45475a"
+    },
+    {
+      "name": "surface0",
+      "hex": "#313244"
+    },
+    {
+      "name": "base",
+      "hex": "#1e1e2e"
+    },
+    {
+      "name": "mantle",
+      "hex": "#181825"
+    },
+    {
+      "name": "crust",
+      "hex": "#11111b"
+    }
+  ],
+  "roles": {
+    "background": "#11111b",
+    "surface": "#181825",
+    "text": "#f5e0dc",
+    "accent": "#74c7ec",
+    "accent_2": "#fab387"
+  }
+}

@@ -1,0 +1,20 @@
+/* Radix Mint (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-mint-light"] {
+  --mint1: #f9fefd;
+  --mint2: #f2fbf9;
+  --mint3: #ddf9f2;
+  --mint4: #c8f4e9;
+  --mint5: #b3ecde;
+  --mint6: #9ce0d0;
+  --mint7: #7ecfbd;
+  --mint8: #4cbba5;
+  --mint9: #86ead4;
+  --mint10: #7de0cb;
+  --mint11: #027864;
+  --mint12: #16433c;
+  --background: #f9fefd;
+  --surface: #f2fbf9;
+  --text: #16433c;
+  --accent: #027864;
+  --accent-2: #16433c;
+}

@@ -1,0 +1,20 @@
+/* Radix Olive (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-olive-dark"] {
+  --olive1: #111210;
+  --olive2: #181917;
+  --olive3: #212220;
+  --olive4: #282a27;
+  --olive5: #2f312e;
+  --olive6: #383a36;
+  --olive7: #454843;
+  --olive8: #5c625b;
+  --olive9: #687066;
+  --olive10: #767d74;
+  --olive11: #afb5ad;
+  --olive12: #eceeec;
+  --background: #111210;
+  --surface: #181917;
+  --text: #eceeec;
+  --accent: #687066;
+  --accent-2: #767d74;
+}

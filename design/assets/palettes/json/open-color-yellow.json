@@ -1,0 +1,57 @@
+{
+  "name": "Open Color Yellow",
+  "slug": "open-color-yellow",
+  "source": "https://github.com/yeun/open-color",
+  "license": "MIT",
+  "dark": false,
+  "note": "13 hues x 10 steps; designed for UI",
+  "colors": [
+    {
+      "name": "50",
+      "hex": "#fff9db"
+    },
+    {
+      "name": "100",
+      "hex": "#fff3bf"
+    },
+    {
+      "name": "200",
+      "hex": "#ffec99"
+    },
+    {
+      "name": "300",
+      "hex": "#ffe066"
+    },
+    {
+      "name": "400",
+      "hex": "#ffd43b"
+    },
+    {
+      "name": "500",
+      "hex": "#fcc419"
+    },
+    {
+      "name": "600",
+      "hex": "#fab005"
+    },
+    {
+      "name": "700",
+      "hex": "#f59f00"
+    },
+    {
+      "name": "800",
+      "hex": "#f08c00"
+    },
+    {
+      "name": "900",
+      "hex": "#e67700"
+    }
+  ],
+  "roles": {
+    "background": "#fff9db",
+    "surface": "#fff3bf",
+    "text": "#e67700",
+    "accent": "#f59f00",
+    "accent_2": "#f08c00"
+  }
+}

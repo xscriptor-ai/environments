@@ -1,0 +1,65 @@
+{
+  "name": "Open Color Neutrals",
+  "slug": "open-color-neutrals",
+  "source": "https://github.com/yeun/open-color",
+  "license": "MIT",
+  "dark": false,
+  "note": "UI neutrals",
+  "colors": [
+    {
+      "name": "white",
+      "hex": "#ffffff"
+    },
+    {
+      "name": "black",
+      "hex": "#000000"
+    },
+    {
+      "name": "gray-50",
+      "hex": "#f8f9fa"
+    },
+    {
+      "name": "gray-100",
+      "hex": "#f1f3f5"
+    },
+    {
+      "name": "gray-200",
+      "hex": "#e9ecef"
+    },
+    {
+      "name": "gray-300",
+      "hex": "#dee2e6"
+    },
+    {
+      "name": "gray-400",
+      "hex": "#ced4da"
+    },
+    {
+      "name": "gray-500",
+      "hex": "#adb5bd"
+    },
+    {
+      "name": "gray-600",
+      "hex": "#868e96"
+    },
+    {
+      "name": "gray-700",
+      "hex": "#495057"
+    },
+    {
+      "name": "gray-800",
+      "hex": "#343a40"
+    },
+    {
+      "name": "gray-900",
+      "hex": "#212529"
+    }
+  ],
+  "roles": {
+    "background": "#ffffff",
+    "surface": "#f8f9fa",
+    "text": "#000000",
+    "accent": "#212529",
+    "accent_2": "#343a40"
+  }
+}

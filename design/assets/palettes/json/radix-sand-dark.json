@@ -1,0 +1,65 @@
+{
+  "name": "Radix Sand (Dark)",
+  "slug": "radix-sand-dark",
+  "source": "https://github.com/radix-ui/colors",
+  "license": "MIT",
+  "dark": true,
+  "note": "12-step perceptual UI scale",
+  "colors": [
+    {
+      "name": "sand1",
+      "hex": "#111110"
+    },
+    {
+      "name": "sand2",
+      "hex": "#191918"
+    },
+    {
+      "name": "sand3",
+      "hex": "#222221"
+    },
+    {
+      "name": "sand4",
+      "hex": "#2a2a28"
+    },
+    {
+      "name": "sand5",
+      "hex": "#31312e"
+    },
+    {
+      "name": "sand6",
+      "hex": "#3b3a37"
+    },
+    {
+      "name": "sand7",
+      "hex": "#494844"
+    },
+    {
+      "name": "sand8",
+      "hex": "#62605b"
+    },
+    {
+      "name": "sand9",
+      "hex": "#6f6d66"
+    },
+    {
+      "name": "sand10",
+      "hex": "#7c7b74"
+    },
+    {
+      "name": "sand11",
+      "hex": "#b5b3ad"
+    },
+    {
+      "name": "sand12",
+      "hex": "#eeeeec"
+    }
+  ],
+  "roles": {
+    "background": "#111110",
+    "surface": "#191918",
+    "text": "#eeeeec",
+    "accent": "#6f6d66",
+    "accent_2": "#62605b"
+  }
+}

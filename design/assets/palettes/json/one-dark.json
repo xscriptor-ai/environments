@@ -1,0 +1,65 @@
+{
+  "name": "One Dark",
+  "slug": "one-dark",
+  "source": "https://github.com/atom/one-dark-syntax",
+  "license": "MIT",
+  "dark": true,
+  "note": "Atom's iconic dark palette",
+  "colors": [
+    {
+      "name": "bg",
+      "hex": "#282c34"
+    },
+    {
+      "name": "fg",
+      "hex": "#abb2bf"
+    },
+    {
+      "name": "red",
+      "hex": "#e06c75"
+    },
+    {
+      "name": "green",
+      "hex": "#98c379"
+    },
+    {
+      "name": "yellow",
+      "hex": "#e5c07b"
+    },
+    {
+      "name": "blue",
+      "hex": "#61afef"
+    },
+    {
+      "name": "magenta",
+      "hex": "#c678dd"
+    },
+    {
+      "name": "cyan",
+      "hex": "#56b6c2"
+    },
+    {
+      "name": "comment",
+      "hex": "#5c6370"
+    },
+    {
+      "name": "gutter",
+      "hex": "#4b5263"
+    },
+    {
+      "name": "selection",
+      "hex": "#3e4451"
+    },
+    {
+      "name": "white",
+      "hex": "#ffffff"
+    }
+  ],
+  "roles": {
+    "background": "#282c34",
+    "surface": "#3e4451",
+    "text": "#ffffff",
+    "accent": "#61afef",
+    "accent_2": "#56b6c2"
+  }
+}

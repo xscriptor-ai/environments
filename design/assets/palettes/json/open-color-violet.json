@@ -1,0 +1,57 @@
+{
+  "name": "Open Color Violet",
+  "slug": "open-color-violet",
+  "source": "https://github.com/yeun/open-color",
+  "license": "MIT",
+  "dark": false,
+  "note": "13 hues x 10 steps; designed for UI",
+  "colors": [
+    {
+      "name": "50",
+      "hex": "#f3f0ff"
+    },
+    {
+      "name": "100",
+      "hex": "#e5dbff"
+    },
+    {
+      "name": "200",
+      "hex": "#d0bfff"
+    },
+    {
+      "name": "300",
+      "hex": "#b197fc"
+    },
+    {
+      "name": "400",
+      "hex": "#9775fa"
+    },
+    {
+      "name": "500",
+      "hex": "#845ef7"
+    },
+    {
+      "name": "600",
+      "hex": "#7950f2"
+    },
+    {
+      "name": "700",
+      "hex": "#7048e8"
+    },
+    {
+      "name": "800",
+      "hex": "#6741d9"
+    },
+    {
+      "name": "900",
+      "hex": "#5f3dc4"
+    }
+  ],
+  "roles": {
+    "background": "#f3f0ff",
+    "surface": "#e5dbff",
+    "text": "#5f3dc4",
+    "accent": "#6741d9",
+    "accent_2": "#7048e8"
+  }
+}

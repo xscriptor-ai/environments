@@ -1,0 +1,65 @@
+{
+  "name": "Radix Grass (Light)",
+  "slug": "radix-grass-light",
+  "source": "https://github.com/radix-ui/colors",
+  "license": "MIT",
+  "dark": false,
+  "note": "12-step perceptual UI scale",
+  "colors": [
+    {
+      "name": "grass1",
+      "hex": "#fbfefb"
+    },
+    {
+      "name": "grass2",
+      "hex": "#f5fbf5"
+    },
+    {
+      "name": "grass3",
+      "hex": "#e9f6e9"
+    },
+    {
+      "name": "grass4",
+      "hex": "#daf1db"
+    },
+    {
+      "name": "grass5",
+      "hex": "#c9e8ca"
+    },
+    {
+      "name": "grass6",
+      "hex": "#b2ddb5"
+    },
+    {
+      "name": "grass7",
+      "hex": "#94ce9a"
+    },
+    {
+      "name": "grass8",
+      "hex": "#65ba74"
+    },
+    {
+      "name": "grass9",
+      "hex": "#46a758"
+    },
+    {
+      "name": "grass10",
+      "hex": "#3e9b4f"
+    },
+    {
+      "name": "grass11",
+      "hex": "#2a7e3b"
+    },
+    {
+      "name": "grass12",
+      "hex": "#203c25"
+    }
+  ],
+  "roles": {
+    "background": "#fbfefb",
+    "surface": "#f5fbf5",
+    "text": "#203c25",
+    "accent": "#2a7e3b",
+    "accent_2": "#3e9b4f"
+  }
+}

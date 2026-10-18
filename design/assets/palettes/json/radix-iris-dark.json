@@ -1,0 +1,65 @@
+{
+  "name": "Radix Iris (Dark)",
+  "slug": "radix-iris-dark",
+  "source": "https://github.com/radix-ui/colors",
+  "license": "MIT",
+  "dark": true,
+  "note": "12-step perceptual UI scale",
+  "colors": [
+    {
+      "name": "iris1",
+      "hex": "#13131e"
+    },
+    {
+      "name": "iris2",
+      "hex": "#171625"
+    },
+    {
+      "name": "iris3",
+      "hex": "#202248"
+    },
+    {
+      "name": "iris4",
+      "hex": "#262a65"
+    },
+    {
+      "name": "iris5",
+      "hex": "#303374"
+    },
+    {
+      "name": "iris6",
+      "hex": "#3d3e82"
+    },
+    {
+      "name": "iris7",
+      "hex": "#4a4a95"
+    },
+    {
+      "name": "iris8",
+      "hex": "#5958b1"
+    },
+    {
+      "name": "iris9",
+      "hex": "#5b5bd6"
+    },
+    {
+      "name": "iris10",
+      "hex": "#6e6ade"
+    },
+    {
+      "name": "iris11",
+      "hex": "#b1a9ff"
+    },
+    {
+      "name": "iris12",
+      "hex": "#e0dffe"
+    }
+  ],
+  "roles": {
+    "background": "#13131e",
+    "surface": "#171625",
+    "text": "#e0dffe",
+    "accent": "#262a65",
+    "accent_2": "#303374"
+  }
+}

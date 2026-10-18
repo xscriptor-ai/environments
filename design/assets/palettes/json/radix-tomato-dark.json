@@ -1,0 +1,65 @@
+{
+  "name": "Radix Tomato (Dark)",
+  "slug": "radix-tomato-dark",
+  "source": "https://github.com/radix-ui/colors",
+  "license": "MIT",
+  "dark": true,
+  "note": "12-step perceptual UI scale",
+  "colors": [
+    {
+      "name": "tomato1",
+      "hex": "#181111"
+    },
+    {
+      "name": "tomato2",
+      "hex": "#1f1513"
+    },
+    {
+      "name": "tomato3",
+      "hex": "#391714"
+    },
+    {
+      "name": "tomato4",
+      "hex": "#4e1511"
+    },
+    {
+      "name": "tomato5",
+      "hex": "#5e1c16"
+    },
+    {
+      "name": "tomato6",
+      "hex": "#6e2920"
+    },
+    {
+      "name": "tomato7",
+      "hex": "#853a2d"
+    },
+    {
+      "name": "tomato8",
+      "hex": "#ac4d39"
+    },
+    {
+      "name": "tomato9",
+      "hex": "#e54d2e"
+    },
+    {
+      "name": "tomato10",
+      "hex": "#ec6142"
+    },
+    {
+      "name": "tomato11",
+      "hex": "#ff977d"
+    },
+    {
+      "name": "tomato12",
+      "hex": "#fbd3cb"
+    }
+  ],
+  "roles": {
+    "background": "#181111",
+    "surface": "#1f1513",
+    "text": "#fbd3cb",
+    "accent": "#e54d2e",
+    "accent_2": "#4e1511"
+  }
+}

@@ -1,0 +1,20 @@
+/* Radix Amber (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-amber-dark"] {
+  --amber1: #16120c;
+  --amber2: #1d180f;
+  --amber3: #302008;
+  --amber4: #3f2700;
+  --amber5: #4d3000;
+  --amber6: #5c3d05;
+  --amber7: #714f19;
+  --amber8: #8f6424;
+  --amber9: #ffc53d;
+  --amber10: #ffd60a;
+  --amber11: #ffca16;
+  --amber12: #ffe7b3;
+  --background: #16120c;
+  --surface: #1d180f;
+  --text: #ffe7b3;
+  --accent: #3f2700;
+  --accent-2: #4d3000;
+}

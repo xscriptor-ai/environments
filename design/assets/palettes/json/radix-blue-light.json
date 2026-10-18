@@ -1,0 +1,65 @@
+{
+  "name": "Radix Blue (Light)",
+  "slug": "radix-blue-light",
+  "source": "https://github.com/radix-ui/colors",
+  "license": "MIT",
+  "dark": false,
+  "note": "12-step perceptual UI scale",
+  "colors": [
+    {
+      "name": "blue1",
+      "hex": "#fbfdff"
+    },
+    {
+      "name": "blue2",
+      "hex": "#f4faff"
+    },
+    {
+      "name": "blue3",
+      "hex": "#e6f4fe"
+    },
+    {
+      "name": "blue4",
+      "hex": "#d5efff"
+    },
+    {
+      "name": "blue5",
+      "hex": "#c2e5ff"
+    },
+    {
+      "name": "blue6",
+      "hex": "#acd8fc"
+    },
+    {
+      "name": "blue7",
+      "hex": "#8ec8f6"
+    },
+    {
+      "name": "blue8",
+      "hex": "#5eb1ef"
+    },
+    {
+      "name": "blue9",
+      "hex": "#0090ff"
+    },
+    {
+      "name": "blue10",
+      "hex": "#0588f0"
+    },
+    {
+      "name": "blue11",
+      "hex": "#0d74ce"
+    },
+    {
+      "name": "blue12",
+      "hex": "#113264"
+    }
+  ],
+  "roles": {
+    "background": "#fbfdff",
+    "surface": "#f4faff",
+    "text": "#113264",
+    "accent": "#0090ff",
+    "accent_2": "#0588f0"
+  }
+}

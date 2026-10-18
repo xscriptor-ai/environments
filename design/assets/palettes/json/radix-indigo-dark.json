@@ -1,0 +1,65 @@
+{
+  "name": "Radix Indigo (Dark)",
+  "slug": "radix-indigo-dark",
+  "source": "https://github.com/radix-ui/colors",
+  "license": "MIT",
+  "dark": true,
+  "note": "12-step perceptual UI scale",
+  "colors": [
+    {
+      "name": "indigo1",
+      "hex": "#11131f"
+    },
+    {
+      "name": "indigo2",
+      "hex": "#141726"
+    },
+    {
+      "name": "indigo3",
+      "hex": "#182449"
+    },
+    {
+      "name": "indigo4",
+      "hex": "#1d2e62"
+    },
+    {
+      "name": "indigo5",
+      "hex": "#253974"
+    },
+    {
+      "name": "indigo6",
+      "hex": "#304384"
+    },
+    {
+      "name": "indigo7",
+      "hex": "#3a4f97"
+    },
+    {
+      "name": "indigo8",
+      "hex": "#435db1"
+    },
+    {
+      "name": "indigo9",
+      "hex": "#3e63dd"
+    },
+    {
+      "name": "indigo10",
+      "hex": "#5472e4"
+    },
+    {
+      "name": "indigo11",
+      "hex": "#9eb1ff"
+    },
+    {
+      "name": "indigo12",
+      "hex": "#d6e1ff"
+    }
+  ],
+  "roles": {
+    "background": "#11131f",
+    "surface": "#141726",
+    "text": "#d6e1ff",
+    "accent": "#3e63dd",
+    "accent_2": "#1d2e62"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "name": "Tailwind Slate",
+  "slug": "tailwind-slate",
+  "source": "https://github.com/tailwindlabs/tailwindcss",
+  "license": "MIT",
+  "dark": false,
+  "note": "11-step UI scale (v3 palette)",
+  "colors": [
+    {
+      "name": "50",
+      "hex": "#f8fafc"
+    },
+    {
+      "name": "100",
+      "hex": "#f1f5f9"
+    },
+    {
+      "name": "200",
+      "hex": "#e2e8f0"
+    },
+    {
+      "name": "300",
+      "hex": "#cbd5e1"
+    },
+    {
+      "name": "400",
+      "hex": "#94a3b8"
+    },
+    {
+      "name": "500",
+      "hex": "#64748b"
+    },
+    {
+      "name": "600",
+      "hex": "#475569"
+    },
+    {
+      "name": "700",
+      "hex": "#334155"
+    },
+    {
+      "name": "800",
+      "hex": "#1e293b"
+    },
+    {
+      "name": "900",
+      "hex": "#0f172a"
+    },
+    {
+      "name": "950",
+      "hex": "#020617"
+    }
+  ],
+  "roles": {
+    "background": "#f8fafc",
+    "surface": "#f1f5f9",
+    "text": "#020617",
+    "accent": "#1e293b",
+    "accent_2": "#334155"
+  }
+}

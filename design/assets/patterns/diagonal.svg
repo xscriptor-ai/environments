@@ -1,0 +1,2 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+<defs><pattern id="p" width="32" height="32" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="32" stroke="#fff" stroke-width="1.2"/></pattern></defs><rect width="1024" height="1024" fill="url(#p)"/></svg>

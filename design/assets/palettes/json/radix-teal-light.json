@@ -1,0 +1,65 @@
+{
+  "name": "Radix Teal (Light)",
+  "slug": "radix-teal-light",
+  "source": "https://github.com/radix-ui/colors",
+  "license": "MIT",
+  "dark": false,
+  "note": "12-step perceptual UI scale",
+  "colors": [
+    {
+      "name": "teal1",
+      "hex": "#fafefd"
+    },
+    {
+      "name": "teal2",
+      "hex": "#f3fbf9"
+    },
+    {
+      "name": "teal3",
+      "hex": "#e0f8f3"
+    },
+    {
+      "name": "teal4",
+      "hex": "#ccf3ea"
+    },
+    {
+      "name": "teal5",
+      "hex": "#b8eae0"
+    },
+    {
+      "name": "teal6",
+      "hex": "#a1ded2"
+    },
+    {
+      "name": "teal7",
+      "hex": "#83cdc1"
+    },
+    {
+      "name": "teal8",
+      "hex": "#53b9ab"
+    },
+    {
+      "name": "teal9",
+      "hex": "#12a594"
+    },
+    {
+      "name": "teal10",
+      "hex": "#0d9b8a"
+    },
+    {
+      "name": "teal11",
+      "hex": "#008573"
+    },
+    {
+      "name": "teal12",
+      "hex": "#0d3d38"
+    }
+  ],
+  "roles": {
+    "background": "#fafefd",
+    "surface": "#f3fbf9",
+    "text": "#0d3d38",
+    "accent": "#008573",
+    "accent_2": "#0d9b8a"
+  }
+}

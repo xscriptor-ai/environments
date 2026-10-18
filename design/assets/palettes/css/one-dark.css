@@ -1,0 +1,20 @@
+/* One Dark — https://github.com/atom/one-dark-syntax — MIT */
+[data-palette="one-dark"] {
+  --bg: #282c34;
+  --fg: #abb2bf;
+  --red: #e06c75;
+  --green: #98c379;
+  --yellow: #e5c07b;
+  --blue: #61afef;
+  --magenta: #c678dd;
+  --cyan: #56b6c2;
+  --comment: #5c6370;
+  --gutter: #4b5263;
+  --selection: #3e4451;
+  --white: #ffffff;
+  --background: #282c34;
+  --surface: #3e4451;
+  --text: #ffffff;
+  --accent: #61afef;
+  --accent-2: #56b6c2;
+}

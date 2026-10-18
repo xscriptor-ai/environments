@@ -1,0 +1,20 @@
+/* Radix Jade (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-jade-dark"] {
+  --jade1: #0d1512;
+  --jade2: #121c18;
+  --jade3: #0f2e22;
+  --jade4: #0b3b2c;
+  --jade5: #114837;
+  --jade6: #1b5745;
+  --jade7: #246854;
+  --jade8: #2a7e68;
+  --jade9: #29a383;
+  --jade10: #27b08b;
+  --jade11: #1fd8a4;
+  --jade12: #adf0d4;
+  --background: #0d1512;
+  --surface: #121c18;
+  --text: #adf0d4;
+  --accent: #1fd8a4;
+  --accent-2: #0b3b2c;
+}

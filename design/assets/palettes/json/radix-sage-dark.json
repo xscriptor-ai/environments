@@ -1,0 +1,65 @@
+{
+  "name": "Radix Sage (Dark)",
+  "slug": "radix-sage-dark",
+  "source": "https://github.com/radix-ui/colors",
+  "license": "MIT",
+  "dark": true,
+  "note": "12-step perceptual UI scale",
+  "colors": [
+    {
+      "name": "sage1",
+      "hex": "#101211"
+    },
+    {
+      "name": "sage2",
+      "hex": "#171918"
+    },
+    {
+      "name": "sage3",
+      "hex": "#202221"
+    },
+    {
+      "name": "sage4",
+      "hex": "#272a29"
+    },
+    {
+      "name": "sage5",
+      "hex": "#2e3130"
+    },
+    {
+      "name": "sage6",
+      "hex": "#373b39"
+    },
+    {
+      "name": "sage7",
+      "hex": "#444947"
+    },
+    {
+      "name": "sage8",
+      "hex": "#5b625f"
+    },
+    {
+      "name": "sage9",
+      "hex": "#63706b"
+    },
+    {
+      "name": "sage10",
+      "hex": "#717d79"
+    },
+    {
+      "name": "sage11",
+      "hex": "#adb5b2"
+    },
+    {
+      "name": "sage12",
+      "hex": "#eceeed"
+    }
+  ],
+  "roles": {
+    "background": "#101211",
+    "surface": "#171918",
+    "text": "#eceeed",
+    "accent": "#63706b",
+    "accent_2": "#717d79"
+  }
+}

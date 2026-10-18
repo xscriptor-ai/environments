@@ -1,0 +1,57 @@
+{
+  "name": "Open Color Gray",
+  "slug": "open-color-gray",
+  "source": "https://github.com/yeun/open-color",
+  "license": "MIT",
+  "dark": false,
+  "note": "13 hues x 10 steps; designed for UI",
+  "colors": [
+    {
+      "name": "50",
+      "hex": "#f8f9fa"
+    },
+    {
+      "name": "100",
+      "hex": "#f1f3f5"
+    },
+    {
+      "name": "200",
+      "hex": "#e9ecef"
+    },
+    {
+      "name": "300",
+      "hex": "#dee2e6"
+    },
+    {
+      "name": "400",
+      "hex": "#ced4da"
+    },
+    {
+      "name": "500",
+      "hex": "#adb5bd"
+    },
+    {
+      "name": "600",
+      "hex": "#868e96"
+    },
+    {
+      "name": "700",
+      "hex": "#495057"
+    },
+    {
+      "name": "800",
+      "hex": "#343a40"
+    },
+    {
+      "name": "900",
+      "hex": "#212529"
+    }
+  ],
+  "roles": {
+    "background": "#f8f9fa",
+    "surface": "#f1f3f5",
+    "text": "#212529",
+    "accent": "#212529",
+    "accent_2": "#343a40"
+  }
+}

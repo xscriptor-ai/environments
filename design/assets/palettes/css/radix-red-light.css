@@ -1,0 +1,20 @@
+/* Radix Red (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-red-light"] {
+  --red1: #fffcfc;
+  --red2: #fff7f7;
+  --red3: #feebec;
+  --red4: #ffdbdc;
+  --red5: #ffcdce;
+  --red6: #fdbdbe;
+  --red7: #f4a9aa;
+  --red8: #eb8e90;
+  --red9: #e5484d;
+  --red10: #dc3e42;
+  --red11: #ce2c31;
+  --red12: #641723;
+  --background: #fffcfc;
+  --surface: #fff7f7;
+  --text: #641723;
+  --accent: #ce2c31;
+  --accent-2: #641723;
+}
