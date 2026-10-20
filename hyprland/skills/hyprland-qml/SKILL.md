@@ -7,7 +7,7 @@ description: Build QML/QtQuick UIs on Hyprland with Quickshell v0.3.x. Use when 
 
 Quickshell is the QML route for Hyprland shells. Official Hyprland has no QML rendering path of its own; its own UI direction is hyprtoolkit (C++). HyprPanel is ARCHIVED (2026-04; it was AGS/GJS+TS, never QML); successor: Wayle (Rust/GTK4).
 
-**Full depth (install, CLI, modules, debugging, patterns) lives in the sibling skill `quickshell`** — read it before writing or reviewing shell code. This skill stays as the short cross-reference.
+**Full depth (install, CLI, modules, debugging, patterns) lives in the sibling skill `quickshell`** — read it before writing or reviewing shell code. This skill stays as the short cross-reference. Migration and deprecations (0.2 to 0.3): skill `quickshell` -> `references/migration.md`.
 
 ## Quickshell facts
 
