@@ -7,9 +7,9 @@ description: Deep Quickshell v0.3.x reference for building QML/Wayland shells (b
 
 Quickshell is THE QML route for Wayland shells on Hyprland (official Hyprland itself ships no QML shell; its own UI direction is hyprtoolkit/C++). It talks to the compositor through wlr-layer-shell, wlr-foreign-toplevel, screencopy, data-control, and the Hyprland IPC sockets.
 
-- Current release: **v0.3.2** (2026-10-08). Canonical repo: `git.outfoxxed.me/outfoxxed/quickshell`; GitHub mirror `quickshell-mirror/quickshell` is read-only. Docs: **https://quickshell.org/** (versioned; v0.3.0 docs cover the 0.3.x line). License LGPL-3.0.
+- Current release: **v0.3.2** (2026-10-08). Canonical repo: `git.outfoxxed.me/outfoxxed/quickshell`; GitHub mirror `quickshell-mirror/quickshell` is read-only. Docs: **https://quickshell.org/** (versioned; v0.3.2 docs cover the 0.3.x line). License LGPL-3.0.
 - Arch: `pacman -S quickshell` (extra, 0.3.2) or AUR `quickshell-git` (master; reinstall if Qt updates). WSL/headless testing: see skill `arch-wsl-headless`.
-- Verified **2026-10-15** against official sources (v0.3.2 changelog, quickshell.org v0.3.0 docs + source): Qt 6.12 support, Hyprland workspace address format, session-lock fixes, PAM subprocess crash fix; default layer namespace `quickshell` (override via `WlrLayershell.namespace`). Always check `qs --version` on the target.
+- Verified **2026-10-20** against official sources (v0.3.2 changelog, quickshell.org v0.3.2 docs including Item Size and Position, v0.3.2 release notes): Qt 6.12 support, Hyprland workspace address format, session-lock fixes, PAM subprocess crash fix; default layer namespace `quickshell` (override via `WlrLayershell.namespace`). Always check `qs --version` on the target.
 
 ## Layout, discovery, launch
 
@@ -61,6 +61,7 @@ Scope {
 
 - `PanelWindow` is the layer-shell bar/panel. `PopupWindow` anchors to windows/items (`anchor.window`, `anchor.rect`); `FloatingWindow` is a normal managed window (dialogs, move/resize, max/min/fullscreen). `QsWindow` is the base.
 - Anchors: `anchors.{top,bottom,left,right}`; opposite anchors force full width/height; `margins` apply only to anchored edges; `exclusiveZone` reserves compositor space (exactly 1 or 3 anchors; implies ExclusionMode.Normal); `exclusionMode: Auto|Normal|Ignore`; `focusable` -> keyboard focus; `aboveWindows` -> layer.
+- Layer-surface sizing: use `implicitWidth`/`implicitHeight` (and animate those). Assigning `width`/`height` directly on `PanelWindow`/`WlrLayershell` is deprecated in Quickshell 0.3.x and logs a runtime warning. Never resize a layer surface on every frame during a reveal: keep the surface size stable and animate/clip the content.
 - Popups: prefer `HyprlandFocusGrab {}` for outside-click dismissal under Hyprland; plain `grabFocus` steals focus and misbehaves.
 - Pragma notes: `//@ pragma AppId`, `ShellId`, `Env VAR = v`, `DefaultEnv VAR = v` (only in root shell.qml), `RespectSystemStyle` (otherwise Controls style is forced to Fusion), `UseQApplication` (QtWidgets styles), `DropExpensiveFonts`. `//@ if/endif` with `hasVersion()/hasQtVersion()/env()/isEnvSet()` for version-gated code.
 

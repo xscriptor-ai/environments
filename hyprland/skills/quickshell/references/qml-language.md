@@ -1,6 +1,6 @@
 # QML for Quickshell authors (Qt 6, v0.3.x, Oct 2026)
 
-The 80% of QML you need for shells, plus the scoping/binding rules that cause most bugs. Full tutorial: quickshell.org/docs/v0.3.0/guide/qml-language/.
+The 80% of QML you need for shells, plus the scoping/binding rules that cause most bugs. Full tutorial: quickshell.org/docs/v0.3.2/guide/qml-language/.
 
 ## Document structure
 

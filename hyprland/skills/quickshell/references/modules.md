@@ -1,6 +1,6 @@
 # Quickshell module & type catalog (v0.3.x, verified Oct 2026)
 
-Per-module index of the 0.3.0 docs types list plus the v0.3.2 changelog. Anything not listed here still exists in the live docs — check quickshell.org/docs/v0.3.0/types/.
+Per-module index of the v0.3.2 docs types list plus the v0.3.2 changelog. Anything not listed here still exists in the live docs — check quickshell.org/docs/v0.3.2/types/.
 
 ## Quickshell (core)
 
