@@ -13,8 +13,8 @@ Authoritative sources: wiki.hypr.land/configuring (Lua utilities, Dispatchers, B
 | `hl.permission(path_regex, type, action)` | Pre-authorize the Permission Manager: type `screencopy`/`plugin`/..., action `allow`/`deny`. Requires restart; check the Permissions wiki page. |
 | `hl.bind(keys, dsp_or_fn, flags?)` | Keys: `SUPER + SHIFT + Q`, keysyms (`Alt_L`), keycodes (`code:28`), mouse buttons (`mouse:272` LMB / 273 RMB / 274 MMB), wheel (`mouse_up/down/left/right`). Returned object has `:unbind()`/`:remove()` and a `description` field. |
 | `hl.unbind(keys)` | Case-sensitive, exact match; removes all earlier registrations of that key. |
-| `hl.curve(name, { type = "bezier"/"spring", ... })` | Spring: `mass`, `stiffness`, `damping` (critical: `2*sqrt(k*m)`). |
-| `hl.animation(t)` | `leaf`, `enabled`, `speed`, `curve`, `style`. Leaves: see skill `hyprland` (animation tree). |
+| `hl.curve(name, { type = "bezier"/"spring", ... })` | Spring: `mass`, `stiffness`, `dampening` (critical: `2*sqrt(k*m)`). The field is `dampening`, not `damping`. |
+| `hl.animation(t)` | `leaf`, `enabled`, `speed`, `style`, and one of `bezier = "<curve>"` or `spring = "<curve>"`. The generic `curve` field is rejected in 0.56.2. Leaves: see skill `hyprland` (animation tree). |
 | `hl.gesture(t)` | `fingers`, `direction` (`horizontal`, `pinch`, ...), `action` (`workspace`, `move`, `resize`, `special`, `close`, `fullscreen`, `float`, `cursor_zoom`, `scroll_move`, `unset`) or Lua `{start,update,finish}` / function. Fields: `mods`, `scale`, `disable_inhibit`. |
 | `hl.window_rule(t)` | `match = { class=..., title=..., initial_class/title, content, focus, fullscreen, float, group, modal, pin, tag, workspace, xdg_tag, xwayland }` + static/dynamic effects; last match wins. Full catalog: skill `hyprland` → `references/rules-animations.md`. Named rules support runtime toggling. |
 | `hl.workspace_rule(t)` | `workspace` selector, `monitor`, `persistent`, `default`, `default_name`, `layout`, `layout_opts`, `gaps_in/out/float_gaps`, `no_border/rounding/shadow`, `on_created_empty`, `animation`. |
