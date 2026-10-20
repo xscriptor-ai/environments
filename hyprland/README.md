@@ -45,7 +45,7 @@ Then restart opencode. The agents already ship with `permission` allow-all (no p
 3. **Wiki moved and versioned**: https://wiki.hypr.land/ (per-release snapshots; legacy hyprlang → 0.54 pages). Logs live at `$XDG_RUNTIME_DIR/hypr/<instance>/hyprland.log` (+ `hyprctl rollinglog`).
 4. **Window rules rewritten in 0.53** (new syntax; `windowrulev2` no longer exists).
 5. **Official UI ≠ QML**: the official direction is hyprtoolkit (C++); Qt/QML is peripheral only (hyprland-qt-support = the "Hyprland" style for Qt Quick Controls; hyprland-qtutils archived → hyprland-guiutils).
-6. **Real QML on Hyprland = Quickshell** (v0.3.2, docs quickshell.org, repo git.outfoxxed.me; GitHub org quickshell-mirror is a mirror). HyprPanel is archived (2026-04) → successor Wayle (Rust/GTK4). AGS/Astal (GTK/TS) and Waybar+SwayNC are still alive.
+6. **Real QML on Hyprland = Quickshell** (v0.3.2, docs quickshell.org, repo git.outfoxxed.me; GitHub org quickshell-mirror is a mirror). HyprPanel is archived (2026-04) → successor Wayle (Rust/GTK4). AGS/Astal (GTK/TS) and Waybar+SwayNC are still alive. Size layer surfaces with `implicitWidth`/`implicitHeight`; direct `width`/`height` on `PanelWindow`/`WlrLayershell` is deprecated in Quickshell 0.3.x.
 7. **hyprpm is now in-tree** in hyprwm/Hyprland (standalone repo removed).
 8. **WSL is a headless test rig, not a desktop**: official Arch WSL images (`wsl --install archlinux`), GPU via mesa d3d12/vulkan-dzn, Hyprland headless with `AQ_NO_KMS_REQUIREMENT=1` + wayvnc; WSLg nested compositing is unreliable.
 

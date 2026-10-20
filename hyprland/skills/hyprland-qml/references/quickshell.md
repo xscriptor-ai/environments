@@ -1,7 +1,7 @@
 # Quickshell module catalog & patterns (v0.3.x, October 2026)
 
 ## Runtime
-- Repo `git.outfoxxed.me/quickshell/quickshell` (GitHub mirror quickshell-mirror/quickshell); docs **quickshell.org** (versioned; v0.3.0 = 0.3.x); LGPL-3.0. Arch extra `quickshell` (0.3.2), AUR `quickshell-git`. Distro availability: Fedora Rawhide + COPR errornointernet/quickshell, Debian unstable/testing, Ubuntu PPA avengemedia/danklinux, OBS home:AvengeMedia:danklinux, Gentoo GURU, Guix, nixpkgs.
+- Repo `git.outfoxxed.me/quickshell/quickshell` (GitHub mirror quickshell-mirror/quickshell); docs **quickshell.org** (versioned; v0.3.2 = 0.3.x); LGPL-3.0. Arch extra `quickshell` (0.3.2), AUR `quickshell-git`. Distro availability: Fedora Rawhide + COPR errornointernet/quickshell, Debian unstable/testing, Ubuntu PPA avengemedia/danklinux, OBS home:AvengeMedia:danklinux, Gentoo GURU, Guix, nixpkgs.
 - Run: `qs -c <name>` / `qs -p <path>`; instance ops `qs list [-a] [-j]`, `qs log [-t N] [-f]`, `qs kill -i <id>`, `qs ipc show|call|listen|prop get`; `qs --debug <port> [--waitfordebug]` for QML debugging. Hot reload on save.
 - Env (0.3): `QS_DISABLE_FILE_WATCHER`, `QS_DISABLE_CRASH_HANDLER`, `QS_CRASHREPORT_URL`, `QS_APP_ID`, `QS_DROP_EXPENSIVE_FONTS`, `QS_ICON_THEME`, `QS_NO_RELOAD_POPUP`, `DefaultEnv` pragma. Shell dir: `Quickshell.shellDir` (renamed from shellRoot, 0.2). Imports: `import qs.path.to.module`; `//@ pragma Singleton`; app-id via `//@ pragma AppId`.
 - v0.3.2 (2026-10-08): Qt 6.12 support, Hyprland new workspace address format, session-lock/PAM/notification fixes. v0.3.0 added: Polkit agent, idle inhibitors/timeouts, shortcut inhibition, FloatingWindow min/max/fullscreen + move/resize, Pipewire peak monitor, Networking, WindowManager (ext-workspace), BackgroundEffect, IPC signal listeners, version-gated pragmas.
@@ -25,6 +25,7 @@ Others: `Quickshell.Networking` (NM-backed Network/NetworkDevice/WifiDevice/Wire
 
 ## PanelWindow semantics
 `anchors.{left,right,top,bottom}` attach screen edges (opposite pair = full width/height; all off by default) · `margins` apply to anchored edges · `exclusiveZone` reserves compositor space (needs exactly 1 or 3 anchors; implies ExclusionMode.Normal) · `exclusionMode` Auto (default; since 0.2 auto-adds zone for single-anchor panels)/Normal/Ignore · `focusable` → WlrLayershell.keyboardFocus · `aboveWindows` → layer · `screen` binding for per-monitor instances.
+Size with `implicitWidth`/`implicitHeight`; direct `width`/`height` on `PanelWindow`/`WlrLayershell` is deprecated in 0.3.x and forces a surface resize. Keep the layer surface size stable during reveal animations and animate/clip the content.
 
 ## Examples
 Minimal bar, multi-monitor Scope+Variants+Process pattern, PopupWindow with `anchor.window`/`anchor.rect` + `HyprlandFocusGrab`: see the hyprland-qml agent SKILL body (canonical snippets).
