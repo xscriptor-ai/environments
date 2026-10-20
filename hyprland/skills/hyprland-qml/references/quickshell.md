@@ -25,7 +25,7 @@ Others: `Quickshell.Networking` (NM-backed Network/NetworkDevice/WifiDevice/Wire
 
 ## PanelWindow semantics
 `anchors.{left,right,top,bottom}` attach screen edges (opposite pair = full width/height; all off by default) · `margins` apply to anchored edges · `exclusiveZone` reserves compositor space (needs exactly 1 or 3 anchors; implies ExclusionMode.Normal) · `exclusionMode` Auto (default; since 0.2 auto-adds zone for single-anchor panels)/Normal/Ignore · `focusable` → WlrLayershell.keyboardFocus · `aboveWindows` → layer · `screen` binding for per-monitor instances.
-Size with `implicitWidth`/`implicitHeight`; direct `width`/`height` on `PanelWindow`/`WlrLayershell` is deprecated in 0.3.x and forces a surface resize. Keep the layer surface size stable during reveal animations and animate/clip the content. Migration and deprecations: see skill `quickshell` → `references/migration.md`.
+Size with `implicitWidth`/`implicitHeight`; direct `width`/`height` on `PanelWindow`/`WlrLayershell` is deprecated in 0.3.x and forces a surface resize. Keep the layer surface size stable during reveal animations and animate/clip the content. Migration and deprecations: see skill `quickshell` → `references/migration.md`; full layer-surface API: `references/layer-surfaces.md`.
 
 ## Examples
 Minimal bar, multi-monitor Scope+Variants+Process pattern, PopupWindow with `anchor.window`/`anchor.rect` + `HyprlandFocusGrab`: see the hyprland-qml agent SKILL body (canonical snippets).

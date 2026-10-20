@@ -115,4 +115,4 @@ Fractional scaling: rely on monitor `scale` (compositor side) + these vars rathe
 2. Prefer starting from a known-good minimal shell.qml, then add modules; test live via hot reload.
 3. Wiring Hyprland state: use `Quickshell.Hyprland` (HyprlandWorkspace/HyprlandWindow lists + events) — never parse hyprctl by hand unless you must.
 4. Style Qt Quick Controls with the official "Hyprland" style if desired (see hyprland-qt agent) or the shell's own QML theme; keep system-tray host unique (one SNI watcher per session).
-5. Deeper docs: skill `quickshell` (full CLI/QML/modules/debugging/patterns incl. `references/migration.md`) + https://quickshell.org/ (v0.3.2 docs = 0.3.x); real-world configs: caelestia-dots/shell, end-4's dots-hyprland (Illogical-Impulse), zephyr, wiki showcase Noctalia/DankMaterialShell.
+5. Deeper docs: skill `quickshell` (full CLI/QML/modules/debugging/patterns incl. `references/migration.md` and `references/layer-surfaces.md`) + https://quickshell.org/ (v0.3.2 docs = 0.3.x); real-world configs: caelestia-dots/shell, end-4's dots-hyprland (Illogical-Impulse), zephyr, wiki showcase Noctalia/DankMaterialShell.

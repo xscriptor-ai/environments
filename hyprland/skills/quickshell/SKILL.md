@@ -87,5 +87,6 @@ Scope {
 - `references/qml-language.md` — QML for shell authors: imports, properties/bindings/scoping, functions/lambdas, signals, types/singletons, models, reactive and lazy-loading semantics.
 - `references/modules.md` — full module catalog and notable types (Quickshell, .Wayland, .Hyprland, .Io, Services.*, .Widgets, .Networking, .Bluetooth, ...).
 - `references/patterns.md` — bar+popup+OSD+lockscreen+notification/tray patterns, fixed-surface reveals, Process/FileView/JsonAdapter data flow, per-monitor state.
+- `references/layer-surfaces.md` — deep dive: size model, PanelWindow/WlrLayershell properties, anchors/exclusion/mask, bar/top/bottom/side/popup recipes, animation rules and validation.
 - `references/migration.md` — 0.2 to 0.3 migration: layer-surface sizing, `qs.*` imports, `shellDir`, exclusion and Qt style, 0.3 additions, and a checklist.
 - `references/debugging.md` — CLI logs, crash handler, QML debugger, qmlls, common runtime failures, memory/performance work.
