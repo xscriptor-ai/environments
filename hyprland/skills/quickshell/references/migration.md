@@ -21,7 +21,7 @@ when a layer-shell window assigns its actual size.
 - Keep the layer surface at its maximum size and animate/clip the content inside it. Mask the transparent area so clicks pass through.
 - A `PanelWindow` with opposite anchors gets the screen dimension on that axis. Use margins and a fixed implicit size for the other axis.
 
-See `patterns.md` for the fixed-surface reveal pattern.
+See `layer-surfaces.md` for the full size model, anchors/exclusion/mask semantics and recipes; `patterns.md` has the fixed-surface reveal pattern.
 
 ## 2. Imports and paths (0.2)
 

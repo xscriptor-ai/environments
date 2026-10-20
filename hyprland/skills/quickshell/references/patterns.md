@@ -74,7 +74,7 @@ PanelWindow {
 }
 ```
 
-Animate `reveal` from 0 to 1, not `implicitHeight`. For a panel anchored to the bottom edge, anchor `clipBox` to the bottom and position the full-size content at `y: clipBox.height - panelH`.
+Animate `reveal` from 0 to 1, not `implicitHeight`. For a panel anchored to the bottom edge, anchor `clipBox` to the bottom and position the full-size content at `y: clipBox.height - panelH`. Full size model and property semantics: `layer-surfaces.md`.
 
 ## Workspaces bound to Hyprland state
 
