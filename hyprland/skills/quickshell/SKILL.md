@@ -86,5 +86,6 @@ Scope {
 - `references/design-and-effects.md` — design tokens, **theme contract for the palette generator binary** (settings.json + base16/roles, live reload, no matugen), glass/blur, elevation, **layout hygiene (density, friendliness, zero overlap)**, **dimensions & transitions tokens (equisdots experimental vs Caelestia/MD3)**, Hack Nerd Font typography, widget recipes, quality gate.
 - `references/qml-language.md` — QML for shell authors: imports, properties/bindings/scoping, functions/lambdas, signals, types/singletons, models, reactive and lazy-loading semantics.
 - `references/modules.md` — full module catalog and notable types (Quickshell, .Wayland, .Hyprland, .Io, Services.*, .Widgets, .Networking, .Bluetooth, ...).
-- `references/patterns.md` — bar+popup+OSD+lockscreen+notification/tray patterns, Process/FileView/JsonAdapter data flow, per-monitor state.
+- `references/patterns.md` — bar+popup+OSD+lockscreen+notification/tray patterns, fixed-surface reveals, Process/FileView/JsonAdapter data flow, per-monitor state.
+- `references/migration.md` — 0.2 to 0.3 migration: layer-surface sizing, `qs.*` imports, `shellDir`, exclusion and Qt style, 0.3 additions, and a checklist.
 - `references/debugging.md` — CLI logs, crash handler, QML debugger, qmlls, common runtime failures, memory/performance work.

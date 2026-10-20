@@ -41,6 +41,41 @@ PanelWindow {
 }
 ```
 
+## Fixed-size layer surface with an animated panel
+
+Do not bind `PanelWindow.implicitHeight` to an animated reveal. Resizing a layer surface forces a configure and buffer reallocation on every frame; keep the surface at its maximum size and clip the content instead. `barH`, `gap` and `panelH` are shell-defined sizes; `reveal` is the animated 0..1 value.
+
+```qml
+PanelWindow {
+  id: bar
+  anchors { top: true; left: true; right: true }
+  implicitHeight: barH + gap + panelH   // fixed maximum
+
+  // Input only on the visible bar/panel; the empty area stays click-through.
+  mask: Region {
+    Region { x: 0; y: 0; width: bar.width; height: barH }
+    Region { x: 0; y: barH + gap; width: bar.width; height: panelH * reveal }
+  }
+
+  Item {
+    id: clipBox
+    y: barH + gap
+    width: parent.width
+    height: panelH * reveal
+    clip: true
+
+    Rectangle {
+      width: parent.width
+      height: panelH
+      color: "#cc101014"
+      radius: 8
+    }
+  }
+}
+```
+
+Animate `reveal` from 0 to 1, not `implicitHeight`. For a panel anchored to the bottom edge, anchor `clipBox` to the bottom and position the full-size content at `y: clipBox.height - panelH`.
+
 ## Workspaces bound to Hyprland state
 
 ```qml
