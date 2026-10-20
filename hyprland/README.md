@@ -2,11 +2,15 @@
 
 Agents, skills, commands and documentation for OpenCode covering the CURRENT state of Hyprland (v0.56.x, the Lua 5.5 config era) plus the surrounding stacks: Quickshell shells, live debugging on Arch, and headless/WSL testing.
 
+## Start here
+
+New to the desktop stack? Read `skills/hyprland/references/from-zero.md` and copy `skills/hyprland/references/starter-hyprland.lua` to `~/.config/hypr/hyprland.lua`. Both files are installed with the `hyprland` skill.
+
 ## Contents
 
 - `agents/` — 13 specialized subagents (opencode frontmatter, allow permissions).
 - `skills/` — 9 deep-reference skills with `references/`:
-  - `hyprland` — the core reference (Lua era + legacy hyprlang, options, IPC, rules, scripts/tooling router).
+  - `hyprland` — the core reference (Lua era + legacy hyprlang, options, IPC, rules, scripts/tooling router, from-zero setup guide and starter config).
   - `hyprland-lua` — complete Lua 5.5 + `hl.*` API, binds/flags/dispatchers, events, timers, custom layouts, stubs/LSP, debugging.
   - `hyprland-bash` — the stack's `.sh` conventions: anatomy/strict mode, caching env, hyprctl automation, socket2 daemons, watchers, Quickshell IPC, systemd units, rofi menus.
   - `hyprland-python` — `.py` tooling: theme-sync targets, palette generators, hyprctl/socket automation, atomic file contracts, CLI design, packaging, pytest.

@@ -13,6 +13,8 @@ Current stable: **v0.56.2** (2026-08-05). Version line continues 0.x — there i
 - Version detection: `hyprctl version`. If `< 0.55` write hyprlang.
 - Reload: auto on save; `hyprctl reload`; `hyprctl reload full-reset` recreates the whole config context.
 - Verify configs without a session (SSH/WSL/CI): **`Hyprland --verify-config`** — exits non-zero on errors. Also `Hyprland --systeminfo`, `--version-json`.
+
+New to a fresh system? Read `references/from-zero.md` first and copy `references/starter-hyprland.lua` to `~/.config/hypr/hyprland.lua`.
 - Launch the session with **`start-hyprland`** (recommended since 0.53: crash recovery + safe mode; `start-hyprland -- -h` shows flags, `-- --safe-mode` for debugging). Starting the bare `Hyprland` binary triggers a watchdog warning (`misc.disable_watchdog_warning` silences it); safe mode expects hyprland-guiutils installed.
 - Always verify claims against the wiki pages before generating long configs: paths are lowercase-nested under `configuring/core/*` and `configuring/layouts/*`.
 
@@ -28,8 +30,8 @@ hl.bind("SUPER + RETURN", hl.dsp.exec_cmd("kitty"), { description = "terminal" }
 hl.unbind("SUPER + TAB")
 hl.define_submap("resize", function() hl.bind("h", function() hl.dispatch(hl.dsp.layout("togglesplit")) end) hl.bind("escape", hl.dsp.submap("reset")) end)
 hl.gesture({ fingers = 3, direction = "horizontal", action = "workspace" })
-hl.curve("snappy", { type = "spring", mass = 1, stiffness = 120, damping = 14 })
-hl.animation({ leaf = "workspaces", enabled = true, speed = 8, curve = "snappy" })
+hl.curve("snappy", { type = "spring", mass = 1, stiffness = 120, dampening = 14 })
+hl.animation({ leaf = "workspaces", enabled = true, speed = 8, spring = "snappy" })
 hl.window_rule({ match = { class = "^(kitty)$" }, float = true })
 hl.workspace_rule({ workspace = "2", persistent = true, monitor = "DP-1" })
 hl.layer_rule({ match = { namespace = "^(waybar)$" }, blur = true })
@@ -67,5 +69,7 @@ hyprctl option paths used colons (`general:border_size`); touchpad options were 
 - `references/ipc.md` — hyprctl commands, IPC sockets, socket2 event catalog.
 - `references/rules-animations.md` — rules catalogs and animation tree details.
 - `references/scripts-and-tooling.md` — router for Bash/Python glue: language decision table, cross-language escaping cookbook, compositor-citizenship checklist (dedicated skills: `hyprland-bash`, `hyprland-python`).
+- `references/from-zero.md` — end-to-end Arch setup: drivers, packages, session entry, starter config, services, verification and first-boot troubleshooting.
+- `references/starter-hyprland.lua` — copy-paste minimal `hyprland.lua` for 0.56.x (Lua 5.5).
 
 Sibling skills: `hyprland-lua` (full Lua 5.5 + hl API + custom layouts), `hyprland-bash` (the .sh scripts), `hyprland-python` (.py tooling), `quickshell` (shells), `hyprland-live-debug` (live debugging), `arch-wsl-headless` (WSL/headless testing), `hyprland-tools` (ecosystem daemons), `hyprland-qml` (shell landscape).

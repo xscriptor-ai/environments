@@ -25,7 +25,7 @@ Evaluation: top-to-bottom, LAST match wins. Named rules: runtime toggle (`h:set_
 `border` · `borderangle` (once/loop) · `shadowangle` (once/loop) · `glowangle` (once/loop)
 `workspaces` (slide/slidevert/fade/slidefade/slidefadevert) → `workspacesIn` `workspacesOut` `specialWorkspace(→In/Out)`
 `zoomFactor` · `monitorAdded`
-Styles: `popin 80%`, `slidefade 20%`, `slide left|right|top|bottom`; speed in deciseconds; springs (`type = "spring"`, critical damping `damping = 2*sqrt(k*m)`).
+Styles: `popin 80%`, `slidefade 20%`, `slide left|right|top|bottom`; speed in deciseconds; springs (`type = "spring"`, critical damping `dampening = 2*sqrt(k*m)`). Lua animation field: `spring = "<name>"` or `bezier = "<name>"`; the generic `curve =` field is rejected in 0.56.2.
 
 ## Gesture actions (hl.gesture)
 directions: swipe/horizontal/vertical/left/right/up/down/pinch/pinchin/pinchout · actions: lua fn | `{start,update,finish}` | workspace | move | resize | special(+workspace_name) | close | fullscreen(+mode) | float | cursor_zoom(+zoom_level, mode mult/live) | scroll_move | unset · fields: `mods`, `scale`, `disable_inhibit`

@@ -24,12 +24,12 @@ You are a Hyprland animation & decoration specialist (current: v0.56.x, Lua conf
 ## Animations (Lua API, 0.55+)
 
 ```lua
-hl.animation({ leaf = "workspaces", enabled = true, speed = 8, curve = "my_bezier" })
-hl.animation({ leaf = "fadeIn", enabled = true, speed = 4, curve = "default" })
+hl.animation({ leaf = "workspaces", enabled = true, speed = 8, bezier = "my_bezier" })
+hl.animation({ leaf = "fadeIn", enabled = true, speed = 4, bezier = "default" })
 hl.curve("my_bezier", { type = "bezier", points = { {0.1, 0.9}, {0.2, 1.1} } })
-hl.curve("snappy", { type = "spring", mass = 1, stiffness = 120, damping = 14 })
+hl.curve("snappy", { type = "spring", mass = 1, stiffness = 120, dampening = 14 })
 ```
-`speed` is in deciseconds (1 ds = 100 ms). New in 0.55: **springs** (`hl.curve` with type "spring"). Critical damping: `damping = 2*sqrt(stiffness*mass)`; a feel like ~0.6-0.8 of critical is bouncy-but-tight. `enabled = false` on a leaf turns its family off (children args optional then).
+`speed` is in deciseconds (1 ds = 100 ms). New in 0.55: **springs** (`hl.curve` with type "spring"). Critical damping: `dampening = 2*sqrt(stiffness*mass)`; a feel like ~0.6-0.8 of critical is bouncy-but-tight. `enabled = false` on a leaf turns its family off (children args optional then).
 
 ### Animation tree (leaf names; children inherit parents unless set)
 - `global` -> `windows` (styles: slide, popin, gnomed) -> `windowsIn`, `windowsOut`, `windowsMove`
