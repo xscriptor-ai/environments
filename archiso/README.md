@@ -7,13 +7,14 @@ All the knowledge is verified against primary sources on **2026-10-01** (archiso
 ## Contents
 
 - `agents/` — 19 subagents: 15 generic + 4 X Linux ones (`xlnux-generations`, `xlnux-installer`, `xlnux-packages`, `xlnux-wsl`).
-- `skills/` — 6 deep-reference skills with `references/`:
+- `skills/` — 7 deep-reference skills with `references/`:
   - `archiso` (profile, bootmodes, live env)
   - `arch-packaging` (devtools/pkgctl, repos and signatures, AUR)
   - `distro-boot` (bootloaders, initramfs/UKI, Secure Boot)
   - `distro-installers` (Calamares, archinstall, first-boot/branding)
   - `distro-release` (CI, QEMU testing, release engineering, WSL images)
   - `xlnux` (X architecture, generations, xpm/xpkg, WSL, prioritized issues)
+  - `xlnux-arm` (aarch64 port: ALARM, archiso/UEFI, installer, generations, packages, CI)
 - `commands/` — 6 commands: `/archiso-new`, `/archiso-build`, `/archiso-test`, `/archiso-diag`, `/xlnux-validate`, `/xlnux-vm`.
 - `docs/` — state of the ecosystem 2026, distro blueprint from zero to release, source map, and the X Linux project map with gap analysis.
 

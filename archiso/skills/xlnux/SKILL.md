@@ -57,6 +57,7 @@ subvol @xstate    -> /var/lib/x     manifests, packages.tsv, services, boot/, cu
 
 - Generic Arch build knowledge: skills `archiso`, `arch-packaging`, `distro-boot`, `distro-installers`, `distro-release`.
 - Project specifics: `references/architecture.md`, `references/generations.md`, `references/xpm-xpkg.md`, `references/wsl.md`, `references/known-issues.md`.
+- ARM port: skill `xlnux-arm` and `equislinux/x/docs/en/arm.md`.
 - Validation flow: `commands/xlnux-validate.md` and `commands/xlnux-vm.md`.
 - Project map and gap analysis: `docs/xlnux-map.md`.
 
