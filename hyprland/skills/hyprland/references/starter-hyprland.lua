@@ -1,11 +1,12 @@
--- Starter Hyprland Lua config for Hyprland 0.56.x (Lua 5.5 era).
+-- Starter Hyprland Lua config for Hyprland 0.57.x (Lua-only, Lua 5.5).
 -- Copy to ~/.config/hypr/hyprland.lua, then edit the monitor, keyboard and
 -- autostart entries for your machine.
 --
--- Verify before launching:
+-- Verify before launching (0.57 also rejects out-of-range values):
 --   Hyprland --verify-config
 -- After launching:
 --   hyprctl configerrors
+--   hyprctl deprecated-config
 --
 -- Deep references: skill hyprland-lua (hl.* API), skill hyprland (options/rules),
 -- skill hyprland-tools (lock/idle/wallpaper), skill quickshell (shell).
@@ -41,7 +42,7 @@ hl.config({
   animations = { enabled = true },
 })
 
-hl.curve("snappy", { type = "spring", mass = 1, stiffness = 120, dampening = 14 })
+hl.curve("snappy", { type = "spring", mass = 1, stiffness = 120, damping = 14 })
 hl.animation({ leaf = "windows", enabled = true, speed = 8, spring = "snappy" })
 
 -- Core keybinds. Adjust the terminal and launcher to what you install.

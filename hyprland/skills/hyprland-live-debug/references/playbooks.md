@@ -67,7 +67,7 @@ Format: **first commands → what to look for → next step**. Commands assume a
 ## "Suspend/resume or DPMS oddities"
 
 - `journalctl -b | grep -i -E "suspend|resume"` and check for stuck DRM state; `hyprctl monitors` after resume; monitor firmware quirks often need `AQ_NO_ATOMIC` or driver knobs — collect `dmesg` right after resume.
-- hypridle: verify listeners and `hyprctl dispatch force_idle` behavior; idle inhibitors (video playback) may keep screens on (`wayland-info` lists `zwp_idle_inhibit_manager_v1`).
+- hypridle: verify listeners and `hyprctl dispatch 'hl.dsp.force_idle(300)'` behavior (the legacy bare `hyprctl dispatch force_idle` fails on 0.57); idle inhibitors (video playback) may keep screens on (`wayland-info` lists `zwp_idle_inhibit_manager_v1`).
 - Lock on resume: hyprlock + PAM — test `loginctl lock-session` and check `journalctl --user -u hyprlock`.
 
 ## "Everything is slow only after login (not in TTY)"

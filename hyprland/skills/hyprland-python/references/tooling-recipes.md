@@ -1,6 +1,8 @@
 # Python tooling recipes (Hyprland/Quickshell stack)
 
-Templates adapted to the equisdots contracts. Verified 2026-10-15 (theme-sync package layout, palette schema, `settings.json` handling).
+Templates adapted to the equisdots contracts. Verified 2026-11-01 (theme-sync package layout, palette schema, `settings.json` handling, Hyprland 0.57 range enforcement).
+
+When a tool writes Hyprland options, validate against the documented range before `hyprctl eval`/persisting; 0.57 reports out-of-range values as config errors and keeps the default.
 
 ## 1. hyprctl bridge
 

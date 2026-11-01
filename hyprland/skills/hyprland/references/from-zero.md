@@ -1,6 +1,6 @@
 # From zero to a working Hyprland session (Arch Linux)
 
-Verified 2026-10-20 against Hyprland v0.56.2, Quickshell v0.3.2 and current Arch packages.
+Verified 2026-11-01 against Hyprland v0.57.0, Quickshell v0.3.2 and current Arch packages. Hyprland 0.57 is Lua-only: `.conf` configs are not read, `hyprctl keyword` is gone, and out-of-range option values are config errors.
 
 This is the end-to-end path the other references assume: an Arch base is already installed, the network works, and you have a normal user with `sudo`. It covers drivers, packages, session entry, a starter config, desktop services, verification and first-boot troubleshooting.
 
@@ -99,6 +99,8 @@ start-hyprland
 
 `start-hyprland` is the supported entrypoint since 0.53. It provides crash recovery and safe mode. Do not start the bare `Hyprland` binary in normal use.
 
+On 0.57, `Hyprland --verify-config` also fails on out-of-range values (for example `decoration.shadow.render_power` must be 1-4). As root inside a container/sandbox, add `--i-am-really-stupid`; as a normal user, do not.
+
 For a display manager, install SDDM or greetd and select the packaged Hyprland Wayland session (`/usr/share/wayland-sessions/hyprland.desktop`). A plain TTY plus `start-hyprland` is also a valid setup. If the display manager fails, test the same session from a TTY with:
 
 ```bash
@@ -139,6 +141,7 @@ Verify again:
 Hyprland --verify-config
 hyprctl reload
 hyprctl configerrors
+hyprctl deprecated-config
 ```
 
 ### File layout and modules
@@ -313,7 +316,7 @@ hl.monitor({ output = "DP-1", mode = "2560x1440@165", position = "1920x0", scale
 - **Network missing:** `systemctl status NetworkManager`; `nmcli device status`.
 - **Portal or screen share fails:** both portal units, a single backend, `grim -l 1`, then the client.
 - **Duplicate bar/notifications/tray:** one shell, one notification server, one SNI host.
-- **Config error:** `Hyprland --verify-config`, `hyprctl configerrors`, `hyprctl repl`, `hyprctl reload full-reset`.
+- **Config error:** `Hyprland --verify-config`, `hyprctl configerrors`, `hyprctl deprecated-config`, `hyprctl repl`, `hyprctl reload full-reset`. On 0.57 an out-of-range value is reported as a config error and the option keeps its default; check `hyprctl getoption <path>`.
 
 Deeper symptom playbooks: skill `hyprland-live-debug` and its `references/playbooks.md`.
 
@@ -321,9 +324,9 @@ Deeper symptom playbooks: skill `hyprland-live-debug` and its `references/playbo
 
 - Upgrade the whole system with `sudo pacman -Syu`; avoid partial upgrades. Hyprland and its libraries (aquamarine, hyprutils, hyprgraphics, hyprcursor) must come from the same rebuild.
 - Back up `~/.config/hypr` before major changes; keep the config in git if possible.
-- On every upgrade, check `hyprctl version`, `hyprctl configerrors` and the session log.
+- On every upgrade, check `hyprctl version`, `hyprctl configerrors`, `hyprctl deprecated-config` and the session log.
 - Plugins must match the exact Hyprland ABI; after an update run `hyprpm update`, disable plugins when bisecting.
-- If the config is still `hyprland.conf`, migrate to `hyprland.lua`; see skill `hyprland-lua` and its `references/hl-api.md`.
+- If the config is still `hyprland.conf`, migrate to `hyprland.lua`; 0.57 does not load `.conf` at all. See skill `hyprland-lua` and its `references/hl-api.md`.
 - Read `docs/state-of-world-2026.md` for version changes and knowledge traps.
 - Keep Quickshell and its Qt runtime current; reinstall `quickshell-git` after Qt upgrades.
 

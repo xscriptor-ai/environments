@@ -1,6 +1,8 @@
 # Bash recipes for Hyprland management
 
-Working snippets for the stack's day-to-day scripts. Verified 2026-10-15 (`hyprctl` surface per wiki snapshot, conventions per equisdots `scripts/`).
+Working snippets for the stack's day-to-day scripts. Verified 2026-11-01 (Hyprland 0.57.0 `hyprctl` surface, conventions per equisdots `scripts/`).
+
+**0.57:** `hyprctl keyword` is gone; `hyprctl dispatch '<lua>'` takes a Lua expression (`hyprctl dispatch 'hl.dsp.exit()'`). Do not paste legacy dispatcher names into scripts.
 
 ## jq cookbook (hyprctl -j)
 
@@ -98,7 +100,7 @@ brightness="$(brightnessctl -m | cut -d, -f4 | tr -d %)"           # ddcutil fal
 ```bash
 # Graceful exit (exit.sh): stop user targets, then exit the compositor
 systemctl --user stop graphical-session.target 2>/dev/null || true
-hyprctl dispatch exit
+hyprctl dispatch 'hl.dsp.exit()'
 
 # Last (crashed) session log from a TTY
 cat "$XDG_RUNTIME_DIR/hypr/$(ls -t "$XDG_RUNTIME_DIR/hypr" | head -n1)/hyprland.log"

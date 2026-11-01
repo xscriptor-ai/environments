@@ -1,4 +1,4 @@
-# Quickshell module catalog & patterns (v0.3.x, October 2026)
+# Quickshell module catalog & patterns (v0.3.x, November 2026)
 
 ## Runtime
 - Repo `git.outfoxxed.me/quickshell/quickshell` (GitHub mirror quickshell-mirror/quickshell); docs **quickshell.org** (versioned; v0.3.2 = 0.3.x); LGPL-3.0. Arch extra `quickshell` (0.3.2), AUR `quickshell-git`. Distro availability: Fedora Rawhide + COPR errornointernet/quickshell, Debian unstable/testing, Ubuntu PPA avengemedia/danklinux, OBS home:AvengeMedia:danklinux, Gentoo GURU, Guix, nixpkgs.

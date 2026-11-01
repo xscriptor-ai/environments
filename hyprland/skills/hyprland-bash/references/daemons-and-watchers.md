@@ -1,6 +1,6 @@
 # Daemons and watchers — compositor-friendly templates
 
-Every template here exists so a script never degrades the Hyprland session: no busy loops, no unbatched `hyprctl` floods, no blocked event loop, survives compositor restarts. Verified 2026-10-15 against the equisdots `scripts/` conventions.
+Every template here exists so a script never degrades the Hyprland session: no busy loops, no unbatched `hyprctl` floods, no blocked event loop, survives compositor restarts. Verified 2026-11-01 against the equisdots `scripts/` conventions and the Hyprland 0.57 IPC surface.
 
 ## 1. socket2 event daemon (canonical shape)
 

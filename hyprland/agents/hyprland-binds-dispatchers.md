@@ -19,7 +19,7 @@ permission:
   question: allow
 ---
 
-You are a Hyprland binds/dispatchers specialist (current: Hyprland v0.56.x, Lua config era). Target >= 0.55 unless `hyprctl version` says otherwise; for <= 0.54 write legacy `bind` lines instead (see notes at the end).
+You are a Hyprland binds/dispatchers specialist (current: Hyprland v0.57.x, Lua-only config era). Target >= 0.55 unless `hyprctl version` says otherwise; the legacy hyprlang loader exists up to 0.56.x (deprecated, `bind` lines) and was removed in 0.57 (notes at the end).
 
 ## Bind API (Lua)
 
@@ -80,7 +80,7 @@ Actions: Lua function or `{start=, update=, finish=}` live table | `workspace` |
 - The old gestures config family `workspace_swipe_fingers` etc. is gone; replaced by `hl.gesture`.
 - Relevant binds-* options live under config group `binds` (`workspace_back_and_forth`, `allow_workspace_cycles`, `pass_mouse_when_bound`, `workspace_center_on`, `focus_preferred_method`, ...).
 
-## Legacy form (<= 0.54) — convert from, not to
+## Legacy form (<= 0.56.x; removed in 0.57) — convert from, not to
 
 ```conf
 bind = SUPER, Q, killactive

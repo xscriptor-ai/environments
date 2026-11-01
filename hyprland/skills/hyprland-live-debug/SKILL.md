@@ -3,16 +3,17 @@ name: hyprland-live-debug
 description: Live debugging on an Arch + Hyprland system — logs, crash reports, coredumpctl/gdb backtraces, safe mode, git bisect, ASan builds, DRM/GPU logs, Wayland trace, input/portal/screenshare diagnosis, and performance profiling. Use when a running Hyprland session misbehaves (crashes, freezes, black screens, input, sharing, tearing) and you need evidence-based debugging commands.
 ---
 
-# Hyprland live debugging (Arch + Hyprland 0.56.x, October 2026)
+# Hyprland live debugging (Arch + Hyprland 0.57.x, November 2026)
 
-Verified **2026-10-15** against official sources: wiki.hypr.land (Crashes and Bugs, Using hyprctl, contributing-and-debugging/tests), hyprwm release metadata, Aquamarine `docs/env.md` (main). Method, not folklore: reproduce → collect evidence → isolate one variable at a time → fix → verify. Everything below is current for v0.56.x; verify versions on the target (`hyprctl version`).
+Verified **2026-11-01** against official sources: wiki.hypr.land (Crashes and Bugs, Using hyprctl, contributing-and-debugging/tests), Hyprland v0.57.0 sources, hyprwm release metadata, Aquamarine `docs/env.md` (main). Method, not folklore: reproduce → collect evidence → isolate one variable at a time → fix → verify. Everything below is current for v0.57.x; verify versions on the target (`hyprctl version`).
 
 ## Phase 0 — facts (30 seconds, always)
 
 ```bash
-hyprctl version                # version/branch/commit/flags; < 0.55 means hyprlang config
+hyprctl version                # version/branch/commit/flags; >= 0.57 is Lua-only, <= 0.56 may still load hyprlang
 hyprctl systeminfo 2>/dev/null; Hyprland --systeminfo   # machine-readable-ish report (binary, not hyprctl)
 hyprctl configerrors           # config errors since load
+hyprctl deprecated-config      # options set with a deprecation notice ("all good!" when clean)
 hyprctl monitors -j | head -c 400                      # outputs alive?
 journalctl --user -b -t Hyprland 2>/dev/null | tail -5 # if session-managed
 ls /dev/dri/ && echo "drivers: $(lspci -k | grep -A2 -Ei 'vga|3d')"
@@ -72,9 +73,9 @@ echo 0 | sudo tee /sys/module/drm/parameters/debug       # ALWAYS disable afterw
 
 ## Phase 3 — configuration & logic bugs
 
-- Config won't apply: `Hyprland --verify-config` (headless check; great over SSH/WSL), then `hyprctl configerrors`, then `hyprctl repl` to probe `hl.*` expressions one by one (skill `hyprland-lua` has the full error-semantics table).
+- Config won't apply: `Hyprland --verify-config` (headless check; great over SSH/WSL), then `hyprctl configerrors` + `hyprctl deprecated-config`, then `hyprctl repl` to probe `hl.*` expressions one by one (skill `hyprland-lua` has the full error-semantics table). On 0.57, out-of-range values are real config errors (e.g. shadow `render_power` > 4); the option keeps its default, so "set but ignored" usually means "rejected".
 - Rules not matching: evaluation is top-to-bottom, **last match wins**; test with `hyprctl getprop <window> <prop>` and `hyprctl clients -j`.
-- Options seemingly ignored: per-device overrides beat globals (`hl.device`); per-workspace rules beat globals; prop refreshes are deferred to the event boundary.
+- Options seemingly ignored: per-device overrides beat globals (`hl.device`); per-workspace rules beat globals; prop refreshes are deferred to the event boundary; out-of-range values are rejected and fall back to the default.
 - Binds: `hyprctl binds`, `hyprctl descriptions -j`, `wev` for keysym/keycode detection. Held/misbehaving keys → check flags (`release`, `repeating`, `non_consuming`, `auto_consuming`).
 - Plugins: ABI must match `hyprctl version` exactly; disable all (`hyprpm disable` / remove) before blaming Hyprland, and test safe mode. `hyprpm list`, `hyprpm update`.
 
@@ -96,8 +97,8 @@ Portals/screenshare: `systemctl --user list-units 'xdg-desktop-portal*'`; the Hy
 - Aquamarine knobs: `AQ_DRM_DEVICES=/dev/dri/card1:card0` (force primary GPU), `AQ_NO_MODIFIERS=1` (works around some iGPU/USB-C blank-external-monitor cases), `AQ_FORCE_LINEAR_BLIT=0|1`, `AQ_MGPU_NO_EXPLICIT`, `AQ_NO_ATOMIC` (last resort), `AQ_NO_KMS_REQUIREMENT=1` (render-only/vGPU/headless), `AQ_TRACE=1` (verbose).
 - NVIDIA: kernel modeset on, explicit sync era drivers; env trio commonly needed historically (`GBM_BACKEND=nvidia-drm`, `__GLX_VENDOR_LIBRARY_NAME=nvidia`, `LIBVA_DRIVER_NAME=nvidia`) — only add these while diagnosing an actual NVIDIA issue.
 - Tools: `drm_info`, `intel_gpu_top`, `radeontop`, `nvtop`, `vulkaninfo`, `glxinfo -B`, `eglinfo`. Check `dmesg` for amdgpu/i915/nvidia errors.
-- Tearing: `general.allow_tearing` + per-window `immediate` rule; VRR per monitor (`vrr -1..3`); `render.new_render_scheduling`, `commit_timing_enabled`, `debug.vfr` — change ONE knob at a time.
-- Frame pacing/wobble: `debug.overlay` on, then toggle `decoration.blur`, shadows, animations; on laptops check TLP GPU freq notes (skill `hyprland` extras).
+- Tearing: `general.allow_tearing` + per-window `immediate` rule; VRR per monitor (`vrr -1..3`); `render.new_render_scheduling`, `render.async_commit`, `commit_timing_enabled`, `debug.vfr` — change ONE knob at a time.
+- Frame pacing/wobble: `debug.overlay` on, then toggle `decoration.blur` (and the 0.57 `decoration.blur.variant`: acrylic/aurora/fluid_jar/... can be much heavier than kawase), `decoration.wobble`, shadows, animations; on laptops check TLP GPU freq notes (skill `hyprland` extras).
 
 ## Phase 6 — performance
 

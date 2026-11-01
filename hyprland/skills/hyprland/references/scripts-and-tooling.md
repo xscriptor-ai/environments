@@ -1,6 +1,6 @@
 # Scripts & tooling — router (Bash and Python around Hyprland/Quickshell)
 
-Verified **2026-10-15**. This file routes between the dedicated skills; it keeps only the cross-language facts that belong to neither:
+Verified **2026-11-01** (Hyprland 0.57.0). This file routes between the dedicated skills; it keeps only the cross-language facts that belong to neither:
 
 - **Bash (the `.sh` files)** → skill **`hyprland-bash`** — script anatomy/strict mode, `caching.sh` env, hyprctl automation + persistence, socket2 daemons (debounce/dedupe/flock), watchers, Quickshell IPC, systemd units, rofi menus, anti-patterns.
 - **Python (the `.py` tools)** → skill **`hyprland-python`** — theme-sync targets, palette/scheme generators, hyprctl JSON automation, socket2 clients, atomic file contracts, CLI/exit-code design, packaging under `~/.local/share/equisdots`, pytest.
@@ -31,9 +31,9 @@ Verified **2026-10-15**. This file routes between the dedicated skills; it keeps
 
 1. Never block: scripts return <50 ms when reachable from a bind/QML handler; otherwise they are supervised daemons.
 2. `hyprctl` is synchronous with a 5 s cap: batch, `timeout 5`, rate-limit, never loop per event without debounce.
-3. State changes through `hl.*` (`hyprctl eval`); persistence to `settings.json` only when the user expects "remember it".
+3. State changes through `hl.*` (`hyprctl eval`); `hyprctl keyword` does not exist on 0.57. Persistence to `settings.json` only when the user expects "remember it".
 4. Event-driven work: debounce (50 ms window churn / 250 ms file edits), dedupe, single instance (`flock`/pidfile), zombie cleanup.
-5. Writes: atomic + validated + unknown keys preserved + fallback paths present.
-6. Quality gates: `shellcheck`/`python -m py_compile`, `bash -n`, pytest for Python contracts, `Hyprland --verify-config` for config changes.
+5. Writes: atomic + validated + unknown keys preserved + fallback paths present. Any generator that writes config values must clamp to the documented ranges: 0.57 makes out-of-range values config errors, not silent no-ops (e.g. `decoration.shadow.render_power` is 1..4).
+6. Quality gates: `shellcheck`/`python -m py_compile`, `bash -n`, pytest for Python contracts, `Hyprland --verify-config` for config changes, `hyprctl configerrors` and `hyprctl deprecated-config` on a live session.
 
 Logs to stderr, meaningful exit codes, no `pkill` in normal flows (use `qs ipc` / `qs kill -i`). Generic depth for these languages lives in the global `systems` and `python` skills; these two skills carry the stack conventions.
