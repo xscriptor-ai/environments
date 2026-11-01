@@ -69,7 +69,7 @@ sudo pacman -S --needed gdb debuginfod systemd-coredump \
 
 - Rolling update broke it? Check the package log date: `grep "upgraded hyprland" /var/log/pacman.log | tail`; downgrade temporarily: `sudo pacman -U /var/cache/pacman/pkg/hyprland-<old>.pkg.tar.zst` (or `downgrade` from AUR) and hold it in `IgnorePkg` while reporting upstream.
 - Compare against Arch package: `pacman -Qi hyprland aquamarine hyprutils hyprlang` — version mismatches between the compositor and its libs are a classic crash source (`hyprpm` ABI too).
-- Config language check: `hyprctl version` says `>= 0.55` but you have `hyprland.conf`? Migrate (skill `hyprland-lua`) — 0.56.1+ shows a deprecation notice.
+- Config language check: `hyprctl version` says `>= 0.55` but you have `hyprland.conf`? Migrate (skill `hyprland-lua`). 0.56.1+ shows a deprecation notice; **0.57+ no longer loads `.conf` at all** (it is parsed as Lua and fails).
 - Missing GPU firmware/kernel: `sudo dmesg | grep -i firmware`.
 
 ## Installation gotchas

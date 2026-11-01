@@ -7,6 +7,8 @@ All recipes assume Arch + `hyprland` installed and systemd running (or an export
 ```bash
 Hyprland --verify-config && echo "config OK"
 # exits non-zero on syntax/runtime errors; run it on every config change, and in pre-commit/CI.
+# Hyprland 0.57: Lua-only (a .conf fails) and out-of-range option values are errors.
+# Running as root inside a container/sandbox needs: Hyprland --i-am-really-stupid --verify-config
 ```
 
 ## 1. Environment matrix for a headless start

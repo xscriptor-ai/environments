@@ -3,7 +3,7 @@ name: hyprland-python
 description: Python tooling for the Hyprland/Quickshell stack (equisdots conventions). Covers theme-sync target modules, palette and scheme generators, hyprctl JSON automation with argv/timeout discipline, socket2 event clients with debounce/backoff, atomic file contracts (settings.json, palettes), CLI design, packaging under ~/.local/share/equisdots and pytest. Use when writing, reviewing or debugging any .py tool that talks to Hyprland, the shell, or their files.
 ---
 
-# Python tooling for the Hyprland/Quickshell stack (verified 2026-10-15)
+# Python tooling for the Hyprland/Quickshell stack (verified 2026-11-01)
 
 Sources: equisdots `theme-sync` (`themesync/` package: `cli.py`, `core.py`, `runner.py`, `targets/*`), `palettes`/`hyprland` repos (palette schema, `settings.json`), design contract in skill `quickshell` → `references/design-and-effects.md` section 2. Generic Python depth (typing, asyncio, packaging) lives in the global `python` skill — this skill is the stack's contract. Templates: `references/tooling-recipes.md`.
 
@@ -18,14 +18,15 @@ Sources: equisdots `theme-sync` (`themesync/` package: `cli.py`, `core.py`, `run
 
 Compositor-citizenship rules (same as bash, stricter on startup):
 - `hyprctl`: argv lists, `-j`, `timeout=5`, no `shell=True`, batch control calls, target instances with `-i`. The socket is synchronous — never loop `hyprctl` per event without debounce.
-- State changes go through the Lua API (`hl.monitor`, `hl.config`) via `hyprctl eval`; persistence goes to `settings.json`.
+- State changes go through the Lua API (`hl.monitor`, `hl.config`) via `hyprctl eval`; `hyprctl keyword` does not exist on 0.57. Persistence goes to `settings.json`.
+- Clamp every numeric config value to its documented range before writing or evaluating it: 0.57 turns out-of-range values into config errors (the option falls back to its default). Validate with `Hyprland --verify-config` (non-zero exit on error) and `hyprctl deprecated-config`.
 - Tools invoked from hooks must start in <50 ms, avoid import-time side effects, and never print to stdout unless the caller consumes it (logs to stderr).
 - No `os.system`, no `subprocess.run(..., shell=True)` with interpolated strings.
 
 ## Contracts to respect (the stack, not invented)
 
 1. **theme-sync target module**: one module per application with `NAME`, `DESCRIPTION`, `available(env)`, `apply(env)`; a failing target never aborts the rest (collect errors; exit code reflects them). Installed under `~/.local/share/equisdots/theme-sync` with a `~/.local/bin/theme-sync` wrapper; called by the shell palette hook and `reload.sh`.
-2. **Generator contract** (palettes): input any source; output `dock/palettes/<slug>.json` + `index.json` entry; validate `#rrggbb`; **atomic writes** (`tmp` + `os.replace`); preserve unknown keys; never modify `settings.json` when only palette content changed; keep the `x` fallback palette intact.
+2. **Generator contract** (palettes): input any source; output `dock/palettes/<slug>.json` + `index.json` entry; validate `#rrggbb`; **atomic writes** (`tmp` + `os.replace`); preserve unknown keys; never modify `settings.json` when only palette content changed; keep the `x` fallback palette intact. When a tool also writes Hyprland options, clamp to the option range (0.57 rejects out-of-range values).
 3. **Settings edits**: same atomicity; read-modify-write with a JSON round-trip that keeps unknown keys; report success/failure so the calling script can notify the user.
 
 ## Standard library kit

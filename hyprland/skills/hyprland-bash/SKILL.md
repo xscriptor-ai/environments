@@ -3,9 +3,11 @@ name: hyprland-bash
 description: Bash scripting for the Hyprland/Quickshell stack (equisdots conventions). Covers script anatomy and strict-mode policy, caching env (QS_CACHE_DIR/STATE/RUN), hyprctl automation and persistence, socket2 event daemons with debounce/dedupe, inotify watchers, Quickshell IPC, systemd user units, rofi menus and notifications. Use when writing, reviewing or debugging any .sh under scripts/ deployed to ~/.config/hypr/scripts/.
 ---
 
-# Bash for the Hyprland/Quickshell stack (verified 2026-10-15)
+# Bash for the Hyprland/Quickshell stack (verified 2026-11-01)
 
-Sources: equisdots `hyprland@branch/experimental` (`scripts/`, `docs/scripts.md`, `ws-desktops-lib.sh`, `volume_listener.sh`, `reload.sh`, `scale-menu.sh`), Quickshell CLI, Hyprland wiki (Using hyprctl, IPC). Generic shell depth lives in the global `systems` skill — this skill is the stack's conventions. Deep templates: `references/daemons-and-watchers.md`; ready snippets: `references/recipes.md`.
+Sources: equisdots `hyprland` (`scripts/`, `docs/scripts.md`, `ws-desktops-lib.sh`, `volume_listener.sh`, `reload.sh`, `scale-menu.sh`), Quickshell CLI, Hyprland 0.57.0 IPC (`src/ipc/s1/Commands.cpp`), wiki.hypr.land (Using hyprctl, IPC). Generic shell depth lives in the global `systems` skill — this skill is the stack's conventions. Deep templates: `references/daemons-and-watchers.md`; ready snippets: `references/recipes.md`.
+
+**0.57 compatibility:** `hyprctl keyword` is gone (legacy config provider removed); use `hyprctl eval 'hl.config({...})'`. `hyprctl dispatch` takes a Lua expression (`'hl.dsp.*'`), not a legacy dispatcher string. Generated config values must be clamped to their ranges — 0.57 reports out-of-range values as config errors. `hyprctl deprecated-config` lists deprecated keys in use.
 
 ## Where scripts live and how they are shaped
 
@@ -30,7 +32,7 @@ bash "$ENGINE" 2>/dev/null || true
 ```
 
 - `hyprctl` talks to a synchronous socket with a 5 s cap: wrap hook-critical calls in `timeout 5`, batch control calls (`--batch "a ; b"`, escaping inner `;`), and never loop `hyprctl` per event without debouncing.
-- All automation is Lua-first for state changes: `hyprctl eval 'hl.monitor({...})'` / `hl.config({...})`; then persist the user's intent to `~/.config/hypr/settings.json` (the `scale-menu.sh` / `monitor-manager.sh` pattern: apply live + record).
+- All automation is Lua-first for state changes: `hyprctl eval 'hl.monitor({...})'` / `hl.config({...})`; never `hyprctl keyword`. Then persist the user's intent to `~/.config/hypr/settings.json` (the `scale-menu.sh` / `monitor-manager.sh` pattern: apply live + record). Validate/clamp numeric values against the option ranges before writing them (e.g. `decoration.shadow.render_power` 1..4, `decoration.rounding` 0..100).
 - Notifications: `hyprctl notify -1 3000 "rgb(...)" "msg"` (compositor-native) or `notify-send` / `swayosd-client` (desktop), always with an explicit timeout.
 
 ## The four script shapes
@@ -56,6 +58,6 @@ Full skeletons (socket2 daemon, `pactl` listener, inotify watcher, systemd unit)
 2. No blocking work in anything reachable from a bind or QML handler; else make it a daemon.
 3. Daemons: debounce + dedupe + lock + log to stderr + meaningful exit codes; supervised by systemd (`Restart=always`, `PartOf=graphical-session.target`).
 4. Watchers: atomic-write aware (watch the directory or use FileView), 250 ms debounce for edits that trigger expensive work (`theme-sync`, border pushes, QML reload).
-5. CI: config changes gated by `Hyprland --verify-config`; headless runs per skill `arch-wsl-headless`.
+5. Local/CI gate: `Hyprland --verify-config` (0.57 fails on out-of-range values), `hyprctl configerrors`, `hyprctl deprecated-config`; headless runs per skill `arch-wsl-headless`.
 
 Cross-refs: generated-by-the-shell scripts and Process integration → skill `quickshell`; Python tooling (theme-sync, generators) → skill `hyprland-python`; language decision table and cross-language escaping → skill `hyprland` → `references/scripts-and-tooling.md`.

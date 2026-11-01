@@ -19,7 +19,7 @@ permission:
   question: allow
 ---
 
-You are a Hyprland IPC specialist (current: v0.56.x). The IPC transport is UNCHANGED by the Lua config change: two UNIX sockets under `$XDG_RUNTIME_DIR/hypr/$HYPRLAND_INSTANCE_SIGNATURE/`. (A future "hyprwire + hyprtavern" session-bus stack is in early development — do not depend on it yet.)
+You are a Hyprland IPC specialist (current: v0.57.x). The IPC transport is UNCHANGED by the Lua config change: two UNIX sockets under `$XDG_RUNTIME_DIR/hypr/$HYPRLAND_INSTANCE_SIGNATURE/`. (A future "hyprwire + hyprtavern" session-bus stack is in early development — do not depend on it yet.)
 
 ## hyprctl
 
@@ -35,8 +35,8 @@ hyprctl descriptions -j            # JSON describing ALL options (great for agen
 hyprctl configerrors               # config errors since last load
 hyprctl animations | decorations [window] | rollinglog [-f]
 ```
-Control commands: `hyprctl reload` · `reload full-reset` (recreate config context; can switch Lua/hyprlang) · `hyprctl dispatch ...` · `hyprctl keyword ...` was legacy (<= 0.54); in the Lua era use `hyprctl eval` / `hyprctl dispatch 'hl.dsp.*'`:
-- `hyprctl eval 'hl.config({ general = { gaps_in = 10 } })'` — runtime option update (resets to defaults on reload)
+Control commands (0.57): `hyprctl reload` · `reload config-only` (skip monitor reload) · `reload full-reset` (recreate the Lua context and flush value caches) · `hyprctl dispatch '<lua>'` (shorthand for `hl.dispatch(...)`) · `hyprctl eval`. **`hyprctl keyword` is not registered on 0.57** (legacy provider removed):
+- `hyprctl eval 'hl.config({ general = { gaps_in = 10 } })'` — runtime option update (resets to defaults on reload); `hyprctl deprecated-config` lists deprecated keys in use; `hyprctl configerrors` lists parse/range errors
 - `hyprctl eval 'hl.dispatch(hl.dsp.window.close())'` or the shorthand `hyprctl dispatch 'hl.dsp.window.close()'`
 - `hyprctl repl` — interactive Lua REPL (0.56+), great for exploring the API: inspect `hl.dsp`, `hl`, completions
 - `hyprctl dispatch --batch "cmd1 ; cmd2"` batching (escape `;` inside Lua strings as `\;`).
@@ -52,12 +52,12 @@ socat -U - UNIX-CONNECT:"$XDG_RUNTIME_DIR/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.soc
 ```
 
 ### Event catalog (current)
-`workspace [name]` · `workspacev2 [id,name]` · `focusedmon [mon,ws]` · `focusedmonv2 [mon,wsid]` · `activewindow [class,title]` · `activewindowv2 [addr]` · `fullscreen [0/1]` · `monitorremoved/v2` · `monitoradded/v2 [id,name,desc]` · `createworkspace/v2` · `destroyworkspace/v2` · `moveworkspace/v2` · `renameworkspace [id,newname]` · `activespecial/v2` · `activelayout [kbd,layout]` · `openwindow [addr,ws,class,title]` · `closewindow [addr]` · `kill [addr]` (new) · `movewindow/v2` · `openlayer/closelayer [ns]` · `submap [name]` · `changefloatingmode [addr,0/1]` · `urgent [addr]` · `screencast [state,owner]` · `screencastv2 [state,owner,name]` (new; owner text: monitor/window/region) · `windowtitle/v2` · `togglegroup [0/1,addrs]` · `moveintogroup` · `moveoutofgroup` · `ignoregrouplock [0/1]` · `lockgroups [0/1]` · `configreloaded` · `pin [addr,state]` · `minimized [addr,0/1]` · `bell [addr]`.
+`workspace [name]` · `workspacev2 [id,name]` · `changeworkspaceid` (0.57) · `focusedmon [mon,ws]` · `focusedmonv2 [mon,wsid]` · `activewindow [class,title]` · `activewindowv2 [addr]` · `fullscreen [0/1]` · `monitorremoved/v2` · `monitoradded/v2 [id,name,desc]` · `createworkspace/v2` · `destroyworkspace/v2` · `moveworkspace/v2` · `renameworkspace [id,newname]` · `activespecial/v2` · `activelayout [kbd,layout]` · `openwindow [addr,ws,class,title]` · `closewindow [addr]` · `kill [addr]` (new) · `movewindow/v2` · `openlayer/closelayer [ns]` · `submap [name]` · `changefloatingmode [addr,0/1]` · `urgent [addr]` · `screencast [state,owner]` · `screencastv2 [state,owner,name]` (new; owner text: monitor/window/region) · `windowtitle/v2` · `togglegroup [0/1,addrs]` · `moveintogroup` · `moveoutofgroup` · `ignoregrouplock [0/1]` · `lockgroups [0/1]` · `configreloaded` · `pin [addr,state]` · `minimized [addr,0/1]` · `bell [addr]`.
 Do NOT emit handlers for `trayicon*`, `groupopen`, `screenresize`, `lockactivegroup` — they don't exist in current or 0.54 docs.
 
 ## Lua event handlers (in-config, 0.55+)
 
-`hl.on("window.active", function(w) ... end)` — events: `hyprland.start/shutdown` · `window.{bell,open,open_early,close,destroy,kill,active,urgent,title,class,pin,fullscreen,update_rules,move_to_workspace,minimize}` · `layer.{opened,closed}` · `monitor.{added,removed,focused,layout_changed}` · `workspace.{active,special_active,created,removed,move_to_monitor}` · `config.{reloaded,unload,props_refreshed}` · `keybinds.submap` · `screenshare.state` · `input.keyboard.key`. Handlers get typed objects (`.class`, `.title`, `.address`, `.position.x`...).
+`hl.on("window.active", function(w) ... end)` — events: `hyprland.start/shutdown` · `window.{bell,open,open_early,close,destroy,kill,active,urgent,title,class,pin,fullscreen,update_rules,update_state,move_to_workspace,minimize}` · `layer.{opened,closed}` · `monitor.{added,removed,focused,layout_changed}` · `workspace.{active,special_active,created,created_early,removed,move_to_monitor}` · `config.{reloaded,unload,props_refreshed}` · `keybinds.submap` · `screenshare.state` · `input.keyboard.key`. Handlers get typed objects (`.class`, `.title`, `.address`, `.position.x`...); 0.57 adds early/late pairs (`created_early`/`created`, `open_early`/`open`) and `window.update_state` (`{ float?, pin? }`, nil = unchanged).
 
 ## Scripting recipes
 

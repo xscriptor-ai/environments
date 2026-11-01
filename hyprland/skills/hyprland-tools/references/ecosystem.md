@@ -8,9 +8,10 @@
 - Do not screenshot-bypass (locks hide on capture by design).
 
 ## hypridle
-- Config `~/.config/hypr/hypridle.conf`; command values in Lua syntax for recent releases (0.1.8 changelog). D-Bus GetActive/ActiveChanged implemented; per-listener `condition_cmd`.
+- Config `~/.config/hypr/hypridle.conf`; command values use Lua dispatch syntax in recent releases. On 0.57 write `hyprctl dispatch 'hl.dsp.dpms({ action = "disable" })'`, not the old `hyprctl dispatch dpms off`. D-Bus GetActive/ActiveChanged implemented.
+- Listeners support `condition_cmd` (run before `on-timeout`; exit 0 fires it) and `condition_retry` (re-check every N seconds while idle). Both run on hypridle's event loop — keep them fast.
 - Typical listeners: DPMS off/resume; hyprlock after 5 min; suspend after 1 h. Wayland idle inhibitors stop timeouts (video playback).
-- Force: `hyprctl dispatch force_idle` / dispatcher `force_idle`.
+- Force: `hl.dsp.force_idle(seconds)` / `hyprctl dispatch 'hl.dsp.force_idle(300)'` (not recommended directly from a bind).
 
 ## hyprpaper
 - `~/.config/hypr/hyprpaper.conf`: `preload = path`; `wallpaper = monitor,path`; `ipc = on`. 0.8.x: recursive wallpaper dirs, shuffle slideshow, status object protocol. Control via the hyprpaper process IPC (check wiki page for current command names).
@@ -31,4 +32,4 @@
 - In-tree (standalone repo removed). `hyprpm update/add <repo>/enable/disable/remove/list/reload`. sudo for sensitive ops. Nix integration since 0.54. ABI locked to `hyprctl version`. Official plugins: hyprwm/hyprland-plugins (rolling).
 
 ## Version pinning advice
-Always record versions used in any guide: hyprlock 0.9.x, hypridle 0.1.x, hyprpaper 0.8.x, hyprsunset 0.4.x, portal 1.4.x, Quickshell 0.3.x, Wayle 0.7.x, aquamarine 0.15.x, hyprutils 0.14.x. Config syntax drift between minors is real (hypridle commands; hyprlock labels; systemd target handling since 0.55-era — the session target is now integrated automatically, remove old manual `systemctl` lines and use `systemctl --user revert hyprland-session.target` to clean leftovers).
+Always record versions used in any guide: Hyprland 0.57.x, Lua 5.5.1, hyprlock 0.9.x, hypridle 0.1.x, hyprpaper 0.8.x, hyprsunset 0.4.x, portal 1.4.x, Quickshell 0.3.x, Wayle 0.7.x, aquamarine 0.15.x, hyprutils 0.14.x. Config syntax drift between minors is real (hypridle commands; hyprlock labels; systemd target handling since 0.55-era — the session target is now integrated automatically, remove old manual `systemctl` lines and use `systemctl --user revert hyprland-session.target` to clean leftovers). Hyprland 0.57 removed the legacy hyprlang provider: anything still emitting `.conf` or `hyprctl keyword` is broken.

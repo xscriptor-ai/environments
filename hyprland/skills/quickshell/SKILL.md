@@ -3,13 +3,13 @@ name: quickshell
 description: Deep Quickshell v0.3.x reference for building QML/Wayland shells (bars, panels, popups, OSDs, docks, lockscreens, notification centers, trays). Covers install/dirs/CLI, QML language, full module catalog, modern UI design (tokens, Material-You structure tokens, glass, motion, layout hygiene, Hack Nerd Font), qmlls/QML debugging, performance and Hyprland integration. Use when writing, reviewing or debugging Quickshell configs, or when a shell misbehaves at runtime.
 ---
 
-# Quickshell (October 2026)
+# Quickshell (November 2026)
 
 Quickshell is THE QML route for Wayland shells on Hyprland (official Hyprland itself ships no QML shell; its own UI direction is hyprtoolkit/C++). It talks to the compositor through wlr-layer-shell, wlr-foreign-toplevel, screencopy, data-control, and the Hyprland IPC sockets.
 
 - Current release: **v0.3.2** (2026-10-08). Canonical repo: `git.outfoxxed.me/outfoxxed/quickshell`; GitHub mirror `quickshell-mirror/quickshell` is read-only. Docs: **https://quickshell.org/** (versioned; v0.3.0 docs cover the 0.3.x line). License LGPL-3.0.
 - Arch: `pacman -S quickshell` (extra, 0.3.2) or AUR `quickshell-git` (master; reinstall if Qt updates). WSL/headless testing: see skill `arch-wsl-headless`.
-- Verified **2026-10-15** against official sources (v0.3.2 changelog, quickshell.org v0.3.0 docs + source): Qt 6.12 support, Hyprland workspace address format, session-lock fixes, PAM subprocess crash fix; default layer namespace `quickshell` (override via `WlrLayershell.namespace`). Always check `qs --version` on the target.
+- Verified **2026-11-01** against official sources (v0.3.2 changelog, quickshell.org v0.3.0 docs + source): Qt 6.12 support, Hyprland workspace address format, session-lock fixes, PAM subprocess crash fix; default layer namespace `quickshell` (override via `WlrLayershell.namespace`). Always check `qs --version` on the target.
 
 ## Layout, discovery, launch
 
@@ -69,7 +69,7 @@ Scope {
 - Theming contract: palettes are **base16 + roles JSON** under `~/.config/hypr/scripts/quickshell/dock/palettes/`, selected via `settings.json → bar.palette`; the shell derives every role live (FileView watchers + content-compare). No matugen/generator service — your binary only writes the files (`design-and-effects.md` §2).
 - One notification server (`Quickshell.Services.Notifications`) and one SNI tray host (`Quickshell.Services.SystemTray`) per session — running dunst/mako/swaync/Waybar tray too causes lost notifications/icons.
 - Don't parse `hyprctl` from `Process` when `Quickshell.Hyprland` exposes it (workspaces, windows, focused monitor, events, GlobalShortcut).
-- Hyprland 0.55+ config is Lua: autostart the shell with `hl.on("hyprland.start", function() hl.exec_cmd("qs -c mybar") end)`; never `exec-once =`.
+- Hyprland 0.55+ config is Lua, and **0.57 is Lua-only**: autostart the shell with `hl.on("hyprland.start", function() hl.exec_cmd("qs -c mybar") end)`; never `exec-once =`. If the shell writes Hyprland options (effects/settings UI), clamp them to their ranges — 0.57 rejects out-of-range values.
 - Paths in strings (Image.source, FileView) resolve to Quickshell's CWD, not the QML file. Use `Qt.resolvedUrl("...")`, or `Quickshell.dataPath()/cachePath()/statePath()` for reserved dirs.
 - A window created opaque stays opaque: set `surfaceFormat.opaque = false` before switching to translucent colors.
 

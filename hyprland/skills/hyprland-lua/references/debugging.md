@@ -4,15 +4,17 @@
 
 ```bash
 Hyprland --verify-config                            # run config headless, report, exit (also fine over SSH/WSL)
+                                                    # 0.57: out-of-range values fail too; as root add --i-am-really-stupid
 hyprctl configerrors                                # what failed in the running instance, if any
+hyprctl deprecated-config                           # options set with a deprecation notice
 hyprctl reload                                      # force reload after an edit
 hyprctl repl                                        # interactive; Ctrl+D exits
 hyprctl repl 'hl.get_active_window().class'
 hyprctl repl 'for i, w in pairs(hl.get_windows()) do print(i, w.class, w.title) end'
 ```
 
-- `--verify-config` executes the whole config (including `hl.on` registrations? no — it parses/evaluates the config context and prints errors; side-effect-free enough for CI, and the recommended gate before reloading a live session).
-- On a live session, always finish with `hyprctl configerrors`; a silent reload failure is usually a syntax error earlier in the file.
+- `--verify-config` parses/evaluates the config context and prints errors; it is the recommended gate before reloading a live session. On 0.57 the Lua path enforces option ranges, so a value like `decoration.shadow.render_power = 5` (max 4) fails here even though 0.56 accepted it silently.
+- On a live session, always finish with `hyprctl configerrors` (and `hyprctl deprecated-config`); a silent reload failure is usually a syntax error earlier in the file.
 
 ## Error semantics (what happens when it goes wrong)
 
@@ -21,6 +23,7 @@ hyprctl repl 'for i, w in pairs(hl.get_windows()) do print(i, w.class, w.title) 
 | Lua syntax error | Whole reload blocked; previous config keeps running. Error goes to log + configerrors. |
 | Runtime error in a file | That file aborts; the rest of the config keeps running. |
 | Type error in `hl.*` arguments | Config continues (with those lines skipped); an error popup/entry appears. |
+| Out-of-range value (0.57) | Recorded as a config error; that option keeps its previous/default value, the rest of the `hl.config` table and file still apply. |
 | Infinite loop in config | Watchdog guard kills the execution; reported in log. |
 | Blocking call in a bind | Input freezes until it returns — no watchdog rescue; avoid `os.execute`/`io.popen`/sleeps. |
 | All binds lost / broken reload | Emergency binds appear: SUPER+Q (terminal), SUPER+R (launcher), SUPER+M (exit); recover from there. |
@@ -51,7 +54,7 @@ hyprctl eval 'hl.config({ ["general.gaps_in"] = 0 })'
 hyprctl repl 'hl.get_active_window()'        -- prints HL.Window object; use fields
 ```
 
-`hyprctl dispatch 'hl.dsp...'` == `hyprctl eval 'hl.dispatch(hl.dsp...)'`; use it to test dispatcher syntax without touching keybinds.
+`hyprctl dispatch 'hl.dsp...'` == `hyprctl eval 'hl.dispatch(hl.dsp...)'`; since 0.57 `dispatch` takes a Lua expression (legacy dispatcher strings fail with a hint). Use it to test dispatcher syntax without touching keybinds. `hyprctl keyword` no longer exists.
 
 ## Testing the config in CI / headless
 
@@ -63,6 +66,6 @@ hyprctl repl 'hl.get_active_window()'        -- prints HL.Window object; use fie
 
 ## Recovering a broken session
 
-1. `SUPER+M` emergency exit (if binds died) or `hyprctl dispatch exit` from a TTY to another instance... if the session is unusable: switch to a TTY, `pkill Hyprland` (or `systemctl --user` if session-managed), fix the file, relaunch with `start-hyprland`.
+1. `SUPER+M` emergency exit (if binds died) or `hyprctl dispatch 'hl.dsp.exit()'` from a TTY to another instance... if the session is unusable: switch to a TTY, `pkill Hyprland` (or `systemctl --user` if session-managed), fix the file, relaunch with `start-hyprland`.
 2. Safe mode via the wrapper: `start-hyprland -- --safe-mode` (no plugins/customizations) or plain `Hyprland --safe-mode`; then bisect config files by commenting requires.
-3. Keep a known-good `hyprland.lua` + `hyprland.lua.bak` pair; `hyprctl reload full-reset` only when you truly need a fresh context (e.g. switching config language).
+3. Keep a known-good `hyprland.lua` + `hyprland.lua.bak` pair; `hyprctl reload full-reset` only when you truly need a fresh Lua context (0.57 cannot switch to hyprlang).

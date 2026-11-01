@@ -1,4 +1,4 @@
-# Lua 5.5 for Hyprland configs (October 2026)
+# Lua 5.5 for Hyprland configs (November 2026)
 
 Hyprland 0.55+ embeds **Lua 5.5** (CMake: `lua>=5.5,<5.6`). Reference manual: https://www.lua.org/manual/5.5/manual.html. This is NOT the 5.1 dialect used by Neovim/LuaJIT code you may know: integer division is native, `goto` exists, `bit32` is gone (use operators `<`, `>>`, `&`, `|`, `~`), `unpack` is `table.unpack`, `#` on tables works as expected.
 

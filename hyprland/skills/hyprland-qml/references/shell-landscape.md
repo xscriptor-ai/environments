@@ -1,4 +1,4 @@
-# Shell landscape 2026 (verified October 2026) — comparison & daemon contracts
+# Shell landscape 2026 (verified November 2026) — comparison & daemon contracts
 
 ## Stacks
 

@@ -1,4 +1,4 @@
-# hl.* API catalog (Hyprland v0.56.x, verified Oct 2026)
+# hl.* API catalog (Hyprland v0.57.0, verified 2026-11-01)
 
 Authoritative sources: wiki.hypr.land/configuring (Lua utilities, Dispatchers, Binds/Flags, Events, Notifications, Permissions), `meta/hl.meta.lua` stubs, and the source under `src/config/lua/`. When in doubt, the stubs and `hyprctl repl` are ground truth.
 
@@ -24,7 +24,7 @@ Authoritative sources: wiki.hypr.land/configuring (Lua utilities, Dispatchers, B
 | `hl.define_submap(name, [next_submap], fn)` | Define a submap; binds inside it are local; `hl.dsp.submap("name"/"reset")` switches. Optional second arg auto-forwards to another submap after a dispatch. Special bind key `catchall` catches any key (use to reset). Stuck? `hyprctl dispatch 'hl.dsp.submap("reset")'`. |
 | `hl.notification.create({ text, timeout, icon, color })` | Icons: `-1`/`none`, `0 ok`, `1 warning`, `2 err`, `3 info`, `4 question`, `5 confused`; `hl.notification.get()` lists live notifications. |
 | `hl.dispatch(dsp)` | Executes a dispatcher (needed inside functions/callbacks). |
-| `hl.exec_cmd(cmd)` | Async exec (same as `hl.dsp.exec_cmd`); no `& disown` needed. |
+| `hl.exec_cmd(cmd, rules?)` | Async exec (same as `hl.dsp.exec_cmd`); no `& disown` needed. `rules` applies window-rule effects to the launched PID (0.57). |
 | `hl.layout.register(name, { recalculate, layout_msg? })` | Custom layout, activated as `lua:name`. Details below. |
 
 ## Query (convenience) functions
@@ -36,11 +36,12 @@ hl.get_workspaces() / get_workspace(sel) / get_active_workspace() / get_active_s
 hl.get_workspace_windows(ws)
 hl.get_monitors({ all = true }?) / get_monitor(sel) / get_active_monitor()
 hl.get_monitor_at({ x, y }) / get_monitor_at_cursor()
+hl.get_last_workspace() / get_urgent_window()
 hl.get_cursor_pos() / get_layers() / get_devices() / get_current_submap()
 hl.get_loaded_plugins() / is_key_down(key|keycode) / version()
 hl.exec_scheduled_prop_refresh_immediately()
 ```
-Objects returned expose typed fields (check stubs/LSP): windows have `class`, `title`, `pid`, `active`, `fullscreen`, `fullscreen_handler`, `stable_id`, ...; monitors have `name`, `position {x,y}`, `activeWorkspace`, ...; workspaces have `id`, `name`, `windows`, ....
+Objects returned expose typed fields (check stubs/LSP): windows have `class`, `title`, `pid`, `active`, `fullscreen`, `fullscreen_handler`, `stable_id`, `addressable_name`, `hardware_details`, `keyboard_interactivity`, `mode`, ...; monitors have `name`, `position {x,y}`, `activeWorkspace`, hardware/mode details, ...; workspaces have `id`, `name`, `windows`, ...; devices have `type` (`pointer`/`keyboard`/`tablet`/`tablet_pad`/`tablet_tool`/`touch`/`switch`), `name`, `address`, `layout`, `active_keymap`, `active_layout_index`, `caps_lock`, `num_lock`, `scroll_factor`, `belongs_to`, `main`, ...; `HL.WindowStateUpdate` carries `float?` and `pin?`.
 
 ## Dispatcher catalog
 
@@ -63,7 +64,9 @@ Common param defaults: `window = "activewindow"`, `action = "toggle"`.
 
 ## Events (hl.on)
 
-`hyprland.start` · `hyprland.shutdown` · `config.props_refreshed` (bool: scheduled vs forced) · `config.reloaded` · `config.unload` (save state before reload/shutdown) · `keybinds.submap` (string) · `input.keyboard.key` (keycode, timestamp, 0/1/2 release/press/repeat) · `screenshare.state` (bool, type, name) · `monitor.added/removed/focused/layout_changed` · `workspace.active/created/removed/special_active/move_to_monitor` · `window.bell/class/close/destroy/fullscreen/kill/minimize/move_to_workspace/open/open_early/pin/title/update_rules/urgent/active` · `layer.opened/closed`.
+`hyprland.start` · `hyprland.shutdown` · `config.props_refreshed` (bool: scheduled vs forced) · `config.reloaded` · `config.unload` (save state before reload/shutdown) · `keybinds.submap` (string) · `input.keyboard.key` (keycode, timestamp, 0/1/2 release/press/repeat) · `screenshare.state` (bool, type, name) · `monitor.added/removed/focused/layout_changed` · `workspace.active/created/created_early/removed/special_active/move_to_monitor` · `window.bell/class/close/destroy/fullscreen/kill/minimize/move_to_workspace/open/open_early/pin/title/update_rules/update_state/urgent/active` · `layer.opened/closed`.
+
+Early/late pairs (0.57): `workspace.created_early` (before activation) vs `workspace.created` (after activation); `window.open_early` (before rules) vs `window.open` (rules applied). `window.update_state` receives `(window, { float?, pin? })` where nil means unchanged.
 
 ## Prop refresh semantics
 

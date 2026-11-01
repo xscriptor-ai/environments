@@ -3,9 +3,9 @@ name: arch-wsl-headless
 description: Arch Linux in WSL2 for headless Hyprland testing and debugging — official archlinux-wsl image, systemd, GPU via mesa d3d12 / vulkan-dzn, WSLg basics, AQ_NO_KMS_REQUIREMENT headless sessions, wayvnc viewing, Hyprland --verify-config in CI, Quickshell smoke tests, and the classic WSL pitfalls. Use when validating Hyprland/Quickshell configs inside WSL where there is no real display.
 ---
 
-# Arch in WSL2 + headless Hyprland testing (October 2026)
+# Arch in WSL2 + headless Hyprland testing (November 2026)
 
-Verified **2026-10-15** against official sources: ArchWiki (Install Arch Linux on WSL), microsoft/WSL and WSLg release metadata, Hyprland wiki (Virtual GPU, Using hyprctl), wslg/microsoft issue tracker.
+Verified **2026-11-01** against official sources: ArchWiki (Install Arch Linux on WSL), microsoft/WSL and WSLg release metadata, Hyprland 0.57.0 wiki/sources (Virtual GPU, Using hyprctl), wslg/microsoft issue tracker.
 
 Realistic scope: on WSL there is no KMS/output and (usually) no usable DRM card, so treat WSL as a **headless test rig**: validate configs, exercise `hyprctl`/IPC, run shells against a headless compositor and inspect them through VNC/screencopy. Do not expect a daily-driver desktop from WSL — for that, use a VM with a virtual GPU (skill `hyprland-live-debug`, virtual-gpu notes in the Hyprland wiki).
 
@@ -48,7 +48,9 @@ dbus-run-session -- env AQ_NO_KMS_REQUIREMENT=1 start-hyprland   # 2) starts hea
 # in another WSL shell:
 hyprctl monitors -j                                        # expect HEADLESS-0
 hyprctl output create headless test                        # optional second virtual output
+hyprctl configerrors; hyprctl deprecated-config            # 3) 0.57: errors + deprecated keys
 ```
+- 0.57 is Lua-only: `--verify-config` fails on `.conf` files and on out-of-range values. As a normal WSL user no extra flag is needed; in a **root container/sandbox** add `--i-am-really-stupid` (Hyprland refuses to run as root otherwise).
 - `AQ_NO_KMS_REQUIREMENT=1` allows a render-only (no output) DRM node — the Wiki's "virtual GPU" path.
 - View it: `wayvnc 127.0.0.1 5900 -o HEADLESS-0` and connect a VNC client from Windows (`localhost:5900` is forwarded). Wayvnc also injects input, so binds are testable.
 - Screencopy without a viewer: `grim -o HEADLESS-0 /tmp/shot.png` (first capture may hit the Permission Manager if `ecosystem.enforce_permissions=true`; pre-allow via `hl.permission`).
@@ -79,7 +81,7 @@ dbus-run-session -- bash -c 'AQ_NO_KMS_REQUIREMENT=1 start-hyprland & sleep 3; h
 qs -c testbar -n & sleep 2; qs ipc call health ping; qs log -t 50 | grep -iE "error|binding loop" && exit 1 || true
 ```
 - `--verify-config` is side-effect-free and exits non-zero on errors — use as the primary gate; a running headless instance covers IPC/dispatcher behavior.
-- Keep one script that tears down (`hyprctl dispatch exit`, `pkill Hyprland`, `pkill quickshell`) so repeated runs stay clean.
+- Keep one script that tears down (`hyprctl dispatch 'hl.dsp.exit()'`, `pkill Hyprland`, `pkill quickshell`) so repeated runs stay clean.
 
 ## Pitfalls (all observed in the wild)
 
