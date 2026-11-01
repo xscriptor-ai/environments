@@ -36,7 +36,7 @@ qs -c mybar --debug 8080 --waitfordebug
 |---|---|
 | Window invisible / zero size | anchors unset on a PanelWindow or missing implicit width/height; check `Variants` delegate size |
 | "hole" in a transparent window | QTBUG-137166: transparent Rectangle touching `border` props. Set `border.width: 0` |
-| Window not translucent | created opaque; set `surfaceFormat.opaque = false` |
+| Window not translucent | created opaque; set `surfaceFormat.opaque: false` |
 | No notifications received | something else owns org.freedesktop.Notifications (dunst/mako/swaync) |
 | Tray icons missing/duplicated | two SNI hosts (Waybar tray + Quickshell, or two shells) |
 | Shell restarts in a loop | crash within 10s of launch — run with `QS_DISABLE_CRASH_HANDLER=1` and read `qs log` |

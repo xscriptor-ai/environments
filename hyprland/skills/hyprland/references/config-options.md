@@ -27,7 +27,8 @@ Removed: `debug.fifo_pending_workaround`; the entire hyprlang config provider.
 ### Blur variants (`decoration.blur.variant`)
 Indices: `kawase` 0 (default), `frost` 1, `ripple` 2, `drops` 3, `water` 4, `fluid_jar` 5, `prism` 6, `heat_shimmer` 7, `acrylic` 8, `aurora` 9, `haze` 10. Variants may be animated and are GPU/CPU-expensive. `frost` and `prism` have no dedicated options.
 
-- `glass` (shared by glass-style variants): `refraction` (20, 0-20) · `size` (40, 4-512) · `roughness` (1, 0-1)
+- `glass` (shared option group used by `frost`, `drops`, `heat_shimmer` and `aurora`; **not a variant name**): `refraction` (20, 0-20) · `size` (40, 4-512) · `roughness` (1, 0-1)
+- `acrylic` is the closest variant to Apple Liquid Glass and has its own group (below).
 - `acrylic`: `refraction` (24, 0-48) · `bulb` (48, 4-256) · `clarity` (0.82, 0-1) · `aberration` (0.025, 0-0.25) · `tint` (0x14EEF5FF; alpha = absorption)
 - `drops`: `speed` (3, 0-10; 0 freezes)
 - `heat_shimmer`: `speed` (1, 0-10)

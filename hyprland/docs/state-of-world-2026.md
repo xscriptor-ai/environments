@@ -57,6 +57,7 @@ Arch package checks (2026-11-01, `extra`): `hyprland 0.57.0-1`, `quickshell 0.3.
 
 - **Swappable blur variants** (`decoration.blur.variant`, string or index): `kawase` (0, default), `frost` (1), `ripple` (2), `drops` (3), `water` (4), `fluid_jar` (5), `prism` (6), `heat_shimmer` (7), `acrylic` (8), `aurora` (9), `haze` (10). Each variant owns a dotted option group; see the `hyprland-animations-decorations` agent.
 - `decoration.blur.proportional` (bool, default false): blur strength proportional to pixel opacity.
+- **Region-shaped backdrop blur**: Hyprland 0.57 advertises `ext_background_effect_manager_v1` v1. Quickshell's attached `BackgroundEffect.blurRegion: Region { ... }` can request blur only for a visible rounded region instead of a whole transparent layer surface. Pair it with `decoration.blur.variant = "acrylic"`/`frost`/... or a layer rule, never both.
 - **Window wobble** (`decoration.wobble.*`): spring-based deformation on move/resize; `enabled`, `mesh` (12, 2-32), `stiffness` (200), `damping` (12), `mass` (1), `intensity` (0.2, 0-2 in v0.57.0), `value_epsilon`, `velocity_epsilon`.
 - Renderer scene composition and pointer transforms are internal improvements; they expose no stable config surface.
 

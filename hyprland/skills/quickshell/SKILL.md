@@ -72,7 +72,8 @@ Scope {
 - Don't parse `hyprctl` from `Process` when `Quickshell.Hyprland` exposes it (workspaces, windows, focused monitor, events, GlobalShortcut).
 - Hyprland 0.55+ config is Lua, and **0.57 is Lua-only**: autostart the shell with `hl.on("hyprland.start", function() hl.exec_cmd("qs -c mybar") end)`; never `exec-once =`. If the shell writes Hyprland options (effects/settings UI), clamp them to their ranges — 0.57 rejects out-of-range values.
 - Paths in strings (Image.source, FileView) resolve to Quickshell's CWD, not the QML file. Use `Qt.resolvedUrl("...")`, or `Quickshell.dataPath()/cachePath()/statePath()` for reserved dirs.
-- A window created opaque stays opaque: set `surfaceFormat.opaque = false` before switching to translucent colors.
+- A window created opaque stays opaque: set `surfaceFormat.opaque: false` before switching to translucent colors.
+- Real glass is layered: compositor blur (`decoration.blur.variant` — `acrylic` is the closest to Apple glass; `glass` is an option group, not a variant) plus tint/edge/sheen/shadow in QML. `BackgroundEffect.blurRegion` is the region-shaped path; never stack it with a layer-rule blur. Deep guide: `references/glassmorphism.md`.
 
 ## Modern UI baseline (non-negotiables)
 
@@ -84,6 +85,7 @@ Scope {
 ## Where to go next (references/)
 
 - `references/design-and-effects.md` — design tokens, **theme contract for the palette generator binary** (settings.json + base16/roles, live reload, no matugen), glass/blur, elevation, **layout hygiene (density, friendliness, zero overlap)**, **dimensions & transitions tokens (equisdots experimental vs Caelestia/MD3)**, Hack Nerd Font typography, widget recipes, quality gate.
+- `references/glassmorphism.md` — real glass on Hyprland 0.57 + Quickshell 0.3.x: Apple/Liquid Glass layers, `acrylic`/`glass` variants, layer-rule vs `BackgroundEffect`, layered QML (`glass-surface.qml`), performance and accessibility.
 - `references/qml-language.md` — QML for shell authors: imports, properties/bindings/scoping, functions/lambdas, signals, types/singletons, models, reactive and lazy-loading semantics.
 - `references/modules.md` — full module catalog and notable types (Quickshell, .Wayland, .Hyprland, .Io, Services.*, .Widgets, .Networking, .Bluetooth, ...).
 - `references/patterns.md` — bar+popup+OSD+lockscreen+notification/tray patterns, fixed-surface reveals, Process/FileView/JsonAdapter data flow, per-monitor state.
