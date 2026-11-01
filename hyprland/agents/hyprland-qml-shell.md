@@ -96,6 +96,13 @@ PanelWindow { id: toplevel; anchors { bottom: true; left: true; right: true }
 }
 ```
 
+## Glass surfaces
+
+- Compositor backdrop blur: either a Hyprland layer rule (`blur = true`, `ignore_alpha`, `blur_popups`) or `BackgroundEffect.blurRegion` (the `ext-background-effect-v1` protocol; Hyprland 0.57 advertises it). Never use both on the same surface.
+- `decoration.blur.variant = "acrylic"` is the closest to Apple Liquid Glass; `glass` is an option group, not a variant name. Animated variants cost GPU.
+- Shadows: `RectangularShadow` is a `QtQuick.Effects` type (Qt 6.9+), not `Quickshell.Widgets`.
+- Full recipe, Material-style levels, contrast/accessibility and a copyable `glass-surface.qml` primitive: skill `quickshell` → `references/glassmorphism.md`.
+
 ## Panel/popup semantics
 - `PanelWindow.anchors.{left,right,top,bottom}` attach screen edges; opposite anchors force full width/height; all anchors off by default. `margins` only affect anchored edges. `exclusiveZone` reserves space (needs exactly 1 or 3 anchors; implies `ExclusionMode.Normal`). `exclusionMode`: Auto (default; since 0.2 adds a zone for single-anchor panels), Normal, Ignore. `focusable` -> WlrLayershell.keyboardFocus; `aboveWindows` -> layer.
 - Size layer surfaces with implicitWidth/implicitHeight; direct width/height on PanelWindow/WlrLayershell is deprecated in Quickshell 0.3.x. Keep the surface size stable during a reveal and animate/clip the content.

@@ -14,7 +14,7 @@ New to the desktop stack? Read `skills/hyprland/references/from-zero.md` and cop
   - `hyprland-lua` — complete Lua 5.5 + `hl.*` API, binds/flags/dispatchers, events, timers, custom layouts, stubs/LSP, debugging.
   - `hyprland-bash` — the stack's `.sh` conventions: anatomy/strict mode, caching env, hyprctl automation, socket2 daemons, watchers, Quickshell IPC, systemd units, rofi menus.
   - `hyprland-python` — `.py` tooling: theme-sync targets, palette generators, hyprctl/socket automation, atomic file contracts, CLI design, packaging, pytest.
-  - `quickshell` — deep Quickshell v0.3.x: CLI, QML language, module catalog, debugging, patterns, a 0.2 to 0.3 migration/deprecations reference, a deep layer-surface API guide, and the design system (tokens, palette-generator contract, dimensions/transitions tokens, **Material-You structure tokens** shape/spacing/elevation/state/motion, layout hygiene).
+  - `quickshell` — deep Quickshell v0.3.x: CLI, QML language, module catalog, debugging, patterns, a 0.2 to 0.3 migration/deprecations reference, a deep layer-surface API guide, a real-glassmorphism reference (Hyprland 0.57 blur variants, `BackgroundEffect`, layered QML + `glass-surface.qml`), and the design system (tokens, palette-generator contract, dimensions/transitions tokens, **Material-You structure tokens** shape/spacing/elevation/state/motion, layout hygiene).
   - `hyprland-qml` — shell landscape cross-reference (Quickshell/Wayle/AGS/Waybar).
   - `hyprland-tools` — hyprlock/hypridle/hyprpaper/hyprsunset/portal/hyprpm versions.
   - `hyprland-live-debug` — live debugging on Arch: logs, coredumps/gdb, bisect, ASan, DRM/GPU logs, portals, input, perf, playbooks.

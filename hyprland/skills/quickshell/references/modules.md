@@ -14,7 +14,7 @@ Global singleton `Quickshell`: `Quickshell.screens`, `.shellDir` (renamed from s
 
 ## Quickshell.Wayland
 
-`WlrLayershell` (raw layer-shell surface; PanelWindow wraps it) · `WlrLayer` · `WlrKeyboardFocus` · `Toplevel`/`ToplevelManager` · `WlSessionLock`/`WlSessionLockSurface` (lockscreen) · `ScreencopyView` (screencopy; Vulkan since 0.3) · `IdleInhibitor` · `IdleMonitor` · `ShortcutInhibitor` · `BackgroundEffect` (ext-background-effect blur).
+`WlrLayershell` (raw layer-shell surface; PanelWindow wraps it) · `WlrLayer` · `WlrKeyboardFocus` · `Toplevel`/`ToplevelManager` · `WlSessionLock`/`WlSessionLockSurface` (lockscreen) · `ScreencopyView` (screencopy; Vulkan since 0.3) · `IdleInhibitor` · `IdleMonitor` · `ShortcutInhibitor` · `BackgroundEffect` (attached; `blurRegion: Region`; `ext-background-effect-v1`, advertised by Hyprland 0.57).
 
 ## Quickshell.Hyprland
 
@@ -41,7 +41,7 @@ Note: v0.3.2 added support for Hyprland's new workspace **address** format — k
 - `Quickshell.Networking` (NetworkManager): `Network`, `NetworkDevice`, `WifiDevice`, `WiredDevice`, `WifiNetwork`, `NMSettings`, ... (0.3; NetworkManager required).
 - `Quickshell.Bluetooth` (BlueZ): `Bluetooth`, `BluetoothAdapter`, `BluetoothDevice`.
 - `Quickshell.DBusMenu`: DBus menu models for SNI.
-- `Quickshell.Widgets`: `ClippingRectangle`, `ClippingWrapperRectangle`, `IconImage`, `WrapperItem/WrapperArea/WrapperRectangle/WrapperManager/MarginWrapperManager`, `WrapperMouseArea`.
+- `Quickshell.Widgets`: `ClippingRectangle`, `ClippingWrapperRectangle`, `IconImage`, `WrapperItem/WrapperArea/WrapperRectangle/WrapperManager/MarginWrapperManager`, `WrapperMouseArea`. (`RectangularShadow` is not here; it is a `QtQuick.Effects` type, Qt 6.9+.)
 - `Quickshell.WindowManager` (0.3, ext-workspace): `WindowManager`, `Windowset`, `WindowsetProjection`, `ScreenProjection` — compositor-agnostic window/workspace view.
 - `Quickshell.I3`: `I3`, `I3Event`, `I3Monitor`, `I3Workspace` (i3/Sway backend).
 

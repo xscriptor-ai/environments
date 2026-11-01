@@ -163,14 +163,16 @@ Generator requirements (so the shell never breaks): write **atomically** (tmp + 
   ```qml
   PanelWindow { WlrLayershell.namespace: "quickshell:bar" /* ... */ }
   ```
-  Hyprland side (Lua era): `hl.layer_rule({ match = { namespace = "^(quickshell:bar)$" }, blur = true, ignore_alpha = 0.12 })`; check live with `hyprctl layers`.
+  Hyprland side (Lua era): `hl.layer_rule({ match = { namespace = "^(quickshell:bar)$" }, blur = true, ignore_alpha = 0.12, blur_popups = true })`; check live with `hyprctl layers`.
+- **Glass material (0.57+)**: select `decoration.blur.variant` — `acrylic` is the closest to Apple Liquid Glass; `glass` is a shared option group (frost/drops/heat_shimmer/aurora), not a variant name. The shared `decoration.blur` keys (`size`, `passes`, `noise`, `contrast`, `vibrance`, `proportional`, `xray`) still apply. Keep the default `kawase` on <=0.56 and on weak GPUs.
+- **Region-shaped blur**: `Quickshell.Wayland.BackgroundEffect` is an attached object; `BackgroundEffect.blurRegion: Region { item: card; radius: card.radius }` asks the compositor to blur only that region. Hyprland **0.57 advertises `ext_background_effect_manager_v1` v1** (verify with `wayland-info`). Prefer it for rounded panels inside a larger transparent surface. **Never combine it with a layer-rule blur on the same surface** (double blur).
 - Push blur-rule updates **batched/cooldown** (Caelestia uses a 30 ms cooldown timer; their stack pushes from `layers.lua`/`syncWindowBorders`): never `hyprctl` per animation frame.
-- In-shell backdrop blur for big popups: `Quickshell.Wayland.BackgroundEffect` where supported — always keep the translucent fallback.
-- Performance: blur-on-blur and BackgroundEffect are the main GPU costs; on llvmpipe (WSL/VM) prefer flat translucency.
+- Performance: blur-on-blur, acrylic/animated variants and BackgroundEffect are the main GPU costs; on llvmpipe (WSL/VM) prefer flat translucency. One or two simultaneous glass surfaces per viewport.
+- Full recipe, QML primitive (`glass-surface.qml`), Material-style levels, contrast/accessibility and pitfalls: `glassmorphism.md`.
 
 ## 4. Elevation, shapes, borders
 
-- Shadows for rectangular/rounded surfaces: **`RectangularShadow`** (Quickshell.Widgets) — already used for bar islands and the strip. Their tokens: `blur 26`, `spread 0`, `offset (0,6)`, `opacity 0.5` (settings.json `shadows`), padded into the bar so the shadow has room.
+- Shadows for rectangular/rounded surfaces: **`RectangularShadow`** — it is a **`QtQuick.Effects`** type (Qt 6.9+, `import QtQuick.Effects`), not a `Quickshell.Widgets` type. Already used for bar islands and the strip. Their tokens: `blur 26`, `spread 0`, `offset (0,6)`, `opacity 0.5` (settings.json `shadows`), padded into the bar so the shadow has room.
 - Optional level system (Caelestia reference, MD3 dp): levels `[0,1,3,6,8,12]` with `blur=(dp*5)^0.7`, `spread=-dp*0.3+(dp*0.1)^2`, `offsetY=dp/2` — adopt **2–3 levels only** (islands / popups / dialogs), not the full table.
 - Rounded media: `ClippingWrapperRectangle { radius: … }`. Arbitrary shapes/effects: `MultiEffect` (quantize usage).
 - Borders: 1 px translucent outline (`surface1` role) beats solid on glass; accent border only for focus/active. `pillRadius(h) = round(h * 0.5 * roundness)` gives capsule→square continuum from one knob.
