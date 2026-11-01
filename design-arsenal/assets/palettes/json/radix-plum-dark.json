@@ -1,0 +1,65 @@
+{
+  "name": "Radix Plum (Dark)",
+  "slug": "radix-plum-dark",
+  "source": "https://github.com/radix-ui/colors",
+  "license": "MIT",
+  "dark": true,
+  "note": "12-step perceptual UI scale",
+  "colors": [
+    {
+      "name": "plum1",
+      "hex": "#181118"
+    },
+    {
+      "name": "plum2",
+      "hex": "#201320"
+    },
+    {
+      "name": "plum3",
+      "hex": "#351a35"
+    },
+    {
+      "name": "plum4",
+      "hex": "#451d47"
+    },
+    {
+      "name": "plum5",
+      "hex": "#512454"
+    },
+    {
+      "name": "plum6",
+      "hex": "#5e3061"
+    },
+    {
+      "name": "plum7",
+      "hex": "#734079"
+    },
+    {
+      "name": "plum8",
+      "hex": "#92549c"
+    },
+    {
+      "name": "plum9",
+      "hex": "#ab4aba"
+    },
+    {
+      "name": "plum10",
+      "hex": "#b658c4"
+    },
+    {
+      "name": "plum11",
+      "hex": "#e796f3"
+    },
+    {
+      "name": "plum12",
+      "hex": "#f4d4f4"
+    }
+  ],
+  "roles": {
+    "background": "#181118",
+    "surface": "#201320",
+    "text": "#f4d4f4",
+    "accent": "#ab4aba",
+    "accent_2": "#451d47"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "name": "Radix Mint (Light)",
+  "slug": "radix-mint-light",
+  "source": "https://github.com/radix-ui/colors",
+  "license": "MIT",
+  "dark": false,
+  "note": "12-step perceptual UI scale",
+  "colors": [
+    {
+      "name": "mint1",
+      "hex": "#f9fefd"
+    },
+    {
+      "name": "mint2",
+      "hex": "#f2fbf9"
+    },
+    {
+      "name": "mint3",
+      "hex": "#ddf9f2"
+    },
+    {
+      "name": "mint4",
+      "hex": "#c8f4e9"
+    },
+    {
+      "name": "mint5",
+      "hex": "#b3ecde"
+    },
+    {
+      "name": "mint6",
+      "hex": "#9ce0d0"
+    },
+    {
+      "name": "mint7",
+      "hex": "#7ecfbd"
+    },
+    {
+      "name": "mint8",
+      "hex": "#4cbba5"
+    },
+    {
+      "name": "mint9",
+      "hex": "#86ead4"
+    },
+    {
+      "name": "mint10",
+      "hex": "#7de0cb"
+    },
+    {
+      "name": "mint11",
+      "hex": "#027864"
+    },
+    {
+      "name": "mint12",
+      "hex": "#16433c"
+    }
+  ],
+  "roles": {
+    "background": "#f9fefd",
+    "surface": "#f2fbf9",
+    "text": "#16433c",
+    "accent": "#027864",
+    "accent_2": "#16433c"
+  }
+}

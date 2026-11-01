@@ -1,0 +1,20 @@
+/* Radix Crimson (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-crimson-dark"] {
+  --crimson1: #191114;
+  --crimson2: #201318;
+  --crimson3: #381525;
+  --crimson4: #4d122f;
+  --crimson5: #5c1839;
+  --crimson6: #6d2545;
+  --crimson7: #873356;
+  --crimson8: #b0436e;
+  --crimson9: #e93d82;
+  --crimson10: #ee518a;
+  --crimson11: #ff92ad;
+  --crimson12: #fdd3e8;
+  --background: #191114;
+  --surface: #201318;
+  --text: #fdd3e8;
+  --accent: #4d122f;
+  --accent-2: #5c1839;
+}

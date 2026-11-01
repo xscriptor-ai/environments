@@ -1,0 +1,57 @@
+{
+  "name": "Open Color Cyan",
+  "slug": "open-color-cyan",
+  "source": "https://github.com/yeun/open-color",
+  "license": "MIT",
+  "dark": false,
+  "note": "13 hues x 10 steps; designed for UI",
+  "colors": [
+    {
+      "name": "50",
+      "hex": "#e3fafc"
+    },
+    {
+      "name": "100",
+      "hex": "#c5f6fa"
+    },
+    {
+      "name": "200",
+      "hex": "#99e9f2"
+    },
+    {
+      "name": "300",
+      "hex": "#66d9e8"
+    },
+    {
+      "name": "400",
+      "hex": "#3bc9db"
+    },
+    {
+      "name": "500",
+      "hex": "#22b8cf"
+    },
+    {
+      "name": "600",
+      "hex": "#15aabf"
+    },
+    {
+      "name": "700",
+      "hex": "#1098ad"
+    },
+    {
+      "name": "800",
+      "hex": "#0c8599"
+    },
+    {
+      "name": "900",
+      "hex": "#0b7285"
+    }
+  ],
+  "roles": {
+    "background": "#e3fafc",
+    "surface": "#c5f6fa",
+    "text": "#0b7285",
+    "accent": "#0c8599",
+    "accent_2": "#0b7285"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "name": "Tailwind Neutral",
+  "slug": "tailwind-neutral",
+  "source": "https://github.com/tailwindlabs/tailwindcss",
+  "license": "MIT",
+  "dark": false,
+  "note": "11-step UI scale (v3 palette)",
+  "colors": [
+    {
+      "name": "50",
+      "hex": "#fafafa"
+    },
+    {
+      "name": "100",
+      "hex": "#f5f5f5"
+    },
+    {
+      "name": "200",
+      "hex": "#e5e5e5"
+    },
+    {
+      "name": "300",
+      "hex": "#d4d4d4"
+    },
+    {
+      "name": "400",
+      "hex": "#a3a3a3"
+    },
+    {
+      "name": "500",
+      "hex": "#737373"
+    },
+    {
+      "name": "600",
+      "hex": "#525252"
+    },
+    {
+      "name": "700",
+      "hex": "#404040"
+    },
+    {
+      "name": "800",
+      "hex": "#262626"
+    },
+    {
+      "name": "900",
+      "hex": "#171717"
+    },
+    {
+      "name": "950",
+      "hex": "#0a0a0a"
+    }
+  ],
+  "roles": {
+    "background": "#fafafa",
+    "surface": "#f5f5f5",
+    "text": "#0a0a0a",
+    "accent": "#a3a3a3",
+    "accent_2": "#737373"
+  }
+}

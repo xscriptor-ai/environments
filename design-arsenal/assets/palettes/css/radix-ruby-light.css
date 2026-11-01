@@ -1,0 +1,20 @@
+/* Radix Ruby (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-ruby-light"] {
+  --ruby1: #fffcfd;
+  --ruby2: #fff7f8;
+  --ruby3: #feeaed;
+  --ruby4: #ffdce1;
+  --ruby5: #ffced6;
+  --ruby6: #f8bfc8;
+  --ruby7: #efacb8;
+  --ruby8: #e592a3;
+  --ruby9: #e54666;
+  --ruby10: #dc3b5d;
+  --ruby11: #ca244d;
+  --ruby12: #64172b;
+  --background: #fffcfd;
+  --surface: #fff7f8;
+  --text: #64172b;
+  --accent: #ca244d;
+  --accent-2: #64172b;
+}

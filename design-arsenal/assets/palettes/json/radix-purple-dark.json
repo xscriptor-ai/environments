@@ -1,0 +1,65 @@
+{
+  "name": "Radix Purple (Dark)",
+  "slug": "radix-purple-dark",
+  "source": "https://github.com/radix-ui/colors",
+  "license": "MIT",
+  "dark": true,
+  "note": "12-step perceptual UI scale",
+  "colors": [
+    {
+      "name": "purple1",
+      "hex": "#18111b"
+    },
+    {
+      "name": "purple2",
+      "hex": "#1e1523"
+    },
+    {
+      "name": "purple3",
+      "hex": "#301c3b"
+    },
+    {
+      "name": "purple4",
+      "hex": "#3d224e"
+    },
+    {
+      "name": "purple5",
+      "hex": "#48295c"
+    },
+    {
+      "name": "purple6",
+      "hex": "#54346b"
+    },
+    {
+      "name": "purple7",
+      "hex": "#664282"
+    },
+    {
+      "name": "purple8",
+      "hex": "#8457aa"
+    },
+    {
+      "name": "purple9",
+      "hex": "#8e4ec6"
+    },
+    {
+      "name": "purple10",
+      "hex": "#9a5cd0"
+    },
+    {
+      "name": "purple11",
+      "hex": "#d19dff"
+    },
+    {
+      "name": "purple12",
+      "hex": "#ecd9fa"
+    }
+  ],
+  "roles": {
+    "background": "#18111b",
+    "surface": "#1e1523",
+    "text": "#ecd9fa",
+    "accent": "#8e4ec6",
+    "accent_2": "#3d224e"
+  }
+}

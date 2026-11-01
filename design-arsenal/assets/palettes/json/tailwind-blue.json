@@ -1,0 +1,61 @@
+{
+  "name": "Tailwind Blue",
+  "slug": "tailwind-blue",
+  "source": "https://github.com/tailwindlabs/tailwindcss",
+  "license": "MIT",
+  "dark": false,
+  "note": "11-step UI scale (v3 palette)",
+  "colors": [
+    {
+      "name": "50",
+      "hex": "#eff6ff"
+    },
+    {
+      "name": "100",
+      "hex": "#dbeafe"
+    },
+    {
+      "name": "200",
+      "hex": "#bfdbfe"
+    },
+    {
+      "name": "300",
+      "hex": "#93c5fd"
+    },
+    {
+      "name": "400",
+      "hex": "#60a5fa"
+    },
+    {
+      "name": "500",
+      "hex": "#3b82f6"
+    },
+    {
+      "name": "600",
+      "hex": "#2563eb"
+    },
+    {
+      "name": "700",
+      "hex": "#1d4ed8"
+    },
+    {
+      "name": "800",
+      "hex": "#1e40af"
+    },
+    {
+      "name": "900",
+      "hex": "#1e3a8a"
+    },
+    {
+      "name": "950",
+      "hex": "#172554"
+    }
+  ],
+  "roles": {
+    "background": "#eff6ff",
+    "surface": "#dbeafe",
+    "text": "#172554",
+    "accent": "#1d4ed8",
+    "accent_2": "#2563eb"
+  }
+}

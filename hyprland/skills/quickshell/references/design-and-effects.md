@@ -1,6 +1,6 @@
 # Building modern interfaces — design, effects & theming (Quickshell + Hyprland)
 
-Verified **2026-10-15**. Sources: quickshell.org docs v0.3.0 + source (layer namespace, `iconPath`, `RectangularShadow`); Hyprland wiki (layer rules, blur variants); **equisdots** `shell@branch/experimental` (Theme.qml, Bar.qml, ModulePill.qml, docs/themes.md, docs/bar.md), `nyx@branch/experimental`, `palettes`/`theme-sync` (own work); **Caelestia** `shell@main` + `tokens.hpp` (GPL-3.0 — values/patterns used as design reference only, no code copied). Base typeface: **Hack Nerd Font**. Structure tokens (Material-You shape/spacing/elevation/state/motion, see §1b): **equisdots** `shell/docs/design-language.md`.
+Verified **2026-10-15**. Sources: quickshell.org docs v0.3.2 + source (layer namespace, `iconPath`, `RectangularShadow`); Hyprland wiki (layer rules, blur variants); **equisdots** `shell@branch/experimental` (Theme.qml, Bar.qml, ModulePill.qml, docs/themes.md, docs/bar.md), `nyx@branch/experimental`, `palettes`/`theme-sync` (own work); **Caelestia** `shell@main` + `tokens.hpp` (GPL-3.0 — values/patterns used as design reference only, no code copied). Base typeface: **Hack Nerd Font**. Structure tokens (Material-You shape/spacing/elevation/state/motion, see §1b): **equisdots** `shell/docs/design-language.md`.
 
 Hard requirements for every design produced with this pack:
 1. **Modern & dense — no dead space.** Layouts fill their region purposefully; leftover space is distributed, never left as holes.

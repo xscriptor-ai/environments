@@ -1,0 +1,65 @@
+{
+  "name": "Radix Green (Light)",
+  "slug": "radix-green-light",
+  "source": "https://github.com/radix-ui/colors",
+  "license": "MIT",
+  "dark": false,
+  "note": "12-step perceptual UI scale",
+  "colors": [
+    {
+      "name": "green1",
+      "hex": "#fbfefc"
+    },
+    {
+      "name": "green2",
+      "hex": "#f4fbf6"
+    },
+    {
+      "name": "green3",
+      "hex": "#e6f6eb"
+    },
+    {
+      "name": "green4",
+      "hex": "#d6f1df"
+    },
+    {
+      "name": "green5",
+      "hex": "#c4e8d1"
+    },
+    {
+      "name": "green6",
+      "hex": "#adddc0"
+    },
+    {
+      "name": "green7",
+      "hex": "#8eceaa"
+    },
+    {
+      "name": "green8",
+      "hex": "#5bb98b"
+    },
+    {
+      "name": "green9",
+      "hex": "#30a46c"
+    },
+    {
+      "name": "green10",
+      "hex": "#2b9a66"
+    },
+    {
+      "name": "green11",
+      "hex": "#218358"
+    },
+    {
+      "name": "green12",
+      "hex": "#193b2d"
+    }
+  ],
+  "roles": {
+    "background": "#fbfefc",
+    "surface": "#f4fbf6",
+    "text": "#193b2d",
+    "accent": "#218358",
+    "accent_2": "#2b9a66"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "name": "Tailwind Yellow",
+  "slug": "tailwind-yellow",
+  "source": "https://github.com/tailwindlabs/tailwindcss",
+  "license": "MIT",
+  "dark": false,
+  "note": "11-step UI scale (v3 palette)",
+  "colors": [
+    {
+      "name": "50",
+      "hex": "#fefce8"
+    },
+    {
+      "name": "100",
+      "hex": "#fef9c3"
+    },
+    {
+      "name": "200",
+      "hex": "#fef08a"
+    },
+    {
+      "name": "300",
+      "hex": "#fde047"
+    },
+    {
+      "name": "400",
+      "hex": "#facc15"
+    },
+    {
+      "name": "500",
+      "hex": "#eab308"
+    },
+    {
+      "name": "600",
+      "hex": "#ca8a04"
+    },
+    {
+      "name": "700",
+      "hex": "#a16207"
+    },
+    {
+      "name": "800",
+      "hex": "#854d0e"
+    },
+    {
+      "name": "900",
+      "hex": "#713f12"
+    },
+    {
+      "name": "950",
+      "hex": "#422006"
+    }
+  ],
+  "roles": {
+    "background": "#fefce8",
+    "surface": "#fef9c3",
+    "text": "#422006",
+    "accent": "#ca8a04",
+    "accent_2": "#eab308"
+  }
+}

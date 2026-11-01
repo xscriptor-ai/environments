@@ -1,0 +1,141 @@
+{
+  "name": "Flexoki",
+  "slug": "flexoki",
+  "source": "https://github.com/kepano/flexoki",
+  "license": "MIT",
+  "dark": false,
+  "note": "ink-on-paper palette for prose and UI",
+  "colors": [
+    {
+      "name": "paper",
+      "hex": "#fffcf0"
+    },
+    {
+      "name": "black",
+      "hex": "#100f0f"
+    },
+    {
+      "name": "50",
+      "hex": "#f2f0e5"
+    },
+    {
+      "name": "100",
+      "hex": "#e6e4d9"
+    },
+    {
+      "name": "150",
+      "hex": "#dad8ce"
+    },
+    {
+      "name": "200",
+      "hex": "#cecdc3"
+    },
+    {
+      "name": "300",
+      "hex": "#b7b5ac"
+    },
+    {
+      "name": "400",
+      "hex": "#9f9d96"
+    },
+    {
+      "name": "500",
+      "hex": "#878580"
+    },
+    {
+      "name": "600",
+      "hex": "#6f6e69"
+    },
+    {
+      "name": "700",
+      "hex": "#575653"
+    },
+    {
+      "name": "800",
+      "hex": "#403e3c"
+    },
+    {
+      "name": "850",
+      "hex": "#343331"
+    },
+    {
+      "name": "900",
+      "hex": "#282726"
+    },
+    {
+      "name": "950",
+      "hex": "#1c1b1a"
+    },
+    {
+      "name": "red-400",
+      "hex": "#d14d41"
+    },
+    {
+      "name": "red-600",
+      "hex": "#af3029"
+    },
+    {
+      "name": "orange-400",
+      "hex": "#da702c"
+    },
+    {
+      "name": "orange-600",
+      "hex": "#bc5215"
+    },
+    {
+      "name": "yellow-400",
+      "hex": "#d0a215"
+    },
+    {
+      "name": "yellow-600",
+      "hex": "#ad8301"
+    },
+    {
+      "name": "green-400",
+      "hex": "#879a39"
+    },
+    {
+      "name": "green-600",
+      "hex": "#66800b"
+    },
+    {
+      "name": "cyan-400",
+      "hex": "#3aa99f"
+    },
+    {
+      "name": "cyan-600",
+      "hex": "#24837b"
+    },
+    {
+      "name": "blue-400",
+      "hex": "#4385be"
+    },
+    {
+      "name": "blue-600",
+      "hex": "#205ea6"
+    },
+    {
+      "name": "purple-400",
+      "hex": "#8b7ec8"
+    },
+    {
+      "name": "purple-600",
+      "hex": "#5e409d"
+    },
+    {
+      "name": "magenta-400",
+      "hex": "#ce5d97"
+    },
+    {
+      "name": "magenta-600",
+      "hex": "#a02f6f"
+    }
+  ],
+  "roles": {
+    "background": "#fffcf0",
+    "surface": "#f2f0e5",
+    "text": "#100f0f",
+    "accent": "#ad8301",
+    "accent_2": "#66800b"
+  }
+}

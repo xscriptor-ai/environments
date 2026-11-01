@@ -26,7 +26,7 @@ Note: `dwindle/master.special_scale_factor` are deprecated in 0.57 in favour of 
 `border` · `borderangle` (once/loop) · `shadowangle` (once/loop) · `glowangle` (once/loop)
 `workspaces` (slide/slidevert/fade/slidefade/slidefadevert) → `workspacesIn` `workspacesOut` `specialWorkspace(→In/Out)`
 `zoomFactor` · `monitorAdded`
-Styles: `popin 80%`, `slidefade 20%`, `slide left|right|top|bottom`; speed in deciseconds; springs (`type = "spring"`, critical damping `damping = 2*sqrt(k*m)`).
+Styles: `popin 80%`, `slidefade 20%`, `slide left|right|top|bottom`; speed in deciseconds; springs (`type = "spring"`, critical damping `damping = 2*sqrt(k*m)`; 0.56.x used `dampening`). Lua animation field: `spring = "<name>"` or `bezier = "<name>"`; there is no generic `curve =` field.
 
 ## Gesture actions (hl.gesture)
 directions: swipe/horizontal/vertical/left/right/up/down/pinch/pinchin/pinchout · actions: lua fn | `{start,update,finish}` | workspace | move | resize | special(+workspace_name) | close | fullscreen(+mode) | float | cursor_zoom(+zoom_level, mode mult/live) | scroll_move | unset · fields: `mods`, `scale`, `disable_inhibit`

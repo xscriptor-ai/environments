@@ -1,0 +1,65 @@
+{
+  "name": "Radix Brown (Light)",
+  "slug": "radix-brown-light",
+  "source": "https://github.com/radix-ui/colors",
+  "license": "MIT",
+  "dark": false,
+  "note": "12-step perceptual UI scale",
+  "colors": [
+    {
+      "name": "brown1",
+      "hex": "#fefdfc"
+    },
+    {
+      "name": "brown2",
+      "hex": "#fcf9f6"
+    },
+    {
+      "name": "brown3",
+      "hex": "#f6eee7"
+    },
+    {
+      "name": "brown4",
+      "hex": "#f0e4d9"
+    },
+    {
+      "name": "brown5",
+      "hex": "#ebdaca"
+    },
+    {
+      "name": "brown6",
+      "hex": "#e4cdb7"
+    },
+    {
+      "name": "brown7",
+      "hex": "#dcbc9f"
+    },
+    {
+      "name": "brown8",
+      "hex": "#cea37e"
+    },
+    {
+      "name": "brown9",
+      "hex": "#ad7f58"
+    },
+    {
+      "name": "brown10",
+      "hex": "#a07553"
+    },
+    {
+      "name": "brown11",
+      "hex": "#815e46"
+    },
+    {
+      "name": "brown12",
+      "hex": "#3e332e"
+    }
+  ],
+  "roles": {
+    "background": "#fefdfc",
+    "surface": "#fcf9f6",
+    "text": "#3e332e",
+    "accent": "#ad7f58",
+    "accent_2": "#a07553"
+  }
+}

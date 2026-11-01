@@ -1,0 +1,8556 @@
+[
+  {
+    "name": "Catppuccin Frappé",
+    "slug": "catppuccin-frapp",
+    "source": "https://github.com/catppuccin/palette",
+    "license": "MIT",
+    "dark": true,
+    "note": "26 roles, four flavors",
+    "colors": [
+      {
+        "name": "rosewater",
+        "hex": "#f2d5cf"
+      },
+      {
+        "name": "flamingo",
+        "hex": "#eebebe"
+      },
+      {
+        "name": "pink",
+        "hex": "#f4b8e4"
+      },
+      {
+        "name": "mauve",
+        "hex": "#ca9ee6"
+      },
+      {
+        "name": "red",
+        "hex": "#e78284"
+      },
+      {
+        "name": "maroon",
+        "hex": "#ea999c"
+      },
+      {
+        "name": "peach",
+        "hex": "#ef9f76"
+      },
+      {
+        "name": "yellow",
+        "hex": "#e5c890"
+      },
+      {
+        "name": "green",
+        "hex": "#a6d189"
+      },
+      {
+        "name": "teal",
+        "hex": "#81c8be"
+      },
+      {
+        "name": "sky",
+        "hex": "#99d1db"
+      },
+      {
+        "name": "sapphire",
+        "hex": "#85c1dc"
+      },
+      {
+        "name": "blue",
+        "hex": "#8caaee"
+      },
+      {
+        "name": "lavender",
+        "hex": "#babbf1"
+      },
+      {
+        "name": "text",
+        "hex": "#c6d0f5"
+      },
+      {
+        "name": "subtext1",
+        "hex": "#b5bfe2"
+      },
+      {
+        "name": "subtext0",
+        "hex": "#a5adce"
+      },
+      {
+        "name": "overlay2",
+        "hex": "#949cbb"
+      },
+      {
+        "name": "overlay1",
+        "hex": "#838ba7"
+      },
+      {
+        "name": "overlay0",
+        "hex": "#737994"
+      },
+      {
+        "name": "surface2",
+        "hex": "#626880"
+      },
+      {
+        "name": "surface1",
+        "hex": "#51576d"
+      },
+      {
+        "name": "surface0",
+        "hex": "#414559"
+      },
+      {
+        "name": "base",
+        "hex": "#303446"
+      },
+      {
+        "name": "mantle",
+        "hex": "#292c3c"
+      },
+      {
+        "name": "crust",
+        "hex": "#232634"
+      }
+    ],
+    "roles": {
+      "background": "#232634",
+      "surface": "#292c3c",
+      "text": "#f2d5cf",
+      "accent": "#ef9f76",
+      "accent_2": "#e78284"
+    }
+  },
+  {
+    "name": "Catppuccin Latte",
+    "slug": "catppuccin-latte",
+    "source": "https://github.com/catppuccin/palette",
+    "license": "MIT",
+    "dark": false,
+    "note": "26 roles, four flavors",
+    "colors": [
+      {
+        "name": "rosewater",
+        "hex": "#dc8a78"
+      },
+      {
+        "name": "flamingo",
+        "hex": "#dd7878"
+      },
+      {
+        "name": "pink",
+        "hex": "#ea76cb"
+      },
+      {
+        "name": "mauve",
+        "hex": "#8839ef"
+      },
+      {
+        "name": "red",
+        "hex": "#d20f39"
+      },
+      {
+        "name": "maroon",
+        "hex": "#e64553"
+      },
+      {
+        "name": "peach",
+        "hex": "#fe640b"
+      },
+      {
+        "name": "yellow",
+        "hex": "#df8e1d"
+      },
+      {
+        "name": "green",
+        "hex": "#40a02b"
+      },
+      {
+        "name": "teal",
+        "hex": "#179299"
+      },
+      {
+        "name": "sky",
+        "hex": "#04a5e5"
+      },
+      {
+        "name": "sapphire",
+        "hex": "#209fb5"
+      },
+      {
+        "name": "blue",
+        "hex": "#1e66f5"
+      },
+      {
+        "name": "lavender",
+        "hex": "#7287fd"
+      },
+      {
+        "name": "text",
+        "hex": "#4c4f69"
+      },
+      {
+        "name": "subtext1",
+        "hex": "#5c5f77"
+      },
+      {
+        "name": "subtext0",
+        "hex": "#6c6f85"
+      },
+      {
+        "name": "overlay2",
+        "hex": "#7c7f93"
+      },
+      {
+        "name": "overlay1",
+        "hex": "#8c8fa1"
+      },
+      {
+        "name": "overlay0",
+        "hex": "#9ca0b0"
+      },
+      {
+        "name": "surface2",
+        "hex": "#acb0be"
+      },
+      {
+        "name": "surface1",
+        "hex": "#bcc0cc"
+      },
+      {
+        "name": "surface0",
+        "hex": "#ccd0da"
+      },
+      {
+        "name": "base",
+        "hex": "#eff1f5"
+      },
+      {
+        "name": "mantle",
+        "hex": "#e6e9ef"
+      },
+      {
+        "name": "crust",
+        "hex": "#dce0e8"
+      }
+    ],
+    "roles": {
+      "background": "#eff1f5",
+      "surface": "#e6e9ef",
+      "text": "#d20f39",
+      "accent": "#04a5e5",
+      "accent_2": "#fe640b"
+    }
+  },
+  {
+    "name": "Catppuccin Macchiato",
+    "slug": "catppuccin-macchiato",
+    "source": "https://github.com/catppuccin/palette",
+    "license": "MIT",
+    "dark": true,
+    "note": "26 roles, four flavors",
+    "colors": [
+      {
+        "name": "rosewater",
+        "hex": "#f4dbd6"
+      },
+      {
+        "name": "flamingo",
+        "hex": "#f0c6c6"
+      },
+      {
+        "name": "pink",
+        "hex": "#f5bde6"
+      },
+      {
+        "name": "mauve",
+        "hex": "#c6a0f6"
+      },
+      {
+        "name": "red",
+        "hex": "#ed8796"
+      },
+      {
+        "name": "maroon",
+        "hex": "#ee99a0"
+      },
+      {
+        "name": "peach",
+        "hex": "#f5a97f"
+      },
+      {
+        "name": "yellow",
+        "hex": "#eed49f"
+      },
+      {
+        "name": "green",
+        "hex": "#a6da95"
+      },
+      {
+        "name": "teal",
+        "hex": "#8bd5ca"
+      },
+      {
+        "name": "sky",
+        "hex": "#91d7e3"
+      },
+      {
+        "name": "sapphire",
+        "hex": "#7dc4e4"
+      },
+      {
+        "name": "blue",
+        "hex": "#8aadf4"
+      },
+      {
+        "name": "lavender",
+        "hex": "#b7bdf8"
+      },
+      {
+        "name": "text",
+        "hex": "#cad3f5"
+      },
+      {
+        "name": "subtext1",
+        "hex": "#b8c0e0"
+      },
+      {
+        "name": "subtext0",
+        "hex": "#a5adcb"
+      },
+      {
+        "name": "overlay2",
+        "hex": "#939ab7"
+      },
+      {
+        "name": "overlay1",
+        "hex": "#8087a2"
+      },
+      {
+        "name": "overlay0",
+        "hex": "#6e738d"
+      },
+      {
+        "name": "surface2",
+        "hex": "#5b6078"
+      },
+      {
+        "name": "surface1",
+        "hex": "#494d64"
+      },
+      {
+        "name": "surface0",
+        "hex": "#363a4f"
+      },
+      {
+        "name": "base",
+        "hex": "#24273a"
+      },
+      {
+        "name": "mantle",
+        "hex": "#1e2030"
+      },
+      {
+        "name": "crust",
+        "hex": "#181926"
+      }
+    ],
+    "roles": {
+      "background": "#181926",
+      "surface": "#1e2030",
+      "text": "#f4dbd6",
+      "accent": "#f5a97f",
+      "accent_2": "#7dc4e4"
+    }
+  },
+  {
+    "name": "Catppuccin Mocha",
+    "slug": "catppuccin-mocha",
+    "source": "https://github.com/catppuccin/palette",
+    "license": "MIT",
+    "dark": true,
+    "note": "26 roles, four flavors",
+    "colors": [
+      {
+        "name": "rosewater",
+        "hex": "#f5e0dc"
+      },
+      {
+        "name": "flamingo",
+        "hex": "#f2cdcd"
+      },
+      {
+        "name": "pink",
+        "hex": "#f5c2e7"
+      },
+      {
+        "name": "mauve",
+        "hex": "#cba6f7"
+      },
+      {
+        "name": "red",
+        "hex": "#f38ba8"
+      },
+      {
+        "name": "maroon",
+        "hex": "#eba0ac"
+      },
+      {
+        "name": "peach",
+        "hex": "#fab387"
+      },
+      {
+        "name": "yellow",
+        "hex": "#f9e2af"
+      },
+      {
+        "name": "green",
+        "hex": "#a6e3a1"
+      },
+      {
+        "name": "teal",
+        "hex": "#94e2d5"
+      },
+      {
+        "name": "sky",
+        "hex": "#89dceb"
+      },
+      {
+        "name": "sapphire",
+        "hex": "#74c7ec"
+      },
+      {
+        "name": "blue",
+        "hex": "#89b4fa"
+      },
+      {
+        "name": "lavender",
+        "hex": "#b4befe"
+      },
+      {
+        "name": "text",
+        "hex": "#cdd6f4"
+      },
+      {
+        "name": "subtext1",
+        "hex": "#bac2de"
+      },
+      {
+        "name": "subtext0",
+        "hex": "#a6adc8"
+      },
+      {
+        "name": "overlay2",
+        "hex": "#9399b2"
+      },
+      {
+        "name": "overlay1",
+        "hex": "#7f849c"
+      },
+      {
+        "name": "overlay0",
+        "hex": "#6c7086"
+      },
+      {
+        "name": "surface2",
+        "hex": "#585b70"
+      },
+      {
+        "name": "surface1",
+        "hex": "#45475a"
+      },
+      {
+        "name": "surface0",
+        "hex": "#313244"
+      },
+      {
+        "name": "base",
+        "hex": "#1e1e2e"
+      },
+      {
+        "name": "mantle",
+        "hex": "#181825"
+      },
+      {
+        "name": "crust",
+        "hex": "#11111b"
+      }
+    ],
+    "roles": {
+      "background": "#11111b",
+      "surface": "#181825",
+      "text": "#f5e0dc",
+      "accent": "#74c7ec",
+      "accent_2": "#fab387"
+    }
+  },
+  {
+    "name": "Dracula",
+    "slug": "dracula",
+    "source": "https://draculatheme.com/",
+    "license": "MIT",
+    "dark": true,
+    "note": "the dark theme for night owls",
+    "colors": [
+      {
+        "name": "background",
+        "hex": "#282a36"
+      },
+      {
+        "name": "current-line",
+        "hex": "#44475a"
+      },
+      {
+        "name": "foreground",
+        "hex": "#f8f8f2"
+      },
+      {
+        "name": "comment",
+        "hex": "#6272a4"
+      },
+      {
+        "name": "cyan",
+        "hex": "#8be9fd"
+      },
+      {
+        "name": "green",
+        "hex": "#50fa7b"
+      },
+      {
+        "name": "orange",
+        "hex": "#ffb86c"
+      },
+      {
+        "name": "pink",
+        "hex": "#ff79c6"
+      },
+      {
+        "name": "purple",
+        "hex": "#bd93f9"
+      },
+      {
+        "name": "red",
+        "hex": "#ff5555"
+      },
+      {
+        "name": "yellow",
+        "hex": "#f1fa8c"
+      }
+    ],
+    "roles": {
+      "background": "#282a36",
+      "surface": "#44475a",
+      "text": "#f8f8f2",
+      "accent": "#50fa7b",
+      "accent_2": "#ff5555"
+    }
+  },
+  {
+    "name": "Everforest",
+    "slug": "everforest",
+    "source": "https://github.com/sainnhe/everforest",
+    "license": "MIT",
+    "dark": true,
+    "note": "comfortable forest-inspired contrast",
+    "colors": [
+      {
+        "name": "bg0",
+        "hex": "#2d353b"
+      },
+      {
+        "name": "bg1",
+        "hex": "#343f44"
+      },
+      {
+        "name": "bg2",
+        "hex": "#3d484d"
+      },
+      {
+        "name": "bg3",
+        "hex": "#475258"
+      },
+      {
+        "name": "bg4",
+        "hex": "#4f585e"
+      },
+      {
+        "name": "bg5",
+        "hex": "#56635f"
+      },
+      {
+        "name": "fg",
+        "hex": "#d3c6aa"
+      },
+      {
+        "name": "red",
+        "hex": "#e67e80"
+      },
+      {
+        "name": "orange",
+        "hex": "#e69875"
+      },
+      {
+        "name": "yellow",
+        "hex": "#dbbc7f"
+      },
+      {
+        "name": "green",
+        "hex": "#a7c080"
+      },
+      {
+        "name": "aqua",
+        "hex": "#83c092"
+      },
+      {
+        "name": "blue",
+        "hex": "#7fbbb3"
+      },
+      {
+        "name": "purple",
+        "hex": "#d699b6"
+      },
+      {
+        "name": "grey0",
+        "hex": "#7a8478"
+      },
+      {
+        "name": "grey1",
+        "hex": "#859289"
+      },
+      {
+        "name": "grey2",
+        "hex": "#9da9a0"
+      }
+    ],
+    "roles": {
+      "background": "#2d353b",
+      "surface": "#343f44",
+      "text": "#d3c6aa",
+      "accent": "#e69875",
+      "accent_2": "#e67e80"
+    }
+  },
+  {
+    "name": "Flexoki",
+    "slug": "flexoki",
+    "source": "https://github.com/kepano/flexoki",
+    "license": "MIT",
+    "dark": false,
+    "note": "ink-on-paper palette for prose and UI",
+    "colors": [
+      {
+        "name": "paper",
+        "hex": "#fffcf0"
+      },
+      {
+        "name": "black",
+        "hex": "#100f0f"
+      },
+      {
+        "name": "50",
+        "hex": "#f2f0e5"
+      },
+      {
+        "name": "100",
+        "hex": "#e6e4d9"
+      },
+      {
+        "name": "150",
+        "hex": "#dad8ce"
+      },
+      {
+        "name": "200",
+        "hex": "#cecdc3"
+      },
+      {
+        "name": "300",
+        "hex": "#b7b5ac"
+      },
+      {
+        "name": "400",
+        "hex": "#9f9d96"
+      },
+      {
+        "name": "500",
+        "hex": "#878580"
+      },
+      {
+        "name": "600",
+        "hex": "#6f6e69"
+      },
+      {
+        "name": "700",
+        "hex": "#575653"
+      },
+      {
+        "name": "800",
+        "hex": "#403e3c"
+      },
+      {
+        "name": "850",
+        "hex": "#343331"
+      },
+      {
+        "name": "900",
+        "hex": "#282726"
+      },
+      {
+        "name": "950",
+        "hex": "#1c1b1a"
+      },
+      {
+        "name": "red-400",
+        "hex": "#d14d41"
+      },
+      {
+        "name": "red-600",
+        "hex": "#af3029"
+      },
+      {
+        "name": "orange-400",
+        "hex": "#da702c"
+      },
+      {
+        "name": "orange-600",
+        "hex": "#bc5215"
+      },
+      {
+        "name": "yellow-400",
+        "hex": "#d0a215"
+      },
+      {
+        "name": "yellow-600",
+        "hex": "#ad8301"
+      },
+      {
+        "name": "green-400",
+        "hex": "#879a39"
+      },
+      {
+        "name": "green-600",
+        "hex": "#66800b"
+      },
+      {
+        "name": "cyan-400",
+        "hex": "#3aa99f"
+      },
+      {
+        "name": "cyan-600",
+        "hex": "#24837b"
+      },
+      {
+        "name": "blue-400",
+        "hex": "#4385be"
+      },
+      {
+        "name": "blue-600",
+        "hex": "#205ea6"
+      },
+      {
+        "name": "purple-400",
+        "hex": "#8b7ec8"
+      },
+      {
+        "name": "purple-600",
+        "hex": "#5e409d"
+      },
+      {
+        "name": "magenta-400",
+        "hex": "#ce5d97"
+      },
+      {
+        "name": "magenta-600",
+        "hex": "#a02f6f"
+      }
+    ],
+    "roles": {
+      "background": "#fffcf0",
+      "surface": "#f2f0e5",
+      "text": "#100f0f",
+      "accent": "#ad8301",
+      "accent_2": "#66800b"
+    }
+  },
+  {
+    "name": "Gruvbox",
+    "slug": "gruvbox",
+    "source": "https://github.com/morhetz/gruvbox",
+    "license": "MIT",
+    "dark": true,
+    "note": "retro groove; warm, low-contrast",
+    "colors": [
+      {
+        "name": "dark0_hard",
+        "hex": "#1d2021"
+      },
+      {
+        "name": "dark0",
+        "hex": "#282828"
+      },
+      {
+        "name": "dark0_soft",
+        "hex": "#32302f"
+      },
+      {
+        "name": "dark1",
+        "hex": "#3c3836"
+      },
+      {
+        "name": "dark2",
+        "hex": "#504945"
+      },
+      {
+        "name": "dark3",
+        "hex": "#665c54"
+      },
+      {
+        "name": "dark4",
+        "hex": "#7c6f64"
+      },
+      {
+        "name": "gray_245",
+        "hex": "#928374"
+      },
+      {
+        "name": "light0_hard",
+        "hex": "#f9f5d7"
+      },
+      {
+        "name": "light0",
+        "hex": "#fbf1c7"
+      },
+      {
+        "name": "light0_soft",
+        "hex": "#f2e5bc"
+      },
+      {
+        "name": "light1",
+        "hex": "#ebdbb2"
+      },
+      {
+        "name": "light2",
+        "hex": "#d5c4a1"
+      },
+      {
+        "name": "light3",
+        "hex": "#bdae93"
+      },
+      {
+        "name": "light4",
+        "hex": "#a89984"
+      },
+      {
+        "name": "bright_red",
+        "hex": "#fb4934"
+      },
+      {
+        "name": "bright_green",
+        "hex": "#b8bb26"
+      },
+      {
+        "name": "bright_yellow",
+        "hex": "#fabd2f"
+      },
+      {
+        "name": "bright_blue",
+        "hex": "#83a598"
+      },
+      {
+        "name": "bright_purple",
+        "hex": "#d3869b"
+      },
+      {
+        "name": "bright_aqua",
+        "hex": "#8ec07c"
+      },
+      {
+        "name": "bright_orange",
+        "hex": "#fe8019"
+      },
+      {
+        "name": "neutral_red",
+        "hex": "#cc241d"
+      },
+      {
+        "name": "neutral_green",
+        "hex": "#98971a"
+      },
+      {
+        "name": "neutral_yellow",
+        "hex": "#d79921"
+      },
+      {
+        "name": "neutral_blue",
+        "hex": "#458588"
+      },
+      {
+        "name": "neutral_purple",
+        "hex": "#b16286"
+      },
+      {
+        "name": "neutral_aqua",
+        "hex": "#689d6a"
+      },
+      {
+        "name": "neutral_orange",
+        "hex": "#d65d0e"
+      },
+      {
+        "name": "faded_red",
+        "hex": "#9d0006"
+      },
+      {
+        "name": "faded_green",
+        "hex": "#79740e"
+      },
+      {
+        "name": "faded_yellow",
+        "hex": "#b57614"
+      },
+      {
+        "name": "faded_blue",
+        "hex": "#076678"
+      },
+      {
+        "name": "faded_purple",
+        "hex": "#8f3f71"
+      },
+      {
+        "name": "faded_aqua",
+        "hex": "#427b58"
+      },
+      {
+        "name": "faded_orange",
+        "hex": "#af3a03"
+      }
+    ],
+    "roles": {
+      "background": "#1d2021",
+      "surface": "#9d0006",
+      "text": "#f9f5d7",
+      "accent": "#9d0006",
+      "accent_2": "#af3a03"
+    }
+  },
+  {
+    "name": "Kanagawa Wave",
+    "slug": "kanagawa-wave",
+    "source": "https://github.com/rebelot/kanagawa.nvim",
+    "license": "MIT",
+    "dark": true,
+    "note": "inspired by Hokusai's Great Wave",
+    "colors": [
+      {
+        "name": "sumiInk0",
+        "hex": "#16161d"
+      },
+      {
+        "name": "sumiInk1",
+        "hex": "#181820"
+      },
+      {
+        "name": "sumiInk2",
+        "hex": "#1a1a22"
+      },
+      {
+        "name": "sumiInk3",
+        "hex": "#1f1f28"
+      },
+      {
+        "name": "sumiInk4",
+        "hex": "#2a2a37"
+      },
+      {
+        "name": "sumiInk5",
+        "hex": "#363646"
+      },
+      {
+        "name": "sumiInk6",
+        "hex": "#54546d"
+      },
+      {
+        "name": "waveBlue1",
+        "hex": "#223249"
+      },
+      {
+        "name": "waveBlue2",
+        "hex": "#2d4f67"
+      },
+      {
+        "name": "winterGreen",
+        "hex": "#2b3328"
+      },
+      {
+        "name": "winterYellow",
+        "hex": "#49443c"
+      },
+      {
+        "name": "winterRed",
+        "hex": "#43242b"
+      },
+      {
+        "name": "winterBlue",
+        "hex": "#252535"
+      },
+      {
+        "name": "autumnGreen",
+        "hex": "#76946a"
+      },
+      {
+        "name": "autumnRed",
+        "hex": "#c34043"
+      },
+      {
+        "name": "autumnYellow",
+        "hex": "#dca561"
+      },
+      {
+        "name": "samuraiRed",
+        "hex": "#e82424"
+      },
+      {
+        "name": "roninYellow",
+        "hex": "#ff9e3b"
+      },
+      {
+        "name": "waveAqua1",
+        "hex": "#6a9589"
+      },
+      {
+        "name": "dragonBlue",
+        "hex": "#658594"
+      },
+      {
+        "name": "oldWhite",
+        "hex": "#c8c093"
+      },
+      {
+        "name": "fujiWhite",
+        "hex": "#dcd7ba"
+      },
+      {
+        "name": "fujiGray",
+        "hex": "#727169"
+      },
+      {
+        "name": "oniViolet",
+        "hex": "#957fb8"
+      },
+      {
+        "name": "oniViolet2",
+        "hex": "#b8b4d0"
+      },
+      {
+        "name": "crystalBlue",
+        "hex": "#7e9cd8"
+      },
+      {
+        "name": "springViolet1",
+        "hex": "#938aa9"
+      },
+      {
+        "name": "springViolet2",
+        "hex": "#9cabca"
+      },
+      {
+        "name": "springBlue",
+        "hex": "#7fb4ca"
+      },
+      {
+        "name": "lightBlue",
+        "hex": "#a3d4d5"
+      },
+      {
+        "name": "waveAqua2",
+        "hex": "#7aa89f"
+      },
+      {
+        "name": "springGreen",
+        "hex": "#98bb6c"
+      },
+      {
+        "name": "boatYellow1",
+        "hex": "#938056"
+      },
+      {
+        "name": "boatYellow2",
+        "hex": "#c0a36e"
+      },
+      {
+        "name": "carpYellow",
+        "hex": "#e6c384"
+      },
+      {
+        "name": "sakuraPink",
+        "hex": "#d27e99"
+      },
+      {
+        "name": "waveRed",
+        "hex": "#e46876"
+      },
+      {
+        "name": "peachRed",
+        "hex": "#ff5d62"
+      },
+      {
+        "name": "surimiOrange",
+        "hex": "#ffa066"
+      },
+      {
+        "name": "katanaGray",
+        "hex": "#717c7c"
+      },
+      {
+        "name": "dragonBlack0",
+        "hex": "#0d0c0c"
+      },
+      {
+        "name": "dragonBlack1",
+        "hex": "#12120f"
+      },
+      {
+        "name": "dragonBlack2",
+        "hex": "#1d1c19"
+      },
+      {
+        "name": "dragonBlack3",
+        "hex": "#181616"
+      },
+      {
+        "name": "dragonBlack4",
+        "hex": "#282727"
+      },
+      {
+        "name": "dragonBlack5",
+        "hex": "#393836"
+      },
+      {
+        "name": "dragonBlack6",
+        "hex": "#625e5a"
+      },
+      {
+        "name": "dragonWhite",
+        "hex": "#c5c9c5"
+      },
+      {
+        "name": "dragonGreen",
+        "hex": "#87a987"
+      },
+      {
+        "name": "dragonGreen2",
+        "hex": "#8a9a7b"
+      },
+      {
+        "name": "dragonPink",
+        "hex": "#a292a3"
+      },
+      {
+        "name": "dragonOrange",
+        "hex": "#b6927b"
+      },
+      {
+        "name": "dragonOrange2",
+        "hex": "#b98d7b"
+      },
+      {
+        "name": "dragonGray",
+        "hex": "#a6a69c"
+      },
+      {
+        "name": "dragonGray2",
+        "hex": "#9e9b93"
+      },
+      {
+        "name": "dragonGray3",
+        "hex": "#7a8382"
+      },
+      {
+        "name": "dragonBlue2",
+        "hex": "#8ba4b0"
+      },
+      {
+        "name": "dragonViolet",
+        "hex": "#8992a7"
+      },
+      {
+        "name": "dragonRed",
+        "hex": "#c4746e"
+      },
+      {
+        "name": "dragonAqua",
+        "hex": "#8ea4a2"
+      },
+      {
+        "name": "dragonAsh",
+        "hex": "#737c73"
+      },
+      {
+        "name": "dragonTeal",
+        "hex": "#949fb5"
+      },
+      {
+        "name": "dragonYellow",
+        "hex": "#c4b28a"
+      },
+      {
+        "name": "lotusInk1",
+        "hex": "#545464"
+      },
+      {
+        "name": "lotusInk2",
+        "hex": "#43436c"
+      },
+      {
+        "name": "lotusGray2",
+        "hex": "#716e61"
+      },
+      {
+        "name": "lotusGray3",
+        "hex": "#8a8980"
+      },
+      {
+        "name": "lotusWhite0",
+        "hex": "#d5cea3"
+      },
+      {
+        "name": "lotusWhite1",
+        "hex": "#dcd5ac"
+      },
+      {
+        "name": "lotusWhite2",
+        "hex": "#e5ddb0"
+      },
+      {
+        "name": "lotusWhite3",
+        "hex": "#f2ecbc"
+      },
+      {
+        "name": "lotusWhite4",
+        "hex": "#e7dba0"
+      },
+      {
+        "name": "lotusWhite5",
+        "hex": "#e4d794"
+      },
+      {
+        "name": "lotusViolet1",
+        "hex": "#a09cac"
+      },
+      {
+        "name": "lotusViolet2",
+        "hex": "#766b90"
+      },
+      {
+        "name": "lotusViolet3",
+        "hex": "#c9cbd1"
+      },
+      {
+        "name": "lotusViolet4",
+        "hex": "#624c83"
+      },
+      {
+        "name": "lotusBlue1",
+        "hex": "#c7d7e0"
+      },
+      {
+        "name": "lotusBlue2",
+        "hex": "#b5cbd2"
+      },
+      {
+        "name": "lotusBlue3",
+        "hex": "#9fb5c9"
+      },
+      {
+        "name": "lotusBlue4",
+        "hex": "#4d699b"
+      },
+      {
+        "name": "lotusBlue5",
+        "hex": "#5d57a3"
+      },
+      {
+        "name": "lotusGreen",
+        "hex": "#6f894e"
+      },
+      {
+        "name": "lotusGreen2",
+        "hex": "#6e915f"
+      },
+      {
+        "name": "lotusGreen3",
+        "hex": "#b7d0ae"
+      },
+      {
+        "name": "lotusPink",
+        "hex": "#b35b79"
+      },
+      {
+        "name": "lotusOrange",
+        "hex": "#cc6d00"
+      },
+      {
+        "name": "lotusOrange2",
+        "hex": "#e98a00"
+      },
+      {
+        "name": "lotusYellow",
+        "hex": "#77713f"
+      },
+      {
+        "name": "lotusYellow2",
+        "hex": "#836f4a"
+      },
+      {
+        "name": "lotusYellow3",
+        "hex": "#de9800"
+      },
+      {
+        "name": "lotusYellow4",
+        "hex": "#f9d791"
+      },
+      {
+        "name": "lotusRed",
+        "hex": "#c84053"
+      },
+      {
+        "name": "lotusRed2",
+        "hex": "#d7474b"
+      },
+      {
+        "name": "lotusRed4",
+        "hex": "#d9a594"
+      },
+      {
+        "name": "lotusAqua",
+        "hex": "#597b75"
+      },
+      {
+        "name": "lotusAqua2",
+        "hex": "#5e857a"
+      },
+      {
+        "name": "lotusTeal1",
+        "hex": "#4e8ca2"
+      },
+      {
+        "name": "lotusTeal2",
+        "hex": "#6693bf"
+      },
+      {
+        "name": "lotusTeal3",
+        "hex": "#5a7785"
+      },
+      {
+        "name": "lotusCyan",
+        "hex": "#d7e3d8"
+      }
+    ],
+    "roles": {
+      "background": "#0d0c0c",
+      "surface": "#12120f",
+      "text": "#f2ecbc",
+      "accent": "#cc6d00",
+      "accent_2": "#e98a00"
+    }
+  },
+  {
+    "name": "Material 3 Baseline",
+    "slug": "material-3-baseline",
+    "source": "https://m3.material.io/styles/color/overview",
+    "license": "Apache-2.0",
+    "dark": false,
+    "note": "baseline Material You roles; generate your own from a seed color",
+    "colors": [
+      {
+        "name": "primary",
+        "hex": "#6750a4"
+      },
+      {
+        "name": "on-primary",
+        "hex": "#ffffff"
+      },
+      {
+        "name": "primary-container",
+        "hex": "#eaddff"
+      },
+      {
+        "name": "on-primary-container",
+        "hex": "#21005d"
+      },
+      {
+        "name": "secondary",
+        "hex": "#625b71"
+      },
+      {
+        "name": "tertiary",
+        "hex": "#7d5260"
+      },
+      {
+        "name": "error",
+        "hex": "#b3261e"
+      },
+      {
+        "name": "background",
+        "hex": "#fffbfe"
+      },
+      {
+        "name": "surface-variant",
+        "hex": "#e7e0ec"
+      },
+      {
+        "name": "on-surface",
+        "hex": "#1c1b1f"
+      },
+      {
+        "name": "on-surface-variant",
+        "hex": "#49454f"
+      },
+      {
+        "name": "outline",
+        "hex": "#79747e"
+      },
+      {
+        "name": "outline-variant",
+        "hex": "#cac4d0"
+      },
+      {
+        "name": "inverse-surface",
+        "hex": "#313033"
+      },
+      {
+        "name": "inverse-primary",
+        "hex": "#d0bcff"
+      }
+    ],
+    "roles": {
+      "background": "#ffffff",
+      "surface": "#fffbfe",
+      "text": "#21005d",
+      "accent": "#b3261e",
+      "accent_2": "#6750a4"
+    }
+  },
+  {
+    "name": "Nord",
+    "slug": "nord",
+    "source": "https://www.nordtheme.com/",
+    "license": "MIT",
+    "dark": true,
+    "note": "arctic, bluish, north-bluish palette",
+    "colors": [
+      {
+        "name": "nord0",
+        "hex": "#2e3440"
+      },
+      {
+        "name": "nord1",
+        "hex": "#3b4252"
+      },
+      {
+        "name": "nord2",
+        "hex": "#434c5e"
+      },
+      {
+        "name": "nord3",
+        "hex": "#4c566a"
+      },
+      {
+        "name": "nord4",
+        "hex": "#d8dee9"
+      },
+      {
+        "name": "nord5",
+        "hex": "#e5e9f0"
+      },
+      {
+        "name": "nord6",
+        "hex": "#eceff4"
+      },
+      {
+        "name": "nord7",
+        "hex": "#8fbcbb"
+      },
+      {
+        "name": "nord8",
+        "hex": "#88c0d0"
+      },
+      {
+        "name": "nord9",
+        "hex": "#81a1c1"
+      },
+      {
+        "name": "nord10",
+        "hex": "#5e81ac"
+      },
+      {
+        "name": "nord11",
+        "hex": "#bf616a"
+      },
+      {
+        "name": "nord12",
+        "hex": "#d08770"
+      },
+      {
+        "name": "nord13",
+        "hex": "#ebcb8b"
+      },
+      {
+        "name": "nord14",
+        "hex": "#a3be8c"
+      },
+      {
+        "name": "nord15",
+        "hex": "#b48ead"
+      }
+    ],
+    "roles": {
+      "background": "#2e3440",
+      "surface": "#3b4252",
+      "text": "#eceff4",
+      "accent": "#bf616a",
+      "accent_2": "#d08770"
+    }
+  },
+  {
+    "name": "One Dark",
+    "slug": "one-dark",
+    "source": "https://github.com/atom/one-dark-syntax",
+    "license": "MIT",
+    "dark": true,
+    "note": "Atom's iconic dark palette",
+    "colors": [
+      {
+        "name": "bg",
+        "hex": "#282c34"
+      },
+      {
+        "name": "fg",
+        "hex": "#abb2bf"
+      },
+      {
+        "name": "red",
+        "hex": "#e06c75"
+      },
+      {
+        "name": "green",
+        "hex": "#98c379"
+      },
+      {
+        "name": "yellow",
+        "hex": "#e5c07b"
+      },
+      {
+        "name": "blue",
+        "hex": "#61afef"
+      },
+      {
+        "name": "magenta",
+        "hex": "#c678dd"
+      },
+      {
+        "name": "cyan",
+        "hex": "#56b6c2"
+      },
+      {
+        "name": "comment",
+        "hex": "#5c6370"
+      },
+      {
+        "name": "gutter",
+        "hex": "#4b5263"
+      },
+      {
+        "name": "selection",
+        "hex": "#3e4451"
+      },
+      {
+        "name": "white",
+        "hex": "#ffffff"
+      }
+    ],
+    "roles": {
+      "background": "#282c34",
+      "surface": "#3e4451",
+      "text": "#ffffff",
+      "accent": "#61afef",
+      "accent_2": "#56b6c2"
+    }
+  },
+  {
+    "name": "Open Color Blue",
+    "slug": "open-color-blue",
+    "source": "https://github.com/yeun/open-color",
+    "license": "MIT",
+    "dark": false,
+    "note": "13 hues x 10 steps; designed for UI",
+    "colors": [
+      {
+        "name": "50",
+        "hex": "#e7f5ff"
+      },
+      {
+        "name": "100",
+        "hex": "#d0ebff"
+      },
+      {
+        "name": "200",
+        "hex": "#a5d8ff"
+      },
+      {
+        "name": "300",
+        "hex": "#74c0fc"
+      },
+      {
+        "name": "400",
+        "hex": "#4dabf7"
+      },
+      {
+        "name": "500",
+        "hex": "#339af0"
+      },
+      {
+        "name": "600",
+        "hex": "#228be6"
+      },
+      {
+        "name": "700",
+        "hex": "#1c7ed6"
+      },
+      {
+        "name": "800",
+        "hex": "#1971c2"
+      },
+      {
+        "name": "900",
+        "hex": "#1864ab"
+      }
+    ],
+    "roles": {
+      "background": "#e7f5ff",
+      "surface": "#d0ebff",
+      "text": "#1864ab",
+      "accent": "#1971c2",
+      "accent_2": "#1c7ed6"
+    }
+  },
+  {
+    "name": "Open Color Cyan",
+    "slug": "open-color-cyan",
+    "source": "https://github.com/yeun/open-color",
+    "license": "MIT",
+    "dark": false,
+    "note": "13 hues x 10 steps; designed for UI",
+    "colors": [
+      {
+        "name": "50",
+        "hex": "#e3fafc"
+      },
+      {
+        "name": "100",
+        "hex": "#c5f6fa"
+      },
+      {
+        "name": "200",
+        "hex": "#99e9f2"
+      },
+      {
+        "name": "300",
+        "hex": "#66d9e8"
+      },
+      {
+        "name": "400",
+        "hex": "#3bc9db"
+      },
+      {
+        "name": "500",
+        "hex": "#22b8cf"
+      },
+      {
+        "name": "600",
+        "hex": "#15aabf"
+      },
+      {
+        "name": "700",
+        "hex": "#1098ad"
+      },
+      {
+        "name": "800",
+        "hex": "#0c8599"
+      },
+      {
+        "name": "900",
+        "hex": "#0b7285"
+      }
+    ],
+    "roles": {
+      "background": "#e3fafc",
+      "surface": "#c5f6fa",
+      "text": "#0b7285",
+      "accent": "#0c8599",
+      "accent_2": "#0b7285"
+    }
+  },
+  {
+    "name": "Open Color Grape",
+    "slug": "open-color-grape",
+    "source": "https://github.com/yeun/open-color",
+    "license": "MIT",
+    "dark": false,
+    "note": "13 hues x 10 steps; designed for UI",
+    "colors": [
+      {
+        "name": "50",
+        "hex": "#f8f0fc"
+      },
+      {
+        "name": "100",
+        "hex": "#f3d9fa"
+      },
+      {
+        "name": "200",
+        "hex": "#eebefa"
+      },
+      {
+        "name": "300",
+        "hex": "#e599f7"
+      },
+      {
+        "name": "400",
+        "hex": "#da77f2"
+      },
+      {
+        "name": "500",
+        "hex": "#cc5de8"
+      },
+      {
+        "name": "600",
+        "hex": "#be4bdb"
+      },
+      {
+        "name": "700",
+        "hex": "#ae3ec9"
+      },
+      {
+        "name": "800",
+        "hex": "#9c36b5"
+      },
+      {
+        "name": "900",
+        "hex": "#862e9c"
+      }
+    ],
+    "roles": {
+      "background": "#f8f0fc",
+      "surface": "#f3d9fa",
+      "text": "#862e9c",
+      "accent": "#862e9c",
+      "accent_2": "#9c36b5"
+    }
+  },
+  {
+    "name": "Open Color Gray",
+    "slug": "open-color-gray",
+    "source": "https://github.com/yeun/open-color",
+    "license": "MIT",
+    "dark": false,
+    "note": "13 hues x 10 steps; designed for UI",
+    "colors": [
+      {
+        "name": "50",
+        "hex": "#f8f9fa"
+      },
+      {
+        "name": "100",
+        "hex": "#f1f3f5"
+      },
+      {
+        "name": "200",
+        "hex": "#e9ecef"
+      },
+      {
+        "name": "300",
+        "hex": "#dee2e6"
+      },
+      {
+        "name": "400",
+        "hex": "#ced4da"
+      },
+      {
+        "name": "500",
+        "hex": "#adb5bd"
+      },
+      {
+        "name": "600",
+        "hex": "#868e96"
+      },
+      {
+        "name": "700",
+        "hex": "#495057"
+      },
+      {
+        "name": "800",
+        "hex": "#343a40"
+      },
+      {
+        "name": "900",
+        "hex": "#212529"
+      }
+    ],
+    "roles": {
+      "background": "#f8f9fa",
+      "surface": "#f1f3f5",
+      "text": "#212529",
+      "accent": "#212529",
+      "accent_2": "#343a40"
+    }
+  },
+  {
+    "name": "Open Color Green",
+    "slug": "open-color-green",
+    "source": "https://github.com/yeun/open-color",
+    "license": "MIT",
+    "dark": false,
+    "note": "13 hues x 10 steps; designed for UI",
+    "colors": [
+      {
+        "name": "50",
+        "hex": "#ebfbee"
+      },
+      {
+        "name": "100",
+        "hex": "#d3f9d8"
+      },
+      {
+        "name": "200",
+        "hex": "#b2f2bb"
+      },
+      {
+        "name": "300",
+        "hex": "#8ce99a"
+      },
+      {
+        "name": "400",
+        "hex": "#69db7c"
+      },
+      {
+        "name": "500",
+        "hex": "#51cf66"
+      },
+      {
+        "name": "600",
+        "hex": "#40c057"
+      },
+      {
+        "name": "700",
+        "hex": "#37b24d"
+      },
+      {
+        "name": "800",
+        "hex": "#2f9e44"
+      },
+      {
+        "name": "900",
+        "hex": "#2b8a3e"
+      }
+    ],
+    "roles": {
+      "background": "#ebfbee",
+      "surface": "#d3f9d8",
+      "text": "#2b8a3e",
+      "accent": "#2f9e44",
+      "accent_2": "#37b24d"
+    }
+  },
+  {
+    "name": "Open Color Indigo",
+    "slug": "open-color-indigo",
+    "source": "https://github.com/yeun/open-color",
+    "license": "MIT",
+    "dark": false,
+    "note": "13 hues x 10 steps; designed for UI",
+    "colors": [
+      {
+        "name": "50",
+        "hex": "#edf2ff"
+      },
+      {
+        "name": "100",
+        "hex": "#dbe4ff"
+      },
+      {
+        "name": "200",
+        "hex": "#bac8ff"
+      },
+      {
+        "name": "300",
+        "hex": "#91a7ff"
+      },
+      {
+        "name": "400",
+        "hex": "#748ffc"
+      },
+      {
+        "name": "500",
+        "hex": "#5c7cfa"
+      },
+      {
+        "name": "600",
+        "hex": "#4c6ef5"
+      },
+      {
+        "name": "700",
+        "hex": "#4263eb"
+      },
+      {
+        "name": "800",
+        "hex": "#3b5bdb"
+      },
+      {
+        "name": "900",
+        "hex": "#364fc7"
+      }
+    ],
+    "roles": {
+      "background": "#edf2ff",
+      "surface": "#dbe4ff",
+      "text": "#364fc7",
+      "accent": "#3b5bdb",
+      "accent_2": "#364fc7"
+    }
+  },
+  {
+    "name": "Open Color Lime",
+    "slug": "open-color-lime",
+    "source": "https://github.com/yeun/open-color",
+    "license": "MIT",
+    "dark": false,
+    "note": "13 hues x 10 steps; designed for UI",
+    "colors": [
+      {
+        "name": "50",
+        "hex": "#f4fce3"
+      },
+      {
+        "name": "100",
+        "hex": "#e9fac8"
+      },
+      {
+        "name": "200",
+        "hex": "#d8f5a2"
+      },
+      {
+        "name": "300",
+        "hex": "#c0eb75"
+      },
+      {
+        "name": "400",
+        "hex": "#a9e34b"
+      },
+      {
+        "name": "500",
+        "hex": "#94d82d"
+      },
+      {
+        "name": "600",
+        "hex": "#82c91e"
+      },
+      {
+        "name": "700",
+        "hex": "#74b816"
+      },
+      {
+        "name": "800",
+        "hex": "#66a80f"
+      },
+      {
+        "name": "900",
+        "hex": "#5c940d"
+      }
+    ],
+    "roles": {
+      "background": "#f4fce3",
+      "surface": "#e9fac8",
+      "text": "#5c940d",
+      "accent": "#5c940d",
+      "accent_2": "#66a80f"
+    }
+  },
+  {
+    "name": "Open Color Neutrals",
+    "slug": "open-color-neutrals",
+    "source": "https://github.com/yeun/open-color",
+    "license": "MIT",
+    "dark": false,
+    "note": "UI neutrals",
+    "colors": [
+      {
+        "name": "white",
+        "hex": "#ffffff"
+      },
+      {
+        "name": "black",
+        "hex": "#000000"
+      },
+      {
+        "name": "gray-50",
+        "hex": "#f8f9fa"
+      },
+      {
+        "name": "gray-100",
+        "hex": "#f1f3f5"
+      },
+      {
+        "name": "gray-200",
+        "hex": "#e9ecef"
+      },
+      {
+        "name": "gray-300",
+        "hex": "#dee2e6"
+      },
+      {
+        "name": "gray-400",
+        "hex": "#ced4da"
+      },
+      {
+        "name": "gray-500",
+        "hex": "#adb5bd"
+      },
+      {
+        "name": "gray-600",
+        "hex": "#868e96"
+      },
+      {
+        "name": "gray-700",
+        "hex": "#495057"
+      },
+      {
+        "name": "gray-800",
+        "hex": "#343a40"
+      },
+      {
+        "name": "gray-900",
+        "hex": "#212529"
+      }
+    ],
+    "roles": {
+      "background": "#ffffff",
+      "surface": "#f8f9fa",
+      "text": "#000000",
+      "accent": "#212529",
+      "accent_2": "#343a40"
+    }
+  },
+  {
+    "name": "Open Color Orange",
+    "slug": "open-color-orange",
+    "source": "https://github.com/yeun/open-color",
+    "license": "MIT",
+    "dark": false,
+    "note": "13 hues x 10 steps; designed for UI",
+    "colors": [
+      {
+        "name": "50",
+        "hex": "#fff4e6"
+      },
+      {
+        "name": "100",
+        "hex": "#ffe8cc"
+      },
+      {
+        "name": "200",
+        "hex": "#ffd8a8"
+      },
+      {
+        "name": "300",
+        "hex": "#ffc078"
+      },
+      {
+        "name": "400",
+        "hex": "#ffa94d"
+      },
+      {
+        "name": "500",
+        "hex": "#ff922b"
+      },
+      {
+        "name": "600",
+        "hex": "#fd7e14"
+      },
+      {
+        "name": "700",
+        "hex": "#f76707"
+      },
+      {
+        "name": "800",
+        "hex": "#e8590c"
+      },
+      {
+        "name": "900",
+        "hex": "#d9480f"
+      }
+    ],
+    "roles": {
+      "background": "#fff4e6",
+      "surface": "#ffe8cc",
+      "text": "#d9480f",
+      "accent": "#f76707",
+      "accent_2": "#e8590c"
+    }
+  },
+  {
+    "name": "Open Color Pink",
+    "slug": "open-color-pink",
+    "source": "https://github.com/yeun/open-color",
+    "license": "MIT",
+    "dark": false,
+    "note": "13 hues x 10 steps; designed for UI",
+    "colors": [
+      {
+        "name": "50",
+        "hex": "#fff0f6"
+      },
+      {
+        "name": "100",
+        "hex": "#ffdeeb"
+      },
+      {
+        "name": "200",
+        "hex": "#fcc2d7"
+      },
+      {
+        "name": "300",
+        "hex": "#faa2c1"
+      },
+      {
+        "name": "400",
+        "hex": "#f783ac"
+      },
+      {
+        "name": "500",
+        "hex": "#f06595"
+      },
+      {
+        "name": "600",
+        "hex": "#e64980"
+      },
+      {
+        "name": "700",
+        "hex": "#d6336c"
+      },
+      {
+        "name": "800",
+        "hex": "#c2255c"
+      },
+      {
+        "name": "900",
+        "hex": "#a61e4d"
+      }
+    ],
+    "roles": {
+      "background": "#fff0f6",
+      "surface": "#ffdeeb",
+      "text": "#a61e4d",
+      "accent": "#a61e4d",
+      "accent_2": "#c2255c"
+    }
+  },
+  {
+    "name": "Open Color Red",
+    "slug": "open-color-red",
+    "source": "https://github.com/yeun/open-color",
+    "license": "MIT",
+    "dark": false,
+    "note": "13 hues x 10 steps; designed for UI",
+    "colors": [
+      {
+        "name": "50",
+        "hex": "#fff5f5"
+      },
+      {
+        "name": "100",
+        "hex": "#ffe3e3"
+      },
+      {
+        "name": "200",
+        "hex": "#ffc9c9"
+      },
+      {
+        "name": "300",
+        "hex": "#ffa8a8"
+      },
+      {
+        "name": "400",
+        "hex": "#ff8787"
+      },
+      {
+        "name": "500",
+        "hex": "#ff6b6b"
+      },
+      {
+        "name": "600",
+        "hex": "#fa5252"
+      },
+      {
+        "name": "700",
+        "hex": "#f03e3e"
+      },
+      {
+        "name": "800",
+        "hex": "#e03131"
+      },
+      {
+        "name": "900",
+        "hex": "#c92a2a"
+      }
+    ],
+    "roles": {
+      "background": "#fff5f5",
+      "surface": "#ffe3e3",
+      "text": "#c92a2a",
+      "accent": "#c92a2a",
+      "accent_2": "#e03131"
+    }
+  },
+  {
+    "name": "Open Color Teal",
+    "slug": "open-color-teal",
+    "source": "https://github.com/yeun/open-color",
+    "license": "MIT",
+    "dark": false,
+    "note": "13 hues x 10 steps; designed for UI",
+    "colors": [
+      {
+        "name": "50",
+        "hex": "#e6fcf5"
+      },
+      {
+        "name": "100",
+        "hex": "#c3fae8"
+      },
+      {
+        "name": "200",
+        "hex": "#96f2d7"
+      },
+      {
+        "name": "300",
+        "hex": "#63e6be"
+      },
+      {
+        "name": "400",
+        "hex": "#38d9a9"
+      },
+      {
+        "name": "500",
+        "hex": "#20c997"
+      },
+      {
+        "name": "600",
+        "hex": "#12b886"
+      },
+      {
+        "name": "700",
+        "hex": "#0ca678"
+      },
+      {
+        "name": "800",
+        "hex": "#099268"
+      },
+      {
+        "name": "900",
+        "hex": "#087f5b"
+      }
+    ],
+    "roles": {
+      "background": "#e6fcf5",
+      "surface": "#c3fae8",
+      "text": "#087f5b",
+      "accent": "#099268",
+      "accent_2": "#087f5b"
+    }
+  },
+  {
+    "name": "Open Color Violet",
+    "slug": "open-color-violet",
+    "source": "https://github.com/yeun/open-color",
+    "license": "MIT",
+    "dark": false,
+    "note": "13 hues x 10 steps; designed for UI",
+    "colors": [
+      {
+        "name": "50",
+        "hex": "#f3f0ff"
+      },
+      {
+        "name": "100",
+        "hex": "#e5dbff"
+      },
+      {
+        "name": "200",
+        "hex": "#d0bfff"
+      },
+      {
+        "name": "300",
+        "hex": "#b197fc"
+      },
+      {
+        "name": "400",
+        "hex": "#9775fa"
+      },
+      {
+        "name": "500",
+        "hex": "#845ef7"
+      },
+      {
+        "name": "600",
+        "hex": "#7950f2"
+      },
+      {
+        "name": "700",
+        "hex": "#7048e8"
+      },
+      {
+        "name": "800",
+        "hex": "#6741d9"
+      },
+      {
+        "name": "900",
+        "hex": "#5f3dc4"
+      }
+    ],
+    "roles": {
+      "background": "#f3f0ff",
+      "surface": "#e5dbff",
+      "text": "#5f3dc4",
+      "accent": "#6741d9",
+      "accent_2": "#7048e8"
+    }
+  },
+  {
+    "name": "Open Color Yellow",
+    "slug": "open-color-yellow",
+    "source": "https://github.com/yeun/open-color",
+    "license": "MIT",
+    "dark": false,
+    "note": "13 hues x 10 steps; designed for UI",
+    "colors": [
+      {
+        "name": "50",
+        "hex": "#fff9db"
+      },
+      {
+        "name": "100",
+        "hex": "#fff3bf"
+      },
+      {
+        "name": "200",
+        "hex": "#ffec99"
+      },
+      {
+        "name": "300",
+        "hex": "#ffe066"
+      },
+      {
+        "name": "400",
+        "hex": "#ffd43b"
+      },
+      {
+        "name": "500",
+        "hex": "#fcc419"
+      },
+      {
+        "name": "600",
+        "hex": "#fab005"
+      },
+      {
+        "name": "700",
+        "hex": "#f59f00"
+      },
+      {
+        "name": "800",
+        "hex": "#f08c00"
+      },
+      {
+        "name": "900",
+        "hex": "#e67700"
+      }
+    ],
+    "roles": {
+      "background": "#fff9db",
+      "surface": "#fff3bf",
+      "text": "#e67700",
+      "accent": "#f59f00",
+      "accent_2": "#f08c00"
+    }
+  },
+  {
+    "name": "Radix Amber (Dark)",
+    "slug": "radix-amber-dark",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": true,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "amber1",
+        "hex": "#16120c"
+      },
+      {
+        "name": "amber2",
+        "hex": "#1d180f"
+      },
+      {
+        "name": "amber3",
+        "hex": "#302008"
+      },
+      {
+        "name": "amber4",
+        "hex": "#3f2700"
+      },
+      {
+        "name": "amber5",
+        "hex": "#4d3000"
+      },
+      {
+        "name": "amber6",
+        "hex": "#5c3d05"
+      },
+      {
+        "name": "amber7",
+        "hex": "#714f19"
+      },
+      {
+        "name": "amber8",
+        "hex": "#8f6424"
+      },
+      {
+        "name": "amber9",
+        "hex": "#ffc53d"
+      },
+      {
+        "name": "amber10",
+        "hex": "#ffd60a"
+      },
+      {
+        "name": "amber11",
+        "hex": "#ffca16"
+      },
+      {
+        "name": "amber12",
+        "hex": "#ffe7b3"
+      }
+    ],
+    "roles": {
+      "background": "#16120c",
+      "surface": "#1d180f",
+      "text": "#ffe7b3",
+      "accent": "#3f2700",
+      "accent_2": "#4d3000"
+    }
+  },
+  {
+    "name": "Radix Amber (Light)",
+    "slug": "radix-amber-light",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": false,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "amber1",
+        "hex": "#fefdfb"
+      },
+      {
+        "name": "amber2",
+        "hex": "#fefbe9"
+      },
+      {
+        "name": "amber3",
+        "hex": "#fff7c2"
+      },
+      {
+        "name": "amber4",
+        "hex": "#ffee9c"
+      },
+      {
+        "name": "amber5",
+        "hex": "#fbe577"
+      },
+      {
+        "name": "amber6",
+        "hex": "#f3d673"
+      },
+      {
+        "name": "amber7",
+        "hex": "#e9c162"
+      },
+      {
+        "name": "amber8",
+        "hex": "#e2a336"
+      },
+      {
+        "name": "amber9",
+        "hex": "#ffc53d"
+      },
+      {
+        "name": "amber10",
+        "hex": "#ffba18"
+      },
+      {
+        "name": "amber11",
+        "hex": "#ab6400"
+      },
+      {
+        "name": "amber12",
+        "hex": "#4f3422"
+      }
+    ],
+    "roles": {
+      "background": "#fefdfb",
+      "surface": "#fefbe9",
+      "text": "#4f3422",
+      "accent": "#ab6400",
+      "accent_2": "#ffba18"
+    }
+  },
+  {
+    "name": "Radix Blue (Dark)",
+    "slug": "radix-blue-dark",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": true,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "blue1",
+        "hex": "#0d1520"
+      },
+      {
+        "name": "blue2",
+        "hex": "#111927"
+      },
+      {
+        "name": "blue3",
+        "hex": "#0d2847"
+      },
+      {
+        "name": "blue4",
+        "hex": "#003362"
+      },
+      {
+        "name": "blue5",
+        "hex": "#004074"
+      },
+      {
+        "name": "blue6",
+        "hex": "#104d87"
+      },
+      {
+        "name": "blue7",
+        "hex": "#205d9e"
+      },
+      {
+        "name": "blue8",
+        "hex": "#2870bd"
+      },
+      {
+        "name": "blue9",
+        "hex": "#0090ff"
+      },
+      {
+        "name": "blue10",
+        "hex": "#3b9eff"
+      },
+      {
+        "name": "blue11",
+        "hex": "#70b8ff"
+      },
+      {
+        "name": "blue12",
+        "hex": "#c2e6ff"
+      }
+    ],
+    "roles": {
+      "background": "#0d1520",
+      "surface": "#111927",
+      "text": "#c2e6ff",
+      "accent": "#003362",
+      "accent_2": "#004074"
+    }
+  },
+  {
+    "name": "Radix Blue (Light)",
+    "slug": "radix-blue-light",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": false,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "blue1",
+        "hex": "#fbfdff"
+      },
+      {
+        "name": "blue2",
+        "hex": "#f4faff"
+      },
+      {
+        "name": "blue3",
+        "hex": "#e6f4fe"
+      },
+      {
+        "name": "blue4",
+        "hex": "#d5efff"
+      },
+      {
+        "name": "blue5",
+        "hex": "#c2e5ff"
+      },
+      {
+        "name": "blue6",
+        "hex": "#acd8fc"
+      },
+      {
+        "name": "blue7",
+        "hex": "#8ec8f6"
+      },
+      {
+        "name": "blue8",
+        "hex": "#5eb1ef"
+      },
+      {
+        "name": "blue9",
+        "hex": "#0090ff"
+      },
+      {
+        "name": "blue10",
+        "hex": "#0588f0"
+      },
+      {
+        "name": "blue11",
+        "hex": "#0d74ce"
+      },
+      {
+        "name": "blue12",
+        "hex": "#113264"
+      }
+    ],
+    "roles": {
+      "background": "#fbfdff",
+      "surface": "#f4faff",
+      "text": "#113264",
+      "accent": "#0090ff",
+      "accent_2": "#0588f0"
+    }
+  },
+  {
+    "name": "Radix Bronze (Dark)",
+    "slug": "radix-bronze-dark",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": true,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "bronze1",
+        "hex": "#141110"
+      },
+      {
+        "name": "bronze2",
+        "hex": "#1c1917"
+      },
+      {
+        "name": "bronze3",
+        "hex": "#262220"
+      },
+      {
+        "name": "bronze4",
+        "hex": "#302a27"
+      },
+      {
+        "name": "bronze5",
+        "hex": "#3b3330"
+      },
+      {
+        "name": "bronze6",
+        "hex": "#493e3a"
+      },
+      {
+        "name": "bronze7",
+        "hex": "#5a4c47"
+      },
+      {
+        "name": "bronze8",
+        "hex": "#6f5f58"
+      },
+      {
+        "name": "bronze9",
+        "hex": "#a18072"
+      },
+      {
+        "name": "bronze10",
+        "hex": "#ae8c7e"
+      },
+      {
+        "name": "bronze11",
+        "hex": "#d4b3a5"
+      },
+      {
+        "name": "bronze12",
+        "hex": "#ede0d9"
+      }
+    ],
+    "roles": {
+      "background": "#141110",
+      "surface": "#1c1917",
+      "text": "#ede0d9",
+      "accent": "#a18072",
+      "accent_2": "#ae8c7e"
+    }
+  },
+  {
+    "name": "Radix Bronze (Light)",
+    "slug": "radix-bronze-light",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": false,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "bronze1",
+        "hex": "#fdfcfc"
+      },
+      {
+        "name": "bronze2",
+        "hex": "#fdf7f5"
+      },
+      {
+        "name": "bronze3",
+        "hex": "#f6edea"
+      },
+      {
+        "name": "bronze4",
+        "hex": "#efe4df"
+      },
+      {
+        "name": "bronze5",
+        "hex": "#e7d9d3"
+      },
+      {
+        "name": "bronze6",
+        "hex": "#dfcdc5"
+      },
+      {
+        "name": "bronze7",
+        "hex": "#d3bcb3"
+      },
+      {
+        "name": "bronze8",
+        "hex": "#c2a499"
+      },
+      {
+        "name": "bronze9",
+        "hex": "#a18072"
+      },
+      {
+        "name": "bronze10",
+        "hex": "#957468"
+      },
+      {
+        "name": "bronze11",
+        "hex": "#7d5e54"
+      },
+      {
+        "name": "bronze12",
+        "hex": "#43302b"
+      }
+    ],
+    "roles": {
+      "background": "#fdfcfc",
+      "surface": "#fdf7f5",
+      "text": "#43302b",
+      "accent": "#43302b",
+      "accent_2": "#7d5e54"
+    }
+  },
+  {
+    "name": "Radix Brown (Dark)",
+    "slug": "radix-brown-dark",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": true,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "brown1",
+        "hex": "#12110f"
+      },
+      {
+        "name": "brown2",
+        "hex": "#1c1816"
+      },
+      {
+        "name": "brown3",
+        "hex": "#28211d"
+      },
+      {
+        "name": "brown4",
+        "hex": "#322922"
+      },
+      {
+        "name": "brown5",
+        "hex": "#3e3128"
+      },
+      {
+        "name": "brown6",
+        "hex": "#4d3c2f"
+      },
+      {
+        "name": "brown7",
+        "hex": "#614a39"
+      },
+      {
+        "name": "brown8",
+        "hex": "#7c5f46"
+      },
+      {
+        "name": "brown9",
+        "hex": "#ad7f58"
+      },
+      {
+        "name": "brown10",
+        "hex": "#b88c67"
+      },
+      {
+        "name": "brown11",
+        "hex": "#dbb594"
+      },
+      {
+        "name": "brown12",
+        "hex": "#f2e1ca"
+      }
+    ],
+    "roles": {
+      "background": "#12110f",
+      "surface": "#1c1816",
+      "text": "#f2e1ca",
+      "accent": "#ad7f58",
+      "accent_2": "#b88c67"
+    }
+  },
+  {
+    "name": "Radix Brown (Light)",
+    "slug": "radix-brown-light",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": false,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "brown1",
+        "hex": "#fefdfc"
+      },
+      {
+        "name": "brown2",
+        "hex": "#fcf9f6"
+      },
+      {
+        "name": "brown3",
+        "hex": "#f6eee7"
+      },
+      {
+        "name": "brown4",
+        "hex": "#f0e4d9"
+      },
+      {
+        "name": "brown5",
+        "hex": "#ebdaca"
+      },
+      {
+        "name": "brown6",
+        "hex": "#e4cdb7"
+      },
+      {
+        "name": "brown7",
+        "hex": "#dcbc9f"
+      },
+      {
+        "name": "brown8",
+        "hex": "#cea37e"
+      },
+      {
+        "name": "brown9",
+        "hex": "#ad7f58"
+      },
+      {
+        "name": "brown10",
+        "hex": "#a07553"
+      },
+      {
+        "name": "brown11",
+        "hex": "#815e46"
+      },
+      {
+        "name": "brown12",
+        "hex": "#3e332e"
+      }
+    ],
+    "roles": {
+      "background": "#fefdfc",
+      "surface": "#fcf9f6",
+      "text": "#3e332e",
+      "accent": "#ad7f58",
+      "accent_2": "#a07553"
+    }
+  },
+  {
+    "name": "Radix Crimson (Dark)",
+    "slug": "radix-crimson-dark",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": true,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "crimson1",
+        "hex": "#191114"
+      },
+      {
+        "name": "crimson2",
+        "hex": "#201318"
+      },
+      {
+        "name": "crimson3",
+        "hex": "#381525"
+      },
+      {
+        "name": "crimson4",
+        "hex": "#4d122f"
+      },
+      {
+        "name": "crimson5",
+        "hex": "#5c1839"
+      },
+      {
+        "name": "crimson6",
+        "hex": "#6d2545"
+      },
+      {
+        "name": "crimson7",
+        "hex": "#873356"
+      },
+      {
+        "name": "crimson8",
+        "hex": "#b0436e"
+      },
+      {
+        "name": "crimson9",
+        "hex": "#e93d82"
+      },
+      {
+        "name": "crimson10",
+        "hex": "#ee518a"
+      },
+      {
+        "name": "crimson11",
+        "hex": "#ff92ad"
+      },
+      {
+        "name": "crimson12",
+        "hex": "#fdd3e8"
+      }
+    ],
+    "roles": {
+      "background": "#191114",
+      "surface": "#201318",
+      "text": "#fdd3e8",
+      "accent": "#4d122f",
+      "accent_2": "#5c1839"
+    }
+  },
+  {
+    "name": "Radix Crimson (Light)",
+    "slug": "radix-crimson-light",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": false,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "crimson1",
+        "hex": "#fffcfd"
+      },
+      {
+        "name": "crimson2",
+        "hex": "#fef7f9"
+      },
+      {
+        "name": "crimson3",
+        "hex": "#ffe9f0"
+      },
+      {
+        "name": "crimson4",
+        "hex": "#fedce7"
+      },
+      {
+        "name": "crimson5",
+        "hex": "#facedd"
+      },
+      {
+        "name": "crimson6",
+        "hex": "#f3bed1"
+      },
+      {
+        "name": "crimson7",
+        "hex": "#eaacc3"
+      },
+      {
+        "name": "crimson8",
+        "hex": "#e093b2"
+      },
+      {
+        "name": "crimson9",
+        "hex": "#e93d82"
+      },
+      {
+        "name": "crimson10",
+        "hex": "#df3478"
+      },
+      {
+        "name": "crimson11",
+        "hex": "#cb1d63"
+      },
+      {
+        "name": "crimson12",
+        "hex": "#621639"
+      }
+    ],
+    "roles": {
+      "background": "#fffcfd",
+      "surface": "#fef7f9",
+      "text": "#621639",
+      "accent": "#cb1d63",
+      "accent_2": "#621639"
+    }
+  },
+  {
+    "name": "Radix Cyan (Dark)",
+    "slug": "radix-cyan-dark",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": true,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "cyan1",
+        "hex": "#0b161a"
+      },
+      {
+        "name": "cyan2",
+        "hex": "#101b20"
+      },
+      {
+        "name": "cyan3",
+        "hex": "#082c36"
+      },
+      {
+        "name": "cyan4",
+        "hex": "#003848"
+      },
+      {
+        "name": "cyan5",
+        "hex": "#004558"
+      },
+      {
+        "name": "cyan6",
+        "hex": "#045468"
+      },
+      {
+        "name": "cyan7",
+        "hex": "#12677e"
+      },
+      {
+        "name": "cyan8",
+        "hex": "#11809c"
+      },
+      {
+        "name": "cyan9",
+        "hex": "#00a2c7"
+      },
+      {
+        "name": "cyan10",
+        "hex": "#23afd0"
+      },
+      {
+        "name": "cyan11",
+        "hex": "#4ccce6"
+      },
+      {
+        "name": "cyan12",
+        "hex": "#b6ecf7"
+      }
+    ],
+    "roles": {
+      "background": "#0b161a",
+      "surface": "#101b20",
+      "text": "#b6ecf7",
+      "accent": "#003848",
+      "accent_2": "#004558"
+    }
+  },
+  {
+    "name": "Radix Cyan (Light)",
+    "slug": "radix-cyan-light",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": false,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "cyan1",
+        "hex": "#fafdfe"
+      },
+      {
+        "name": "cyan2",
+        "hex": "#f2fafb"
+      },
+      {
+        "name": "cyan3",
+        "hex": "#def7f9"
+      },
+      {
+        "name": "cyan4",
+        "hex": "#caf1f6"
+      },
+      {
+        "name": "cyan5",
+        "hex": "#b5e9f0"
+      },
+      {
+        "name": "cyan6",
+        "hex": "#9ddde7"
+      },
+      {
+        "name": "cyan7",
+        "hex": "#7dcedc"
+      },
+      {
+        "name": "cyan8",
+        "hex": "#3db9cf"
+      },
+      {
+        "name": "cyan9",
+        "hex": "#00a2c7"
+      },
+      {
+        "name": "cyan10",
+        "hex": "#0797b9"
+      },
+      {
+        "name": "cyan11",
+        "hex": "#107d98"
+      },
+      {
+        "name": "cyan12",
+        "hex": "#0d3c48"
+      }
+    ],
+    "roles": {
+      "background": "#fafdfe",
+      "surface": "#f2fafb",
+      "text": "#0d3c48",
+      "accent": "#00a2c7",
+      "accent_2": "#0797b9"
+    }
+  },
+  {
+    "name": "Radix Gold (Dark)",
+    "slug": "radix-gold-dark",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": true,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "gold1",
+        "hex": "#121211"
+      },
+      {
+        "name": "gold2",
+        "hex": "#1b1a17"
+      },
+      {
+        "name": "gold3",
+        "hex": "#24231f"
+      },
+      {
+        "name": "gold4",
+        "hex": "#2d2b26"
+      },
+      {
+        "name": "gold5",
+        "hex": "#38352e"
+      },
+      {
+        "name": "gold6",
+        "hex": "#444039"
+      },
+      {
+        "name": "gold7",
+        "hex": "#544f46"
+      },
+      {
+        "name": "gold8",
+        "hex": "#696256"
+      },
+      {
+        "name": "gold9",
+        "hex": "#978365"
+      },
+      {
+        "name": "gold10",
+        "hex": "#a39073"
+      },
+      {
+        "name": "gold11",
+        "hex": "#cbb99f"
+      },
+      {
+        "name": "gold12",
+        "hex": "#e8e2d9"
+      }
+    ],
+    "roles": {
+      "background": "#121211",
+      "surface": "#1b1a17",
+      "text": "#e8e2d9",
+      "accent": "#978365",
+      "accent_2": "#a39073"
+    }
+  },
+  {
+    "name": "Radix Gold (Light)",
+    "slug": "radix-gold-light",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": false,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "gold1",
+        "hex": "#fdfdfc"
+      },
+      {
+        "name": "gold2",
+        "hex": "#faf9f2"
+      },
+      {
+        "name": "gold3",
+        "hex": "#f2f0e7"
+      },
+      {
+        "name": "gold4",
+        "hex": "#eae6db"
+      },
+      {
+        "name": "gold5",
+        "hex": "#e1dccf"
+      },
+      {
+        "name": "gold6",
+        "hex": "#d8d0bf"
+      },
+      {
+        "name": "gold7",
+        "hex": "#cbc0aa"
+      },
+      {
+        "name": "gold8",
+        "hex": "#b9a88d"
+      },
+      {
+        "name": "gold9",
+        "hex": "#978365"
+      },
+      {
+        "name": "gold10",
+        "hex": "#8c7a5e"
+      },
+      {
+        "name": "gold11",
+        "hex": "#71624b"
+      },
+      {
+        "name": "gold12",
+        "hex": "#3b352b"
+      }
+    ],
+    "roles": {
+      "background": "#fdfdfc",
+      "surface": "#faf9f2",
+      "text": "#3b352b",
+      "accent": "#71624b",
+      "accent_2": "#978365"
+    }
+  },
+  {
+    "name": "Radix Grass (Dark)",
+    "slug": "radix-grass-dark",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": true,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "grass1",
+        "hex": "#0e1511"
+      },
+      {
+        "name": "grass2",
+        "hex": "#141a15"
+      },
+      {
+        "name": "grass3",
+        "hex": "#1b2a1e"
+      },
+      {
+        "name": "grass4",
+        "hex": "#1d3a24"
+      },
+      {
+        "name": "grass5",
+        "hex": "#25482d"
+      },
+      {
+        "name": "grass6",
+        "hex": "#2d5736"
+      },
+      {
+        "name": "grass7",
+        "hex": "#366740"
+      },
+      {
+        "name": "grass8",
+        "hex": "#3e7949"
+      },
+      {
+        "name": "grass9",
+        "hex": "#46a758"
+      },
+      {
+        "name": "grass10",
+        "hex": "#53b365"
+      },
+      {
+        "name": "grass11",
+        "hex": "#71d083"
+      },
+      {
+        "name": "grass12",
+        "hex": "#c2f0c2"
+      }
+    ],
+    "roles": {
+      "background": "#0e1511",
+      "surface": "#141a15",
+      "text": "#c2f0c2",
+      "accent": "#46a758",
+      "accent_2": "#53b365"
+    }
+  },
+  {
+    "name": "Radix Grass (Light)",
+    "slug": "radix-grass-light",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": false,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "grass1",
+        "hex": "#fbfefb"
+      },
+      {
+        "name": "grass2",
+        "hex": "#f5fbf5"
+      },
+      {
+        "name": "grass3",
+        "hex": "#e9f6e9"
+      },
+      {
+        "name": "grass4",
+        "hex": "#daf1db"
+      },
+      {
+        "name": "grass5",
+        "hex": "#c9e8ca"
+      },
+      {
+        "name": "grass6",
+        "hex": "#b2ddb5"
+      },
+      {
+        "name": "grass7",
+        "hex": "#94ce9a"
+      },
+      {
+        "name": "grass8",
+        "hex": "#65ba74"
+      },
+      {
+        "name": "grass9",
+        "hex": "#46a758"
+      },
+      {
+        "name": "grass10",
+        "hex": "#3e9b4f"
+      },
+      {
+        "name": "grass11",
+        "hex": "#2a7e3b"
+      },
+      {
+        "name": "grass12",
+        "hex": "#203c25"
+      }
+    ],
+    "roles": {
+      "background": "#fbfefb",
+      "surface": "#f5fbf5",
+      "text": "#203c25",
+      "accent": "#2a7e3b",
+      "accent_2": "#3e9b4f"
+    }
+  },
+  {
+    "name": "Radix Gray (Dark)",
+    "slug": "radix-gray-dark",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": true,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "gray1",
+        "hex": "#111111"
+      },
+      {
+        "name": "gray2",
+        "hex": "#191919"
+      },
+      {
+        "name": "gray3",
+        "hex": "#222222"
+      },
+      {
+        "name": "gray4",
+        "hex": "#2a2a2a"
+      },
+      {
+        "name": "gray5",
+        "hex": "#313131"
+      },
+      {
+        "name": "gray6",
+        "hex": "#3a3a3a"
+      },
+      {
+        "name": "gray7",
+        "hex": "#484848"
+      },
+      {
+        "name": "gray8",
+        "hex": "#606060"
+      },
+      {
+        "name": "gray9",
+        "hex": "#6e6e6e"
+      },
+      {
+        "name": "gray10",
+        "hex": "#7b7b7b"
+      },
+      {
+        "name": "gray11",
+        "hex": "#b4b4b4"
+      },
+      {
+        "name": "gray12",
+        "hex": "#eeeeee"
+      }
+    ],
+    "roles": {
+      "background": "#111111",
+      "surface": "#191919",
+      "text": "#eeeeee",
+      "accent": "#222222",
+      "accent_2": "#2a2a2a"
+    }
+  },
+  {
+    "name": "Radix Gray (Light)",
+    "slug": "radix-gray-light",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": false,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "gray1",
+        "hex": "#fcfcfc"
+      },
+      {
+        "name": "gray2",
+        "hex": "#f9f9f9"
+      },
+      {
+        "name": "gray3",
+        "hex": "#f0f0f0"
+      },
+      {
+        "name": "gray4",
+        "hex": "#e8e8e8"
+      },
+      {
+        "name": "gray5",
+        "hex": "#e0e0e0"
+      },
+      {
+        "name": "gray6",
+        "hex": "#d9d9d9"
+      },
+      {
+        "name": "gray7",
+        "hex": "#cecece"
+      },
+      {
+        "name": "gray8",
+        "hex": "#bbbbbb"
+      },
+      {
+        "name": "gray9",
+        "hex": "#8d8d8d"
+      },
+      {
+        "name": "gray10",
+        "hex": "#838383"
+      },
+      {
+        "name": "gray11",
+        "hex": "#646464"
+      },
+      {
+        "name": "gray12",
+        "hex": "#202020"
+      }
+    ],
+    "roles": {
+      "background": "#fcfcfc",
+      "surface": "#f9f9f9",
+      "text": "#202020",
+      "accent": "#cecece",
+      "accent_2": "#bbbbbb"
+    }
+  },
+  {
+    "name": "Radix Green (Dark)",
+    "slug": "radix-green-dark",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": true,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "green1",
+        "hex": "#0e1512"
+      },
+      {
+        "name": "green2",
+        "hex": "#121b17"
+      },
+      {
+        "name": "green3",
+        "hex": "#132d21"
+      },
+      {
+        "name": "green4",
+        "hex": "#113b29"
+      },
+      {
+        "name": "green5",
+        "hex": "#174933"
+      },
+      {
+        "name": "green6",
+        "hex": "#20573e"
+      },
+      {
+        "name": "green7",
+        "hex": "#28684a"
+      },
+      {
+        "name": "green8",
+        "hex": "#2f7c57"
+      },
+      {
+        "name": "green9",
+        "hex": "#30a46c"
+      },
+      {
+        "name": "green10",
+        "hex": "#33b074"
+      },
+      {
+        "name": "green11",
+        "hex": "#3dd68c"
+      },
+      {
+        "name": "green12",
+        "hex": "#b1f1cb"
+      }
+    ],
+    "roles": {
+      "background": "#0e1512",
+      "surface": "#121b17",
+      "text": "#b1f1cb",
+      "accent": "#3dd68c",
+      "accent_2": "#113b29"
+    }
+  },
+  {
+    "name": "Radix Green (Light)",
+    "slug": "radix-green-light",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": false,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "green1",
+        "hex": "#fbfefc"
+      },
+      {
+        "name": "green2",
+        "hex": "#f4fbf6"
+      },
+      {
+        "name": "green3",
+        "hex": "#e6f6eb"
+      },
+      {
+        "name": "green4",
+        "hex": "#d6f1df"
+      },
+      {
+        "name": "green5",
+        "hex": "#c4e8d1"
+      },
+      {
+        "name": "green6",
+        "hex": "#adddc0"
+      },
+      {
+        "name": "green7",
+        "hex": "#8eceaa"
+      },
+      {
+        "name": "green8",
+        "hex": "#5bb98b"
+      },
+      {
+        "name": "green9",
+        "hex": "#30a46c"
+      },
+      {
+        "name": "green10",
+        "hex": "#2b9a66"
+      },
+      {
+        "name": "green11",
+        "hex": "#218358"
+      },
+      {
+        "name": "green12",
+        "hex": "#193b2d"
+      }
+    ],
+    "roles": {
+      "background": "#fbfefc",
+      "surface": "#f4fbf6",
+      "text": "#193b2d",
+      "accent": "#218358",
+      "accent_2": "#2b9a66"
+    }
+  },
+  {
+    "name": "Radix Indigo (Dark)",
+    "slug": "radix-indigo-dark",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": true,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "indigo1",
+        "hex": "#11131f"
+      },
+      {
+        "name": "indigo2",
+        "hex": "#141726"
+      },
+      {
+        "name": "indigo3",
+        "hex": "#182449"
+      },
+      {
+        "name": "indigo4",
+        "hex": "#1d2e62"
+      },
+      {
+        "name": "indigo5",
+        "hex": "#253974"
+      },
+      {
+        "name": "indigo6",
+        "hex": "#304384"
+      },
+      {
+        "name": "indigo7",
+        "hex": "#3a4f97"
+      },
+      {
+        "name": "indigo8",
+        "hex": "#435db1"
+      },
+      {
+        "name": "indigo9",
+        "hex": "#3e63dd"
+      },
+      {
+        "name": "indigo10",
+        "hex": "#5472e4"
+      },
+      {
+        "name": "indigo11",
+        "hex": "#9eb1ff"
+      },
+      {
+        "name": "indigo12",
+        "hex": "#d6e1ff"
+      }
+    ],
+    "roles": {
+      "background": "#11131f",
+      "surface": "#141726",
+      "text": "#d6e1ff",
+      "accent": "#3e63dd",
+      "accent_2": "#1d2e62"
+    }
+  },
+  {
+    "name": "Radix Indigo (Light)",
+    "slug": "radix-indigo-light",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": false,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "indigo1",
+        "hex": "#fdfdfe"
+      },
+      {
+        "name": "indigo2",
+        "hex": "#f7f9ff"
+      },
+      {
+        "name": "indigo3",
+        "hex": "#edf2fe"
+      },
+      {
+        "name": "indigo4",
+        "hex": "#e1e9ff"
+      },
+      {
+        "name": "indigo5",
+        "hex": "#d2deff"
+      },
+      {
+        "name": "indigo6",
+        "hex": "#c1d0ff"
+      },
+      {
+        "name": "indigo7",
+        "hex": "#abbdf9"
+      },
+      {
+        "name": "indigo8",
+        "hex": "#8da4ef"
+      },
+      {
+        "name": "indigo9",
+        "hex": "#3e63dd"
+      },
+      {
+        "name": "indigo10",
+        "hex": "#3358d4"
+      },
+      {
+        "name": "indigo11",
+        "hex": "#3a5bc7"
+      },
+      {
+        "name": "indigo12",
+        "hex": "#1f2d5c"
+      }
+    ],
+    "roles": {
+      "background": "#fdfdfe",
+      "surface": "#f7f9ff",
+      "text": "#1f2d5c",
+      "accent": "#3358d4",
+      "accent_2": "#3e63dd"
+    }
+  },
+  {
+    "name": "Radix Iris (Dark)",
+    "slug": "radix-iris-dark",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": true,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "iris1",
+        "hex": "#13131e"
+      },
+      {
+        "name": "iris2",
+        "hex": "#171625"
+      },
+      {
+        "name": "iris3",
+        "hex": "#202248"
+      },
+      {
+        "name": "iris4",
+        "hex": "#262a65"
+      },
+      {
+        "name": "iris5",
+        "hex": "#303374"
+      },
+      {
+        "name": "iris6",
+        "hex": "#3d3e82"
+      },
+      {
+        "name": "iris7",
+        "hex": "#4a4a95"
+      },
+      {
+        "name": "iris8",
+        "hex": "#5958b1"
+      },
+      {
+        "name": "iris9",
+        "hex": "#5b5bd6"
+      },
+      {
+        "name": "iris10",
+        "hex": "#6e6ade"
+      },
+      {
+        "name": "iris11",
+        "hex": "#b1a9ff"
+      },
+      {
+        "name": "iris12",
+        "hex": "#e0dffe"
+      }
+    ],
+    "roles": {
+      "background": "#13131e",
+      "surface": "#171625",
+      "text": "#e0dffe",
+      "accent": "#262a65",
+      "accent_2": "#303374"
+    }
+  },
+  {
+    "name": "Radix Iris (Light)",
+    "slug": "radix-iris-light",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": false,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "iris1",
+        "hex": "#fdfdff"
+      },
+      {
+        "name": "iris2",
+        "hex": "#f8f8ff"
+      },
+      {
+        "name": "iris3",
+        "hex": "#f0f1fe"
+      },
+      {
+        "name": "iris4",
+        "hex": "#e6e7ff"
+      },
+      {
+        "name": "iris5",
+        "hex": "#dadcff"
+      },
+      {
+        "name": "iris6",
+        "hex": "#cbcdff"
+      },
+      {
+        "name": "iris7",
+        "hex": "#b8baf8"
+      },
+      {
+        "name": "iris8",
+        "hex": "#9b9ef0"
+      },
+      {
+        "name": "iris9",
+        "hex": "#5b5bd6"
+      },
+      {
+        "name": "iris10",
+        "hex": "#5151cd"
+      },
+      {
+        "name": "iris11",
+        "hex": "#5753c6"
+      },
+      {
+        "name": "iris12",
+        "hex": "#272962"
+      }
+    ],
+    "roles": {
+      "background": "#fdfdff",
+      "surface": "#f8f8ff",
+      "text": "#272962",
+      "accent": "#5151cd",
+      "accent_2": "#272962"
+    }
+  },
+  {
+    "name": "Radix Jade (Dark)",
+    "slug": "radix-jade-dark",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": true,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "jade1",
+        "hex": "#0d1512"
+      },
+      {
+        "name": "jade2",
+        "hex": "#121c18"
+      },
+      {
+        "name": "jade3",
+        "hex": "#0f2e22"
+      },
+      {
+        "name": "jade4",
+        "hex": "#0b3b2c"
+      },
+      {
+        "name": "jade5",
+        "hex": "#114837"
+      },
+      {
+        "name": "jade6",
+        "hex": "#1b5745"
+      },
+      {
+        "name": "jade7",
+        "hex": "#246854"
+      },
+      {
+        "name": "jade8",
+        "hex": "#2a7e68"
+      },
+      {
+        "name": "jade9",
+        "hex": "#29a383"
+      },
+      {
+        "name": "jade10",
+        "hex": "#27b08b"
+      },
+      {
+        "name": "jade11",
+        "hex": "#1fd8a4"
+      },
+      {
+        "name": "jade12",
+        "hex": "#adf0d4"
+      }
+    ],
+    "roles": {
+      "background": "#0d1512",
+      "surface": "#121c18",
+      "text": "#adf0d4",
+      "accent": "#1fd8a4",
+      "accent_2": "#0b3b2c"
+    }
+  },
+  {
+    "name": "Radix Jade (Light)",
+    "slug": "radix-jade-light",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": false,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "jade1",
+        "hex": "#fbfefd"
+      },
+      {
+        "name": "jade2",
+        "hex": "#f4fbf7"
+      },
+      {
+        "name": "jade3",
+        "hex": "#e6f7ed"
+      },
+      {
+        "name": "jade4",
+        "hex": "#d6f1e3"
+      },
+      {
+        "name": "jade5",
+        "hex": "#c3e9d7"
+      },
+      {
+        "name": "jade6",
+        "hex": "#acdec8"
+      },
+      {
+        "name": "jade7",
+        "hex": "#8bceb6"
+      },
+      {
+        "name": "jade8",
+        "hex": "#56ba9f"
+      },
+      {
+        "name": "jade9",
+        "hex": "#29a383"
+      },
+      {
+        "name": "jade10",
+        "hex": "#26997b"
+      },
+      {
+        "name": "jade11",
+        "hex": "#208368"
+      },
+      {
+        "name": "jade12",
+        "hex": "#1d3b31"
+      }
+    ],
+    "roles": {
+      "background": "#fbfefd",
+      "surface": "#f4fbf7",
+      "text": "#1d3b31",
+      "accent": "#208368",
+      "accent_2": "#26997b"
+    }
+  },
+  {
+    "name": "Radix Lime (Dark)",
+    "slug": "radix-lime-dark",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": true,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "lime1",
+        "hex": "#11130c"
+      },
+      {
+        "name": "lime2",
+        "hex": "#151a10"
+      },
+      {
+        "name": "lime3",
+        "hex": "#1f2917"
+      },
+      {
+        "name": "lime4",
+        "hex": "#29371d"
+      },
+      {
+        "name": "lime5",
+        "hex": "#334423"
+      },
+      {
+        "name": "lime6",
+        "hex": "#3d522a"
+      },
+      {
+        "name": "lime7",
+        "hex": "#496231"
+      },
+      {
+        "name": "lime8",
+        "hex": "#577538"
+      },
+      {
+        "name": "lime9",
+        "hex": "#bdee63"
+      },
+      {
+        "name": "lime10",
+        "hex": "#d4ff70"
+      },
+      {
+        "name": "lime11",
+        "hex": "#bde56c"
+      },
+      {
+        "name": "lime12",
+        "hex": "#e3f7ba"
+      }
+    ],
+    "roles": {
+      "background": "#11130c",
+      "surface": "#151a10",
+      "text": "#e3f7ba",
+      "accent": "#577538",
+      "accent_2": "#496231"
+    }
+  },
+  {
+    "name": "Radix Lime (Light)",
+    "slug": "radix-lime-light",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": false,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "lime1",
+        "hex": "#fcfdfa"
+      },
+      {
+        "name": "lime2",
+        "hex": "#f8faf3"
+      },
+      {
+        "name": "lime3",
+        "hex": "#eef6d6"
+      },
+      {
+        "name": "lime4",
+        "hex": "#e2f0bd"
+      },
+      {
+        "name": "lime5",
+        "hex": "#d3e7a6"
+      },
+      {
+        "name": "lime6",
+        "hex": "#c2da91"
+      },
+      {
+        "name": "lime7",
+        "hex": "#abc978"
+      },
+      {
+        "name": "lime8",
+        "hex": "#8db654"
+      },
+      {
+        "name": "lime9",
+        "hex": "#bdee63"
+      },
+      {
+        "name": "lime10",
+        "hex": "#b0e64c"
+      },
+      {
+        "name": "lime11",
+        "hex": "#5c7c2f"
+      },
+      {
+        "name": "lime12",
+        "hex": "#37401c"
+      }
+    ],
+    "roles": {
+      "background": "#fcfdfa",
+      "surface": "#f8faf3",
+      "text": "#37401c",
+      "accent": "#b0e64c",
+      "accent_2": "#5c7c2f"
+    }
+  },
+  {
+    "name": "Radix Mauve (Dark)",
+    "slug": "radix-mauve-dark",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": true,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "mauve1",
+        "hex": "#121113"
+      },
+      {
+        "name": "mauve2",
+        "hex": "#1a191b"
+      },
+      {
+        "name": "mauve3",
+        "hex": "#232225"
+      },
+      {
+        "name": "mauve4",
+        "hex": "#2b292d"
+      },
+      {
+        "name": "mauve5",
+        "hex": "#323035"
+      },
+      {
+        "name": "mauve6",
+        "hex": "#3c393f"
+      },
+      {
+        "name": "mauve7",
+        "hex": "#49474e"
+      },
+      {
+        "name": "mauve8",
+        "hex": "#625f69"
+      },
+      {
+        "name": "mauve9",
+        "hex": "#6f6d78"
+      },
+      {
+        "name": "mauve10",
+        "hex": "#7c7a85"
+      },
+      {
+        "name": "mauve11",
+        "hex": "#b5b2bc"
+      },
+      {
+        "name": "mauve12",
+        "hex": "#eeeef0"
+      }
+    ],
+    "roles": {
+      "background": "#121113",
+      "surface": "#1a191b",
+      "text": "#eeeef0",
+      "accent": "#3c393f",
+      "accent_2": "#625f69"
+    }
+  },
+  {
+    "name": "Radix Mauve (Light)",
+    "slug": "radix-mauve-light",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": false,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "mauve1",
+        "hex": "#fdfcfd"
+      },
+      {
+        "name": "mauve2",
+        "hex": "#faf9fb"
+      },
+      {
+        "name": "mauve3",
+        "hex": "#f2eff3"
+      },
+      {
+        "name": "mauve4",
+        "hex": "#eae7ec"
+      },
+      {
+        "name": "mauve5",
+        "hex": "#e3dfe6"
+      },
+      {
+        "name": "mauve6",
+        "hex": "#dbd8e0"
+      },
+      {
+        "name": "mauve7",
+        "hex": "#d0cdd7"
+      },
+      {
+        "name": "mauve8",
+        "hex": "#bcbac7"
+      },
+      {
+        "name": "mauve9",
+        "hex": "#8e8c99"
+      },
+      {
+        "name": "mauve10",
+        "hex": "#84828e"
+      },
+      {
+        "name": "mauve11",
+        "hex": "#65636d"
+      },
+      {
+        "name": "mauve12",
+        "hex": "#211f26"
+      }
+    ],
+    "roles": {
+      "background": "#fdfcfd",
+      "surface": "#faf9fb",
+      "text": "#211f26",
+      "accent": "#211f26",
+      "accent_2": "#65636d"
+    }
+  },
+  {
+    "name": "Radix Mint (Dark)",
+    "slug": "radix-mint-dark",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": true,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "mint1",
+        "hex": "#0e1515"
+      },
+      {
+        "name": "mint2",
+        "hex": "#0f1b1b"
+      },
+      {
+        "name": "mint3",
+        "hex": "#092c2b"
+      },
+      {
+        "name": "mint4",
+        "hex": "#003a38"
+      },
+      {
+        "name": "mint5",
+        "hex": "#004744"
+      },
+      {
+        "name": "mint6",
+        "hex": "#105650"
+      },
+      {
+        "name": "mint7",
+        "hex": "#1e685f"
+      },
+      {
+        "name": "mint8",
+        "hex": "#277f70"
+      },
+      {
+        "name": "mint9",
+        "hex": "#86ead4"
+      },
+      {
+        "name": "mint10",
+        "hex": "#a8f5e5"
+      },
+      {
+        "name": "mint11",
+        "hex": "#58d5ba"
+      },
+      {
+        "name": "mint12",
+        "hex": "#c4f5e1"
+      }
+    ],
+    "roles": {
+      "background": "#0e1515",
+      "surface": "#0f1b1b",
+      "text": "#c4f5e1",
+      "accent": "#003a38",
+      "accent_2": "#004744"
+    }
+  },
+  {
+    "name": "Radix Mint (Light)",
+    "slug": "radix-mint-light",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": false,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "mint1",
+        "hex": "#f9fefd"
+      },
+      {
+        "name": "mint2",
+        "hex": "#f2fbf9"
+      },
+      {
+        "name": "mint3",
+        "hex": "#ddf9f2"
+      },
+      {
+        "name": "mint4",
+        "hex": "#c8f4e9"
+      },
+      {
+        "name": "mint5",
+        "hex": "#b3ecde"
+      },
+      {
+        "name": "mint6",
+        "hex": "#9ce0d0"
+      },
+      {
+        "name": "mint7",
+        "hex": "#7ecfbd"
+      },
+      {
+        "name": "mint8",
+        "hex": "#4cbba5"
+      },
+      {
+        "name": "mint9",
+        "hex": "#86ead4"
+      },
+      {
+        "name": "mint10",
+        "hex": "#7de0cb"
+      },
+      {
+        "name": "mint11",
+        "hex": "#027864"
+      },
+      {
+        "name": "mint12",
+        "hex": "#16433c"
+      }
+    ],
+    "roles": {
+      "background": "#f9fefd",
+      "surface": "#f2fbf9",
+      "text": "#16433c",
+      "accent": "#027864",
+      "accent_2": "#16433c"
+    }
+  },
+  {
+    "name": "Radix Olive (Dark)",
+    "slug": "radix-olive-dark",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": true,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "olive1",
+        "hex": "#111210"
+      },
+      {
+        "name": "olive2",
+        "hex": "#181917"
+      },
+      {
+        "name": "olive3",
+        "hex": "#212220"
+      },
+      {
+        "name": "olive4",
+        "hex": "#282a27"
+      },
+      {
+        "name": "olive5",
+        "hex": "#2f312e"
+      },
+      {
+        "name": "olive6",
+        "hex": "#383a36"
+      },
+      {
+        "name": "olive7",
+        "hex": "#454843"
+      },
+      {
+        "name": "olive8",
+        "hex": "#5c625b"
+      },
+      {
+        "name": "olive9",
+        "hex": "#687066"
+      },
+      {
+        "name": "olive10",
+        "hex": "#767d74"
+      },
+      {
+        "name": "olive11",
+        "hex": "#afb5ad"
+      },
+      {
+        "name": "olive12",
+        "hex": "#eceeec"
+      }
+    ],
+    "roles": {
+      "background": "#111210",
+      "surface": "#181917",
+      "text": "#eceeec",
+      "accent": "#687066",
+      "accent_2": "#767d74"
+    }
+  },
+  {
+    "name": "Radix Olive (Light)",
+    "slug": "radix-olive-light",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": false,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "olive1",
+        "hex": "#fcfdfc"
+      },
+      {
+        "name": "olive2",
+        "hex": "#f8faf8"
+      },
+      {
+        "name": "olive3",
+        "hex": "#eff1ef"
+      },
+      {
+        "name": "olive4",
+        "hex": "#e7e9e7"
+      },
+      {
+        "name": "olive5",
+        "hex": "#dfe2df"
+      },
+      {
+        "name": "olive6",
+        "hex": "#d7dad7"
+      },
+      {
+        "name": "olive7",
+        "hex": "#cccfcc"
+      },
+      {
+        "name": "olive8",
+        "hex": "#b9bcb8"
+      },
+      {
+        "name": "olive9",
+        "hex": "#898e87"
+      },
+      {
+        "name": "olive10",
+        "hex": "#7f847d"
+      },
+      {
+        "name": "olive11",
+        "hex": "#60655f"
+      },
+      {
+        "name": "olive12",
+        "hex": "#1d211c"
+      }
+    ],
+    "roles": {
+      "background": "#fcfdfc",
+      "surface": "#f8faf8",
+      "text": "#1d211c",
+      "accent": "#1d211c",
+      "accent_2": "#60655f"
+    }
+  },
+  {
+    "name": "Radix Orange (Dark)",
+    "slug": "radix-orange-dark",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": true,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "orange1",
+        "hex": "#17120e"
+      },
+      {
+        "name": "orange2",
+        "hex": "#1e160f"
+      },
+      {
+        "name": "orange3",
+        "hex": "#331e0b"
+      },
+      {
+        "name": "orange4",
+        "hex": "#462100"
+      },
+      {
+        "name": "orange5",
+        "hex": "#562800"
+      },
+      {
+        "name": "orange6",
+        "hex": "#66350c"
+      },
+      {
+        "name": "orange7",
+        "hex": "#7e451d"
+      },
+      {
+        "name": "orange8",
+        "hex": "#a35829"
+      },
+      {
+        "name": "orange9",
+        "hex": "#f76b15"
+      },
+      {
+        "name": "orange10",
+        "hex": "#ff801f"
+      },
+      {
+        "name": "orange11",
+        "hex": "#ffa057"
+      },
+      {
+        "name": "orange12",
+        "hex": "#ffe0c2"
+      }
+    ],
+    "roles": {
+      "background": "#17120e",
+      "surface": "#1e160f",
+      "text": "#ffe0c2",
+      "accent": "#462100",
+      "accent_2": "#562800"
+    }
+  },
+  {
+    "name": "Radix Orange (Light)",
+    "slug": "radix-orange-light",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": false,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "orange1",
+        "hex": "#fefcfb"
+      },
+      {
+        "name": "orange2",
+        "hex": "#fff7ed"
+      },
+      {
+        "name": "orange3",
+        "hex": "#ffefd6"
+      },
+      {
+        "name": "orange4",
+        "hex": "#ffdfb5"
+      },
+      {
+        "name": "orange5",
+        "hex": "#ffd19a"
+      },
+      {
+        "name": "orange6",
+        "hex": "#ffc182"
+      },
+      {
+        "name": "orange7",
+        "hex": "#f5ae73"
+      },
+      {
+        "name": "orange8",
+        "hex": "#ec9455"
+      },
+      {
+        "name": "orange9",
+        "hex": "#f76b15"
+      },
+      {
+        "name": "orange10",
+        "hex": "#ef5f00"
+      },
+      {
+        "name": "orange11",
+        "hex": "#cc4e00"
+      },
+      {
+        "name": "orange12",
+        "hex": "#582d1d"
+      }
+    ],
+    "roles": {
+      "background": "#fefcfb",
+      "surface": "#fff7ed",
+      "text": "#582d1d",
+      "accent": "#ef5f00",
+      "accent_2": "#cc4e00"
+    }
+  },
+  {
+    "name": "Radix Pink (Dark)",
+    "slug": "radix-pink-dark",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": true,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "pink1",
+        "hex": "#191117"
+      },
+      {
+        "name": "pink2",
+        "hex": "#21121d"
+      },
+      {
+        "name": "pink3",
+        "hex": "#37172f"
+      },
+      {
+        "name": "pink4",
+        "hex": "#4b143d"
+      },
+      {
+        "name": "pink5",
+        "hex": "#591c47"
+      },
+      {
+        "name": "pink6",
+        "hex": "#692955"
+      },
+      {
+        "name": "pink7",
+        "hex": "#833869"
+      },
+      {
+        "name": "pink8",
+        "hex": "#a84885"
+      },
+      {
+        "name": "pink9",
+        "hex": "#d6409f"
+      },
+      {
+        "name": "pink10",
+        "hex": "#de51a8"
+      },
+      {
+        "name": "pink11",
+        "hex": "#ff8dcc"
+      },
+      {
+        "name": "pink12",
+        "hex": "#fdd1ea"
+      }
+    ],
+    "roles": {
+      "background": "#191117",
+      "surface": "#21121d",
+      "text": "#fdd1ea",
+      "accent": "#4b143d",
+      "accent_2": "#d6409f"
+    }
+  },
+  {
+    "name": "Radix Pink (Light)",
+    "slug": "radix-pink-light",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": false,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "pink1",
+        "hex": "#fffcfe"
+      },
+      {
+        "name": "pink2",
+        "hex": "#fef7fb"
+      },
+      {
+        "name": "pink3",
+        "hex": "#fee9f5"
+      },
+      {
+        "name": "pink4",
+        "hex": "#fbdcef"
+      },
+      {
+        "name": "pink5",
+        "hex": "#f6cee7"
+      },
+      {
+        "name": "pink6",
+        "hex": "#efbfdd"
+      },
+      {
+        "name": "pink7",
+        "hex": "#e7acd0"
+      },
+      {
+        "name": "pink8",
+        "hex": "#dd93c2"
+      },
+      {
+        "name": "pink9",
+        "hex": "#d6409f"
+      },
+      {
+        "name": "pink10",
+        "hex": "#cf3897"
+      },
+      {
+        "name": "pink11",
+        "hex": "#c2298a"
+      },
+      {
+        "name": "pink12",
+        "hex": "#651249"
+      }
+    ],
+    "roles": {
+      "background": "#fffcfe",
+      "surface": "#fef7fb",
+      "text": "#651249",
+      "accent": "#651249",
+      "accent_2": "#c2298a"
+    }
+  },
+  {
+    "name": "Radix Plum (Dark)",
+    "slug": "radix-plum-dark",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": true,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "plum1",
+        "hex": "#181118"
+      },
+      {
+        "name": "plum2",
+        "hex": "#201320"
+      },
+      {
+        "name": "plum3",
+        "hex": "#351a35"
+      },
+      {
+        "name": "plum4",
+        "hex": "#451d47"
+      },
+      {
+        "name": "plum5",
+        "hex": "#512454"
+      },
+      {
+        "name": "plum6",
+        "hex": "#5e3061"
+      },
+      {
+        "name": "plum7",
+        "hex": "#734079"
+      },
+      {
+        "name": "plum8",
+        "hex": "#92549c"
+      },
+      {
+        "name": "plum9",
+        "hex": "#ab4aba"
+      },
+      {
+        "name": "plum10",
+        "hex": "#b658c4"
+      },
+      {
+        "name": "plum11",
+        "hex": "#e796f3"
+      },
+      {
+        "name": "plum12",
+        "hex": "#f4d4f4"
+      }
+    ],
+    "roles": {
+      "background": "#181118",
+      "surface": "#201320",
+      "text": "#f4d4f4",
+      "accent": "#ab4aba",
+      "accent_2": "#451d47"
+    }
+  },
+  {
+    "name": "Radix Plum (Light)",
+    "slug": "radix-plum-light",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": false,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "plum1",
+        "hex": "#fefcff"
+      },
+      {
+        "name": "plum2",
+        "hex": "#fdf7fd"
+      },
+      {
+        "name": "plum3",
+        "hex": "#fbebfb"
+      },
+      {
+        "name": "plum4",
+        "hex": "#f7def8"
+      },
+      {
+        "name": "plum5",
+        "hex": "#f2d1f3"
+      },
+      {
+        "name": "plum6",
+        "hex": "#e9c2ec"
+      },
+      {
+        "name": "plum7",
+        "hex": "#deade3"
+      },
+      {
+        "name": "plum8",
+        "hex": "#cf91d8"
+      },
+      {
+        "name": "plum9",
+        "hex": "#ab4aba"
+      },
+      {
+        "name": "plum10",
+        "hex": "#a144af"
+      },
+      {
+        "name": "plum11",
+        "hex": "#953ea3"
+      },
+      {
+        "name": "plum12",
+        "hex": "#53195d"
+      }
+    ],
+    "roles": {
+      "background": "#fefcff",
+      "surface": "#fdf7fd",
+      "text": "#53195d",
+      "accent": "#53195d",
+      "accent_2": "#953ea3"
+    }
+  },
+  {
+    "name": "Radix Purple (Dark)",
+    "slug": "radix-purple-dark",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": true,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "purple1",
+        "hex": "#18111b"
+      },
+      {
+        "name": "purple2",
+        "hex": "#1e1523"
+      },
+      {
+        "name": "purple3",
+        "hex": "#301c3b"
+      },
+      {
+        "name": "purple4",
+        "hex": "#3d224e"
+      },
+      {
+        "name": "purple5",
+        "hex": "#48295c"
+      },
+      {
+        "name": "purple6",
+        "hex": "#54346b"
+      },
+      {
+        "name": "purple7",
+        "hex": "#664282"
+      },
+      {
+        "name": "purple8",
+        "hex": "#8457aa"
+      },
+      {
+        "name": "purple9",
+        "hex": "#8e4ec6"
+      },
+      {
+        "name": "purple10",
+        "hex": "#9a5cd0"
+      },
+      {
+        "name": "purple11",
+        "hex": "#d19dff"
+      },
+      {
+        "name": "purple12",
+        "hex": "#ecd9fa"
+      }
+    ],
+    "roles": {
+      "background": "#18111b",
+      "surface": "#1e1523",
+      "text": "#ecd9fa",
+      "accent": "#8e4ec6",
+      "accent_2": "#3d224e"
+    }
+  },
+  {
+    "name": "Radix Purple (Light)",
+    "slug": "radix-purple-light",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": false,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "purple1",
+        "hex": "#fefcfe"
+      },
+      {
+        "name": "purple2",
+        "hex": "#fbf7fe"
+      },
+      {
+        "name": "purple3",
+        "hex": "#f7edfe"
+      },
+      {
+        "name": "purple4",
+        "hex": "#f2e2fc"
+      },
+      {
+        "name": "purple5",
+        "hex": "#ead5f9"
+      },
+      {
+        "name": "purple6",
+        "hex": "#e0c4f4"
+      },
+      {
+        "name": "purple7",
+        "hex": "#d1afec"
+      },
+      {
+        "name": "purple8",
+        "hex": "#be93e4"
+      },
+      {
+        "name": "purple9",
+        "hex": "#8e4ec6"
+      },
+      {
+        "name": "purple10",
+        "hex": "#8347b9"
+      },
+      {
+        "name": "purple11",
+        "hex": "#8145b5"
+      },
+      {
+        "name": "purple12",
+        "hex": "#402060"
+      }
+    ],
+    "roles": {
+      "background": "#fefcfe",
+      "surface": "#fbf7fe",
+      "text": "#402060",
+      "accent": "#402060",
+      "accent_2": "#8145b5"
+    }
+  },
+  {
+    "name": "Radix Red (Dark)",
+    "slug": "radix-red-dark",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": true,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "red1",
+        "hex": "#191111"
+      },
+      {
+        "name": "red2",
+        "hex": "#201314"
+      },
+      {
+        "name": "red3",
+        "hex": "#3b1219"
+      },
+      {
+        "name": "red4",
+        "hex": "#500f1c"
+      },
+      {
+        "name": "red5",
+        "hex": "#611623"
+      },
+      {
+        "name": "red6",
+        "hex": "#72232d"
+      },
+      {
+        "name": "red7",
+        "hex": "#8c333a"
+      },
+      {
+        "name": "red8",
+        "hex": "#b54548"
+      },
+      {
+        "name": "red9",
+        "hex": "#e5484d"
+      },
+      {
+        "name": "red10",
+        "hex": "#ec5d5e"
+      },
+      {
+        "name": "red11",
+        "hex": "#ff9592"
+      },
+      {
+        "name": "red12",
+        "hex": "#ffd1d9"
+      }
+    ],
+    "roles": {
+      "background": "#191111",
+      "surface": "#201314",
+      "text": "#ffd1d9",
+      "accent": "#611623",
+      "accent_2": "#72232d"
+    }
+  },
+  {
+    "name": "Radix Red (Light)",
+    "slug": "radix-red-light",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": false,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "red1",
+        "hex": "#fffcfc"
+      },
+      {
+        "name": "red2",
+        "hex": "#fff7f7"
+      },
+      {
+        "name": "red3",
+        "hex": "#feebec"
+      },
+      {
+        "name": "red4",
+        "hex": "#ffdbdc"
+      },
+      {
+        "name": "red5",
+        "hex": "#ffcdce"
+      },
+      {
+        "name": "red6",
+        "hex": "#fdbdbe"
+      },
+      {
+        "name": "red7",
+        "hex": "#f4a9aa"
+      },
+      {
+        "name": "red8",
+        "hex": "#eb8e90"
+      },
+      {
+        "name": "red9",
+        "hex": "#e5484d"
+      },
+      {
+        "name": "red10",
+        "hex": "#dc3e42"
+      },
+      {
+        "name": "red11",
+        "hex": "#ce2c31"
+      },
+      {
+        "name": "red12",
+        "hex": "#641723"
+      }
+    ],
+    "roles": {
+      "background": "#fffcfc",
+      "surface": "#fff7f7",
+      "text": "#641723",
+      "accent": "#ce2c31",
+      "accent_2": "#641723"
+    }
+  },
+  {
+    "name": "Radix Ruby (Dark)",
+    "slug": "radix-ruby-dark",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": true,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "ruby1",
+        "hex": "#191113"
+      },
+      {
+        "name": "ruby2",
+        "hex": "#1e1517"
+      },
+      {
+        "name": "ruby3",
+        "hex": "#3a141e"
+      },
+      {
+        "name": "ruby4",
+        "hex": "#4e1325"
+      },
+      {
+        "name": "ruby5",
+        "hex": "#5e1a2e"
+      },
+      {
+        "name": "ruby6",
+        "hex": "#6f2539"
+      },
+      {
+        "name": "ruby7",
+        "hex": "#883447"
+      },
+      {
+        "name": "ruby8",
+        "hex": "#b3445a"
+      },
+      {
+        "name": "ruby9",
+        "hex": "#e54666"
+      },
+      {
+        "name": "ruby10",
+        "hex": "#ec5a72"
+      },
+      {
+        "name": "ruby11",
+        "hex": "#ff949d"
+      },
+      {
+        "name": "ruby12",
+        "hex": "#fed2e1"
+      }
+    ],
+    "roles": {
+      "background": "#191113",
+      "surface": "#1e1517",
+      "text": "#fed2e1",
+      "accent": "#4e1325",
+      "accent_2": "#5e1a2e"
+    }
+  },
+  {
+    "name": "Radix Ruby (Light)",
+    "slug": "radix-ruby-light",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": false,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "ruby1",
+        "hex": "#fffcfd"
+      },
+      {
+        "name": "ruby2",
+        "hex": "#fff7f8"
+      },
+      {
+        "name": "ruby3",
+        "hex": "#feeaed"
+      },
+      {
+        "name": "ruby4",
+        "hex": "#ffdce1"
+      },
+      {
+        "name": "ruby5",
+        "hex": "#ffced6"
+      },
+      {
+        "name": "ruby6",
+        "hex": "#f8bfc8"
+      },
+      {
+        "name": "ruby7",
+        "hex": "#efacb8"
+      },
+      {
+        "name": "ruby8",
+        "hex": "#e592a3"
+      },
+      {
+        "name": "ruby9",
+        "hex": "#e54666"
+      },
+      {
+        "name": "ruby10",
+        "hex": "#dc3b5d"
+      },
+      {
+        "name": "ruby11",
+        "hex": "#ca244d"
+      },
+      {
+        "name": "ruby12",
+        "hex": "#64172b"
+      }
+    ],
+    "roles": {
+      "background": "#fffcfd",
+      "surface": "#fff7f8",
+      "text": "#64172b",
+      "accent": "#ca244d",
+      "accent_2": "#64172b"
+    }
+  },
+  {
+    "name": "Radix Sage (Dark)",
+    "slug": "radix-sage-dark",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": true,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "sage1",
+        "hex": "#101211"
+      },
+      {
+        "name": "sage2",
+        "hex": "#171918"
+      },
+      {
+        "name": "sage3",
+        "hex": "#202221"
+      },
+      {
+        "name": "sage4",
+        "hex": "#272a29"
+      },
+      {
+        "name": "sage5",
+        "hex": "#2e3130"
+      },
+      {
+        "name": "sage6",
+        "hex": "#373b39"
+      },
+      {
+        "name": "sage7",
+        "hex": "#444947"
+      },
+      {
+        "name": "sage8",
+        "hex": "#5b625f"
+      },
+      {
+        "name": "sage9",
+        "hex": "#63706b"
+      },
+      {
+        "name": "sage10",
+        "hex": "#717d79"
+      },
+      {
+        "name": "sage11",
+        "hex": "#adb5b2"
+      },
+      {
+        "name": "sage12",
+        "hex": "#eceeed"
+      }
+    ],
+    "roles": {
+      "background": "#101211",
+      "surface": "#171918",
+      "text": "#eceeed",
+      "accent": "#63706b",
+      "accent_2": "#717d79"
+    }
+  },
+  {
+    "name": "Radix Sage (Light)",
+    "slug": "radix-sage-light",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": false,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "sage1",
+        "hex": "#fbfdfc"
+      },
+      {
+        "name": "sage2",
+        "hex": "#f7f9f8"
+      },
+      {
+        "name": "sage3",
+        "hex": "#eef1f0"
+      },
+      {
+        "name": "sage4",
+        "hex": "#e6e9e8"
+      },
+      {
+        "name": "sage5",
+        "hex": "#dfe2e0"
+      },
+      {
+        "name": "sage6",
+        "hex": "#d7dad9"
+      },
+      {
+        "name": "sage7",
+        "hex": "#cbcfcd"
+      },
+      {
+        "name": "sage8",
+        "hex": "#b8bcba"
+      },
+      {
+        "name": "sage9",
+        "hex": "#868e8b"
+      },
+      {
+        "name": "sage10",
+        "hex": "#7c8481"
+      },
+      {
+        "name": "sage11",
+        "hex": "#5f6563"
+      },
+      {
+        "name": "sage12",
+        "hex": "#1a211e"
+      }
+    ],
+    "roles": {
+      "background": "#fbfdfc",
+      "surface": "#f7f9f8",
+      "text": "#1a211e",
+      "accent": "#1a211e",
+      "accent_2": "#7c8481"
+    }
+  },
+  {
+    "name": "Radix Sand (Dark)",
+    "slug": "radix-sand-dark",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": true,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "sand1",
+        "hex": "#111110"
+      },
+      {
+        "name": "sand2",
+        "hex": "#191918"
+      },
+      {
+        "name": "sand3",
+        "hex": "#222221"
+      },
+      {
+        "name": "sand4",
+        "hex": "#2a2a28"
+      },
+      {
+        "name": "sand5",
+        "hex": "#31312e"
+      },
+      {
+        "name": "sand6",
+        "hex": "#3b3a37"
+      },
+      {
+        "name": "sand7",
+        "hex": "#494844"
+      },
+      {
+        "name": "sand8",
+        "hex": "#62605b"
+      },
+      {
+        "name": "sand9",
+        "hex": "#6f6d66"
+      },
+      {
+        "name": "sand10",
+        "hex": "#7c7b74"
+      },
+      {
+        "name": "sand11",
+        "hex": "#b5b3ad"
+      },
+      {
+        "name": "sand12",
+        "hex": "#eeeeec"
+      }
+    ],
+    "roles": {
+      "background": "#111110",
+      "surface": "#191918",
+      "text": "#eeeeec",
+      "accent": "#6f6d66",
+      "accent_2": "#62605b"
+    }
+  },
+  {
+    "name": "Radix Sand (Light)",
+    "slug": "radix-sand-light",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": false,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "sand1",
+        "hex": "#fdfdfc"
+      },
+      {
+        "name": "sand2",
+        "hex": "#f9f9f8"
+      },
+      {
+        "name": "sand3",
+        "hex": "#f1f0ef"
+      },
+      {
+        "name": "sand4",
+        "hex": "#e9e8e6"
+      },
+      {
+        "name": "sand5",
+        "hex": "#e2e1de"
+      },
+      {
+        "name": "sand6",
+        "hex": "#dad9d6"
+      },
+      {
+        "name": "sand7",
+        "hex": "#cfceca"
+      },
+      {
+        "name": "sand8",
+        "hex": "#bcbbb5"
+      },
+      {
+        "name": "sand9",
+        "hex": "#8d8d86"
+      },
+      {
+        "name": "sand10",
+        "hex": "#82827c"
+      },
+      {
+        "name": "sand11",
+        "hex": "#63635e"
+      },
+      {
+        "name": "sand12",
+        "hex": "#21201c"
+      }
+    ],
+    "roles": {
+      "background": "#fdfdfc",
+      "surface": "#f9f9f8",
+      "text": "#21201c",
+      "accent": "#21201c",
+      "accent_2": "#63635e"
+    }
+  },
+  {
+    "name": "Radix Sky (Dark)",
+    "slug": "radix-sky-dark",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": true,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "sky1",
+        "hex": "#0d141f"
+      },
+      {
+        "name": "sky2",
+        "hex": "#111a27"
+      },
+      {
+        "name": "sky3",
+        "hex": "#112840"
+      },
+      {
+        "name": "sky4",
+        "hex": "#113555"
+      },
+      {
+        "name": "sky5",
+        "hex": "#154467"
+      },
+      {
+        "name": "sky6",
+        "hex": "#1b537b"
+      },
+      {
+        "name": "sky7",
+        "hex": "#1f6692"
+      },
+      {
+        "name": "sky8",
+        "hex": "#197cae"
+      },
+      {
+        "name": "sky9",
+        "hex": "#7ce2fe"
+      },
+      {
+        "name": "sky10",
+        "hex": "#a8eeff"
+      },
+      {
+        "name": "sky11",
+        "hex": "#75c7f0"
+      },
+      {
+        "name": "sky12",
+        "hex": "#c2f3ff"
+      }
+    ],
+    "roles": {
+      "background": "#0d141f",
+      "surface": "#111a27",
+      "text": "#c2f3ff",
+      "accent": "#197cae",
+      "accent_2": "#113555"
+    }
+  },
+  {
+    "name": "Radix Sky (Light)",
+    "slug": "radix-sky-light",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": false,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "sky1",
+        "hex": "#f9feff"
+      },
+      {
+        "name": "sky2",
+        "hex": "#f1fafd"
+      },
+      {
+        "name": "sky3",
+        "hex": "#e1f6fd"
+      },
+      {
+        "name": "sky4",
+        "hex": "#d1f0fa"
+      },
+      {
+        "name": "sky5",
+        "hex": "#bee7f5"
+      },
+      {
+        "name": "sky6",
+        "hex": "#a9daed"
+      },
+      {
+        "name": "sky7",
+        "hex": "#8dcae3"
+      },
+      {
+        "name": "sky8",
+        "hex": "#60b3d7"
+      },
+      {
+        "name": "sky9",
+        "hex": "#7ce2fe"
+      },
+      {
+        "name": "sky10",
+        "hex": "#74daf8"
+      },
+      {
+        "name": "sky11",
+        "hex": "#00749e"
+      },
+      {
+        "name": "sky12",
+        "hex": "#1d3e56"
+      }
+    ],
+    "roles": {
+      "background": "#f9feff",
+      "surface": "#f1fafd",
+      "text": "#1d3e56",
+      "accent": "#00749e",
+      "accent_2": "#1d3e56"
+    }
+  },
+  {
+    "name": "Radix Slate (Dark)",
+    "slug": "radix-slate-dark",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": true,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "slate1",
+        "hex": "#111113"
+      },
+      {
+        "name": "slate2",
+        "hex": "#18191b"
+      },
+      {
+        "name": "slate3",
+        "hex": "#212225"
+      },
+      {
+        "name": "slate4",
+        "hex": "#272a2d"
+      },
+      {
+        "name": "slate5",
+        "hex": "#2e3135"
+      },
+      {
+        "name": "slate6",
+        "hex": "#363a3f"
+      },
+      {
+        "name": "slate7",
+        "hex": "#43484e"
+      },
+      {
+        "name": "slate8",
+        "hex": "#5a6169"
+      },
+      {
+        "name": "slate9",
+        "hex": "#696e77"
+      },
+      {
+        "name": "slate10",
+        "hex": "#777b84"
+      },
+      {
+        "name": "slate11",
+        "hex": "#b0b4ba"
+      },
+      {
+        "name": "slate12",
+        "hex": "#edeef0"
+      }
+    ],
+    "roles": {
+      "background": "#111113",
+      "surface": "#18191b",
+      "text": "#edeef0",
+      "accent": "#363a3f",
+      "accent_2": "#5a6169"
+    }
+  },
+  {
+    "name": "Radix Slate (Light)",
+    "slug": "radix-slate-light",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": false,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "slate1",
+        "hex": "#fcfcfd"
+      },
+      {
+        "name": "slate2",
+        "hex": "#f9f9fb"
+      },
+      {
+        "name": "slate3",
+        "hex": "#f0f0f3"
+      },
+      {
+        "name": "slate4",
+        "hex": "#e8e8ec"
+      },
+      {
+        "name": "slate5",
+        "hex": "#e0e1e6"
+      },
+      {
+        "name": "slate6",
+        "hex": "#d9d9e0"
+      },
+      {
+        "name": "slate7",
+        "hex": "#cdced6"
+      },
+      {
+        "name": "slate8",
+        "hex": "#b9bbc6"
+      },
+      {
+        "name": "slate9",
+        "hex": "#8b8d98"
+      },
+      {
+        "name": "slate10",
+        "hex": "#80838d"
+      },
+      {
+        "name": "slate11",
+        "hex": "#60646c"
+      },
+      {
+        "name": "slate12",
+        "hex": "#1c2024"
+      }
+    ],
+    "roles": {
+      "background": "#fcfcfd",
+      "surface": "#f9f9fb",
+      "text": "#1c2024",
+      "accent": "#1c2024",
+      "accent_2": "#60646c"
+    }
+  },
+  {
+    "name": "Radix Teal (Dark)",
+    "slug": "radix-teal-dark",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": true,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "teal1",
+        "hex": "#0d1514"
+      },
+      {
+        "name": "teal2",
+        "hex": "#111c1b"
+      },
+      {
+        "name": "teal3",
+        "hex": "#0d2d2a"
+      },
+      {
+        "name": "teal4",
+        "hex": "#023b37"
+      },
+      {
+        "name": "teal5",
+        "hex": "#084843"
+      },
+      {
+        "name": "teal6",
+        "hex": "#145750"
+      },
+      {
+        "name": "teal7",
+        "hex": "#1c6961"
+      },
+      {
+        "name": "teal8",
+        "hex": "#207e73"
+      },
+      {
+        "name": "teal9",
+        "hex": "#12a594"
+      },
+      {
+        "name": "teal10",
+        "hex": "#0eb39e"
+      },
+      {
+        "name": "teal11",
+        "hex": "#0bd8b6"
+      },
+      {
+        "name": "teal12",
+        "hex": "#adf0dd"
+      }
+    ],
+    "roles": {
+      "background": "#0d1514",
+      "surface": "#111c1b",
+      "text": "#adf0dd",
+      "accent": "#023b37",
+      "accent_2": "#0bd8b6"
+    }
+  },
+  {
+    "name": "Radix Teal (Light)",
+    "slug": "radix-teal-light",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": false,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "teal1",
+        "hex": "#fafefd"
+      },
+      {
+        "name": "teal2",
+        "hex": "#f3fbf9"
+      },
+      {
+        "name": "teal3",
+        "hex": "#e0f8f3"
+      },
+      {
+        "name": "teal4",
+        "hex": "#ccf3ea"
+      },
+      {
+        "name": "teal5",
+        "hex": "#b8eae0"
+      },
+      {
+        "name": "teal6",
+        "hex": "#a1ded2"
+      },
+      {
+        "name": "teal7",
+        "hex": "#83cdc1"
+      },
+      {
+        "name": "teal8",
+        "hex": "#53b9ab"
+      },
+      {
+        "name": "teal9",
+        "hex": "#12a594"
+      },
+      {
+        "name": "teal10",
+        "hex": "#0d9b8a"
+      },
+      {
+        "name": "teal11",
+        "hex": "#008573"
+      },
+      {
+        "name": "teal12",
+        "hex": "#0d3d38"
+      }
+    ],
+    "roles": {
+      "background": "#fafefd",
+      "surface": "#f3fbf9",
+      "text": "#0d3d38",
+      "accent": "#008573",
+      "accent_2": "#0d9b8a"
+    }
+  },
+  {
+    "name": "Radix Tomato (Dark)",
+    "slug": "radix-tomato-dark",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": true,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "tomato1",
+        "hex": "#181111"
+      },
+      {
+        "name": "tomato2",
+        "hex": "#1f1513"
+      },
+      {
+        "name": "tomato3",
+        "hex": "#391714"
+      },
+      {
+        "name": "tomato4",
+        "hex": "#4e1511"
+      },
+      {
+        "name": "tomato5",
+        "hex": "#5e1c16"
+      },
+      {
+        "name": "tomato6",
+        "hex": "#6e2920"
+      },
+      {
+        "name": "tomato7",
+        "hex": "#853a2d"
+      },
+      {
+        "name": "tomato8",
+        "hex": "#ac4d39"
+      },
+      {
+        "name": "tomato9",
+        "hex": "#e54d2e"
+      },
+      {
+        "name": "tomato10",
+        "hex": "#ec6142"
+      },
+      {
+        "name": "tomato11",
+        "hex": "#ff977d"
+      },
+      {
+        "name": "tomato12",
+        "hex": "#fbd3cb"
+      }
+    ],
+    "roles": {
+      "background": "#181111",
+      "surface": "#1f1513",
+      "text": "#fbd3cb",
+      "accent": "#e54d2e",
+      "accent_2": "#4e1511"
+    }
+  },
+  {
+    "name": "Radix Tomato (Light)",
+    "slug": "radix-tomato-light",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": false,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "tomato1",
+        "hex": "#fffcfc"
+      },
+      {
+        "name": "tomato2",
+        "hex": "#fff8f7"
+      },
+      {
+        "name": "tomato3",
+        "hex": "#feebe7"
+      },
+      {
+        "name": "tomato4",
+        "hex": "#ffdcd3"
+      },
+      {
+        "name": "tomato5",
+        "hex": "#ffcdc2"
+      },
+      {
+        "name": "tomato6",
+        "hex": "#fdbdaf"
+      },
+      {
+        "name": "tomato7",
+        "hex": "#f5a898"
+      },
+      {
+        "name": "tomato8",
+        "hex": "#ec8e7b"
+      },
+      {
+        "name": "tomato9",
+        "hex": "#e54d2e"
+      },
+      {
+        "name": "tomato10",
+        "hex": "#dd4425"
+      },
+      {
+        "name": "tomato11",
+        "hex": "#d13415"
+      },
+      {
+        "name": "tomato12",
+        "hex": "#5c271f"
+      }
+    ],
+    "roles": {
+      "background": "#fffcfc",
+      "surface": "#fff8f7",
+      "text": "#5c271f",
+      "accent": "#d13415",
+      "accent_2": "#dd4425"
+    }
+  },
+  {
+    "name": "Radix Violet (Dark)",
+    "slug": "radix-violet-dark",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": true,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "violet1",
+        "hex": "#14121f"
+      },
+      {
+        "name": "violet2",
+        "hex": "#1b1525"
+      },
+      {
+        "name": "violet3",
+        "hex": "#291f43"
+      },
+      {
+        "name": "violet4",
+        "hex": "#33255b"
+      },
+      {
+        "name": "violet5",
+        "hex": "#3c2e69"
+      },
+      {
+        "name": "violet6",
+        "hex": "#473876"
+      },
+      {
+        "name": "violet7",
+        "hex": "#56468b"
+      },
+      {
+        "name": "violet8",
+        "hex": "#6958ad"
+      },
+      {
+        "name": "violet9",
+        "hex": "#6e56cf"
+      },
+      {
+        "name": "violet10",
+        "hex": "#7d66d9"
+      },
+      {
+        "name": "violet11",
+        "hex": "#baa7ff"
+      },
+      {
+        "name": "violet12",
+        "hex": "#e2ddfe"
+      }
+    ],
+    "roles": {
+      "background": "#14121f",
+      "surface": "#1b1525",
+      "text": "#e2ddfe",
+      "accent": "#33255b",
+      "accent_2": "#6e56cf"
+    }
+  },
+  {
+    "name": "Radix Violet (Light)",
+    "slug": "radix-violet-light",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": false,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "violet1",
+        "hex": "#fdfcfe"
+      },
+      {
+        "name": "violet2",
+        "hex": "#faf8ff"
+      },
+      {
+        "name": "violet3",
+        "hex": "#f4f0fe"
+      },
+      {
+        "name": "violet4",
+        "hex": "#ebe4ff"
+      },
+      {
+        "name": "violet5",
+        "hex": "#e1d9ff"
+      },
+      {
+        "name": "violet6",
+        "hex": "#d4cafe"
+      },
+      {
+        "name": "violet7",
+        "hex": "#c2b5f5"
+      },
+      {
+        "name": "violet8",
+        "hex": "#aa99ec"
+      },
+      {
+        "name": "violet9",
+        "hex": "#6e56cf"
+      },
+      {
+        "name": "violet10",
+        "hex": "#654dc4"
+      },
+      {
+        "name": "violet11",
+        "hex": "#6550b9"
+      },
+      {
+        "name": "violet12",
+        "hex": "#2f265f"
+      }
+    ],
+    "roles": {
+      "background": "#fdfcfe",
+      "surface": "#faf8ff",
+      "text": "#2f265f",
+      "accent": "#654dc4",
+      "accent_2": "#2f265f"
+    }
+  },
+  {
+    "name": "Radix Yellow (Dark)",
+    "slug": "radix-yellow-dark",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": true,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "yellow1",
+        "hex": "#14120b"
+      },
+      {
+        "name": "yellow2",
+        "hex": "#1b180f"
+      },
+      {
+        "name": "yellow3",
+        "hex": "#2d2305"
+      },
+      {
+        "name": "yellow4",
+        "hex": "#362b00"
+      },
+      {
+        "name": "yellow5",
+        "hex": "#433500"
+      },
+      {
+        "name": "yellow6",
+        "hex": "#524202"
+      },
+      {
+        "name": "yellow7",
+        "hex": "#665417"
+      },
+      {
+        "name": "yellow8",
+        "hex": "#836a21"
+      },
+      {
+        "name": "yellow9",
+        "hex": "#ffe629"
+      },
+      {
+        "name": "yellow10",
+        "hex": "#ffff57"
+      },
+      {
+        "name": "yellow11",
+        "hex": "#f5e147"
+      },
+      {
+        "name": "yellow12",
+        "hex": "#f6eeb4"
+      }
+    ],
+    "roles": {
+      "background": "#14120b",
+      "surface": "#1b180f",
+      "text": "#ffff57",
+      "accent": "#362b00",
+      "accent_2": "#433500"
+    }
+  },
+  {
+    "name": "Radix Yellow (Light)",
+    "slug": "radix-yellow-light",
+    "source": "https://github.com/radix-ui/colors",
+    "license": "MIT",
+    "dark": false,
+    "note": "12-step perceptual UI scale",
+    "colors": [
+      {
+        "name": "yellow1",
+        "hex": "#fdfdf9"
+      },
+      {
+        "name": "yellow2",
+        "hex": "#fefce9"
+      },
+      {
+        "name": "yellow3",
+        "hex": "#fffab8"
+      },
+      {
+        "name": "yellow4",
+        "hex": "#fff394"
+      },
+      {
+        "name": "yellow5",
+        "hex": "#ffe770"
+      },
+      {
+        "name": "yellow6",
+        "hex": "#f3d768"
+      },
+      {
+        "name": "yellow7",
+        "hex": "#e4c767"
+      },
+      {
+        "name": "yellow8",
+        "hex": "#d5ae39"
+      },
+      {
+        "name": "yellow9",
+        "hex": "#ffe629"
+      },
+      {
+        "name": "yellow10",
+        "hex": "#ffdc00"
+      },
+      {
+        "name": "yellow11",
+        "hex": "#9e6c00"
+      },
+      {
+        "name": "yellow12",
+        "hex": "#473b1f"
+      }
+    ],
+    "roles": {
+      "background": "#fdfdf9",
+      "surface": "#fefce9",
+      "text": "#473b1f",
+      "accent": "#9e6c00",
+      "accent_2": "#d5ae39"
+    }
+  },
+  {
+    "name": "Rose Pine Dawn",
+    "slug": "rose-pine-dawn",
+    "source": "https://github.com/rose-pine/palette",
+    "license": "MIT",
+    "dark": false,
+    "note": "roles: base, surface, overlay, text, accents",
+    "colors": [
+      {
+        "name": "base",
+        "hex": "#faf4ed"
+      },
+      {
+        "name": "surface",
+        "hex": "#fffaf3"
+      },
+      {
+        "name": "overlay",
+        "hex": "#f2e9e1"
+      },
+      {
+        "name": "muted",
+        "hex": "#9893a5"
+      },
+      {
+        "name": "subtle",
+        "hex": "#797593"
+      },
+      {
+        "name": "text",
+        "hex": "#464261"
+      },
+      {
+        "name": "love",
+        "hex": "#b4637a"
+      },
+      {
+        "name": "gold",
+        "hex": "#ea9d34"
+      },
+      {
+        "name": "rose",
+        "hex": "#d7827e"
+      },
+      {
+        "name": "pine",
+        "hex": "#286983"
+      },
+      {
+        "name": "foam",
+        "hex": "#56949f"
+      },
+      {
+        "name": "iris",
+        "hex": "#907aa9"
+      }
+    ],
+    "roles": {
+      "background": "#fffaf3",
+      "surface": "#faf4ed",
+      "text": "#464261",
+      "accent": "#ea9d34",
+      "accent_2": "#286983"
+    }
+  },
+  {
+    "name": "Rose Pine Main",
+    "slug": "rose-pine-main",
+    "source": "https://github.com/rose-pine/palette",
+    "license": "MIT",
+    "dark": true,
+    "note": "roles: base, surface, overlay, text, accents",
+    "colors": [
+      {
+        "name": "base",
+        "hex": "#191724"
+      },
+      {
+        "name": "surface",
+        "hex": "#1f1d2e"
+      },
+      {
+        "name": "overlay",
+        "hex": "#26233a"
+      },
+      {
+        "name": "muted",
+        "hex": "#6e6a86"
+      },
+      {
+        "name": "subtle",
+        "hex": "#908caa"
+      },
+      {
+        "name": "text",
+        "hex": "#e0def4"
+      },
+      {
+        "name": "love",
+        "hex": "#eb6f92"
+      },
+      {
+        "name": "gold",
+        "hex": "#f6c177"
+      },
+      {
+        "name": "rose",
+        "hex": "#ebbcba"
+      },
+      {
+        "name": "pine",
+        "hex": "#31748f"
+      },
+      {
+        "name": "foam",
+        "hex": "#9ccfd8"
+      },
+      {
+        "name": "iris",
+        "hex": "#c4a7e7"
+      }
+    ],
+    "roles": {
+      "background": "#191724",
+      "surface": "#1f1d2e",
+      "text": "#e0def4",
+      "accent": "#31748f",
+      "accent_2": "#eb6f92"
+    }
+  },
+  {
+    "name": "Rose Pine Moon",
+    "slug": "rose-pine-moon",
+    "source": "https://github.com/rose-pine/palette",
+    "license": "MIT",
+    "dark": true,
+    "note": "roles: base, surface, overlay, text, accents",
+    "colors": [
+      {
+        "name": "base",
+        "hex": "#232136"
+      },
+      {
+        "name": "surface",
+        "hex": "#2a273f"
+      },
+      {
+        "name": "overlay",
+        "hex": "#393552"
+      },
+      {
+        "name": "muted",
+        "hex": "#6e6a86"
+      },
+      {
+        "name": "subtle",
+        "hex": "#908caa"
+      },
+      {
+        "name": "text",
+        "hex": "#e0def4"
+      },
+      {
+        "name": "love",
+        "hex": "#eb6f92"
+      },
+      {
+        "name": "gold",
+        "hex": "#f6c177"
+      },
+      {
+        "name": "rose",
+        "hex": "#ea9a97"
+      },
+      {
+        "name": "pine",
+        "hex": "#3e8fb0"
+      },
+      {
+        "name": "foam",
+        "hex": "#9ccfd8"
+      },
+      {
+        "name": "iris",
+        "hex": "#c4a7e7"
+      }
+    ],
+    "roles": {
+      "background": "#232136",
+      "surface": "#2a273f",
+      "text": "#e0def4",
+      "accent": "#3e8fb0",
+      "accent_2": "#eb6f92"
+    }
+  },
+  {
+    "name": "Solarized Dark",
+    "slug": "solarized-dark",
+    "source": "https://ethanschoonover.com/solarized/",
+    "license": "MIT",
+    "dark": true,
+    "note": "precision colors for machines and people",
+    "colors": [
+      {
+        "name": "base03",
+        "hex": "#002b36"
+      },
+      {
+        "name": "base02",
+        "hex": "#073642"
+      },
+      {
+        "name": "base01",
+        "hex": "#586e75"
+      },
+      {
+        "name": "base00",
+        "hex": "#657b83"
+      },
+      {
+        "name": "base0",
+        "hex": "#839496"
+      },
+      {
+        "name": "base1",
+        "hex": "#93a1a1"
+      },
+      {
+        "name": "base2",
+        "hex": "#eee8d5"
+      },
+      {
+        "name": "base3",
+        "hex": "#fdf6e3"
+      },
+      {
+        "name": "yellow",
+        "hex": "#b58900"
+      },
+      {
+        "name": "orange",
+        "hex": "#cb4b16"
+      },
+      {
+        "name": "red",
+        "hex": "#dc322f"
+      },
+      {
+        "name": "magenta",
+        "hex": "#d33682"
+      },
+      {
+        "name": "violet",
+        "hex": "#6c71c4"
+      },
+      {
+        "name": "blue",
+        "hex": "#268bd2"
+      },
+      {
+        "name": "cyan",
+        "hex": "#2aa198"
+      },
+      {
+        "name": "green",
+        "hex": "#859900"
+      }
+    ],
+    "roles": {
+      "background": "#002b36",
+      "surface": "#073642",
+      "text": "#fdf6e3",
+      "accent": "#002b36",
+      "accent_2": "#b58900"
+    }
+  },
+  {
+    "name": "Solarized Light",
+    "slug": "solarized-light",
+    "source": "https://ethanschoonover.com/solarized/",
+    "license": "MIT",
+    "dark": false,
+    "note": "precision colors for machines and people",
+    "colors": [
+      {
+        "name": "base3",
+        "hex": "#fdf6e3"
+      },
+      {
+        "name": "base2",
+        "hex": "#eee8d5"
+      },
+      {
+        "name": "base1",
+        "hex": "#93a1a1"
+      },
+      {
+        "name": "base0",
+        "hex": "#839496"
+      },
+      {
+        "name": "base00",
+        "hex": "#657b83"
+      },
+      {
+        "name": "base01",
+        "hex": "#586e75"
+      },
+      {
+        "name": "base02",
+        "hex": "#073642"
+      },
+      {
+        "name": "base03",
+        "hex": "#002b36"
+      },
+      {
+        "name": "yellow",
+        "hex": "#b58900"
+      },
+      {
+        "name": "orange",
+        "hex": "#cb4b16"
+      },
+      {
+        "name": "red",
+        "hex": "#dc322f"
+      },
+      {
+        "name": "magenta",
+        "hex": "#d33682"
+      },
+      {
+        "name": "violet",
+        "hex": "#6c71c4"
+      },
+      {
+        "name": "blue",
+        "hex": "#268bd2"
+      },
+      {
+        "name": "cyan",
+        "hex": "#2aa198"
+      },
+      {
+        "name": "green",
+        "hex": "#859900"
+      }
+    ],
+    "roles": {
+      "background": "#fdf6e3",
+      "surface": "#eee8d5",
+      "text": "#002b36",
+      "accent": "#002b36",
+      "accent_2": "#b58900"
+    }
+  },
+  {
+    "name": "Tailwind Amber",
+    "slug": "tailwind-amber",
+    "source": "https://github.com/tailwindlabs/tailwindcss",
+    "license": "MIT",
+    "dark": false,
+    "note": "11-step UI scale (v3 palette)",
+    "colors": [
+      {
+        "name": "50",
+        "hex": "#fffbeb"
+      },
+      {
+        "name": "100",
+        "hex": "#fef3c7"
+      },
+      {
+        "name": "200",
+        "hex": "#fde68a"
+      },
+      {
+        "name": "300",
+        "hex": "#fcd34d"
+      },
+      {
+        "name": "400",
+        "hex": "#fbbf24"
+      },
+      {
+        "name": "500",
+        "hex": "#f59e0b"
+      },
+      {
+        "name": "600",
+        "hex": "#d97706"
+      },
+      {
+        "name": "700",
+        "hex": "#b45309"
+      },
+      {
+        "name": "800",
+        "hex": "#92400e"
+      },
+      {
+        "name": "900",
+        "hex": "#78350f"
+      },
+      {
+        "name": "950",
+        "hex": "#451a03"
+      }
+    ],
+    "roles": {
+      "background": "#fffbeb",
+      "surface": "#fef3c7",
+      "text": "#451a03",
+      "accent": "#d97706",
+      "accent_2": "#451a03"
+    }
+  },
+  {
+    "name": "Tailwind Blue",
+    "slug": "tailwind-blue",
+    "source": "https://github.com/tailwindlabs/tailwindcss",
+    "license": "MIT",
+    "dark": false,
+    "note": "11-step UI scale (v3 palette)",
+    "colors": [
+      {
+        "name": "50",
+        "hex": "#eff6ff"
+      },
+      {
+        "name": "100",
+        "hex": "#dbeafe"
+      },
+      {
+        "name": "200",
+        "hex": "#bfdbfe"
+      },
+      {
+        "name": "300",
+        "hex": "#93c5fd"
+      },
+      {
+        "name": "400",
+        "hex": "#60a5fa"
+      },
+      {
+        "name": "500",
+        "hex": "#3b82f6"
+      },
+      {
+        "name": "600",
+        "hex": "#2563eb"
+      },
+      {
+        "name": "700",
+        "hex": "#1d4ed8"
+      },
+      {
+        "name": "800",
+        "hex": "#1e40af"
+      },
+      {
+        "name": "900",
+        "hex": "#1e3a8a"
+      },
+      {
+        "name": "950",
+        "hex": "#172554"
+      }
+    ],
+    "roles": {
+      "background": "#eff6ff",
+      "surface": "#dbeafe",
+      "text": "#172554",
+      "accent": "#1d4ed8",
+      "accent_2": "#2563eb"
+    }
+  },
+  {
+    "name": "Tailwind Cyan",
+    "slug": "tailwind-cyan",
+    "source": "https://github.com/tailwindlabs/tailwindcss",
+    "license": "MIT",
+    "dark": false,
+    "note": "11-step UI scale (v3 palette)",
+    "colors": [
+      {
+        "name": "50",
+        "hex": "#ecfeff"
+      },
+      {
+        "name": "100",
+        "hex": "#cffafe"
+      },
+      {
+        "name": "200",
+        "hex": "#a5f3fc"
+      },
+      {
+        "name": "300",
+        "hex": "#67e8f9"
+      },
+      {
+        "name": "400",
+        "hex": "#22d3ee"
+      },
+      {
+        "name": "500",
+        "hex": "#06b6d4"
+      },
+      {
+        "name": "600",
+        "hex": "#0891b2"
+      },
+      {
+        "name": "700",
+        "hex": "#0e7490"
+      },
+      {
+        "name": "800",
+        "hex": "#155e75"
+      },
+      {
+        "name": "900",
+        "hex": "#164e63"
+      },
+      {
+        "name": "950",
+        "hex": "#083344"
+      }
+    ],
+    "roles": {
+      "background": "#ecfeff",
+      "surface": "#cffafe",
+      "text": "#083344",
+      "accent": "#06b6d4",
+      "accent_2": "#0891b2"
+    }
+  },
+  {
+    "name": "Tailwind Emerald",
+    "slug": "tailwind-emerald",
+    "source": "https://github.com/tailwindlabs/tailwindcss",
+    "license": "MIT",
+    "dark": false,
+    "note": "11-step UI scale (v3 palette)",
+    "colors": [
+      {
+        "name": "50",
+        "hex": "#ecfdf5"
+      },
+      {
+        "name": "100",
+        "hex": "#d1fae5"
+      },
+      {
+        "name": "200",
+        "hex": "#a7f3d0"
+      },
+      {
+        "name": "300",
+        "hex": "#6ee7b7"
+      },
+      {
+        "name": "400",
+        "hex": "#34d399"
+      },
+      {
+        "name": "500",
+        "hex": "#10b981"
+      },
+      {
+        "name": "600",
+        "hex": "#059669"
+      },
+      {
+        "name": "700",
+        "hex": "#047857"
+      },
+      {
+        "name": "800",
+        "hex": "#065f46"
+      },
+      {
+        "name": "900",
+        "hex": "#064e3b"
+      },
+      {
+        "name": "950",
+        "hex": "#022c22"
+      }
+    ],
+    "roles": {
+      "background": "#ecfdf5",
+      "surface": "#d1fae5",
+      "text": "#022c22",
+      "accent": "#047857",
+      "accent_2": "#059669"
+    }
+  },
+  {
+    "name": "Tailwind Fuchsia",
+    "slug": "tailwind-fuchsia",
+    "source": "https://github.com/tailwindlabs/tailwindcss",
+    "license": "MIT",
+    "dark": false,
+    "note": "11-step UI scale (v3 palette)",
+    "colors": [
+      {
+        "name": "50",
+        "hex": "#fdf4ff"
+      },
+      {
+        "name": "100",
+        "hex": "#fae8ff"
+      },
+      {
+        "name": "200",
+        "hex": "#f5d0fe"
+      },
+      {
+        "name": "300",
+        "hex": "#f0abfc"
+      },
+      {
+        "name": "400",
+        "hex": "#e879f9"
+      },
+      {
+        "name": "500",
+        "hex": "#d946ef"
+      },
+      {
+        "name": "600",
+        "hex": "#c026d3"
+      },
+      {
+        "name": "700",
+        "hex": "#a21caf"
+      },
+      {
+        "name": "800",
+        "hex": "#86198f"
+      },
+      {
+        "name": "900",
+        "hex": "#701a75"
+      },
+      {
+        "name": "950",
+        "hex": "#4a044e"
+      }
+    ],
+    "roles": {
+      "background": "#fdf4ff",
+      "surface": "#fae8ff",
+      "text": "#4a044e",
+      "accent": "#a21caf",
+      "accent_2": "#86198f"
+    }
+  },
+  {
+    "name": "Tailwind Gray",
+    "slug": "tailwind-gray",
+    "source": "https://github.com/tailwindlabs/tailwindcss",
+    "license": "MIT",
+    "dark": false,
+    "note": "11-step UI scale (v3 palette)",
+    "colors": [
+      {
+        "name": "50",
+        "hex": "#f9fafb"
+      },
+      {
+        "name": "100",
+        "hex": "#f3f4f6"
+      },
+      {
+        "name": "200",
+        "hex": "#e5e7eb"
+      },
+      {
+        "name": "300",
+        "hex": "#d1d5db"
+      },
+      {
+        "name": "400",
+        "hex": "#9ca3af"
+      },
+      {
+        "name": "500",
+        "hex": "#6b7280"
+      },
+      {
+        "name": "600",
+        "hex": "#4b5563"
+      },
+      {
+        "name": "700",
+        "hex": "#374151"
+      },
+      {
+        "name": "800",
+        "hex": "#1f2937"
+      },
+      {
+        "name": "900",
+        "hex": "#111827"
+      },
+      {
+        "name": "950",
+        "hex": "#030712"
+      }
+    ],
+    "roles": {
+      "background": "#f9fafb",
+      "surface": "#f3f4f6",
+      "text": "#030712",
+      "accent": "#1f2937",
+      "accent_2": "#374151"
+    }
+  },
+  {
+    "name": "Tailwind Green",
+    "slug": "tailwind-green",
+    "source": "https://github.com/tailwindlabs/tailwindcss",
+    "license": "MIT",
+    "dark": false,
+    "note": "11-step UI scale (v3 palette)",
+    "colors": [
+      {
+        "name": "50",
+        "hex": "#f0fdf4"
+      },
+      {
+        "name": "100",
+        "hex": "#dcfce7"
+      },
+      {
+        "name": "200",
+        "hex": "#bbf7d0"
+      },
+      {
+        "name": "300",
+        "hex": "#86efac"
+      },
+      {
+        "name": "400",
+        "hex": "#4ade80"
+      },
+      {
+        "name": "500",
+        "hex": "#22c55e"
+      },
+      {
+        "name": "600",
+        "hex": "#16a34a"
+      },
+      {
+        "name": "700",
+        "hex": "#15803d"
+      },
+      {
+        "name": "800",
+        "hex": "#166534"
+      },
+      {
+        "name": "900",
+        "hex": "#14532d"
+      },
+      {
+        "name": "950",
+        "hex": "#052e16"
+      }
+    ],
+    "roles": {
+      "background": "#f0fdf4",
+      "surface": "#dcfce7",
+      "text": "#052e16",
+      "accent": "#052e16",
+      "accent_2": "#16a34a"
+    }
+  },
+  {
+    "name": "Tailwind Indigo",
+    "slug": "tailwind-indigo",
+    "source": "https://github.com/tailwindlabs/tailwindcss",
+    "license": "MIT",
+    "dark": false,
+    "note": "11-step UI scale (v3 palette)",
+    "colors": [
+      {
+        "name": "50",
+        "hex": "#eef2ff"
+      },
+      {
+        "name": "100",
+        "hex": "#e0e7ff"
+      },
+      {
+        "name": "200",
+        "hex": "#c7d2fe"
+      },
+      {
+        "name": "300",
+        "hex": "#a5b4fc"
+      },
+      {
+        "name": "400",
+        "hex": "#818cf8"
+      },
+      {
+        "name": "500",
+        "hex": "#6366f1"
+      },
+      {
+        "name": "600",
+        "hex": "#4f46e5"
+      },
+      {
+        "name": "700",
+        "hex": "#4338ca"
+      },
+      {
+        "name": "800",
+        "hex": "#3730a3"
+      },
+      {
+        "name": "900",
+        "hex": "#312e81"
+      },
+      {
+        "name": "950",
+        "hex": "#1e1b4b"
+      }
+    ],
+    "roles": {
+      "background": "#eef2ff",
+      "surface": "#e0e7ff",
+      "text": "#1e1b4b",
+      "accent": "#4338ca",
+      "accent_2": "#3730a3"
+    }
+  },
+  {
+    "name": "Tailwind Lime",
+    "slug": "tailwind-lime",
+    "source": "https://github.com/tailwindlabs/tailwindcss",
+    "license": "MIT",
+    "dark": false,
+    "note": "11-step UI scale (v3 palette)",
+    "colors": [
+      {
+        "name": "50",
+        "hex": "#f7fee7"
+      },
+      {
+        "name": "100",
+        "hex": "#ecfccb"
+      },
+      {
+        "name": "200",
+        "hex": "#d9f99d"
+      },
+      {
+        "name": "300",
+        "hex": "#bef264"
+      },
+      {
+        "name": "400",
+        "hex": "#a3e635"
+      },
+      {
+        "name": "500",
+        "hex": "#84cc16"
+      },
+      {
+        "name": "600",
+        "hex": "#65a30d"
+      },
+      {
+        "name": "700",
+        "hex": "#4d7c0f"
+      },
+      {
+        "name": "800",
+        "hex": "#3f6212"
+      },
+      {
+        "name": "900",
+        "hex": "#365314"
+      },
+      {
+        "name": "950",
+        "hex": "#1a2e05"
+      }
+    ],
+    "roles": {
+      "background": "#f7fee7",
+      "surface": "#ecfccb",
+      "text": "#1a2e05",
+      "accent": "#65a30d",
+      "accent_2": "#84cc16"
+    }
+  },
+  {
+    "name": "Tailwind Neutral",
+    "slug": "tailwind-neutral",
+    "source": "https://github.com/tailwindlabs/tailwindcss",
+    "license": "MIT",
+    "dark": false,
+    "note": "11-step UI scale (v3 palette)",
+    "colors": [
+      {
+        "name": "50",
+        "hex": "#fafafa"
+      },
+      {
+        "name": "100",
+        "hex": "#f5f5f5"
+      },
+      {
+        "name": "200",
+        "hex": "#e5e5e5"
+      },
+      {
+        "name": "300",
+        "hex": "#d4d4d4"
+      },
+      {
+        "name": "400",
+        "hex": "#a3a3a3"
+      },
+      {
+        "name": "500",
+        "hex": "#737373"
+      },
+      {
+        "name": "600",
+        "hex": "#525252"
+      },
+      {
+        "name": "700",
+        "hex": "#404040"
+      },
+      {
+        "name": "800",
+        "hex": "#262626"
+      },
+      {
+        "name": "900",
+        "hex": "#171717"
+      },
+      {
+        "name": "950",
+        "hex": "#0a0a0a"
+      }
+    ],
+    "roles": {
+      "background": "#fafafa",
+      "surface": "#f5f5f5",
+      "text": "#0a0a0a",
+      "accent": "#a3a3a3",
+      "accent_2": "#737373"
+    }
+  },
+  {
+    "name": "Tailwind Orange",
+    "slug": "tailwind-orange",
+    "source": "https://github.com/tailwindlabs/tailwindcss",
+    "license": "MIT",
+    "dark": false,
+    "note": "11-step UI scale (v3 palette)",
+    "colors": [
+      {
+        "name": "50",
+        "hex": "#fff7ed"
+      },
+      {
+        "name": "100",
+        "hex": "#ffedd5"
+      },
+      {
+        "name": "200",
+        "hex": "#fed7aa"
+      },
+      {
+        "name": "300",
+        "hex": "#fdba74"
+      },
+      {
+        "name": "400",
+        "hex": "#fb923c"
+      },
+      {
+        "name": "500",
+        "hex": "#f97316"
+      },
+      {
+        "name": "600",
+        "hex": "#ea580c"
+      },
+      {
+        "name": "700",
+        "hex": "#c2410c"
+      },
+      {
+        "name": "800",
+        "hex": "#9a3412"
+      },
+      {
+        "name": "900",
+        "hex": "#7c2d12"
+      },
+      {
+        "name": "950",
+        "hex": "#431407"
+      }
+    ],
+    "roles": {
+      "background": "#fff7ed",
+      "surface": "#ffedd5",
+      "text": "#431407",
+      "accent": "#ea580c",
+      "accent_2": "#c2410c"
+    }
+  },
+  {
+    "name": "Tailwind Pink",
+    "slug": "tailwind-pink",
+    "source": "https://github.com/tailwindlabs/tailwindcss",
+    "license": "MIT",
+    "dark": false,
+    "note": "11-step UI scale (v3 palette)",
+    "colors": [
+      {
+        "name": "50",
+        "hex": "#fdf2f8"
+      },
+      {
+        "name": "100",
+        "hex": "#fce7f3"
+      },
+      {
+        "name": "200",
+        "hex": "#fbcfe8"
+      },
+      {
+        "name": "300",
+        "hex": "#f9a8d4"
+      },
+      {
+        "name": "400",
+        "hex": "#f472b6"
+      },
+      {
+        "name": "500",
+        "hex": "#ec4899"
+      },
+      {
+        "name": "600",
+        "hex": "#db2777"
+      },
+      {
+        "name": "700",
+        "hex": "#be185d"
+      },
+      {
+        "name": "800",
+        "hex": "#9d174d"
+      },
+      {
+        "name": "900",
+        "hex": "#831843"
+      },
+      {
+        "name": "950",
+        "hex": "#500724"
+      }
+    ],
+    "roles": {
+      "background": "#fdf2f8",
+      "surface": "#fce7f3",
+      "text": "#500724",
+      "accent": "#be185d",
+      "accent_2": "#9d174d"
+    }
+  },
+  {
+    "name": "Tailwind Purple",
+    "slug": "tailwind-purple",
+    "source": "https://github.com/tailwindlabs/tailwindcss",
+    "license": "MIT",
+    "dark": false,
+    "note": "11-step UI scale (v3 palette)",
+    "colors": [
+      {
+        "name": "50",
+        "hex": "#faf5ff"
+      },
+      {
+        "name": "100",
+        "hex": "#f3e8ff"
+      },
+      {
+        "name": "200",
+        "hex": "#e9d5ff"
+      },
+      {
+        "name": "300",
+        "hex": "#d8b4fe"
+      },
+      {
+        "name": "400",
+        "hex": "#c084fc"
+      },
+      {
+        "name": "500",
+        "hex": "#a855f7"
+      },
+      {
+        "name": "600",
+        "hex": "#9333ea"
+      },
+      {
+        "name": "700",
+        "hex": "#7e22ce"
+      },
+      {
+        "name": "800",
+        "hex": "#6b21a8"
+      },
+      {
+        "name": "900",
+        "hex": "#581c87"
+      },
+      {
+        "name": "950",
+        "hex": "#3b0764"
+      }
+    ],
+    "roles": {
+      "background": "#faf5ff",
+      "surface": "#f3e8ff",
+      "text": "#3b0764",
+      "accent": "#7e22ce",
+      "accent_2": "#6b21a8"
+    }
+  },
+  {
+    "name": "Tailwind Red",
+    "slug": "tailwind-red",
+    "source": "https://github.com/tailwindlabs/tailwindcss",
+    "license": "MIT",
+    "dark": false,
+    "note": "11-step UI scale (v3 palette)",
+    "colors": [
+      {
+        "name": "50",
+        "hex": "#fef2f2"
+      },
+      {
+        "name": "100",
+        "hex": "#fee2e2"
+      },
+      {
+        "name": "200",
+        "hex": "#fecaca"
+      },
+      {
+        "name": "300",
+        "hex": "#fca5a5"
+      },
+      {
+        "name": "400",
+        "hex": "#f87171"
+      },
+      {
+        "name": "500",
+        "hex": "#ef4444"
+      },
+      {
+        "name": "600",
+        "hex": "#dc2626"
+      },
+      {
+        "name": "700",
+        "hex": "#b91c1c"
+      },
+      {
+        "name": "800",
+        "hex": "#991b1b"
+      },
+      {
+        "name": "900",
+        "hex": "#7f1d1d"
+      },
+      {
+        "name": "950",
+        "hex": "#450a0a"
+      }
+    ],
+    "roles": {
+      "background": "#fef2f2",
+      "surface": "#fee2e2",
+      "text": "#450a0a",
+      "accent": "#b91c1c",
+      "accent_2": "#dc2626"
+    }
+  },
+  {
+    "name": "Tailwind Rose",
+    "slug": "tailwind-rose",
+    "source": "https://github.com/tailwindlabs/tailwindcss",
+    "license": "MIT",
+    "dark": false,
+    "note": "11-step UI scale (v3 palette)",
+    "colors": [
+      {
+        "name": "50",
+        "hex": "#fff1f2"
+      },
+      {
+        "name": "100",
+        "hex": "#ffe4e6"
+      },
+      {
+        "name": "200",
+        "hex": "#fecdd3"
+      },
+      {
+        "name": "300",
+        "hex": "#fda4af"
+      },
+      {
+        "name": "400",
+        "hex": "#fb7185"
+      },
+      {
+        "name": "500",
+        "hex": "#f43f5e"
+      },
+      {
+        "name": "600",
+        "hex": "#e11d48"
+      },
+      {
+        "name": "700",
+        "hex": "#be123c"
+      },
+      {
+        "name": "800",
+        "hex": "#9f1239"
+      },
+      {
+        "name": "900",
+        "hex": "#881337"
+      },
+      {
+        "name": "950",
+        "hex": "#4c0519"
+      }
+    ],
+    "roles": {
+      "background": "#fff1f2",
+      "surface": "#ffe4e6",
+      "text": "#4c0519",
+      "accent": "#be123c",
+      "accent_2": "#9f1239"
+    }
+  },
+  {
+    "name": "Tailwind Sky",
+    "slug": "tailwind-sky",
+    "source": "https://github.com/tailwindlabs/tailwindcss",
+    "license": "MIT",
+    "dark": false,
+    "note": "11-step UI scale (v3 palette)",
+    "colors": [
+      {
+        "name": "50",
+        "hex": "#f0f9ff"
+      },
+      {
+        "name": "100",
+        "hex": "#e0f2fe"
+      },
+      {
+        "name": "200",
+        "hex": "#bae6fd"
+      },
+      {
+        "name": "300",
+        "hex": "#7dd3fc"
+      },
+      {
+        "name": "400",
+        "hex": "#38bdf8"
+      },
+      {
+        "name": "500",
+        "hex": "#0ea5e9"
+      },
+      {
+        "name": "600",
+        "hex": "#0284c7"
+      },
+      {
+        "name": "700",
+        "hex": "#0369a1"
+      },
+      {
+        "name": "800",
+        "hex": "#075985"
+      },
+      {
+        "name": "900",
+        "hex": "#0c4a6e"
+      },
+      {
+        "name": "950",
+        "hex": "#082f49"
+      }
+    ],
+    "roles": {
+      "background": "#f0f9ff",
+      "surface": "#e0f2fe",
+      "text": "#082f49",
+      "accent": "#0284c7",
+      "accent_2": "#0369a1"
+    }
+  },
+  {
+    "name": "Tailwind Slate",
+    "slug": "tailwind-slate",
+    "source": "https://github.com/tailwindlabs/tailwindcss",
+    "license": "MIT",
+    "dark": false,
+    "note": "11-step UI scale (v3 palette)",
+    "colors": [
+      {
+        "name": "50",
+        "hex": "#f8fafc"
+      },
+      {
+        "name": "100",
+        "hex": "#f1f5f9"
+      },
+      {
+        "name": "200",
+        "hex": "#e2e8f0"
+      },
+      {
+        "name": "300",
+        "hex": "#cbd5e1"
+      },
+      {
+        "name": "400",
+        "hex": "#94a3b8"
+      },
+      {
+        "name": "500",
+        "hex": "#64748b"
+      },
+      {
+        "name": "600",
+        "hex": "#475569"
+      },
+      {
+        "name": "700",
+        "hex": "#334155"
+      },
+      {
+        "name": "800",
+        "hex": "#1e293b"
+      },
+      {
+        "name": "900",
+        "hex": "#0f172a"
+      },
+      {
+        "name": "950",
+        "hex": "#020617"
+      }
+    ],
+    "roles": {
+      "background": "#f8fafc",
+      "surface": "#f1f5f9",
+      "text": "#020617",
+      "accent": "#1e293b",
+      "accent_2": "#334155"
+    }
+  },
+  {
+    "name": "Tailwind Stone",
+    "slug": "tailwind-stone",
+    "source": "https://github.com/tailwindlabs/tailwindcss",
+    "license": "MIT",
+    "dark": false,
+    "note": "11-step UI scale (v3 palette)",
+    "colors": [
+      {
+        "name": "50",
+        "hex": "#fafaf9"
+      },
+      {
+        "name": "100",
+        "hex": "#f5f5f4"
+      },
+      {
+        "name": "200",
+        "hex": "#e7e5e4"
+      },
+      {
+        "name": "300",
+        "hex": "#d6d3d1"
+      },
+      {
+        "name": "400",
+        "hex": "#a8a29e"
+      },
+      {
+        "name": "500",
+        "hex": "#78716c"
+      },
+      {
+        "name": "600",
+        "hex": "#57534e"
+      },
+      {
+        "name": "700",
+        "hex": "#44403c"
+      },
+      {
+        "name": "800",
+        "hex": "#292524"
+      },
+      {
+        "name": "900",
+        "hex": "#1c1917"
+      },
+      {
+        "name": "950",
+        "hex": "#0c0a09"
+      }
+    ],
+    "roles": {
+      "background": "#fafaf9",
+      "surface": "#f5f5f4",
+      "text": "#0c0a09",
+      "accent": "#292524",
+      "accent_2": "#44403c"
+    }
+  },
+  {
+    "name": "Tailwind Teal",
+    "slug": "tailwind-teal",
+    "source": "https://github.com/tailwindlabs/tailwindcss",
+    "license": "MIT",
+    "dark": false,
+    "note": "11-step UI scale (v3 palette)",
+    "colors": [
+      {
+        "name": "50",
+        "hex": "#f0fdfa"
+      },
+      {
+        "name": "100",
+        "hex": "#ccfbf1"
+      },
+      {
+        "name": "200",
+        "hex": "#99f6e4"
+      },
+      {
+        "name": "300",
+        "hex": "#5eead4"
+      },
+      {
+        "name": "400",
+        "hex": "#2dd4bf"
+      },
+      {
+        "name": "500",
+        "hex": "#14b8a6"
+      },
+      {
+        "name": "600",
+        "hex": "#0d9488"
+      },
+      {
+        "name": "700",
+        "hex": "#0f766e"
+      },
+      {
+        "name": "800",
+        "hex": "#115e59"
+      },
+      {
+        "name": "900",
+        "hex": "#134e4a"
+      },
+      {
+        "name": "950",
+        "hex": "#042f2e"
+      }
+    ],
+    "roles": {
+      "background": "#f0fdfa",
+      "surface": "#ccfbf1",
+      "text": "#042f2e",
+      "accent": "#042f2e",
+      "accent_2": "#0d9488"
+    }
+  },
+  {
+    "name": "Tailwind Violet",
+    "slug": "tailwind-violet",
+    "source": "https://github.com/tailwindlabs/tailwindcss",
+    "license": "MIT",
+    "dark": false,
+    "note": "11-step UI scale (v3 palette)",
+    "colors": [
+      {
+        "name": "50",
+        "hex": "#f5f3ff"
+      },
+      {
+        "name": "100",
+        "hex": "#ede9fe"
+      },
+      {
+        "name": "200",
+        "hex": "#ddd6fe"
+      },
+      {
+        "name": "300",
+        "hex": "#c4b5fd"
+      },
+      {
+        "name": "400",
+        "hex": "#a78bfa"
+      },
+      {
+        "name": "500",
+        "hex": "#8b5cf6"
+      },
+      {
+        "name": "600",
+        "hex": "#7c3aed"
+      },
+      {
+        "name": "700",
+        "hex": "#6d28d9"
+      },
+      {
+        "name": "800",
+        "hex": "#5b21b6"
+      },
+      {
+        "name": "900",
+        "hex": "#4c1d95"
+      },
+      {
+        "name": "950",
+        "hex": "#2e1065"
+      }
+    ],
+    "roles": {
+      "background": "#f5f3ff",
+      "surface": "#ede9fe",
+      "text": "#2e1065",
+      "accent": "#5b21b6",
+      "accent_2": "#6d28d9"
+    }
+  },
+  {
+    "name": "Tailwind Yellow",
+    "slug": "tailwind-yellow",
+    "source": "https://github.com/tailwindlabs/tailwindcss",
+    "license": "MIT",
+    "dark": false,
+    "note": "11-step UI scale (v3 palette)",
+    "colors": [
+      {
+        "name": "50",
+        "hex": "#fefce8"
+      },
+      {
+        "name": "100",
+        "hex": "#fef9c3"
+      },
+      {
+        "name": "200",
+        "hex": "#fef08a"
+      },
+      {
+        "name": "300",
+        "hex": "#fde047"
+      },
+      {
+        "name": "400",
+        "hex": "#facc15"
+      },
+      {
+        "name": "500",
+        "hex": "#eab308"
+      },
+      {
+        "name": "600",
+        "hex": "#ca8a04"
+      },
+      {
+        "name": "700",
+        "hex": "#a16207"
+      },
+      {
+        "name": "800",
+        "hex": "#854d0e"
+      },
+      {
+        "name": "900",
+        "hex": "#713f12"
+      },
+      {
+        "name": "950",
+        "hex": "#422006"
+      }
+    ],
+    "roles": {
+      "background": "#fefce8",
+      "surface": "#fef9c3",
+      "text": "#422006",
+      "accent": "#ca8a04",
+      "accent_2": "#eab308"
+    }
+  },
+  {
+    "name": "Tailwind Zinc",
+    "slug": "tailwind-zinc",
+    "source": "https://github.com/tailwindlabs/tailwindcss",
+    "license": "MIT",
+    "dark": false,
+    "note": "11-step UI scale (v3 palette)",
+    "colors": [
+      {
+        "name": "50",
+        "hex": "#fafafa"
+      },
+      {
+        "name": "100",
+        "hex": "#f4f4f5"
+      },
+      {
+        "name": "200",
+        "hex": "#e4e4e7"
+      },
+      {
+        "name": "300",
+        "hex": "#d4d4d8"
+      },
+      {
+        "name": "400",
+        "hex": "#a1a1aa"
+      },
+      {
+        "name": "500",
+        "hex": "#71717a"
+      },
+      {
+        "name": "600",
+        "hex": "#52525b"
+      },
+      {
+        "name": "700",
+        "hex": "#3f3f46"
+      },
+      {
+        "name": "800",
+        "hex": "#27272a"
+      },
+      {
+        "name": "900",
+        "hex": "#18181b"
+      },
+      {
+        "name": "950",
+        "hex": "#09090b"
+      }
+    ],
+    "roles": {
+      "background": "#fafafa",
+      "surface": "#f4f4f5",
+      "text": "#09090b",
+      "accent": "#3f3f46",
+      "accent_2": "#52525b"
+    }
+  },
+  {
+    "name": "Tokyo Night Moon",
+    "slug": "tokyo-night-moon",
+    "source": "https://github.com/folke/tokyonight.nvim",
+    "license": "MIT",
+    "dark": true,
+    "note": "moon variant; cooler and lighter",
+    "colors": [
+      {
+        "name": "bg",
+        "hex": "#222436"
+      },
+      {
+        "name": "bg_dark",
+        "hex": "#1e2030"
+      },
+      {
+        "name": "bg_dark1",
+        "hex": "#191b29"
+      },
+      {
+        "name": "bg_highlight",
+        "hex": "#2f334d"
+      },
+      {
+        "name": "blue",
+        "hex": "#82aaff"
+      },
+      {
+        "name": "blue0",
+        "hex": "#3e68d7"
+      },
+      {
+        "name": "blue1",
+        "hex": "#65bcff"
+      },
+      {
+        "name": "blue2",
+        "hex": "#0db9d7"
+      },
+      {
+        "name": "blue5",
+        "hex": "#89ddff"
+      },
+      {
+        "name": "blue6",
+        "hex": "#b4f9f8"
+      },
+      {
+        "name": "blue7",
+        "hex": "#394b70"
+      },
+      {
+        "name": "comment",
+        "hex": "#636da6"
+      },
+      {
+        "name": "cyan",
+        "hex": "#86e1fc"
+      },
+      {
+        "name": "dark3",
+        "hex": "#545c7e"
+      },
+      {
+        "name": "dark5",
+        "hex": "#737aa2"
+      },
+      {
+        "name": "fg",
+        "hex": "#c8d3f5"
+      },
+      {
+        "name": "fg_dark",
+        "hex": "#828bb8"
+      },
+      {
+        "name": "fg_gutter",
+        "hex": "#3b4261"
+      },
+      {
+        "name": "green",
+        "hex": "#c3e88d"
+      },
+      {
+        "name": "green1",
+        "hex": "#4fd6be"
+      },
+      {
+        "name": "green2",
+        "hex": "#41a6b5"
+      },
+      {
+        "name": "magenta",
+        "hex": "#c099ff"
+      },
+      {
+        "name": "magenta2",
+        "hex": "#ff007c"
+      },
+      {
+        "name": "orange",
+        "hex": "#ff966c"
+      },
+      {
+        "name": "purple",
+        "hex": "#fca7ea"
+      },
+      {
+        "name": "red",
+        "hex": "#ff757f"
+      },
+      {
+        "name": "red1",
+        "hex": "#c53b53"
+      },
+      {
+        "name": "terminal_black",
+        "hex": "#444a73"
+      },
+      {
+        "name": "yellow",
+        "hex": "#ffc777"
+      },
+      {
+        "name": "add",
+        "hex": "#b8db87"
+      },
+      {
+        "name": "change",
+        "hex": "#7ca1f2"
+      },
+      {
+        "name": "delete",
+        "hex": "#e26a75"
+      }
+    ],
+    "roles": {
+      "background": "#191b29",
+      "surface": "#1e2030",
+      "text": "#b4f9f8",
+      "accent": "#ff007c",
+      "accent_2": "#0db9d7"
+    }
+  },
+  {
+    "name": "Tokyo Night Storm",
+    "slug": "tokyo-night-storm",
+    "source": "https://github.com/folke/tokyonight.nvim",
+    "license": "MIT",
+    "dark": true,
+    "note": "storm variant",
+    "colors": [
+      {
+        "name": "bg",
+        "hex": "#24283b"
+      },
+      {
+        "name": "bg_dark",
+        "hex": "#1f2335"
+      },
+      {
+        "name": "bg_dark1",
+        "hex": "#1b1e2d"
+      },
+      {
+        "name": "bg_highlight",
+        "hex": "#292e42"
+      },
+      {
+        "name": "blue",
+        "hex": "#7aa2f7"
+      },
+      {
+        "name": "blue0",
+        "hex": "#3d59a1"
+      },
+      {
+        "name": "blue1",
+        "hex": "#2ac3de"
+      },
+      {
+        "name": "blue2",
+        "hex": "#0db9d7"
+      },
+      {
+        "name": "blue5",
+        "hex": "#89ddff"
+      },
+      {
+        "name": "blue6",
+        "hex": "#b4f9f8"
+      },
+      {
+        "name": "blue7",
+        "hex": "#394b70"
+      },
+      {
+        "name": "comment",
+        "hex": "#565f89"
+      },
+      {
+        "name": "cyan",
+        "hex": "#7dcfff"
+      },
+      {
+        "name": "dark3",
+        "hex": "#545c7e"
+      },
+      {
+        "name": "dark5",
+        "hex": "#737aa2"
+      },
+      {
+        "name": "fg",
+        "hex": "#c0caf5"
+      },
+      {
+        "name": "fg_dark",
+        "hex": "#a9b1d6"
+      },
+      {
+        "name": "fg_gutter",
+        "hex": "#3b4261"
+      },
+      {
+        "name": "green",
+        "hex": "#9ece6a"
+      },
+      {
+        "name": "green1",
+        "hex": "#73daca"
+      },
+      {
+        "name": "green2",
+        "hex": "#41a6b5"
+      },
+      {
+        "name": "magenta",
+        "hex": "#bb9af7"
+      },
+      {
+        "name": "magenta2",
+        "hex": "#ff007c"
+      },
+      {
+        "name": "orange",
+        "hex": "#ff9e64"
+      },
+      {
+        "name": "purple",
+        "hex": "#9d7cd8"
+      },
+      {
+        "name": "red",
+        "hex": "#f7768e"
+      },
+      {
+        "name": "red1",
+        "hex": "#db4b4b"
+      },
+      {
+        "name": "teal",
+        "hex": "#1abc9c"
+      },
+      {
+        "name": "terminal_black",
+        "hex": "#414868"
+      },
+      {
+        "name": "yellow",
+        "hex": "#e0af68"
+      },
+      {
+        "name": "add",
+        "hex": "#449dab"
+      },
+      {
+        "name": "change",
+        "hex": "#6183bb"
+      },
+      {
+        "name": "delete",
+        "hex": "#914c54"
+      }
+    ],
+    "roles": {
+      "background": "#1b1e2d",
+      "surface": "#1f2335",
+      "text": "#b4f9f8",
+      "accent": "#ff007c",
+      "accent_2": "#0db9d7"
+    }
+  },
+  {
+    "name": "Tokyo Night",
+    "slug": "tokyo-night",
+    "source": "https://github.com/folke/tokyonight.nvim",
+    "license": "MIT",
+    "dark": true,
+    "note": "night variant; deep blue city lights",
+    "colors": [
+      {
+        "name": "bg",
+        "hex": "#1a1b26"
+      },
+      {
+        "name": "bg_dark",
+        "hex": "#16161e"
+      },
+      {
+        "name": "bg_dark1",
+        "hex": "#0c0e14"
+      },
+      {
+        "name": "bg_highlight",
+        "hex": "#292e42"
+      },
+      {
+        "name": "blue",
+        "hex": "#7aa2f7"
+      },
+      {
+        "name": "blue0",
+        "hex": "#3d59a1"
+      },
+      {
+        "name": "blue1",
+        "hex": "#2ac3de"
+      },
+      {
+        "name": "blue2",
+        "hex": "#0db9d7"
+      },
+      {
+        "name": "blue5",
+        "hex": "#89ddff"
+      },
+      {
+        "name": "blue6",
+        "hex": "#b4f9f8"
+      },
+      {
+        "name": "blue7",
+        "hex": "#394b70"
+      },
+      {
+        "name": "comment",
+        "hex": "#565f89"
+      },
+      {
+        "name": "cyan",
+        "hex": "#7dcfff"
+      },
+      {
+        "name": "dark3",
+        "hex": "#545c7e"
+      },
+      {
+        "name": "dark5",
+        "hex": "#737aa2"
+      },
+      {
+        "name": "fg",
+        "hex": "#c0caf5"
+      },
+      {
+        "name": "fg_dark",
+        "hex": "#a9b1d6"
+      },
+      {
+        "name": "fg_gutter",
+        "hex": "#3b4261"
+      },
+      {
+        "name": "green",
+        "hex": "#9ece6a"
+      },
+      {
+        "name": "green1",
+        "hex": "#73daca"
+      },
+      {
+        "name": "green2",
+        "hex": "#41a6b5"
+      },
+      {
+        "name": "magenta",
+        "hex": "#bb9af7"
+      },
+      {
+        "name": "magenta2",
+        "hex": "#ff007c"
+      },
+      {
+        "name": "orange",
+        "hex": "#ff9e64"
+      },
+      {
+        "name": "purple",
+        "hex": "#9d7cd8"
+      },
+      {
+        "name": "red",
+        "hex": "#f7768e"
+      },
+      {
+        "name": "red1",
+        "hex": "#db4b4b"
+      },
+      {
+        "name": "teal",
+        "hex": "#1abc9c"
+      },
+      {
+        "name": "terminal_black",
+        "hex": "#414868"
+      },
+      {
+        "name": "yellow",
+        "hex": "#e0af68"
+      },
+      {
+        "name": "add",
+        "hex": "#449dab"
+      },
+      {
+        "name": "change",
+        "hex": "#6183bb"
+      },
+      {
+        "name": "delete",
+        "hex": "#914c54"
+      }
+    ],
+    "roles": {
+      "background": "#0c0e14",
+      "surface": "#16161e",
+      "text": "#b4f9f8",
+      "accent": "#ff007c",
+      "accent_2": "#0db9d7"
+    }
+  }
+]

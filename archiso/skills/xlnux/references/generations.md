@@ -17,7 +17,7 @@ Each relevant change = writable btrfs snapshot of the root tree + metadata dir w
 ~/.local/share/x/home-gens/   home gens: <id>/{manifest.json,files/,files.sha256}, current, [pinned]
 ```
 
-IDs are `%04d`, monotonic, scanning metadata + snapshots. `parent` links generations.
+IDs are `%04d`, monotonic, scanning metadata + snapshots. `parent` links generations. The snapshots directory is auto-detected from the btrfs layout; an explicit `X_GEN_SUBVOL_PREFIX` wins, and the installer exports `X_GEN_SUBVOL_PREFIX=/@snapshots`.
 
 ## Manifest (schema 2)
 
@@ -25,83 +25,60 @@ IDs are `%04d`, monotonic, scanning metadata + snapshots. `parent` links generat
 {
   "schema": 2, "id": "0002", "parent": "0001",
   "reason": "manual|setup|update|pre-update|pre-rollback|pacman|pacman-pre|install",
-  "label": "...", "created": "UTC ISO-8601", "hostname": "...",
-  "backend": "btrfs|dir|off", "package_backend": "pacman|xpm|none",
-  "root_subvol": "/@ | /@snapshots/<id>",
-  "x_scripts": "0.1.0-13|git describe|unknown",
-  "kernel": {"release": "..."}, "cmdline": "...",
-  "configs": {"etc_sha256": "..."},
-  "packages": {"count": N, "sha256": "..."},
-  "services": {"count": N}, "migrations": {"count": N}
+  "label": "after-nvidia", "created": "2026-10-09T12:00:00Z",
+  "subvol": "/@snapshots/0002", "snapshot_uuid": "...",
+  "kernel": "6.12.10-arch1-1", "boot": ["vmlinuz-linux", "vmlinuz-linux-lts"],
+  "x_scripts": "0.1.0-37",
+  "packages_sha256": "...", "services_sha256": "...", "etc_sha256": "...",
+  "migrations": ["0001-example"], "pinned": false
 }
 ```
 
-Captures: `pacman -Q` sorted (or `xpm query`), enabled unit files, per-user migration markers (from `/home/*` + `/root`), recursive `/etc` hash (excludes `.pwd.lock`, `mtab`, `pacman.d/gnupg/*`), archived kernels/initrds (`cp -a`, multi-kernel copies all; boot picks first sorted).
+## Subcommands (`x gen …`)
 
-## Environment variables (defaults)
-
-```
-X_GEN_STATE=/var/lib/x
-X_GEN_DIR=$X_GEN_STATE/generations
-X_GEN_CURRENT=$X_GEN_STATE/current
-X_GEN_SNAPSHOTS=/.snapshots
-X_GEN_SUBVOL_PREFIX=$X_GEN_SNAPSHOTS
-X_GEN_ROOT=/
-X_GEN_BACKEND=auto|btrfs|dir|off
-X_GEN_BOOT=auto
-X_GEN_BOOT_DIR=/boot
-X_GEN_BOOT_KEEP=3
-X_GEN_KEEP=5
-X_GEN_CMDLINE=/proc/cmdline
-X_GEN_LIVE_SUBVOL=            # set to /@ for generation 0001 during install
-X_GEN_RUNNING=                # override running detection
-X_GEN_SKIP=0
-```
-
-Home: `X_HGEN_STATE=~/.local/share/x/home-gens`, `X_HGEN_HOME`, `X_HGEN_INCLUDE`, `X_HGEN_EXCLUDE`, `X_HGEN_KEEP=10`.
-
-## Subcommands (exact)
-
-| Command | Notes |
+| Command | Behaviour |
 |---|---|
-| `x gen` / `list` | markers `*` default, `r` running, `p` pinned |
-| `x gen new [--reason R] [--label L]` | root on btrfs; does not steal default unless first gen |
-| `x gen status [--json]` | backend, running, default, pending, drift, usage; JSON schema 1 single line |
-| `x gen rollback <id> [--no-safety]` | safety gen (`pre-rollback`), pin target, set `current`, `pending` if not running, sync boot |
-| `x gen boot` | re-sync boot entries |
-| `x gen diff <a> <b>` | packages/services/migrations/kernel/etc hash/root subvol |
-| `x gen verify [id]` | live vs generation captures; exit 1 on drift |
-| `x gen pin <id> [--unpin]` | prune protection |
-| `x gen prune [--keep N] [--older-than DAYS] [--dry-run]` | never pinned/running/default |
-| `x gen restore <path> [--from ID] [--dest PATH]` | `.bak.<ts>` backups before overwrite |
-| `x gen restore --pkg <name>` | file list from pacman local db or `xpm` db |
-| `x gen export <id> [--with-data]` / `import` | tar.zst/gz bundles; btrfs send for data; no signature/checksum |
-| `x home list/new/status/diff/restore/prune` | copies, no root; no pin/verify/export/rollback |
+| `list [--json]` | generations with id/parent/label/date/reason/size/pinned/current |
+| `status [--json]` | current default, pending rollback target, snapshot dir, broken/missing gens |
+| `new [--label TEXT]` | snapshot root, write manifest, archive kernels, sync boot entries, **make it the default** |
+| `rollback <id>` | safety gen for the running state, flatten target (no nested subvol), set `current`/`pending`, rewrite boot entries |
+| `diff <id>` | files/packages/services diff between the running system and a generation |
+| `verify <id>` | manifest hashes; a frozen gen reports an `/etc` hash difference by design (its fstab points to its own subvol) |
+| `pin <id>`, `prune` | protect from or reclaim unpinned generations |
+| `restore <id> [--pkg]` | revert files (tracked paths), optionally reinstall the package set from pacman and xpm DBs; always creates a safety generation |
+| `export <id> [--sign] [--encrypt]` | `btrfs send` stream or portable tarball; per-file checksums; magic detection on import |
+| `import <file>` | restore from a verified bundle |
+| `boot [--regenerate]` | inspect/rewrite GRUB/systemd-boot entries; orphan entries for pruned gens are swept |
+| `quota` | qgroup usage/per-gen sizes |
+| `plan`, `apply` | `system.toml` declarative generation (packages/services/migrations) with tests |
 
-## Boot integration (`xgen_boot_sync`)
+Home generations mirror the model with plain copies: `x home list|new|status|diff|restore|prune`, including `--pin`.
 
-- systemd-boot: `loader/entries/x-gen-<id>.conf`, `x.conf` mirror of default, `x-rescue.conf` (+`systemd.unit=rescue.target`), `loader.conf` default updated.
-- GRUB: `grub/custom.cfg` with `set default=x-gen-<id>` + one menuentry per kept generation + rescue.
-- Running generation boots `/vmlinuz-linux` (live root mutates); frozen generations get their archived kernel copied to `/x/gen-<id>/` and boot that.
-- Cmdline = manifest cmdline minus `rootflags=*`, forced `rw`, plus `rootflags=subvol=<root_subvol or prefix/id>`.
-- ESP retention `X_GEN_BOOT_KEEP` (3) + current/running/pinned/pending; pruning ESP copies does not delete snapshots/metadata.
+## Default-selection policy (NixOS-style)
 
-## Pacman hooks
+- `x gen new` makes the **newest generation the default boot target**. Ids are monotonic, so the newest is also the highest id.
+- `x gen rollback <id>` pins that target and overrides the default **until a newer generation exists** (next `x gen new`, hook generation, setup or update). It creates a safety generation for the state it leaves.
+- A `pacman-pre` generation can become the default only during the transaction window; the post-transaction generation wins afterwards.
+- Boot entry regeneration scans `/var/lib/x/generations` and removes entries whose generation no longer exists; `x-rescue` is always kept.
 
-`etc/pacman.d/hooks/10-x-gen-pre.hook` (PreTransaction) and `20-x-gen-post.hook` (PostTransaction) over Install/Upgrade/Remove `Target=*` → `/usr/share/x/hooks/pacman-gen.sh pre|post` → `x gen new --reason pacman-pre|pacman`. Guards: `X_GEN_SKIP=1`, no `current`, backend off. `install/config.sh` copies `etc/*` onto `/etc` during `x setup`, which is how the hooks land on installed systems. `x update` sets `X_GEN_SKIP=1` on its own pacman and does its own pre/post captures.
+## Automatic creation (pacman hooks)
 
-## Migrations
+- Hooks live in `/usr/share/libalpm/hooks/` and are shipped by `x-scripts`:
+  - `10-x-gen-pre.hook` → `/usr/share/x/hooks/pacman-gen.sh pre` (safety generation, `When = PreTransaction`).
+  - `95-x-gen-post.hook` → `pacman-gen.sh post` (records the new generation, re-syncs boot entries).
+- The legacy `/etc/pacman.d/hooks/` copies are removed by `x-scripts.install`; both pacman and xpm execute hooks from the libalpm directory.
+- `X_GEN_SKIP=1` suppresses hook generation for a transaction. `x update` sets it and records its own pre/post generations; `x setup` creates a `setup` generation after provisioning.
 
-`migrations/<timestamp>-<name>.sh`, idempotent, per-user; markers in `~/.local/state/x/migrations/<name>`; run by `x migrate` and at the end of `x update`; failures reported and not marked; captured into manifests. Currently **zero migrations shipped**.
+## Failure modes and invariants
 
-## Known correctness issues (see known-issues.md for full list)
+- Never edit a frozen generation through `/.snapshots/<id>` (0700, bootable fork): use `x gen restore`/`rollback`.
+- `x gen prune` never removes the current generation, the pending target or pinned generations; it also sweeps stale boot entries.
+- Snapshots are excluded from themselves; `/home` is a separate subvolume and never rolled back with system generations.
+- `x gen verify` on a frozen generation is expected to show the `/etc` fstab difference; verify a running system instead when checking drift.
+- Exports use per-file checksums; signatures/encryption are optional (`--sign`, `--encrypt`, `--encrypt-to`) and detected on import by magic, not extension.
 
-1. `X_GEN_SUBVOL_PREFIX` never exported on installed systems: installer created the snapshot subvol as top-level `@snapshots` (path `/@snapshots`) but the engine defaults to `/.snapshots`, so generation ≥0002 manifests/boot options/fstab patching can disagree with the documented `subvol=/@snapshots/<id>` contract. Fix: export `X_GEN_SUBVOL_PREFIX=/@snapshots` (or derive it from the mount) in installer, hooks, `x setup`, `x update`, and test the installed layout.
-2. System restore has no `..`/traversal rejection (home restore does); runs as root.
-3. `x-gen-*` files declare `# x:root=false` while btrfs ops need root; `pin` has no root check; read commands can't read the 0700 state dir as user.
-4. Manifest parsing is `sed`-based; import has no schema/signature validation.
-5. `generations-btrfs.sh` has a vacuous `/home` assertion (`|| true`); no btrfs boot/rollback/export tests; no multi-kernel selection test.
+## Tests
 
-## Test suite
-
-`scripts/test/validate.sh` → `smoke.sh` (syntax, sync, hyprland dry-run, dispatcher, migrations) + `generations.sh` (dir backend) + `generations-boot.sh` (fake ESP, SB+GRUB entries) + `pacman-hooks.sh` + `generations-export.sh` + `home-gens.sh`; then `cargo test` for xpm/xpkg; then `generations-btrfs.sh` with root (real loop btrfs; self-skips). All green without root per `ESTADO-GENERACIONES.md`; real-btrfs + VM pending.
+- `bash scripts/test/validate.sh` (362 checks, no root): smoke, generations, boot entries, pacman hooks, export/import, home gens.
+- `sudo bash scripts/test/generations-btrfs.sh`: real loop btrfs exercising snapshots/rollback/prune/export.
+- `python3 x/tests/e2e-autoinstall.py --mode uefi|bios`: install → boot → `0001` → verify → package install → newest gen default → reboot into it.

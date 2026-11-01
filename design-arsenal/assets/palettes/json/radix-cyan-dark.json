@@ -1,0 +1,65 @@
+{
+  "name": "Radix Cyan (Dark)",
+  "slug": "radix-cyan-dark",
+  "source": "https://github.com/radix-ui/colors",
+  "license": "MIT",
+  "dark": true,
+  "note": "12-step perceptual UI scale",
+  "colors": [
+    {
+      "name": "cyan1",
+      "hex": "#0b161a"
+    },
+    {
+      "name": "cyan2",
+      "hex": "#101b20"
+    },
+    {
+      "name": "cyan3",
+      "hex": "#082c36"
+    },
+    {
+      "name": "cyan4",
+      "hex": "#003848"
+    },
+    {
+      "name": "cyan5",
+      "hex": "#004558"
+    },
+    {
+      "name": "cyan6",
+      "hex": "#045468"
+    },
+    {
+      "name": "cyan7",
+      "hex": "#12677e"
+    },
+    {
+      "name": "cyan8",
+      "hex": "#11809c"
+    },
+    {
+      "name": "cyan9",
+      "hex": "#00a2c7"
+    },
+    {
+      "name": "cyan10",
+      "hex": "#23afd0"
+    },
+    {
+      "name": "cyan11",
+      "hex": "#4ccce6"
+    },
+    {
+      "name": "cyan12",
+      "hex": "#b6ecf7"
+    }
+  ],
+  "roles": {
+    "background": "#0b161a",
+    "surface": "#101b20",
+    "text": "#b6ecf7",
+    "accent": "#003848",
+    "accent_2": "#004558"
+  }
+}

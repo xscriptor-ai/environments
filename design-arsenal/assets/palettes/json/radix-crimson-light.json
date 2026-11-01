@@ -1,0 +1,65 @@
+{
+  "name": "Radix Crimson (Light)",
+  "slug": "radix-crimson-light",
+  "source": "https://github.com/radix-ui/colors",
+  "license": "MIT",
+  "dark": false,
+  "note": "12-step perceptual UI scale",
+  "colors": [
+    {
+      "name": "crimson1",
+      "hex": "#fffcfd"
+    },
+    {
+      "name": "crimson2",
+      "hex": "#fef7f9"
+    },
+    {
+      "name": "crimson3",
+      "hex": "#ffe9f0"
+    },
+    {
+      "name": "crimson4",
+      "hex": "#fedce7"
+    },
+    {
+      "name": "crimson5",
+      "hex": "#facedd"
+    },
+    {
+      "name": "crimson6",
+      "hex": "#f3bed1"
+    },
+    {
+      "name": "crimson7",
+      "hex": "#eaacc3"
+    },
+    {
+      "name": "crimson8",
+      "hex": "#e093b2"
+    },
+    {
+      "name": "crimson9",
+      "hex": "#e93d82"
+    },
+    {
+      "name": "crimson10",
+      "hex": "#df3478"
+    },
+    {
+      "name": "crimson11",
+      "hex": "#cb1d63"
+    },
+    {
+      "name": "crimson12",
+      "hex": "#621639"
+    }
+  ],
+  "roles": {
+    "background": "#fffcfd",
+    "surface": "#fef7f9",
+    "text": "#621639",
+    "accent": "#cb1d63",
+    "accent_2": "#621639"
+  }
+}

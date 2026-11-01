@@ -1,0 +1,20 @@
+/* Radix Plum (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-plum-light"] {
+  --plum1: #fefcff;
+  --plum2: #fdf7fd;
+  --plum3: #fbebfb;
+  --plum4: #f7def8;
+  --plum5: #f2d1f3;
+  --plum6: #e9c2ec;
+  --plum7: #deade3;
+  --plum8: #cf91d8;
+  --plum9: #ab4aba;
+  --plum10: #a144af;
+  --plum11: #953ea3;
+  --plum12: #53195d;
+  --background: #fefcff;
+  --surface: #fdf7fd;
+  --text: #53195d;
+  --accent: #53195d;
+  --accent-2: #953ea3;
+}

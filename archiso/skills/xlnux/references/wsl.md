@@ -1,4 +1,4 @@
-# X Linux WSL (xlnux/wsl + xlnux/wsl-scripts)
+# X Linux WSL (equislinux/wsl + equislinux/wsl-scripts)
 
 ## Canonical flow (dedicated repos, branch `main`)
 
@@ -25,18 +25,17 @@ Relaunch:   wsl --terminate x && wsl -d x -> ./install.sh           (user stage)
 - `stage-root.sh`: tools (`sudo git curl wget zsh` best-effort), locale (`locale.gen`/`locale.conf` + `locale-gen`), keymap (`vconsole.conf`), timezone (`windows-time` = no-op), creates user (`useradd -m -G wheel`), sudoers drop-in `/etc/sudoers.d/x-wsl-wheel` (NOPASSWD by default), pins `[user] default` in `/etc/wsl.conf` (idempotent awk helpers in `lib/common.sh`).
 - `stage-user.sh`: marker-delimited rc block (`~/.zprofile`+`~/.zshrc` or `~/.profile`+`~/.bashrc`) with EDITOR/XDG/PATH/prompt/aliases; creates `~/.local/bin`, `~/Projects`, `~/.config/x`; idempotent re-runs.
 - `lib/ui.sh`: gum when available, plain fallback, `X_AUTO=1`/non-tty picks defaults.
-- `legacy/`: old XScriptor bootstrap, dead raw URLs to `xlnux/x/main/wsl/install.sh`; keep out of the active flow.
+- `legacy/`: old XScriptor bootstrap, dead raw URLs to `equislinux/x/main/wsl/install.sh`; keep out of the active flow.
 - Tests: `test/smoke.sh` (syntax, wsl.conf helpers, dry-runs, real user-stage into temp HOME).
 
 ## Known issues and gaps
 
-1. `install.ps1` untested on Windows; no CI in either repo.
+1. `install.ps1` has not been run on real Windows; CI stays local by decision (no Actions in either repo).
 2. `lib/common.sh` `x_require_root` forwards only `X_DRY`/`X_AUTO`/`X_INSTALL` across sudo; env-provided `X_LOCALE/X_KEYMAP/X_TIMEZONE/X_USER/X_SHELL/X_SUDO` are lost on elevation (options still work).
-3. The old divergent WSL flow remains in `x/` (`WSL_GUIDE.md`, `xbuildwsl.sh`, `xbuildwslc.sh`): `cp -r "${PROFILE_DIR}/airootfs/"*` **does not copy hidden entries** (`root/.zlogin`, `.automated_script.sh`, `.gnupg`), and the guide contradicts the dedicated repos (distro name `x-linux` vs `x`, manual user vs wsl-scripts, `.tar.zst` import myth). Decide: delete from `x/` or make it explicitly legacy.
-4. `wsl-scripts` does not provision `x-scripts`/`x` CLI, generations or `x home` (F4 item 7 in ESTADO: document `x home` integration in WSL).
-5. Wiki aggregate README omits `wsl`/`wsl-scripts` even though `wiki/wsl/` exists.
-6. Rootfs has no `linux`/firmware: intended for WSL kernel; document that `x` generations/hook paths are no-ops there (backend detection returns `off`).
-7. No published `out/` artifact or release tag; builds are local-only.
+3. Rootfs release `v0.1.0` is published on GitHub and mirrored to SourceForge as `x-wsl-rootfs.tar.gz` (+ `.sha256`); rebuilds must be regenerated with the current keyring/mirrorlist.
+4. `wsl-scripts` does not provision `x-scripts`/`x` CLI, generations or `x home`; WSL integration of those is parked by decision.
+5. The legacy WSL builders that lived in `x/` were removed (session 23); do not reintroduce them.
+6. The rootfs has no `linux`/firmware by design (WSL kernel); `x` generations/hook paths are no-ops there (backend detection returns `off`).
 
 ## Generic WSL best practices (for X and any Arch rootfs)
 

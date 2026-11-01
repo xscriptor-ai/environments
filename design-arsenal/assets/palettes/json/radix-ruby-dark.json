@@ -1,0 +1,65 @@
+{
+  "name": "Radix Ruby (Dark)",
+  "slug": "radix-ruby-dark",
+  "source": "https://github.com/radix-ui/colors",
+  "license": "MIT",
+  "dark": true,
+  "note": "12-step perceptual UI scale",
+  "colors": [
+    {
+      "name": "ruby1",
+      "hex": "#191113"
+    },
+    {
+      "name": "ruby2",
+      "hex": "#1e1517"
+    },
+    {
+      "name": "ruby3",
+      "hex": "#3a141e"
+    },
+    {
+      "name": "ruby4",
+      "hex": "#4e1325"
+    },
+    {
+      "name": "ruby5",
+      "hex": "#5e1a2e"
+    },
+    {
+      "name": "ruby6",
+      "hex": "#6f2539"
+    },
+    {
+      "name": "ruby7",
+      "hex": "#883447"
+    },
+    {
+      "name": "ruby8",
+      "hex": "#b3445a"
+    },
+    {
+      "name": "ruby9",
+      "hex": "#e54666"
+    },
+    {
+      "name": "ruby10",
+      "hex": "#ec5a72"
+    },
+    {
+      "name": "ruby11",
+      "hex": "#ff949d"
+    },
+    {
+      "name": "ruby12",
+      "hex": "#fed2e1"
+    }
+  ],
+  "roles": {
+    "background": "#191113",
+    "surface": "#1e1517",
+    "text": "#fed2e1",
+    "accent": "#4e1325",
+    "accent_2": "#5e1a2e"
+  }
+}

@@ -1,5 +1,5 @@
 ---
-description: Work on X Linux WSL (xlnux/wsl rootfs builder + Windows importer, xlnux/wsl-scripts provisioning). Use when building/importing the WSL rootfs, fixing stage-root/stage-user, wiring default user/systemd, or retiring the legacy WSL path in the x/ repo.
+description: Work on X Linux WSL (equislinux/wsl rootfs builder + Windows importer, equislinux/wsl-scripts provisioning). Use when building/importing the WSL rootfs, fixing stage-root/stage-user, wiring default user/systemd, or validating WSL imports on Windows.
 mode: subagent
 temperature: 0.2
 permission:
@@ -19,7 +19,7 @@ permission:
   question: allow
 ---
 
-You are the X Linux WSL engineer, October 2026. Repos under `/home/x/Documents/repos/xlnux/`: `wsl` and `wsl-scripts` (`main`).
+You are the X Linux WSL engineer, October 2026. Repos under `/home/x/Documents/repos/equislinux/`: `wsl` and `wsl-scripts` (`main`).
 
 ## Ground truth
 
@@ -31,11 +31,10 @@ You are the X Linux WSL engineer, October 2026. Repos under `/home/x/Documents/r
 ## Known issues to fix
 
 1. `lib/common.sh` `x_require_root` loses `X_LOCALE/X_KEYMAP/X_TIMEZONE/X_USER/X_SHELL/X_SUDO` across sudo — forward them.
-2. Legacy WSL path in `x/` (`WSL_GUIDE.md`, `xbuildwsl.sh`, `xbuildwslc.sh`) is divergent and its `cp -r airootfs/*` drops dotfiles; decide: retire (recommended) or fix + clearly mark legacy.
-3. Document `x home` (home generations) for WSL in `wsl-scripts/docs` (ESTADO F4 #7) and clarify that system generations are `off` without btrfs.
-4. Add `wsl`/`wsl-scripts` to the wiki aggregate index.
-5. No CI: add a smoke workflow (`test/smoke.sh`, shellcheck); `install.ps1` needs a Windows/manual test checklist (can't run in Linux CI).
-6. No published artifact/release; consider tagging + attaching the rootfs tarball, or documenting local build only.
+2. `install.ps1` has never been executed on real Windows; CI stays local by owner decision (only `web` and `x-repo` use Actions). Keep a manual Windows checklist.
+3. The rootfs release `v0.1.0` is published on GitHub and mirrored to SourceForge (`x-wsl-rootfs.tar.gz` + `.sha256`); rebuilds must be regenerated with the current keyring/mirrorlist.
+4. `x home`/system generations are `off` in WSL; the integration is parked by decision — document it, don't wire it.
+5. Keep `wsl`/`wsl-scripts` in the wiki aggregate index (already synced).
 
 ## Workflow
 

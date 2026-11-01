@@ -1,0 +1,77 @@
+{
+  "name": "Material 3 Baseline",
+  "slug": "material-3-baseline",
+  "source": "https://m3.material.io/styles/color/overview",
+  "license": "Apache-2.0",
+  "dark": false,
+  "note": "baseline Material You roles; generate your own from a seed color",
+  "colors": [
+    {
+      "name": "primary",
+      "hex": "#6750a4"
+    },
+    {
+      "name": "on-primary",
+      "hex": "#ffffff"
+    },
+    {
+      "name": "primary-container",
+      "hex": "#eaddff"
+    },
+    {
+      "name": "on-primary-container",
+      "hex": "#21005d"
+    },
+    {
+      "name": "secondary",
+      "hex": "#625b71"
+    },
+    {
+      "name": "tertiary",
+      "hex": "#7d5260"
+    },
+    {
+      "name": "error",
+      "hex": "#b3261e"
+    },
+    {
+      "name": "background",
+      "hex": "#fffbfe"
+    },
+    {
+      "name": "surface-variant",
+      "hex": "#e7e0ec"
+    },
+    {
+      "name": "on-surface",
+      "hex": "#1c1b1f"
+    },
+    {
+      "name": "on-surface-variant",
+      "hex": "#49454f"
+    },
+    {
+      "name": "outline",
+      "hex": "#79747e"
+    },
+    {
+      "name": "outline-variant",
+      "hex": "#cac4d0"
+    },
+    {
+      "name": "inverse-surface",
+      "hex": "#313033"
+    },
+    {
+      "name": "inverse-primary",
+      "hex": "#d0bcff"
+    }
+  ],
+  "roles": {
+    "background": "#ffffff",
+    "surface": "#fffbfe",
+    "text": "#21005d",
+    "accent": "#b3261e",
+    "accent_2": "#6750a4"
+  }
+}

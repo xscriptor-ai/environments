@@ -1,0 +1,85 @@
+{
+  "name": "Everforest",
+  "slug": "everforest",
+  "source": "https://github.com/sainnhe/everforest",
+  "license": "MIT",
+  "dark": true,
+  "note": "comfortable forest-inspired contrast",
+  "colors": [
+    {
+      "name": "bg0",
+      "hex": "#2d353b"
+    },
+    {
+      "name": "bg1",
+      "hex": "#343f44"
+    },
+    {
+      "name": "bg2",
+      "hex": "#3d484d"
+    },
+    {
+      "name": "bg3",
+      "hex": "#475258"
+    },
+    {
+      "name": "bg4",
+      "hex": "#4f585e"
+    },
+    {
+      "name": "bg5",
+      "hex": "#56635f"
+    },
+    {
+      "name": "fg",
+      "hex": "#d3c6aa"
+    },
+    {
+      "name": "red",
+      "hex": "#e67e80"
+    },
+    {
+      "name": "orange",
+      "hex": "#e69875"
+    },
+    {
+      "name": "yellow",
+      "hex": "#dbbc7f"
+    },
+    {
+      "name": "green",
+      "hex": "#a7c080"
+    },
+    {
+      "name": "aqua",
+      "hex": "#83c092"
+    },
+    {
+      "name": "blue",
+      "hex": "#7fbbb3"
+    },
+    {
+      "name": "purple",
+      "hex": "#d699b6"
+    },
+    {
+      "name": "grey0",
+      "hex": "#7a8478"
+    },
+    {
+      "name": "grey1",
+      "hex": "#859289"
+    },
+    {
+      "name": "grey2",
+      "hex": "#9da9a0"
+    }
+  ],
+  "roles": {
+    "background": "#2d353b",
+    "surface": "#343f44",
+    "text": "#d3c6aa",
+    "accent": "#e69875",
+    "accent_2": "#e67e80"
+  }
+}

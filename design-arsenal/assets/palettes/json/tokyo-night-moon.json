@@ -1,0 +1,145 @@
+{
+  "name": "Tokyo Night Moon",
+  "slug": "tokyo-night-moon",
+  "source": "https://github.com/folke/tokyonight.nvim",
+  "license": "MIT",
+  "dark": true,
+  "note": "moon variant; cooler and lighter",
+  "colors": [
+    {
+      "name": "bg",
+      "hex": "#222436"
+    },
+    {
+      "name": "bg_dark",
+      "hex": "#1e2030"
+    },
+    {
+      "name": "bg_dark1",
+      "hex": "#191b29"
+    },
+    {
+      "name": "bg_highlight",
+      "hex": "#2f334d"
+    },
+    {
+      "name": "blue",
+      "hex": "#82aaff"
+    },
+    {
+      "name": "blue0",
+      "hex": "#3e68d7"
+    },
+    {
+      "name": "blue1",
+      "hex": "#65bcff"
+    },
+    {
+      "name": "blue2",
+      "hex": "#0db9d7"
+    },
+    {
+      "name": "blue5",
+      "hex": "#89ddff"
+    },
+    {
+      "name": "blue6",
+      "hex": "#b4f9f8"
+    },
+    {
+      "name": "blue7",
+      "hex": "#394b70"
+    },
+    {
+      "name": "comment",
+      "hex": "#636da6"
+    },
+    {
+      "name": "cyan",
+      "hex": "#86e1fc"
+    },
+    {
+      "name": "dark3",
+      "hex": "#545c7e"
+    },
+    {
+      "name": "dark5",
+      "hex": "#737aa2"
+    },
+    {
+      "name": "fg",
+      "hex": "#c8d3f5"
+    },
+    {
+      "name": "fg_dark",
+      "hex": "#828bb8"
+    },
+    {
+      "name": "fg_gutter",
+      "hex": "#3b4261"
+    },
+    {
+      "name": "green",
+      "hex": "#c3e88d"
+    },
+    {
+      "name": "green1",
+      "hex": "#4fd6be"
+    },
+    {
+      "name": "green2",
+      "hex": "#41a6b5"
+    },
+    {
+      "name": "magenta",
+      "hex": "#c099ff"
+    },
+    {
+      "name": "magenta2",
+      "hex": "#ff007c"
+    },
+    {
+      "name": "orange",
+      "hex": "#ff966c"
+    },
+    {
+      "name": "purple",
+      "hex": "#fca7ea"
+    },
+    {
+      "name": "red",
+      "hex": "#ff757f"
+    },
+    {
+      "name": "red1",
+      "hex": "#c53b53"
+    },
+    {
+      "name": "terminal_black",
+      "hex": "#444a73"
+    },
+    {
+      "name": "yellow",
+      "hex": "#ffc777"
+    },
+    {
+      "name": "add",
+      "hex": "#b8db87"
+    },
+    {
+      "name": "change",
+      "hex": "#7ca1f2"
+    },
+    {
+      "name": "delete",
+      "hex": "#e26a75"
+    }
+  ],
+  "roles": {
+    "background": "#191b29",
+    "surface": "#1e2030",
+    "text": "#b4f9f8",
+    "accent": "#ff007c",
+    "accent_2": "#0db9d7"
+  }
+}

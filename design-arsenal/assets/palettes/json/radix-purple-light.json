@@ -1,0 +1,65 @@
+{
+  "name": "Radix Purple (Light)",
+  "slug": "radix-purple-light",
+  "source": "https://github.com/radix-ui/colors",
+  "license": "MIT",
+  "dark": false,
+  "note": "12-step perceptual UI scale",
+  "colors": [
+    {
+      "name": "purple1",
+      "hex": "#fefcfe"
+    },
+    {
+      "name": "purple2",
+      "hex": "#fbf7fe"
+    },
+    {
+      "name": "purple3",
+      "hex": "#f7edfe"
+    },
+    {
+      "name": "purple4",
+      "hex": "#f2e2fc"
+    },
+    {
+      "name": "purple5",
+      "hex": "#ead5f9"
+    },
+    {
+      "name": "purple6",
+      "hex": "#e0c4f4"
+    },
+    {
+      "name": "purple7",
+      "hex": "#d1afec"
+    },
+    {
+      "name": "purple8",
+      "hex": "#be93e4"
+    },
+    {
+      "name": "purple9",
+      "hex": "#8e4ec6"
+    },
+    {
+      "name": "purple10",
+      "hex": "#8347b9"
+    },
+    {
+      "name": "purple11",
+      "hex": "#8145b5"
+    },
+    {
+      "name": "purple12",
+      "hex": "#402060"
+    }
+  ],
+  "roles": {
+    "background": "#fefcfe",
+    "surface": "#fbf7fe",
+    "text": "#402060",
+    "accent": "#402060",
+    "accent_2": "#8145b5"
+  }
+}

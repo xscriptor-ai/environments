@@ -1,0 +1,18 @@
+/* Open Color Pink — https://github.com/yeun/open-color — MIT */
+[data-palette="open-color-pink"] {
+  --50: #fff0f6;
+  --100: #ffdeeb;
+  --200: #fcc2d7;
+  --300: #faa2c1;
+  --400: #f783ac;
+  --500: #f06595;
+  --600: #e64980;
+  --700: #d6336c;
+  --800: #c2255c;
+  --900: #a61e4d;
+  --background: #fff0f6;
+  --surface: #ffdeeb;
+  --text: #a61e4d;
+  --accent: #a61e4d;
+  --accent-2: #c2255c;
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3840" height="2160" viewBox="0 0 3840 2160">
+<defs>
+  <linearGradient id="base" x1="0.213" y1="0.090" x2="0.787" y2="0.910"><stop offset="0.000" stop-color="#100a05"/><stop offset="0.333" stop-color="#7c2d12"/><stop offset="0.667" stop-color="#d97706"/><stop offset="1.000" stop-color="#fef3c7"/></linearGradient>
+  <radialGradient id="glow" cx="0.34" cy="0.3" r=".62">
+    <stop offset="0" stop-color="#fbbf24" stop-opacity=".16"/>
+    <stop offset=".55" stop-color="#fbbf24" stop-opacity=".035"/>
+    <stop offset="1" stop-color="#fbbf24" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="vig" cx=".5" cy=".5" r=".75">
+    <stop offset=".55" stop-color="#000" stop-opacity="0"/>
+    <stop offset="1" stop-color="#000" stop-opacity=".35"/>
+  </radialGradient>
+</defs>
+<rect width="3840" height="2160" fill="url(#base)"/>
+<rect width="3840" height="2160" fill="url(#glow)"/>
+<rect width="3840" height="2160" fill="url(#vig)"/>
+</svg>

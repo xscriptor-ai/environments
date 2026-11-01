@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3840" height="2160" viewBox="0 0 3840 2160">
+<defs><radialGradient id="b0" cx="0.18" cy="0.24" r="0.62"><stop offset="0" stop-color="#0c4a6e" stop-opacity=".62"/><stop offset="1" stop-color="#0c4a6e" stop-opacity="0"/></radialGradient><radialGradient id="b1" cx="0.82" cy="0.18" r="0.55"><stop offset="0" stop-color="#0ea5e9" stop-opacity=".62"/><stop offset="1" stop-color="#0ea5e9" stop-opacity="0"/></radialGradient><radialGradient id="b2" cx="0.74" cy="0.82" r="0.66"><stop offset="0" stop-color="#0369a1" stop-opacity=".62"/><stop offset="1" stop-color="#0369a1" stop-opacity="0"/></radialGradient><radialGradient id="b3" cx="0.22" cy="0.84" r="0.52"><stop offset="0" stop-color="#67e8f9" stop-opacity=".62"/><stop offset="1" stop-color="#67e8f9" stop-opacity="0"/></radialGradient></defs>
+<rect width="3840" height="2160" fill="#01060d"/>
+<rect width="3840" height="2160" fill="url(#b0)"/><rect width="3840" height="2160" fill="url(#b1)"/><rect width="3840" height="2160" fill="url(#b2)"/><rect width="3840" height="2160" fill="url(#b3)"/>
+<defs><radialGradient id="v" cx=".5" cy=".5" r=".8"><stop offset=".5" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".38"/></radialGradient></defs>
+<rect width="3840" height="2160" fill="#000" opacity=".08"/>
+<rect width="3840" height="2160" fill="url(#v)"/>
+</svg>

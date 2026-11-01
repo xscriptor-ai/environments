@@ -1,0 +1,57 @@
+{
+  "name": "Open Color Blue",
+  "slug": "open-color-blue",
+  "source": "https://github.com/yeun/open-color",
+  "license": "MIT",
+  "dark": false,
+  "note": "13 hues x 10 steps; designed for UI",
+  "colors": [
+    {
+      "name": "50",
+      "hex": "#e7f5ff"
+    },
+    {
+      "name": "100",
+      "hex": "#d0ebff"
+    },
+    {
+      "name": "200",
+      "hex": "#a5d8ff"
+    },
+    {
+      "name": "300",
+      "hex": "#74c0fc"
+    },
+    {
+      "name": "400",
+      "hex": "#4dabf7"
+    },
+    {
+      "name": "500",
+      "hex": "#339af0"
+    },
+    {
+      "name": "600",
+      "hex": "#228be6"
+    },
+    {
+      "name": "700",
+      "hex": "#1c7ed6"
+    },
+    {
+      "name": "800",
+      "hex": "#1971c2"
+    },
+    {
+      "name": "900",
+      "hex": "#1864ab"
+    }
+  ],
+  "roles": {
+    "background": "#e7f5ff",
+    "surface": "#d0ebff",
+    "text": "#1864ab",
+    "accent": "#1971c2",
+    "accent_2": "#1c7ed6"
+  }
+}

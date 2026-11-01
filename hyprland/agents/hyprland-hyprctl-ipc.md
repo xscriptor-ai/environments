@@ -28,7 +28,7 @@ hyprctl version                    # version, branch, commit, flags (use to dete
 hyprctl monitors [-j]              # JSON with -j
 hyprctl workspaces | activeworkspace | clients | activewindow | layers | devices | binds | cursors? (cursorpos)
 hyprctl workspacerules | instances | layouts | submap | locked | splash
-hyprctl getoption general:gaps_in  # hyprlang-era path with colons also accepted for input/options? use dotted in Lua era:
+hyprctl getoption general.gaps_in   # current dotted path (legacy hyprlang used general:gaps_in)
 hyprctl getoption general.border_size
 hyprctl getprop <window> <prop>    # dynamic prop of a window (0.51+)
 hyprctl descriptions -j            # JSON describing ALL options (great for agent lookups)

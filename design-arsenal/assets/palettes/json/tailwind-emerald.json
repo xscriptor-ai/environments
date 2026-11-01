@@ -1,0 +1,61 @@
+{
+  "name": "Tailwind Emerald",
+  "slug": "tailwind-emerald",
+  "source": "https://github.com/tailwindlabs/tailwindcss",
+  "license": "MIT",
+  "dark": false,
+  "note": "11-step UI scale (v3 palette)",
+  "colors": [
+    {
+      "name": "50",
+      "hex": "#ecfdf5"
+    },
+    {
+      "name": "100",
+      "hex": "#d1fae5"
+    },
+    {
+      "name": "200",
+      "hex": "#a7f3d0"
+    },
+    {
+      "name": "300",
+      "hex": "#6ee7b7"
+    },
+    {
+      "name": "400",
+      "hex": "#34d399"
+    },
+    {
+      "name": "500",
+      "hex": "#10b981"
+    },
+    {
+      "name": "600",
+      "hex": "#059669"
+    },
+    {
+      "name": "700",
+      "hex": "#047857"
+    },
+    {
+      "name": "800",
+      "hex": "#065f46"
+    },
+    {
+      "name": "900",
+      "hex": "#064e3b"
+    },
+    {
+      "name": "950",
+      "hex": "#022c22"
+    }
+  ],
+  "roles": {
+    "background": "#ecfdf5",
+    "surface": "#d1fae5",
+    "text": "#022c22",
+    "accent": "#047857",
+    "accent_2": "#059669"
+  }
+}

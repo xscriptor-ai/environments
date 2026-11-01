@@ -1,0 +1,20 @@
+/* Radix Iris (Dark) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-iris-dark"] {
+  --iris1: #13131e;
+  --iris2: #171625;
+  --iris3: #202248;
+  --iris4: #262a65;
+  --iris5: #303374;
+  --iris6: #3d3e82;
+  --iris7: #4a4a95;
+  --iris8: #5958b1;
+  --iris9: #5b5bd6;
+  --iris10: #6e6ade;
+  --iris11: #b1a9ff;
+  --iris12: #e0dffe;
+  --background: #13131e;
+  --surface: #171625;
+  --text: #e0dffe;
+  --accent: #262a65;
+  --accent-2: #303374;
+}

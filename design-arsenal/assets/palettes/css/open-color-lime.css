@@ -1,0 +1,18 @@
+/* Open Color Lime — https://github.com/yeun/open-color — MIT */
+[data-palette="open-color-lime"] {
+  --50: #f4fce3;
+  --100: #e9fac8;
+  --200: #d8f5a2;
+  --300: #c0eb75;
+  --400: #a9e34b;
+  --500: #94d82d;
+  --600: #82c91e;
+  --700: #74b816;
+  --800: #66a80f;
+  --900: #5c940d;
+  --background: #f4fce3;
+  --surface: #e9fac8;
+  --text: #5c940d;
+  --accent: #5c940d;
+  --accent-2: #66a80f;
+}

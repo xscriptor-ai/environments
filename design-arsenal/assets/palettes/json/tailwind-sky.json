@@ -1,0 +1,61 @@
+{
+  "name": "Tailwind Sky",
+  "slug": "tailwind-sky",
+  "source": "https://github.com/tailwindlabs/tailwindcss",
+  "license": "MIT",
+  "dark": false,
+  "note": "11-step UI scale (v3 palette)",
+  "colors": [
+    {
+      "name": "50",
+      "hex": "#f0f9ff"
+    },
+    {
+      "name": "100",
+      "hex": "#e0f2fe"
+    },
+    {
+      "name": "200",
+      "hex": "#bae6fd"
+    },
+    {
+      "name": "300",
+      "hex": "#7dd3fc"
+    },
+    {
+      "name": "400",
+      "hex": "#38bdf8"
+    },
+    {
+      "name": "500",
+      "hex": "#0ea5e9"
+    },
+    {
+      "name": "600",
+      "hex": "#0284c7"
+    },
+    {
+      "name": "700",
+      "hex": "#0369a1"
+    },
+    {
+      "name": "800",
+      "hex": "#075985"
+    },
+    {
+      "name": "900",
+      "hex": "#0c4a6e"
+    },
+    {
+      "name": "950",
+      "hex": "#082f49"
+    }
+  ],
+  "roles": {
+    "background": "#f0f9ff",
+    "surface": "#e0f2fe",
+    "text": "#082f49",
+    "accent": "#0284c7",
+    "accent_2": "#0369a1"
+  }
+}

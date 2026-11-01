@@ -1,0 +1,65 @@
+{
+  "name": "Radix Red (Dark)",
+  "slug": "radix-red-dark",
+  "source": "https://github.com/radix-ui/colors",
+  "license": "MIT",
+  "dark": true,
+  "note": "12-step perceptual UI scale",
+  "colors": [
+    {
+      "name": "red1",
+      "hex": "#191111"
+    },
+    {
+      "name": "red2",
+      "hex": "#201314"
+    },
+    {
+      "name": "red3",
+      "hex": "#3b1219"
+    },
+    {
+      "name": "red4",
+      "hex": "#500f1c"
+    },
+    {
+      "name": "red5",
+      "hex": "#611623"
+    },
+    {
+      "name": "red6",
+      "hex": "#72232d"
+    },
+    {
+      "name": "red7",
+      "hex": "#8c333a"
+    },
+    {
+      "name": "red8",
+      "hex": "#b54548"
+    },
+    {
+      "name": "red9",
+      "hex": "#e5484d"
+    },
+    {
+      "name": "red10",
+      "hex": "#ec5d5e"
+    },
+    {
+      "name": "red11",
+      "hex": "#ff9592"
+    },
+    {
+      "name": "red12",
+      "hex": "#ffd1d9"
+    }
+  ],
+  "roles": {
+    "background": "#191111",
+    "surface": "#201314",
+    "text": "#ffd1d9",
+    "accent": "#611623",
+    "accent_2": "#72232d"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "name": "Radix Lime (Light)",
+  "slug": "radix-lime-light",
+  "source": "https://github.com/radix-ui/colors",
+  "license": "MIT",
+  "dark": false,
+  "note": "12-step perceptual UI scale",
+  "colors": [
+    {
+      "name": "lime1",
+      "hex": "#fcfdfa"
+    },
+    {
+      "name": "lime2",
+      "hex": "#f8faf3"
+    },
+    {
+      "name": "lime3",
+      "hex": "#eef6d6"
+    },
+    {
+      "name": "lime4",
+      "hex": "#e2f0bd"
+    },
+    {
+      "name": "lime5",
+      "hex": "#d3e7a6"
+    },
+    {
+      "name": "lime6",
+      "hex": "#c2da91"
+    },
+    {
+      "name": "lime7",
+      "hex": "#abc978"
+    },
+    {
+      "name": "lime8",
+      "hex": "#8db654"
+    },
+    {
+      "name": "lime9",
+      "hex": "#bdee63"
+    },
+    {
+      "name": "lime10",
+      "hex": "#b0e64c"
+    },
+    {
+      "name": "lime11",
+      "hex": "#5c7c2f"
+    },
+    {
+      "name": "lime12",
+      "hex": "#37401c"
+    }
+  ],
+  "roles": {
+    "background": "#fcfdfa",
+    "surface": "#f8faf3",
+    "text": "#37401c",
+    "accent": "#b0e64c",
+    "accent_2": "#5c7c2f"
+  }
+}

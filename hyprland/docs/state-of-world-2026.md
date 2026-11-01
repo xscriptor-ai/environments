@@ -125,7 +125,8 @@ Arch package checks (2026-11-01, `extra`): `hyprland 0.57.0-1`, `quickshell 0.3.
 - Wiki: https://wiki.hypr.land/ — paths are lowercase and nested: `configuring/core/*` (config-options, binds + flags/gestures/submaps/devices/globals, dispatchers, rules/{window,layer,workspace}-rules, animations, environment-variables, autostart, advanced-configuration/{using-hyprctl,lua-utilities,events,notifications,permissions}), `configuring/layouts/*` (dwindle, master, scrolling, monocle, custom-layouts), `configuring/extra/*` (multi-gpu, virtual-gpu, performance, tearing, xwayland, systemd), `hypr-ecosystem/{dev,user}/*`, plus `plugins/`, `ipc/`, `nix/`, `crashes-and-bugs`, `contributing-and-debugging/*`.
 - The wiki allows per-release snapshots (e.g. `/0.57.0/`). Prefer the tag artifacts for exact defaults/ranges; the `main` wiki may describe unreleased changes.
 - Source of truth used by this pack: `hyprwm/Hyprland` **v0.57.0** tag → `src/config/values/ConfigValues.cpp` (defaults/ranges/deprecations), `src/config/lua/types/*` (Lua coercion), `meta/generateLuaStubs.py` output `/usr/share/hypr/stubs/hl.meta.lua` (API), `/usr/share/hypr/hyprland.lua` (example), `src/ipc/s1/Commands.cpp` (hyprctl/IPC), release notes.
-- Quickshell: https://quickshell.org/ (docs for 0.3.x); repo git.outfoxxed.me/quickshell/quickshell (GitHub `quickshell-mirror/quickshell` is a read-only mirror); changelogs under `changelog/`.
+- News: https://hypr.land/news (RSS hypr.land/rss.xml); blog.hyprland.org is down/irrelevant.
+- Quickshell: https://quickshell.org/docs/v0.3.2/ (docs for 0.3.x); repo git.outfoxxed.me/quickshell/quickshell (GitHub `quickshell-mirror/quickshell` is a read-only mirror); changelogs under `changelog/`.
 - Wayle: wayle.app, repo `wayle-rs/wayle`. AGS: aylur.github.io/ags. Waybar: `Alexays/Waybar`.
 - Lua 5.5: https://www.lua.org/manual/5.5/ (Hyprland embeds upstream Lua; stubs are generated from source).
 
@@ -145,3 +146,4 @@ Arch package checks (2026-11-01, `extra`): `hyprland 0.57.0-1`, `quickshell 0.3.
 12. `hyprland.log` lives at `$XDG_RUNTIME_DIR/hypr/<instance>/hyprland.log`; `hyprctl rollinglog` follows the in-memory buffer.
 13. "Hyprland in WSL with WSLg as a desktop" is not a supported desktop: WSL is a headless test rig (render-only node or `vgem` + `AQ_NO_KMS_REQUIREMENT=1`, view via wayvnc).
 14. Lua is 5.5, not LuaJIT/5.1: no `bit` library; integers and bitwise operators are native; `global` declarations exist.
+15. Quickshell layer surfaces: use `implicitWidth`/`implicitHeight`; assigning `width`/`height` on `PanelWindow`/`WlrLayershell` is deprecated in 0.3.x and forces a surface resize.

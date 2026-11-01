@@ -1,0 +1,65 @@
+{
+  "name": "Rose Pine Moon",
+  "slug": "rose-pine-moon",
+  "source": "https://github.com/rose-pine/palette",
+  "license": "MIT",
+  "dark": true,
+  "note": "roles: base, surface, overlay, text, accents",
+  "colors": [
+    {
+      "name": "base",
+      "hex": "#232136"
+    },
+    {
+      "name": "surface",
+      "hex": "#2a273f"
+    },
+    {
+      "name": "overlay",
+      "hex": "#393552"
+    },
+    {
+      "name": "muted",
+      "hex": "#6e6a86"
+    },
+    {
+      "name": "subtle",
+      "hex": "#908caa"
+    },
+    {
+      "name": "text",
+      "hex": "#e0def4"
+    },
+    {
+      "name": "love",
+      "hex": "#eb6f92"
+    },
+    {
+      "name": "gold",
+      "hex": "#f6c177"
+    },
+    {
+      "name": "rose",
+      "hex": "#ea9a97"
+    },
+    {
+      "name": "pine",
+      "hex": "#3e8fb0"
+    },
+    {
+      "name": "foam",
+      "hex": "#9ccfd8"
+    },
+    {
+      "name": "iris",
+      "hex": "#c4a7e7"
+    }
+  ],
+  "roles": {
+    "background": "#232136",
+    "surface": "#2a273f",
+    "text": "#e0def4",
+    "accent": "#3e8fb0",
+    "accent_2": "#eb6f92"
+  }
+}

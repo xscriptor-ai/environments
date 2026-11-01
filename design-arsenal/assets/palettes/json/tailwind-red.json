@@ -1,0 +1,61 @@
+{
+  "name": "Tailwind Red",
+  "slug": "tailwind-red",
+  "source": "https://github.com/tailwindlabs/tailwindcss",
+  "license": "MIT",
+  "dark": false,
+  "note": "11-step UI scale (v3 palette)",
+  "colors": [
+    {
+      "name": "50",
+      "hex": "#fef2f2"
+    },
+    {
+      "name": "100",
+      "hex": "#fee2e2"
+    },
+    {
+      "name": "200",
+      "hex": "#fecaca"
+    },
+    {
+      "name": "300",
+      "hex": "#fca5a5"
+    },
+    {
+      "name": "400",
+      "hex": "#f87171"
+    },
+    {
+      "name": "500",
+      "hex": "#ef4444"
+    },
+    {
+      "name": "600",
+      "hex": "#dc2626"
+    },
+    {
+      "name": "700",
+      "hex": "#b91c1c"
+    },
+    {
+      "name": "800",
+      "hex": "#991b1b"
+    },
+    {
+      "name": "900",
+      "hex": "#7f1d1d"
+    },
+    {
+      "name": "950",
+      "hex": "#450a0a"
+    }
+  ],
+  "roles": {
+    "background": "#fef2f2",
+    "surface": "#fee2e2",
+    "text": "#450a0a",
+    "accent": "#b91c1c",
+    "accent_2": "#dc2626"
+  }
+}

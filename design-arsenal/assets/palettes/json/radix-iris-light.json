@@ -1,0 +1,65 @@
+{
+  "name": "Radix Iris (Light)",
+  "slug": "radix-iris-light",
+  "source": "https://github.com/radix-ui/colors",
+  "license": "MIT",
+  "dark": false,
+  "note": "12-step perceptual UI scale",
+  "colors": [
+    {
+      "name": "iris1",
+      "hex": "#fdfdff"
+    },
+    {
+      "name": "iris2",
+      "hex": "#f8f8ff"
+    },
+    {
+      "name": "iris3",
+      "hex": "#f0f1fe"
+    },
+    {
+      "name": "iris4",
+      "hex": "#e6e7ff"
+    },
+    {
+      "name": "iris5",
+      "hex": "#dadcff"
+    },
+    {
+      "name": "iris6",
+      "hex": "#cbcdff"
+    },
+    {
+      "name": "iris7",
+      "hex": "#b8baf8"
+    },
+    {
+      "name": "iris8",
+      "hex": "#9b9ef0"
+    },
+    {
+      "name": "iris9",
+      "hex": "#5b5bd6"
+    },
+    {
+      "name": "iris10",
+      "hex": "#5151cd"
+    },
+    {
+      "name": "iris11",
+      "hex": "#5753c6"
+    },
+    {
+      "name": "iris12",
+      "hex": "#272962"
+    }
+  ],
+  "roles": {
+    "background": "#fdfdff",
+    "surface": "#f8f8ff",
+    "text": "#272962",
+    "accent": "#5151cd",
+    "accent_2": "#272962"
+  }
+}

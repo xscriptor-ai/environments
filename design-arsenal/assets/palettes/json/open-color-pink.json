@@ -1,0 +1,57 @@
+{
+  "name": "Open Color Pink",
+  "slug": "open-color-pink",
+  "source": "https://github.com/yeun/open-color",
+  "license": "MIT",
+  "dark": false,
+  "note": "13 hues x 10 steps; designed for UI",
+  "colors": [
+    {
+      "name": "50",
+      "hex": "#fff0f6"
+    },
+    {
+      "name": "100",
+      "hex": "#ffdeeb"
+    },
+    {
+      "name": "200",
+      "hex": "#fcc2d7"
+    },
+    {
+      "name": "300",
+      "hex": "#faa2c1"
+    },
+    {
+      "name": "400",
+      "hex": "#f783ac"
+    },
+    {
+      "name": "500",
+      "hex": "#f06595"
+    },
+    {
+      "name": "600",
+      "hex": "#e64980"
+    },
+    {
+      "name": "700",
+      "hex": "#d6336c"
+    },
+    {
+      "name": "800",
+      "hex": "#c2255c"
+    },
+    {
+      "name": "900",
+      "hex": "#a61e4d"
+    }
+  ],
+  "roles": {
+    "background": "#fff0f6",
+    "surface": "#ffdeeb",
+    "text": "#a61e4d",
+    "accent": "#a61e4d",
+    "accent_2": "#c2255c"
+  }
+}

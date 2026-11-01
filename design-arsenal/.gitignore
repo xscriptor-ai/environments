@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.pyc
+assets/wallpapers/ready/
+assets/wallpapers/demo-mobile-to-desktop/
+assets/wallpapers/animated/

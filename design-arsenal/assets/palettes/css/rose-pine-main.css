@@ -1,0 +1,20 @@
+/* Rose Pine Main — https://github.com/rose-pine/palette — MIT */
+[data-palette="rose-pine-main"] {
+  --base: #191724;
+  --surface: #1f1d2e;
+  --overlay: #26233a;
+  --muted: #6e6a86;
+  --subtle: #908caa;
+  --text: #e0def4;
+  --love: #eb6f92;
+  --gold: #f6c177;
+  --rose: #ebbcba;
+  --pine: #31748f;
+  --foam: #9ccfd8;
+  --iris: #c4a7e7;
+  --background: #191724;
+  --surface: #1f1d2e;
+  --text: #e0def4;
+  --accent: #31748f;
+  --accent-2: #eb6f92;
+}

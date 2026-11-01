@@ -1,0 +1,18 @@
+/* Open Color Green — https://github.com/yeun/open-color — MIT */
+[data-palette="open-color-green"] {
+  --50: #ebfbee;
+  --100: #d3f9d8;
+  --200: #b2f2bb;
+  --300: #8ce99a;
+  --400: #69db7c;
+  --500: #51cf66;
+  --600: #40c057;
+  --700: #37b24d;
+  --800: #2f9e44;
+  --900: #2b8a3e;
+  --background: #ebfbee;
+  --surface: #d3f9d8;
+  --text: #2b8a3e;
+  --accent: #2f9e44;
+  --accent-2: #37b24d;
+}

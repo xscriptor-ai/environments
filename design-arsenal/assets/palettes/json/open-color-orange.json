@@ -1,0 +1,57 @@
+{
+  "name": "Open Color Orange",
+  "slug": "open-color-orange",
+  "source": "https://github.com/yeun/open-color",
+  "license": "MIT",
+  "dark": false,
+  "note": "13 hues x 10 steps; designed for UI",
+  "colors": [
+    {
+      "name": "50",
+      "hex": "#fff4e6"
+    },
+    {
+      "name": "100",
+      "hex": "#ffe8cc"
+    },
+    {
+      "name": "200",
+      "hex": "#ffd8a8"
+    },
+    {
+      "name": "300",
+      "hex": "#ffc078"
+    },
+    {
+      "name": "400",
+      "hex": "#ffa94d"
+    },
+    {
+      "name": "500",
+      "hex": "#ff922b"
+    },
+    {
+      "name": "600",
+      "hex": "#fd7e14"
+    },
+    {
+      "name": "700",
+      "hex": "#f76707"
+    },
+    {
+      "name": "800",
+      "hex": "#e8590c"
+    },
+    {
+      "name": "900",
+      "hex": "#d9480f"
+    }
+  ],
+  "roles": {
+    "background": "#fff4e6",
+    "surface": "#ffe8cc",
+    "text": "#d9480f",
+    "accent": "#f76707",
+    "accent_2": "#e8590c"
+  }
+}

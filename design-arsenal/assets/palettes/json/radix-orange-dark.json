@@ -1,0 +1,65 @@
+{
+  "name": "Radix Orange (Dark)",
+  "slug": "radix-orange-dark",
+  "source": "https://github.com/radix-ui/colors",
+  "license": "MIT",
+  "dark": true,
+  "note": "12-step perceptual UI scale",
+  "colors": [
+    {
+      "name": "orange1",
+      "hex": "#17120e"
+    },
+    {
+      "name": "orange2",
+      "hex": "#1e160f"
+    },
+    {
+      "name": "orange3",
+      "hex": "#331e0b"
+    },
+    {
+      "name": "orange4",
+      "hex": "#462100"
+    },
+    {
+      "name": "orange5",
+      "hex": "#562800"
+    },
+    {
+      "name": "orange6",
+      "hex": "#66350c"
+    },
+    {
+      "name": "orange7",
+      "hex": "#7e451d"
+    },
+    {
+      "name": "orange8",
+      "hex": "#a35829"
+    },
+    {
+      "name": "orange9",
+      "hex": "#f76b15"
+    },
+    {
+      "name": "orange10",
+      "hex": "#ff801f"
+    },
+    {
+      "name": "orange11",
+      "hex": "#ffa057"
+    },
+    {
+      "name": "orange12",
+      "hex": "#ffe0c2"
+    }
+  ],
+  "roles": {
+    "background": "#17120e",
+    "surface": "#1e160f",
+    "text": "#ffe0c2",
+    "accent": "#462100",
+    "accent_2": "#562800"
+  }
+}

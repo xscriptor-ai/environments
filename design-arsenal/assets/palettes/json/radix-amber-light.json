@@ -1,0 +1,65 @@
+{
+  "name": "Radix Amber (Light)",
+  "slug": "radix-amber-light",
+  "source": "https://github.com/radix-ui/colors",
+  "license": "MIT",
+  "dark": false,
+  "note": "12-step perceptual UI scale",
+  "colors": [
+    {
+      "name": "amber1",
+      "hex": "#fefdfb"
+    },
+    {
+      "name": "amber2",
+      "hex": "#fefbe9"
+    },
+    {
+      "name": "amber3",
+      "hex": "#fff7c2"
+    },
+    {
+      "name": "amber4",
+      "hex": "#ffee9c"
+    },
+    {
+      "name": "amber5",
+      "hex": "#fbe577"
+    },
+    {
+      "name": "amber6",
+      "hex": "#f3d673"
+    },
+    {
+      "name": "amber7",
+      "hex": "#e9c162"
+    },
+    {
+      "name": "amber8",
+      "hex": "#e2a336"
+    },
+    {
+      "name": "amber9",
+      "hex": "#ffc53d"
+    },
+    {
+      "name": "amber10",
+      "hex": "#ffba18"
+    },
+    {
+      "name": "amber11",
+      "hex": "#ab6400"
+    },
+    {
+      "name": "amber12",
+      "hex": "#4f3422"
+    }
+  ],
+  "roles": {
+    "background": "#fefdfb",
+    "surface": "#fefbe9",
+    "text": "#4f3422",
+    "accent": "#ab6400",
+    "accent_2": "#ffba18"
+  }
+}

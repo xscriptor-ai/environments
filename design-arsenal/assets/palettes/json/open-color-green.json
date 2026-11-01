@@ -1,0 +1,57 @@
+{
+  "name": "Open Color Green",
+  "slug": "open-color-green",
+  "source": "https://github.com/yeun/open-color",
+  "license": "MIT",
+  "dark": false,
+  "note": "13 hues x 10 steps; designed for UI",
+  "colors": [
+    {
+      "name": "50",
+      "hex": "#ebfbee"
+    },
+    {
+      "name": "100",
+      "hex": "#d3f9d8"
+    },
+    {
+      "name": "200",
+      "hex": "#b2f2bb"
+    },
+    {
+      "name": "300",
+      "hex": "#8ce99a"
+    },
+    {
+      "name": "400",
+      "hex": "#69db7c"
+    },
+    {
+      "name": "500",
+      "hex": "#51cf66"
+    },
+    {
+      "name": "600",
+      "hex": "#40c057"
+    },
+    {
+      "name": "700",
+      "hex": "#37b24d"
+    },
+    {
+      "name": "800",
+      "hex": "#2f9e44"
+    },
+    {
+      "name": "900",
+      "hex": "#2b8a3e"
+    }
+  ],
+  "roles": {
+    "background": "#ebfbee",
+    "surface": "#d3f9d8",
+    "text": "#2b8a3e",
+    "accent": "#2f9e44",
+    "accent_2": "#37b24d"
+  }
+}

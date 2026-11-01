@@ -1,0 +1,121 @@
+{
+  "name": "Catppuccin Latte",
+  "slug": "catppuccin-latte",
+  "source": "https://github.com/catppuccin/palette",
+  "license": "MIT",
+  "dark": false,
+  "note": "26 roles, four flavors",
+  "colors": [
+    {
+      "name": "rosewater",
+      "hex": "#dc8a78"
+    },
+    {
+      "name": "flamingo",
+      "hex": "#dd7878"
+    },
+    {
+      "name": "pink",
+      "hex": "#ea76cb"
+    },
+    {
+      "name": "mauve",
+      "hex": "#8839ef"
+    },
+    {
+      "name": "red",
+      "hex": "#d20f39"
+    },
+    {
+      "name": "maroon",
+      "hex": "#e64553"
+    },
+    {
+      "name": "peach",
+      "hex": "#fe640b"
+    },
+    {
+      "name": "yellow",
+      "hex": "#df8e1d"
+    },
+    {
+      "name": "green",
+      "hex": "#40a02b"
+    },
+    {
+      "name": "teal",
+      "hex": "#179299"
+    },
+    {
+      "name": "sky",
+      "hex": "#04a5e5"
+    },
+    {
+      "name": "sapphire",
+      "hex": "#209fb5"
+    },
+    {
+      "name": "blue",
+      "hex": "#1e66f5"
+    },
+    {
+      "name": "lavender",
+      "hex": "#7287fd"
+    },
+    {
+      "name": "text",
+      "hex": "#4c4f69"
+    },
+    {
+      "name": "subtext1",
+      "hex": "#5c5f77"
+    },
+    {
+      "name": "subtext0",
+      "hex": "#6c6f85"
+    },
+    {
+      "name": "overlay2",
+      "hex": "#7c7f93"
+    },
+    {
+      "name": "overlay1",
+      "hex": "#8c8fa1"
+    },
+    {
+      "name": "overlay0",
+      "hex": "#9ca0b0"
+    },
+    {
+      "name": "surface2",
+      "hex": "#acb0be"
+    },
+    {
+      "name": "surface1",
+      "hex": "#bcc0cc"
+    },
+    {
+      "name": "surface0",
+      "hex": "#ccd0da"
+    },
+    {
+      "name": "base",
+      "hex": "#eff1f5"
+    },
+    {
+      "name": "mantle",
+      "hex": "#e6e9ef"
+    },
+    {
+      "name": "crust",
+      "hex": "#dce0e8"
+    }
+  ],
+  "roles": {
+    "background": "#eff1f5",
+    "surface": "#e6e9ef",
+    "text": "#d20f39",
+    "accent": "#04a5e5",
+    "accent_2": "#fe640b"
+  }
+}

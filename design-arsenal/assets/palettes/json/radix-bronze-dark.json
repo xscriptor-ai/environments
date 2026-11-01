@@ -1,0 +1,65 @@
+{
+  "name": "Radix Bronze (Dark)",
+  "slug": "radix-bronze-dark",
+  "source": "https://github.com/radix-ui/colors",
+  "license": "MIT",
+  "dark": true,
+  "note": "12-step perceptual UI scale",
+  "colors": [
+    {
+      "name": "bronze1",
+      "hex": "#141110"
+    },
+    {
+      "name": "bronze2",
+      "hex": "#1c1917"
+    },
+    {
+      "name": "bronze3",
+      "hex": "#262220"
+    },
+    {
+      "name": "bronze4",
+      "hex": "#302a27"
+    },
+    {
+      "name": "bronze5",
+      "hex": "#3b3330"
+    },
+    {
+      "name": "bronze6",
+      "hex": "#493e3a"
+    },
+    {
+      "name": "bronze7",
+      "hex": "#5a4c47"
+    },
+    {
+      "name": "bronze8",
+      "hex": "#6f5f58"
+    },
+    {
+      "name": "bronze9",
+      "hex": "#a18072"
+    },
+    {
+      "name": "bronze10",
+      "hex": "#ae8c7e"
+    },
+    {
+      "name": "bronze11",
+      "hex": "#d4b3a5"
+    },
+    {
+      "name": "bronze12",
+      "hex": "#ede0d9"
+    }
+  ],
+  "roles": {
+    "background": "#141110",
+    "surface": "#1c1917",
+    "text": "#ede0d9",
+    "accent": "#a18072",
+    "accent_2": "#ae8c7e"
+  }
+}

@@ -1,0 +1,18 @@
+/* Open Color Yellow — https://github.com/yeun/open-color — MIT */
+[data-palette="open-color-yellow"] {
+  --50: #fff9db;
+  --100: #fff3bf;
+  --200: #ffec99;
+  --300: #ffe066;
+  --400: #ffd43b;
+  --500: #fcc419;
+  --600: #fab005;
+  --700: #f59f00;
+  --800: #f08c00;
+  --900: #e67700;
+  --background: #fff9db;
+  --surface: #fff3bf;
+  --text: #e67700;
+  --accent: #f59f00;
+  --accent-2: #f08c00;
+}

@@ -1,0 +1,20 @@
+/* Radix Iris (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-iris-light"] {
+  --iris1: #fdfdff;
+  --iris2: #f8f8ff;
+  --iris3: #f0f1fe;
+  --iris4: #e6e7ff;
+  --iris5: #dadcff;
+  --iris6: #cbcdff;
+  --iris7: #b8baf8;
+  --iris8: #9b9ef0;
+  --iris9: #5b5bd6;
+  --iris10: #5151cd;
+  --iris11: #5753c6;
+  --iris12: #272962;
+  --background: #fdfdff;
+  --surface: #f8f8ff;
+  --text: #272962;
+  --accent: #5151cd;
+  --accent-2: #272962;
+}

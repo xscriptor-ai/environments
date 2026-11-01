@@ -1,0 +1,61 @@
+{
+  "name": "Tailwind Rose",
+  "slug": "tailwind-rose",
+  "source": "https://github.com/tailwindlabs/tailwindcss",
+  "license": "MIT",
+  "dark": false,
+  "note": "11-step UI scale (v3 palette)",
+  "colors": [
+    {
+      "name": "50",
+      "hex": "#fff1f2"
+    },
+    {
+      "name": "100",
+      "hex": "#ffe4e6"
+    },
+    {
+      "name": "200",
+      "hex": "#fecdd3"
+    },
+    {
+      "name": "300",
+      "hex": "#fda4af"
+    },
+    {
+      "name": "400",
+      "hex": "#fb7185"
+    },
+    {
+      "name": "500",
+      "hex": "#f43f5e"
+    },
+    {
+      "name": "600",
+      "hex": "#e11d48"
+    },
+    {
+      "name": "700",
+      "hex": "#be123c"
+    },
+    {
+      "name": "800",
+      "hex": "#9f1239"
+    },
+    {
+      "name": "900",
+      "hex": "#881337"
+    },
+    {
+      "name": "950",
+      "hex": "#4c0519"
+    }
+  ],
+  "roles": {
+    "background": "#fff1f2",
+    "surface": "#ffe4e6",
+    "text": "#4c0519",
+    "accent": "#be123c",
+    "accent_2": "#9f1239"
+  }
+}

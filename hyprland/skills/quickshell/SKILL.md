@@ -7,9 +7,9 @@ description: Deep Quickshell v0.3.x reference for building QML/Wayland shells (b
 
 Quickshell is THE QML route for Wayland shells on Hyprland (official Hyprland itself ships no QML shell; its own UI direction is hyprtoolkit/C++). It talks to the compositor through wlr-layer-shell, wlr-foreign-toplevel, screencopy, data-control, and the Hyprland IPC sockets.
 
-- Current release: **v0.3.2** (2026-10-08). Canonical repo: `git.outfoxxed.me/outfoxxed/quickshell`; GitHub mirror `quickshell-mirror/quickshell` is read-only. Docs: **https://quickshell.org/** (versioned; v0.3.0 docs cover the 0.3.x line). License LGPL-3.0.
+- Current release: **v0.3.2** (2026-10-08). Canonical repo: `git.outfoxxed.me/outfoxxed/quickshell`; GitHub mirror `quickshell-mirror/quickshell` is read-only. Docs: **https://quickshell.org/** (versioned; v0.3.2 docs cover the 0.3.x line). License LGPL-3.0.
 - Arch: `pacman -S quickshell` (extra, 0.3.2) or AUR `quickshell-git` (master; reinstall if Qt updates). WSL/headless testing: see skill `arch-wsl-headless`.
-- Verified **2026-11-01** against official sources (v0.3.2 changelog, quickshell.org v0.3.0 docs + source): Qt 6.12 support, Hyprland workspace address format, session-lock fixes, PAM subprocess crash fix; default layer namespace `quickshell` (override via `WlrLayershell.namespace`). Always check `qs --version` on the target.
+- Verified **2026-11-01** against official sources (v0.3.2 changelog, quickshell.org v0.3.2 docs including Item Size and Position, v0.3.2 release notes): Qt 6.12 support, Hyprland workspace address format, session-lock fixes, PAM subprocess crash fix; default layer namespace `quickshell` (override via `WlrLayershell.namespace`). Always check `qs --version` on the target.
 
 ## Layout, discovery, launch
 
@@ -61,6 +61,7 @@ Scope {
 
 - `PanelWindow` is the layer-shell bar/panel. `PopupWindow` anchors to windows/items (`anchor.window`, `anchor.rect`); `FloatingWindow` is a normal managed window (dialogs, move/resize, max/min/fullscreen). `QsWindow` is the base.
 - Anchors: `anchors.{top,bottom,left,right}`; opposite anchors force full width/height; `margins` apply only to anchored edges; `exclusiveZone` reserves compositor space (exactly 1 or 3 anchors; implies ExclusionMode.Normal); `exclusionMode: Auto|Normal|Ignore`; `focusable` -> keyboard focus; `aboveWindows` -> layer.
+- Layer-surface sizing: use `implicitWidth`/`implicitHeight` (and animate those). Assigning `width`/`height` directly on `PanelWindow`/`WlrLayershell` is deprecated in Quickshell 0.3.x and logs a runtime warning. Never resize a layer surface on every frame during a reveal: keep the surface size stable and animate/clip the content.
 - Popups: prefer `HyprlandFocusGrab {}` for outside-click dismissal under Hyprland; plain `grabFocus` steals focus and misbehaves.
 - Pragma notes: `//@ pragma AppId`, `ShellId`, `Env VAR = v`, `DefaultEnv VAR = v` (only in root shell.qml), `RespectSystemStyle` (otherwise Controls style is forced to Fusion), `UseQApplication` (QtWidgets styles), `DropExpensiveFonts`. `//@ if/endif` with `hasVersion()/hasQtVersion()/env()/isEnvSet()` for version-gated code.
 
@@ -85,5 +86,7 @@ Scope {
 - `references/design-and-effects.md` — design tokens, **theme contract for the palette generator binary** (settings.json + base16/roles, live reload, no matugen), glass/blur, elevation, **layout hygiene (density, friendliness, zero overlap)**, **dimensions & transitions tokens (equisdots experimental vs Caelestia/MD3)**, Hack Nerd Font typography, widget recipes, quality gate.
 - `references/qml-language.md` — QML for shell authors: imports, properties/bindings/scoping, functions/lambdas, signals, types/singletons, models, reactive and lazy-loading semantics.
 - `references/modules.md` — full module catalog and notable types (Quickshell, .Wayland, .Hyprland, .Io, Services.*, .Widgets, .Networking, .Bluetooth, ...).
-- `references/patterns.md` — bar+popup+OSD+lockscreen+notification/tray patterns, Process/FileView/JsonAdapter data flow, per-monitor state.
+- `references/patterns.md` — bar+popup+OSD+lockscreen+notification/tray patterns, fixed-surface reveals, Process/FileView/JsonAdapter data flow, per-monitor state.
+- `references/layer-surfaces.md` — deep dive: size model, PanelWindow/WlrLayershell properties, anchors/exclusion/mask, bar/top/bottom/side/popup recipes, animation rules and validation.
+- `references/migration.md` — 0.2 to 0.3 migration: layer-surface sizing, `qs.*` imports, `shellDir`, exclusion and Qt style, 0.3 additions, and a checklist.
 - `references/debugging.md` — CLI logs, crash handler, QML debugger, qmlls, common runtime failures, memory/performance work.

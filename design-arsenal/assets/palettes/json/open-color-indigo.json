@@ -1,0 +1,57 @@
+{
+  "name": "Open Color Indigo",
+  "slug": "open-color-indigo",
+  "source": "https://github.com/yeun/open-color",
+  "license": "MIT",
+  "dark": false,
+  "note": "13 hues x 10 steps; designed for UI",
+  "colors": [
+    {
+      "name": "50",
+      "hex": "#edf2ff"
+    },
+    {
+      "name": "100",
+      "hex": "#dbe4ff"
+    },
+    {
+      "name": "200",
+      "hex": "#bac8ff"
+    },
+    {
+      "name": "300",
+      "hex": "#91a7ff"
+    },
+    {
+      "name": "400",
+      "hex": "#748ffc"
+    },
+    {
+      "name": "500",
+      "hex": "#5c7cfa"
+    },
+    {
+      "name": "600",
+      "hex": "#4c6ef5"
+    },
+    {
+      "name": "700",
+      "hex": "#4263eb"
+    },
+    {
+      "name": "800",
+      "hex": "#3b5bdb"
+    },
+    {
+      "name": "900",
+      "hex": "#364fc7"
+    }
+  ],
+  "roles": {
+    "background": "#edf2ff",
+    "surface": "#dbe4ff",
+    "text": "#364fc7",
+    "accent": "#3b5bdb",
+    "accent_2": "#364fc7"
+  }
+}

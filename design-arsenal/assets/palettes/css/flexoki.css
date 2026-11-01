@@ -1,0 +1,39 @@
+/* Flexoki — https://github.com/kepano/flexoki — MIT */
+[data-palette="flexoki"] {
+  --paper: #fffcf0;
+  --black: #100f0f;
+  --50: #f2f0e5;
+  --100: #e6e4d9;
+  --150: #dad8ce;
+  --200: #cecdc3;
+  --300: #b7b5ac;
+  --400: #9f9d96;
+  --500: #878580;
+  --600: #6f6e69;
+  --700: #575653;
+  --800: #403e3c;
+  --850: #343331;
+  --900: #282726;
+  --950: #1c1b1a;
+  --red-400: #d14d41;
+  --red-600: #af3029;
+  --orange-400: #da702c;
+  --orange-600: #bc5215;
+  --yellow-400: #d0a215;
+  --yellow-600: #ad8301;
+  --green-400: #879a39;
+  --green-600: #66800b;
+  --cyan-400: #3aa99f;
+  --cyan-600: #24837b;
+  --blue-400: #4385be;
+  --blue-600: #205ea6;
+  --purple-400: #8b7ec8;
+  --purple-600: #5e409d;
+  --magenta-400: #ce5d97;
+  --magenta-600: #a02f6f;
+  --background: #fffcf0;
+  --surface: #f2f0e5;
+  --text: #100f0f;
+  --accent: #ad8301;
+  --accent-2: #66800b;
+}

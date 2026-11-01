@@ -1,0 +1,61 @@
+{
+  "name": "Tailwind Cyan",
+  "slug": "tailwind-cyan",
+  "source": "https://github.com/tailwindlabs/tailwindcss",
+  "license": "MIT",
+  "dark": false,
+  "note": "11-step UI scale (v3 palette)",
+  "colors": [
+    {
+      "name": "50",
+      "hex": "#ecfeff"
+    },
+    {
+      "name": "100",
+      "hex": "#cffafe"
+    },
+    {
+      "name": "200",
+      "hex": "#a5f3fc"
+    },
+    {
+      "name": "300",
+      "hex": "#67e8f9"
+    },
+    {
+      "name": "400",
+      "hex": "#22d3ee"
+    },
+    {
+      "name": "500",
+      "hex": "#06b6d4"
+    },
+    {
+      "name": "600",
+      "hex": "#0891b2"
+    },
+    {
+      "name": "700",
+      "hex": "#0e7490"
+    },
+    {
+      "name": "800",
+      "hex": "#155e75"
+    },
+    {
+      "name": "900",
+      "hex": "#164e63"
+    },
+    {
+      "name": "950",
+      "hex": "#083344"
+    }
+  ],
+  "roles": {
+    "background": "#ecfeff",
+    "surface": "#cffafe",
+    "text": "#083344",
+    "accent": "#06b6d4",
+    "accent_2": "#0891b2"
+  }
+}

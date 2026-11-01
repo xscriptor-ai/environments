@@ -7,15 +7,16 @@ description: Build QML/QtQuick UIs on Hyprland with Quickshell v0.3.x. Use when 
 
 Quickshell is the QML route for Hyprland shells. Official Hyprland has no QML rendering path of its own; its own UI direction is hyprtoolkit (C++). HyprPanel is ARCHIVED (2026-04; it was AGS/GJS+TS, never QML); successor: Wayle (Rust/GTK4). Hyprland 0.57 is Lua-only; shell autostart still goes through `hl.on("hyprland.start", ...)`.
 
-**Full depth (install, CLI, modules, debugging, patterns) lives in the sibling skill `quickshell`** — read it before writing or reviewing shell code. This skill stays as the short cross-reference.
+**Full depth (install, CLI, modules, debugging, patterns) lives in the sibling skill `quickshell`** — read it before writing or reviewing shell code. This skill stays as the short cross-reference. Migration and deprecations (0.2 to 0.3): skill `quickshell` -> `references/migration.md`.
 
 ## Quickshell facts
 
-- Stable: **v0.3.2** (2026-10-08). Repo: `git.outfoxxed.me/quickshell/quickshell` (GitHub mirror: quickshell-mirror/quickshell). Docs: **quickshell.org** (versioned, v0.3.0 covers 0.3.x). Arch: `pacman -S quickshell` (extra, 0.3.2) or `quickshell-git`. Verified 2026-11-01 against official docs/changelog.
+- Stable: **v0.3.2** (2026-10-08). Repo: `git.outfoxxed.me/quickshell/quickshell` (GitHub mirror: quickshell-mirror/quickshell). Docs: **quickshell.org** (versioned, v0.3.2 covers 0.3.x). Arch: `pacman -S quickshell` (extra, 0.3.2) or `quickshell-git`. Verified 2026-11-01 against the v0.3.2 docs/changelog.
 - Config discovery: `~/.config/quickshell/<name>/shell.qml` (every subfolder with shell.qml is a config; a top-level `shell.qml` takes precedence). Run: `qs -c <name>` / `qs -p <path>`; hot reload built in. Instance ops: `qs list`, `qs log -t 200`, `qs kill -i <id>`, `qs ipc show|call`.
 - Uppercase `.qml` files = reusable types; `pragma Singleton` = singletons; subfolders import as `import qs.path.to.module`. `.qmlls.ini` enables LSP.
 - Key modules: `Quickshell` (PanelWindow/PopupWindow/FloatingWindow, Variants, Scope, ShellScreen...), `Quickshell.Wayland` (WlrLayershell, ScreencopyView, WlSessionLock, IdleMonitor, BackgroundEffect...), `Quickshell.Hyprland` (Hyprland IPC singleton, HyprlandWorkspace/Window/Toplevel, GlobalShortcut, HyprlandFocusGrab), `Quickshell.Io`, services (Notifications/SystemTray/Mpris/Pipewire/UPower/Pam/Greetd/Polkit), `Quickshell.Networking`, `.Bluetooth`, `.Widgets`.
 - Layer semantics: anchors attach screen edges; opposite anchors force full width/height; exclusiveZone (1 or 3 anchors) reserves space; focusable/keyboardFocus; aboveWindows/layer.
+- Size layer surfaces with `implicitWidth`/`implicitHeight`; direct `width`/`height` on `PanelWindow`/`WlrLayershell` is deprecated in Quickshell 0.3.x and can resize the surface mid-animation.
 - **One notification server & one SNI tray host per session.**
 
 ## Minimal shell

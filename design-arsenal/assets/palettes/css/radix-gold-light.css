@@ -1,0 +1,20 @@
+/* Radix Gold (Light) — https://github.com/radix-ui/colors — MIT */
+[data-palette="radix-gold-light"] {
+  --gold1: #fdfdfc;
+  --gold2: #faf9f2;
+  --gold3: #f2f0e7;
+  --gold4: #eae6db;
+  --gold5: #e1dccf;
+  --gold6: #d8d0bf;
+  --gold7: #cbc0aa;
+  --gold8: #b9a88d;
+  --gold9: #978365;
+  --gold10: #8c7a5e;
+  --gold11: #71624b;
+  --gold12: #3b352b;
+  --background: #fdfdfc;
+  --surface: #faf9f2;
+  --text: #3b352b;
+  --accent: #71624b;
+  --accent-2: #978365;
+}

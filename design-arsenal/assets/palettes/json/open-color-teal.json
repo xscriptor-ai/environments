@@ -1,0 +1,57 @@
+{
+  "name": "Open Color Teal",
+  "slug": "open-color-teal",
+  "source": "https://github.com/yeun/open-color",
+  "license": "MIT",
+  "dark": false,
+  "note": "13 hues x 10 steps; designed for UI",
+  "colors": [
+    {
+      "name": "50",
+      "hex": "#e6fcf5"
+    },
+    {
+      "name": "100",
+      "hex": "#c3fae8"
+    },
+    {
+      "name": "200",
+      "hex": "#96f2d7"
+    },
+    {
+      "name": "300",
+      "hex": "#63e6be"
+    },
+    {
+      "name": "400",
+      "hex": "#38d9a9"
+    },
+    {
+      "name": "500",
+      "hex": "#20c997"
+    },
+    {
+      "name": "600",
+      "hex": "#12b886"
+    },
+    {
+      "name": "700",
+      "hex": "#0ca678"
+    },
+    {
+      "name": "800",
+      "hex": "#099268"
+    },
+    {
+      "name": "900",
+      "hex": "#087f5b"
+    }
+  ],
+  "roles": {
+    "background": "#e6fcf5",
+    "surface": "#c3fae8",
+    "text": "#087f5b",
+    "accent": "#099268",
+    "accent_2": "#087f5b"
+  }
+}

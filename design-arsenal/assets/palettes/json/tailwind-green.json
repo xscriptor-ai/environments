@@ -1,0 +1,61 @@
+{
+  "name": "Tailwind Green",
+  "slug": "tailwind-green",
+  "source": "https://github.com/tailwindlabs/tailwindcss",
+  "license": "MIT",
+  "dark": false,
+  "note": "11-step UI scale (v3 palette)",
+  "colors": [
+    {
+      "name": "50",
+      "hex": "#f0fdf4"
+    },
+    {
+      "name": "100",
+      "hex": "#dcfce7"
+    },
+    {
+      "name": "200",
+      "hex": "#bbf7d0"
+    },
+    {
+      "name": "300",
+      "hex": "#86efac"
+    },
+    {
+      "name": "400",
+      "hex": "#4ade80"
+    },
+    {
+      "name": "500",
+      "hex": "#22c55e"
+    },
+    {
+      "name": "600",
+      "hex": "#16a34a"
+    },
+    {
+      "name": "700",
+      "hex": "#15803d"
+    },
+    {
+      "name": "800",
+      "hex": "#166534"
+    },
+    {
+      "name": "900",
+      "hex": "#14532d"
+    },
+    {
+      "name": "950",
+      "hex": "#052e16"
+    }
+  ],
+  "roles": {
+    "background": "#f0fdf4",
+    "surface": "#dcfce7",
+    "text": "#052e16",
+    "accent": "#052e16",
+    "accent_2": "#16a34a"
+  }
+}

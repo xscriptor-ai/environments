@@ -1,0 +1,65 @@
+{
+  "name": "Radix Mauve (Dark)",
+  "slug": "radix-mauve-dark",
+  "source": "https://github.com/radix-ui/colors",
+  "license": "MIT",
+  "dark": true,
+  "note": "12-step perceptual UI scale",
+  "colors": [
+    {
+      "name": "mauve1",
+      "hex": "#121113"
+    },
+    {
+      "name": "mauve2",
+      "hex": "#1a191b"
+    },
+    {
+      "name": "mauve3",
+      "hex": "#232225"
+    },
+    {
+      "name": "mauve4",
+      "hex": "#2b292d"
+    },
+    {
+      "name": "mauve5",
+      "hex": "#323035"
+    },
+    {
+      "name": "mauve6",
+      "hex": "#3c393f"
+    },
+    {
+      "name": "mauve7",
+      "hex": "#49474e"
+    },
+    {
+      "name": "mauve8",
+      "hex": "#625f69"
+    },
+    {
+      "name": "mauve9",
+      "hex": "#6f6d78"
+    },
+    {
+      "name": "mauve10",
+      "hex": "#7c7a85"
+    },
+    {
+      "name": "mauve11",
+      "hex": "#b5b2bc"
+    },
+    {
+      "name": "mauve12",
+      "hex": "#eeeef0"
+    }
+  ],
+  "roles": {
+    "background": "#121113",
+    "surface": "#1a191b",
+    "text": "#eeeef0",
+    "accent": "#3c393f",
+    "accent_2": "#625f69"
+  }
+}

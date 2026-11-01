@@ -1,0 +1,65 @@
+{
+  "name": "Radix Jade (Light)",
+  "slug": "radix-jade-light",
+  "source": "https://github.com/radix-ui/colors",
+  "license": "MIT",
+  "dark": false,
+  "note": "12-step perceptual UI scale",
+  "colors": [
+    {
+      "name": "jade1",
+      "hex": "#fbfefd"
+    },
+    {
+      "name": "jade2",
+      "hex": "#f4fbf7"
+    },
+    {
+      "name": "jade3",
+      "hex": "#e6f7ed"
+    },
+    {
+      "name": "jade4",
+      "hex": "#d6f1e3"
+    },
+    {
+      "name": "jade5",
+      "hex": "#c3e9d7"
+    },
+    {
+      "name": "jade6",
+      "hex": "#acdec8"
+    },
+    {
+      "name": "jade7",
+      "hex": "#8bceb6"
+    },
+    {
+      "name": "jade8",
+      "hex": "#56ba9f"
+    },
+    {
+      "name": "jade9",
+      "hex": "#29a383"
+    },
+    {
+      "name": "jade10",
+      "hex": "#26997b"
+    },
+    {
+      "name": "jade11",
+      "hex": "#208368"
+    },
+    {
+      "name": "jade12",
+      "hex": "#1d3b31"
+    }
+  ],
+  "roles": {
+    "background": "#fbfefd",
+    "surface": "#f4fbf7",
+    "text": "#1d3b31",
+    "accent": "#208368",
+    "accent_2": "#26997b"
+  }
+}

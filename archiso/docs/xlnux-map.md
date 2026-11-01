@@ -1,62 +1,38 @@
-# X Linux (xlnux) — project map and pack coverage
+# X Linux — project map and pack coverage
 
-Verified against the local repos on **2026-10-01**. This document connects each piece of X with the pack's resources and marks what is missing. Session state: `/home/x/Documents/repos/xlnux/ESTADO-GENERACIONES.md`.
+Verified against the local repos on **2026-10-17**. This document connects each piece of X with the pack's resources and marks what is missing. Session state: `/home/x/Documents/repos/equislinux/ESTADO-GENERACIONES.md`.
 
 ## Component → coverage map
 
-| Component | What it is | Pack resources | Gap |
+| Component | What it is | Pack resources | Status / gap |
 |---|---|---|---|
-| `x/` profile + `x-installer` | archiso ISO, Bash installer, subvols, gen 0001 | `agents/xlnux-installer`, `archiso-profile`, `archiso-build`; `archiso`, `distro-boot` skills | VM e2e validation (P0) |
-| `scripts/` generations | `x gen`, home gens, hooks, migrations, tests | `agents/xlnux-generations`; `xlnux` skill refs `generations.md`, `known-issues.md` | Subvol prefix (P0), real btrfs (P0) |
-| `scripts/` provisioning | `x setup`, user, hardware, themes, Hyprland | `archiso-branding`, `archiso-desktop`; `distro-installers` skill | — |
-| `xpm` | Rust package manager | `agents/xlnux-packages`; `xlnux` skill ref `xpm-xpkg.md` | Resolver/local install (P2) |
-| `xpkg` | Rust builder + repo-add | same | `.files` DB, history hygiene, xpm E2E |
-| `x-repo` | `[x]` repo on GitHub Pages + portal | `agents/xlnux-packages`, `archiso-packages`; `arch-packaging` skill | Repo signing (P1) |
-| `wsl/` + `wsl-scripts/` | WSL rootfs + provisioning | `agents/xlnux-wsl`; `xlnux` skill ref `wsl.md`; new generic ref `distro-release/references/wsl-images.md` | untested install.ps1, legacy `x/` |
-| `web/`, `wiki/` | portal and bilingual docs | outside the pack's scope (web/TS packs) | Keep es/en mirrors |
-| Boot generations | SB/GRUB entries, `x-rescue`, future UKI | `distro-boot` (bootloaders, initramfs/UKI, secureboot) | UKI/SB/multi-kernel (roadmap) |
-| Chain security | package/repo/ISO signatures | `arch-packaging`, `distro-release` | current `TrustAll` (P1) |
-| Legal/identity | trademark, licenses, os-release | `docs/distro-blueprint.md` (compliance section), `archiso-branding` | LICENSE in `scripts/`, trademark audit |
+| `x/` profile + `x-installer` | archiso ISO, Bash installer, subvols, gen `0001` | `agents/xlnux-installer`, `archiso-profile`, `archiso-build`; `archiso`, `distro-boot` skills | VM e2e **green** (UEFI+BIOS, ISO 10.17); publish pending |
+| `scripts/` generations | `x gen`, home gens, hooks, migrations, tests | `agents/xlnux-generations`; `xlnux` skill refs `generations.md`, `known-issues.md` | Real btrfs + e2e green; newest-gen default implemented and validated |
+| `scripts/` provisioning | `x setup`, user, hardware, themes, Hyprland | `archiso-branding`, `archiso-desktop`; `distro-installers` skill | Online Hyprland (`hyprland=online`) + snapshot fallback; vendored snapshot pinned 2026-10-04 |
+| `xpm` | Rust package manager | `agents/xlnux-packages`; `xlnux` skill ref `xpm-xpkg.md` | Resolver/keyring/local `.xp`/rollback/diff/pacnew done; 2 P1 bugs (gcc-libs cycle, zoneinfo hardlinks) |
+| `xpkg` | Rust builder + repo-add | same | `.files` DB, history/provenance, benchmarks; E2E lifecycle green |
+| `x-repo` | `[x]` repo on GitHub Pages + portal | `agents/xlnux-packages`, `archiso-packages`; `arch-packaging` skill | Signed `Required` + embedded keyring; native `.xp` endpoint live; ISO publish in progress |
+| `wsl/` + `wsl-scripts/` | Importable WSL rootfs + provisioning | `agents/xlnux-wsl`, `distro-installers`; `systems` skill | Rootfs `v0.1.0` published + SourceForge mirror; `install.ps1` untested on Windows |
+| `web/` + `wiki/` | Portal and aggregated docs | `senior-frontend`, `web`, `api-design` skills | Bilingual mirrors synced; landing/org profile refreshed |
+| Packaging/release | PKGBUILDs, signing, SourceForge | `archiso-ci`, `distro-release` skills | GitHub Pages auto-deploy; SourceForge publishing scripted and verified |
 
-## archiso pack coverage (generic + X)
+## Coverage summary
 
-- **Generic (applicable now)**: profile and build (archiso 91), bootmodes, packaging and signed repos, boot/UKI/Secure Boot/TPM, installers (Calamares/archinstall as alternatives), branding/first-boot, storage (btrfs/LUKS/snapper/hibernation), desktop, CI/QEMU/release, blueprints, state of the world 2026 with versions and myths.
-- **X-specific (new)**: `xlnux` skill (architecture, generations contract, xpm/xpkg, WSL, prioritized issues), 4 agents (`xlnux-generations`, `xlnux-installer`, `xlnux-packages`, `xlnux-wsl`), `/xlnux-validate` and `/xlnux-vm` commands, this map.
+- **Strong**: archiso profile/installer, generations engine and contracts, xpm/xpkg architecture, signing/keyring flow, VM e2e harness, docs mirrors.
+- **Usable with care**: vendored desktop snapshot (pinned 4-oct, missing the plugin stack), WSL importer (PowerShell path untested).
+- **Deliberately out of scope**: CI (local by owner decision), UKI/Secure Boot (Microsoft-signed shim only), btrfs home snapshots, equisdots plugin hosting.
 
-## Generic gaps closed in this pass
+## Current status (October 2026)
 
-1. **WSL**: new reference `distro-release/references/wsl-images.md` (importable rootfs, `wsl.conf`, default user, systemd, machine-id hygiene, official Arch WSL image).
-2. **Compliance and licenses**: new section in `distro-blueprint.md` (0BSD of Arch sources, GPL of packages, Arch trademark, attribution, privacy/telemetry policy).
-3. **Vulnerabilities**: new tracking section (Arch security tracker, arch-audit, CVE feeds, `checkrebuild`).
-4. **Accessibility**: note in the blueprint and in the desktop agent (speech/brltty/espeakup, `accessibility=on` pattern that X already uses).
+- ISO `x-2026.10.17-x86_64.iso` built with payload `x-scripts 0.1.0-37`; e2e UEFI and BIOS green, including newest-generation default and reboot into it.
+- `[x]` serves payload 36; payload 37 is bundled in the ISO but not yet published. The 10.17 ISO is not yet uploaded to SourceForge.
+- `hyprland=online` installs the latest equisdots stack (plugin system included); `hyprland=yes` deploys the pinned snapshot.
+- Open P1: two xpm bugs, owner crypto backup/rotation, `install.ps1` on real Windows.
+- Details and prioritisation: `skills/xlnux/references/known-issues.md`.
 
-## X project gaps the pack cannot close (require work in xlnux)
+## How to use this pack
 
-See `skills/xlnux/references/known-issues.md` (20 prioritized items). The blockers:
-
-1. Installer VM e2e (P0) — `/xlnux-vm` guides the procedure.
-2. `X_GEN_SUBVOL_PREFIX` (P0).
-3. Outdated `x-scripts` payload (P0) — without `x gen` the installer does not create gen 0001.
-4. `generations-btrfs.sh` with root (P0).
-5. Restore traversal + root flags (P1), repo signing (P1), CI (P2), xpm resolver (P2).
-
-## Recommended order (current sprint)
-
-1. Rebuild the payload (`x-scripts` pkgrel+1) and replace it in `x/airootfs/root/x-installer/packages/`.
-2. `sudo bash scripts/test/generations-btrfs.sh` and fixes.
-3. `sudo x/xbuild.sh` + `x/vm.sh --seed` with `xauto=1`; assert gen 0001 + rollback.
-4. Fix `X_GEN_SUBVOL_PREFIX=/@snapshots` in installer/hooks/setup/update.
-5. Minimal CI (`validate.sh` + cargo) and `[x]` repo signing.
-
-## How to use the pack
-
-```bash
-# install
-cp agents/*.md ~/.config/opencode/agents/
-cp -r skills/* ~/.config/opencode/skills/
-cp commands/*.md ~/.config/opencode/commands/
-```
-
-- Before touching generations: load the `xlnux` skill and read `references/generations.md` + `known-issues.md`.
-- To validate: `/xlnux-validate` (rootless) and `/xlnux-vm` (root, QEMU).
-- For platform questions (archiso/pacman/boot): the generic skills.
+1. Read `skills/xlnux/SKILL.md` for the component map and installed-system contract.
+2. Use `skills/xlnux/references/*` for the area you touch (generations, xpm/xpkg, WSL, architecture).
+3. Select an agent: `xlnux-installer` (ISO/VM), `xlnux-generations` (engine/tests), `xlnux-packages` (xpm/xpkg/x-repo), `xlnux-wsl`.
+4. Validate through `commands/xlnux-validate.md` and `commands/xlnux-vm.md`; generic Arch depth lives in the sibling skills (`archiso`, `arch-packaging`, `distro-*`).
