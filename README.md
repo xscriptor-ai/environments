@@ -1,6 +1,6 @@
 # Xscriptor Environments
 
-Environment packs for AI coding assistants: agents, skills, commands, and docs for desktop environments.
+Environment packs for AI coding assistants: agents, skills, commands, and docs for desktop environments and interactive 3D web.
 
 Each environment is a self-contained folder with its own `README.md` index.
 
@@ -12,6 +12,7 @@ Each environment is a self-contained folder with its own `README.md` index.
 | [niri](niri/) | niri 26.04 (KDL config) plus the Hyprland to niri migration layer: 10 specialized agents and 15 deep-reference skills (niri core and config/IPC/tooling mapping). |
 | [archiso](archiso/) | Arch-based distro building (October 2026, archiso 91, pacman 7.1, mkinitcpio 42, Calamares 3.4.3, archinstall 4.5) plus the X Linux (xlnux) project layer: 19 specialized agents, 6 deep-reference skills, 6 commands, and state-of-the-world + distro blueprint + sources + xlnux project map dossiers. |
 | [design-arsenal](design-arsenal/) | Design arsenal (October 2026): image pipeline (ImageMagick, libvips, FFmpeg, Real-ESRGAN), mobile→desktop wallpaper craft, 118 palettes, 32 SVG gradients, 13 patterns, 7 safe-zone guides, 6 agents, 6 deep-reference skills, 4 commands, 16 full guides, 12 resource catalogs, licensing and provenance. |
+| [three-atlas](three-atlas/) | Three.js / interactive 3D web (r187): 23 deep-reference docs, 8 skills, 6 agents, 4 cheatsheets, 3 checklists, 4 resource catalogs, 2 runnable Vite templates (vanilla and React Three Fiber), plus GLSL/TSL shader, loader, interaction, and performance patterns. |
 
 ## Adding an environment
 
