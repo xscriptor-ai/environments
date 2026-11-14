@@ -23,4 +23,13 @@ Each environment is a self-contained folder with its own `README.md` index.
 
 ## License
 
-MIT
+- Code (scripts and tooling): [GPL-3.0-or-later](LICENSE)
+- Documentation, environment packs and content: [CC BY-SA 4.0](LICENSE-CONTENT)
+
+Reuse and redistribution are welcome under those terms. Attribution is
+required; see [NOTICE](NOTICE) for the preferred credit and the
+attribution-preservation term for code (GPL-3.0 §7(b)).
+
+Third-party assets bundled under `design-arsenal/` keep their original
+licenses, documented in
+[`design-arsenal/licenses/README.md`](design-arsenal/licenses/README.md).

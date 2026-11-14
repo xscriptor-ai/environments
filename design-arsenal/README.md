@@ -120,7 +120,8 @@ pipeline exists to produce them once a brief is defined.
 
 ## License
 
-Pack documentation and scripts follow the repository's MIT license. Generated
+Pack documentation follows the repository's CC-BY-SA-4.0 license; scripts
+follow GPL-3.0-or-later. Generated
 SVG gradients, patterns and guides are CC0. Palette data retains the upstream
 license recorded in each JSON. No fonts, icons, photo textures or wallpapers are
 redistributed in this reduced edition. See `LICENSES.md`.
