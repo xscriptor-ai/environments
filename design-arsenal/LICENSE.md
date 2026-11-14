@@ -1,7 +1,7 @@
 # Licenses
 
-This pack follows the repository's MIT license for its own documentation and
-scripts.
+This pack follows the repository's licenses: GPL-3.0-or-later for its scripts
+and CC-BY-SA-4.0 for its documentation.
 
 ## Bundled assets
 
